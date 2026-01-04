@@ -1,6 +1,6 @@
 // GitHub Activity Widget
 class GitHubActivity {
-    constructor(username = 'kwstas147', privateReposCount = 11) {
+    constructor(username = 'kwstas147', privateReposCount = 0) {
         this.username = username;
         this.privateReposCount = privateReposCount; // Manual count for private repos
         this.init();
