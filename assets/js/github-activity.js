@@ -180,10 +180,10 @@ class GitHubActivity {
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         // TODO: Update the second parameter with your actual private repos count
-        const githubActivity = new GitHubActivity('kwstas147', 0);
+        const githubActivity = new GitHubActivity('kwstas147', 11);
     });
 } else {
     // TODO: Update the second parameter with your actual private repos count
-    const githubActivity = new GitHubActivity('kwstas147', 0);
+    const githubActivity = new GitHubActivity('kwstas147', 11);
 }
 
