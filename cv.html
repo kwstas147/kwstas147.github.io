@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="pageTitleFlutter">Flutter Mobile Apps</title>
+    <title data-i18n="pageTitleCV">Curriculum Vitae</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="min-h-screen">
     <!-- Navigation -->
-    <nav class="bg-gray-800 dark:bg-gray-800 border-b border-gray-700 dark:border-gray-700 sticky top-0 z-50">
+    <nav class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-8">
                     <a href="index.html" class="text-xl font-bold text-blue-400" data-i18n="navHome">Αρχική</a>
                     <div class="hidden md:flex space-x-6">
-                        <a href="home-assistant.html" class="hover:text-blue-400 transition-colors" data-i18n="navHomeAssistant">Home Assistant</a>
-                        <a href="flutter.html" class="hover:text-blue-400 transition-colors" data-i18n="navFlutter">Flutter Apps</a>
-                        <a href="csharp.html" class="hover:text-blue-400 transition-colors" data-i18n="navCSharp">C# Windows Apps</a>
-                        <a href="esp32.html" class="hover:text-blue-400 transition-colors" data-i18n="navESP32">ESP32 Devices</a>
-                        <a href="assets/pdf/cv-placeholder.pdf" target="_blank" class="hover:text-blue-400 transition-colors" data-i18n="navCV">Βιογραφικό</a>
+                        <a href="3d-printing.html" class="hover:text-blue-400 transition-colors" data-i18n="nav3DPrinting">3D Printing</a>
+                        <a href="fusion360.html" class="hover:text-blue-400 transition-colors" data-i18n="navFusion360">Fusion360</a>
+                        <a href="programming.html" class="hover:text-blue-400 transition-colors" data-i18n="navProgramming">Development</a>
+                        <a href="cv.html" class="hover:text-blue-400 transition-colors" data-i18n="navCV">Βιογραφικό</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-4">
@@ -38,15 +38,97 @@
 
     <!-- Hero Section -->
     <section class="container mx-auto px-4 py-20 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 fade-in" data-i18n="pageTitleFlutter">Flutter Mobile Apps</h1>
-        <p class="text-lg text-gray-400 max-w-2xl mx-auto fade-in" data-i18n="descFlutter">Mobile εφαρμογές που έχω αναπτύξει με Flutter</p>
+        <div class="flex justify-center mb-6">
+            <i data-lucide="file-text" class="w-16 h-16 text-blue-400"></i>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 fade-in" data-i18n="pageTitleCV">Curriculum Vitae</h1>
+        <div class="mt-8">
+            <a href="assets/pdf/cv-placeholder.pdf" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition-colors flex items-center gap-2 mx-auto">
+                <i data-lucide="download" class="w-5 h-5"></i>
+                <span data-i18n="btnDownloadCV">Κατεβάστε το CV</span>
+            </a>
+        </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="container mx-auto px-4 py-16">
-        <div class="bg-gray-800 rounded-lg p-8 text-center">
-            <p class="text-xl text-gray-400 mb-4" data-i18n="placeholderProjects">Projects θα προστεθούν σύντομα...</p>
-            <p class="text-gray-500" data-i18n="placeholderDescription">Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.</p>
+    <!-- CV Content -->
+    <section class="container mx-auto px-4 py-12 max-w-4xl">
+        <!-- Personal Info -->
+        <div class="bg-slate-800 rounded-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
+                <i data-lucide="user" class="w-6 h-6"></i>
+                <span>Personal Information</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <p class="text-gray-400 text-sm mb-2">Name</p>
+                    <p class="text-white">[Placeholder]</p>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm mb-2">Email</p>
+                    <p class="text-white">kwstas147@gmail.com</p>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm mb-2">Phone</p>
+                    <p class="text-white">[Placeholder]</p>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm mb-2">Location</p>
+                    <p class="text-white">[Placeholder]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="bg-slate-800 rounded-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
+                <i data-lucide="briefcase" class="w-6 h-6"></i>
+                <span>Experience</span>
+            </h2>
+            <div class="space-y-6">
+                <div class="border-l-2 border-blue-400 pl-6">
+                    <h3 class="text-xl font-bold text-white mb-2">[Job Title]</h3>
+                    <p class="text-blue-400 mb-2">[Company Name]</p>
+                    <p class="text-gray-400 text-sm mb-2">[Date Range]</p>
+                    <p class="text-gray-300">[Description placeholder]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="bg-slate-800 rounded-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
+                <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                <span>Education</span>
+            </h2>
+            <div class="space-y-6">
+                <div class="border-l-2 border-blue-400 pl-6">
+                    <h3 class="text-xl font-bold text-white mb-2">[Degree]</h3>
+                    <p class="text-blue-400 mb-2">[Institution]</p>
+                    <p class="text-gray-400 text-sm">[Date Range]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="bg-slate-800 rounded-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
+                <i data-lucide="award" class="w-6 h-6"></i>
+                <span>Skills</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Programming Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 text-sm text-gray-300 rounded">[Skill]</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Technologies & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 text-sm text-gray-300 rounded">[Technology]</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -56,7 +138,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700 mt-20">
+    <footer class="bg-slate-800 border-t border-slate-700 mt-20">
         <div class="container mx-auto px-4 py-6">
             <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4">
                 <span class="text-xs text-gray-500 hidden md:inline" data-i18n="footerFollow">Ακολουθήστε με</span>
@@ -67,7 +149,7 @@
                     <a href="mailto:kwstas147@gmail.com" class="text-gray-500 hover:text-blue-400 transition-colors" title="Email"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
                 </div>
             </div>
-            <div class="flex justify-center items-center pt-4 border-t border-gray-700">
+            <div class="flex justify-center items-center pt-4 border-t border-slate-700">
                 <p class="text-gray-400 text-sm" data-i18n="footerText">© 2026 Portfolio. Όλα τα δικαιώματα διατηρούνται.</p>
             </div>
         </div>
@@ -77,6 +159,9 @@
     <script src="assets/js/translations.js?v=2"></script>
     <script src="assets/js/language.js?v=2"></script>
     <script src="assets/js/theme.js?v=1"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
 

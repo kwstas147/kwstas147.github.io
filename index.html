@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="heroTitle">Καλώς ήρθατε στο Portfolio μου</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="assets/css/style.css?v=1">
 </head>
 <body class="min-h-screen">
     <!-- Navigation -->
-    <nav class="bg-gray-800 dark:bg-gray-800 border-b border-gray-700 dark:border-gray-700 sticky top-0 z-50">
+    <nav class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-8">
                     <a href="index.html" class="text-xl font-bold text-blue-400" data-i18n="navHome">Αρχική</a>
                     <div class="hidden md:flex space-x-6">
-                        <a href="home-assistant.html" class="hover:text-blue-400 transition-colors" data-i18n="navHomeAssistant">Home Assistant</a>
-                        <a href="flutter.html" class="hover:text-blue-400 transition-colors" data-i18n="navFlutter">Flutter Apps</a>
-                        <a href="csharp.html" class="hover:text-blue-400 transition-colors" data-i18n="navCSharp">C# Windows Apps</a>
-                        <a href="esp32.html" class="hover:text-blue-400 transition-colors" data-i18n="navESP32">ESP32 Devices</a>
-                        <a href="assets/pdf/cv-placeholder.pdf" target="_blank" class="hover:text-blue-400 transition-colors" data-i18n="navCV">Βιογραφικό</a>
+                        <a href="3d-printing.html" class="hover:text-blue-400 transition-colors" data-i18n="nav3DPrinting">3D Printing</a>
+                        <a href="fusion360.html" class="hover:text-blue-400 transition-colors" data-i18n="navFusion360">Fusion360</a>
+                        <a href="programming.html" class="hover:text-blue-400 transition-colors" data-i18n="navProgramming">Development</a>
+                        <a href="cv.html" class="hover:text-blue-400 transition-colors" data-i18n="navCV">Βιογραφικό</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-4">
@@ -37,48 +37,55 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="container mx-auto px-4 py-20 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 fade-in" data-i18n="heroTitle">Καλώς ήρθατε στο Portfolio μου</h1>
-        <p class="text-2xl md:text-3xl text-gray-400 mb-6 fade-in" data-i18n="heroSubtitle">Επαγγελματική παρουσίαση των έργων μου</p>
-        <p class="text-lg text-gray-500 max-w-2xl mx-auto fade-in" data-i18n="heroDescription">Εξερευνήστε τα projects μου σε Home Assistant, Flutter mobile apps, C# Windows applications και ESP32 smart devices.</p>
+    <section class="container mx-auto px-4 py-24 text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in" data-i18n="heroTitle">Καλώς ήρθατε στο Portfolio μου</h1>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto fade-in" data-i18n="heroDescription">Εξερευνήστε τις δημιουργίες μου σε 3D Printing, Fusion360 Designs, Software Development και περισσότερα.</p>
     </section>
 
-    <!-- Projects Overview -->
+    <!-- Categories Section -->
     <section class="container mx-auto px-4 py-16">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Home Assistant -->
-            <div class="bg-gray-800 rounded-lg p-6 project-card">
-                <h2 class="text-2xl font-bold mb-4 text-blue-400" data-i18n="sectionHomeAssistant">Home Assistant Projects</h2>
-                <p class="text-gray-400 mb-6" data-i18n="descHomeAssistant">Έργα αυτοματισμού σπιτιού με Home Assistant</p>
-                <a href="home-assistant.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors" data-i18n="btnViewMore">Δείτε περισσότερα</a>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- 3D Printing -->
+            <a href="3d-printing.html" class="category-card bg-slate-800 rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="flex justify-center mb-4">
+                    <i data-lucide="printer" class="w-12 h-12 text-blue-400"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-3 text-blue-400" data-i18n="category3DPrinting">3D Printing Creations</h2>
+                <p class="text-gray-400 text-sm" data-i18n="desc3DPrinting">Φυσικές κατασκευές και εκτυπώσεις 3D</p>
+            </a>
 
-            <!-- Flutter -->
-            <div class="bg-gray-800 rounded-lg p-6 project-card">
-                <h2 class="text-2xl font-bold mb-4 text-blue-400" data-i18n="sectionFlutter">Flutter Mobile Apps</h2>
-                <p class="text-gray-400 mb-6" data-i18n="descFlutter">Mobile εφαρμογές που έχω αναπτύξει με Flutter</p>
-                <a href="flutter.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors" data-i18n="btnViewMore">Δείτε περισσότερα</a>
-            </div>
+            <!-- Fusion360 -->
+            <a href="fusion360.html" class="category-card bg-slate-800 rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="flex justify-center mb-4">
+                    <i data-lucide="box-select" class="w-12 h-12 text-blue-400"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-3 text-blue-400" data-i18n="categoryFusion360">Fusion360 Designs</h2>
+                <p class="text-gray-400 text-sm" data-i18n="descFusion360">CAD μοντέλα και σχεδίαση μηχανικών</p>
+            </a>
 
-            <!-- C# -->
-            <div class="bg-gray-800 rounded-lg p-6 project-card">
-                <h2 class="text-2xl font-bold mb-4 text-blue-400" data-i18n="sectionCSharp">C# Windows Applications</h2>
-                <p class="text-gray-400 mb-6" data-i18n="descCSharp">Windows desktop applications σε C#</p>
-                <a href="csharp.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors" data-i18n="btnViewMore">Δείτε περισσότερα</a>
-            </div>
+            <!-- Development Hub -->
+            <a href="programming.html" class="category-card bg-slate-800 rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="flex justify-center mb-4">
+                    <i data-lucide="code" class="w-12 h-12 text-blue-400"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-3 text-blue-400" data-i18n="categoryProgramming">Development Hub</h2>
+                <p class="text-gray-400 text-sm" data-i18n="descProgramming">Ενοποιημένη σελίδα για software projects</p>
+            </a>
 
-            <!-- ESP32 -->
-            <div class="bg-gray-800 rounded-lg p-6 project-card">
-                <h2 class="text-2xl font-bold mb-4 text-blue-400" data-i18n="sectionESP32">ESP32 Smart Devices</h2>
-                <p class="text-gray-400 mb-6" data-i18n="descESP32">Έξυπνες συσκευές με ESP32 microcontrollers</p>
-                <a href="esp32.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors" data-i18n="btnViewMore">Δείτε περισσότερα</a>
-            </div>
+            <!-- CV -->
+            <a href="cv.html" class="category-card bg-slate-800 rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
+                <div class="flex justify-center mb-4">
+                    <i data-lucide="file-text" class="w-12 h-12 text-blue-400"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-3 text-blue-400" data-i18n="categoryCV">Curriculum Vitae</h2>
+                <p class="text-gray-400 text-sm" data-i18n="descCV">Επαγγελματικό βιογραφικό</p>
+            </a>
         </div>
     </section>
 
     <!-- GitHub Activity Section - Subtle & Compact -->
     <section class="container mx-auto px-4 py-8">
-        <div class="bg-gray-800 rounded-lg p-4 max-w-2xl mx-auto border border-gray-700">
+        <div class="bg-slate-800 rounded-lg p-4 max-w-2xl mx-auto border border-slate-700">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
                 <!-- Left: Stats -->
                 <div class="flex items-center gap-6">
@@ -120,7 +127,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700 mt-20">
+    <footer class="bg-slate-800 border-t border-slate-700 mt-20">
         <div class="container mx-auto px-4 py-6">
             <!-- Social Links -->
             <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4">
@@ -177,7 +184,7 @@
                 </div>
             </div>
             <!-- Copyright -->
-            <div class="flex justify-center items-center pt-4 border-t border-gray-700">
+            <div class="flex justify-center items-center pt-4 border-t border-slate-700">
                 <p class="text-gray-400 text-sm" data-i18n="footerText">© 2026 Portfolio. Όλα τα δικαιώματα διατηρούνται.</p>
             </div>
         </div>
@@ -188,6 +195,10 @@
     <script src="assets/js/language.js?v=2"></script>
     <script src="assets/js/theme.js?v=1"></script>
     <script src="assets/js/github-activity.js?v=1"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
 

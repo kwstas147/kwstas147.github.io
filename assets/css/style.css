@@ -10,20 +10,20 @@
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-/* Midnight Theme (Dark) - Default */
+/* Midnight Theme (Dark) - Default - Slate/Blue Industrial */
 html[data-theme="midnight"],
 html:not([data-theme]) {
-    --bg-primary: #111827;
-    --bg-secondary: #1f2937;
-    --bg-tertiary: #374151;
-    --text-primary: #ffffff;
-    --text-secondary: #d1d5db;
-    --text-tertiary: #9ca3af;
-    --border-color: #374151;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --border-color: #334155;
     --accent-color: #3b82f6;
-    --accent-hover: #2563eb;
-    --card-bg: #1f2937;
-    --card-hover-shadow: rgba(0, 0, 0, 0.3);
+    --accent-hover: #60a5fa;
+    --card-bg: #1e293b;
+    --card-hover-shadow: rgba(59, 130, 246, 0.15);
 }
 
 /* Clean Office Theme (Light) */
@@ -65,7 +65,7 @@ html:not([data-theme]) {
 
 html[data-theme="midnight"] ::-webkit-scrollbar-track,
 html:not([data-theme]) ::-webkit-scrollbar-track {
-    background: #1f2937;
+    background: #1e293b;
 }
 
 html[data-theme="clean-office"] ::-webkit-scrollbar-track {
@@ -111,8 +111,8 @@ html[data-theme="midnight"] .lang-switcher [data-lang="el"],
 html[data-theme="midnight"] .lang-switcher [data-lang="en"],
 html:not([data-theme]) .lang-switcher [data-lang="el"],
 html:not([data-theme]) .lang-switcher [data-lang="en"] {
-    background-color: rgba(55, 65, 81, 0.5);
-    color: #d1d5db;
+    background-color: rgba(51, 65, 85, 0.5);
+    color: #cbd5e1;
 }
 
 html[data-theme="clean-office"] .lang-switcher [data-lang="el"],
@@ -152,8 +152,8 @@ html[data-theme="clean-office"] .lang-switcher [data-lang="en"] {
 
 html[data-theme="midnight"] .theme-switcher [data-theme],
 html:not([data-theme]) .theme-switcher [data-theme] {
-    background-color: rgba(55, 65, 81, 0.5);
-    color: #d1d5db;
+    background-color: rgba(51, 65, 85, 0.5);
+    color: #cbd5e1;
 }
 
 html[data-theme="clean-office"] .theme-switcher [data-theme] {
@@ -331,5 +331,68 @@ html[data-theme="clean-office"] #github-activity-graph {
 
 html[data-theme="clean-office"] .github-activity-container .bg-gray-700 {
     background-color: var(--bg-tertiary) !important;
+}
+
+/* Code block styling for industrial theme */
+pre[class*="language-"] {
+    background-color: #0f172a !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #334155;
+    border-left: 3px solid #3b82f6;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+code[class*="language-"] {
+    background-color: transparent;
+    color: #e2e8f0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    background-color: #1e293b;
+    color: #60a5fa;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+/* Syntax highlighting colors for Prism */
+.token.keyword {
+    color: #60a5fa;
+}
+
+.token.string {
+    color: #4ade80;
+}
+
+.token.comment {
+    color: #64748b;
+    font-style: italic;
+}
+
+.token.function {
+    color: #a78bfa;
+}
+
+.token.number {
+    color: #fbbf24;
+}
+
+/* Category card hover effects with blue glow */
+.category-card {
+    border: 1px solid #334155;
+    transition: all 0.3s ease-in-out;
+}
+
+.category-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
 }
 

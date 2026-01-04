@@ -3,10 +3,9 @@ const translations = {
     el: {
         // Navigation
         navHome: "Αρχική",
-        navHomeAssistant: "Home Assistant",
-        navFlutter: "Flutter Apps",
-        navCSharp: "C# Windows Apps",
-        navESP32: "ESP32 Devices",
+        nav3DPrinting: "3D Printing",
+        navFusion360: "Fusion360",
+        navProgramming: "Development",
         navCV: "Βιογραφικό",
         
         // Language switcher
@@ -21,19 +20,19 @@ const translations = {
         // Home page
         heroTitle: "Καλώς ήρθατε στο Portfolio μου",
         heroSubtitle: "Επαγγελματική παρουσίαση των έργων μου",
-        heroDescription: "Εξερευνήστε τα projects μου σε Home Assistant, Flutter mobile apps, C# Windows applications και ESP32 smart devices.",
+        heroDescription: "Εξερευνήστε τις δημιουργίες μου σε 3D Printing, Fusion360 Designs, Software Development και περισσότερα.",
         
-        // Sections
-        sectionHomeAssistant: "Home Assistant Projects",
-        sectionFlutter: "Flutter Mobile Apps",
-        sectionCSharp: "C# Windows Applications",
-        sectionESP32: "ESP32 Smart Devices",
+        // Categories
+        category3DPrinting: "3D Printing Creations",
+        categoryFusion360: "Fusion360 Designs",
+        categoryProgramming: "Development Hub",
+        categoryCV: "Curriculum Vitae",
         
-        // Section descriptions
-        descHomeAssistant: "Έργα αυτοματισμού σπιτιού με Home Assistant",
-        descFlutter: "Mobile εφαρμογές που έχω αναπτύξει με Flutter",
-        descCSharp: "Windows desktop applications σε C#",
-        descESP32: "Έξυπνες συσκευές με ESP32 microcontrollers",
+        // Category descriptions
+        desc3DPrinting: "Φυσικές κατασκευές και εκτυπώσεις 3D",
+        descFusion360: "CAD μοντέλα και σχεδίαση μηχανικών",
+        descProgramming: "Ενοποιημένη σελίδα για software projects",
+        descCV: "Επαγγελματικό βιογραφικό",
         
         // Buttons
         btnViewMore: "Δείτε περισσότερα",
@@ -64,10 +63,9 @@ const translations = {
     en: {
         // Navigation
         navHome: "Home",
-        navHomeAssistant: "Home Assistant",
-        navFlutter: "Flutter Apps",
-        navCSharp: "C# Windows Apps",
-        navESP32: "ESP32 Devices",
+        nav3DPrinting: "3D Printing",
+        navFusion360: "Fusion360",
+        navProgramming: "Development",
         navCV: "CV",
         
         // Language switcher
@@ -82,19 +80,19 @@ const translations = {
         // Home page
         heroTitle: "Welcome to My Portfolio",
         heroSubtitle: "Professional showcase of my work",
-        heroDescription: "Explore my projects in Home Assistant, Flutter mobile apps, C# Windows applications, and ESP32 smart devices.",
+        heroDescription: "Explore my creations in 3D Printing, Fusion360 Designs, Software Development, and more.",
         
-        // Sections
-        sectionHomeAssistant: "Home Assistant Projects",
-        sectionFlutter: "Flutter Mobile Apps",
-        sectionCSharp: "C# Windows Applications",
-        sectionESP32: "ESP32 Smart Devices",
+        // Categories
+        category3DPrinting: "3D Printing Creations",
+        categoryFusion360: "Fusion360 Designs",
+        categoryProgramming: "Development Hub",
+        categoryCV: "Curriculum Vitae",
         
-        // Section descriptions
-        descHomeAssistant: "Home automation projects with Home Assistant",
-        descFlutter: "Mobile applications I've developed with Flutter",
-        descCSharp: "Windows desktop applications in C#",
-        descESP32: "Smart devices with ESP32 microcontrollers",
+        // Category descriptions
+        desc3DPrinting: "Physical builds and 3D prints",
+        descFusion360: "CAD models and engineering designs",
+        descProgramming: "Unified page for software projects",
+        descCV: "Professional CV",
         
         // Buttons
         btnViewMore: "View More",
