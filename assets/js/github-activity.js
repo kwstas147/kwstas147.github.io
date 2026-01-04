@@ -1,7 +1,8 @@
 // GitHub Activity Widget
 class GitHubActivity {
-    constructor(username = 'kwstas147') {
+    constructor(username = 'kwstas147', privateReposCount = 11) {
         this.username = username;
+        this.privateReposCount = privateReposCount; // Manual count for private repos
         this.init();
     }
 
@@ -56,21 +57,22 @@ class GitHubActivity {
             
             const userData = await response.json();
             
-            // Get total repos count (public + private if authenticated, otherwise just public)
-            // Note: GitHub API only returns public_repos for unauthenticated requests
-            // For total repos, we need to fetch all repos and count them
-            let totalRepos = userData.public_repos || 0;
+            // Note: GitHub API without authentication can only access PUBLIC repos
+            // Private repos are not accessible via the public API
+            // We'll count all public repos (with pagination support)
+            let publicRepos = userData.public_repos || 0;
             
-            // Try to fetch all repos to get total count
+            // Try to fetch all public repos to get accurate count (handles pagination)
             try {
                 const reposResponse = await fetch(`https://api.github.com/users/${this.username}/repos?per_page=100&sort=updated`);
                 if (reposResponse.ok) {
                     const reposData = await reposResponse.json();
-                    // Count all repos (this will be limited by API pagination, but gives a better estimate)
-                    totalRepos = reposData.length;
-                    // If we got 100 repos, there might be more (check if we need to fetch more pages)
+                    // Count public repos (this will be limited by API pagination)
+                    publicRepos = reposData.length;
+                    
+                    // If we got 100 repos, there might be more (check pagination)
                     if (reposData.length === 100) {
-                        // Try to get the total from Link header or make another request
+                        // Try to get the total from Link header
                         const linkHeader = reposResponse.headers.get('Link');
                         if (linkHeader) {
                             // Parse Link header to get total pages
@@ -81,22 +83,37 @@ class GitHubActivity {
                                 const lastPageResponse = await fetch(`https://api.github.com/users/${this.username}/repos?per_page=100&page=${lastPage}&sort=updated`);
                                 if (lastPageResponse.ok) {
                                     const lastPageData = await lastPageResponse.json();
-                                    totalRepos = (lastPage - 1) * 100 + lastPageData.length;
+                                    publicRepos = (lastPage - 1) * 100 + lastPageData.length;
                                 }
                             }
                         }
                     }
                 }
             } catch (reposError) {
-                console.warn('Could not fetch all repos, using public count:', reposError);
-                // Fallback to public repos count
+                console.warn('Could not fetch all repos, using public_repos count:', reposError);
+                // Fallback to public_repos from user data
             }
+            
+            // Calculate total repos (public + private if configured)
+            const totalRepos = publicRepos + (this.privateReposCount || 0);
             
             // Update repos count
             const reposElement = document.getElementById('github-stats-repos');
             if (reposElement) {
                 reposElement.textContent = totalRepos.toString();
-                console.log('GitHub repos count updated:', totalRepos);
+                
+                // Update tooltip based on whether private repos are included
+                if (this.privateReposCount > 0) {
+                    reposElement.title = `${publicRepos} public + ${this.privateReposCount} private = ${totalRepos} total repos`;
+                } else {
+                    reposElement.title = `${publicRepos} public repositories (private repos not included - configure in github-activity.js)`;
+                }
+                
+                console.log('GitHub repos count:', {
+                    public: publicRepos,
+                    private: this.privateReposCount,
+                    total: totalRepos
+                });
             } else {
                 console.warn('GitHub repos element not found');
             }
@@ -158,11 +175,15 @@ class GitHubActivity {
 }
 
 // Initialize GitHub Activity when DOM is ready
+// To include private repos count, update the second parameter:
+// new GitHubActivity('kwstas147', 5) // where 5 is your private repos count
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-        const githubActivity = new GitHubActivity('kwstas147');
+        // TODO: Update the second parameter with your actual private repos count
+        const githubActivity = new GitHubActivity('kwstas147', 0);
     });
 } else {
-    const githubActivity = new GitHubActivity('kwstas147');
+    // TODO: Update the second parameter with your actual private repos count
+    const githubActivity = new GitHubActivity('kwstas147', 0);
 }
 
