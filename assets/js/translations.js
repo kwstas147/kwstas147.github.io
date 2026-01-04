@@ -56,7 +56,7 @@ const translations = {
         
         // GitHub Activity
         githubActivity: "GitHub Activity",
-        githubActivityDescription: "Οι συνεισφορές μου στο GitHub - ένα "πράσινο" προφίλ είναι η καλύτερη απόδειξη ότι γράφω κώδικα καθημερινά.",
+        githubActivityDescription: "Οι συνεισφορές μου στο GitHub - ένα \"πράσινο\" προφίλ είναι η καλύτερη απόδειξη ότι γράφω κώδικα καθημερινά.",
         githubViewProfile: "Δείτε το προφίλ μου στο GitHub"
     },
     en: {
