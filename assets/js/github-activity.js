@@ -56,10 +56,46 @@ class GitHubActivity {
             
             const userData = await response.json();
             
-            // Update public repos count
+            // Get total repos count (public + private if authenticated, otherwise just public)
+            // Note: GitHub API only returns public_repos for unauthenticated requests
+            // For total repos, we need to fetch all repos and count them
+            let totalRepos = userData.public_repos || 0;
+            
+            // Try to fetch all repos to get total count
+            try {
+                const reposResponse = await fetch(`https://api.github.com/users/${this.username}/repos?per_page=100&sort=updated`);
+                if (reposResponse.ok) {
+                    const reposData = await reposResponse.json();
+                    // Count all repos (this will be limited by API pagination, but gives a better estimate)
+                    totalRepos = reposData.length;
+                    // If we got 100 repos, there might be more (check if we need to fetch more pages)
+                    if (reposData.length === 100) {
+                        // Try to get the total from Link header or make another request
+                        const linkHeader = reposResponse.headers.get('Link');
+                        if (linkHeader) {
+                            // Parse Link header to get total pages
+                            const lastPageMatch = linkHeader.match(/page=(\d+)>; rel="last"/);
+                            if (lastPageMatch) {
+                                const lastPage = parseInt(lastPageMatch[1]);
+                                // Fetch last page to get accurate count
+                                const lastPageResponse = await fetch(`https://api.github.com/users/${this.username}/repos?per_page=100&page=${lastPage}&sort=updated`);
+                                if (lastPageResponse.ok) {
+                                    const lastPageData = await lastPageResponse.json();
+                                    totalRepos = (lastPage - 1) * 100 + lastPageData.length;
+                                }
+                            }
+                        }
+                    }
+                }
+            } catch (reposError) {
+                console.warn('Could not fetch all repos, using public count:', reposError);
+                // Fallback to public repos count
+            }
+            
+            // Update repos count
             const reposElement = document.getElementById('github-stats-repos');
             if (reposElement) {
-                reposElement.textContent = userData.public_repos || '0';
+                reposElement.textContent = totalRepos.toString();
             }
 
             // Load contribution stats using GitHub Readme Stats

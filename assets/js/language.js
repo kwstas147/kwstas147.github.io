@@ -45,6 +45,8 @@ class LanguageManager {
     }
 
     setLanguage(lang) {
+        console.log('setLanguage called with:', lang); // Debug
+        
         if (typeof translations === 'undefined') {
             console.error('Translations object not loaded');
             return;
@@ -55,10 +57,12 @@ class LanguageManager {
             return;
         }
 
+        console.log('Changing language from', this.currentLang, 'to', lang); // Debug
         this.currentLang = lang;
         this.storeLanguage(lang);
         this.updateContent();
         this.updateLanguageSwitcher();
+        console.log('Language changed successfully to:', this.currentLang); // Debug
     }
 
     toggleLanguage() {
@@ -111,6 +115,27 @@ class LanguageManager {
                         element.value = translation;
                     } else if (element.hasAttribute('placeholder')) {
                         element.placeholder = translation;
+                    } else if (element.tagName === 'A' || element.tagName === 'BUTTON') {
+                        // For links and buttons, preserve any child elements but update text
+                        const children = element.children;
+                        if (children.length === 0) {
+                            element.textContent = translation;
+                        } else {
+                            // If there are child elements, find text nodes or update first text node
+                            let textNode = null;
+                            for (let node of element.childNodes) {
+                                if (node.nodeType === Node.TEXT_NODE) {
+                                    textNode = node;
+                                    break;
+                                }
+                            }
+                            if (textNode) {
+                                textNode.textContent = translation;
+                            } else {
+                                // If no text node, prepend text
+                                element.insertBefore(document.createTextNode(translation), element.firstChild);
+                            }
+                        }
                     } else {
                         element.textContent = translation;
                     }
@@ -158,29 +183,36 @@ class LanguageManager {
     }
 
     attachEventListeners() {
-        // Use event delegation for better reliability
-        const langSwitchers = document.querySelectorAll('.lang-switcher');
-        const self = this; // Preserve 'this' context
+        // Remove all existing listeners first by using a single delegated listener on document
+        // This prevents duplicate listeners
+        const self = this;
         
-        langSwitchers.forEach(switcher => {
-            // Remove any existing listeners by cloning the container
-            const newSwitcher = switcher.cloneNode(true);
-            switcher.parentNode.replaceChild(newSwitcher, switcher);
+        // Remove old listener if it exists
+        if (this._languageClickHandler) {
+            document.removeEventListener('click', this._languageClickHandler);
+        }
+        
+        // Create new handler
+        this._languageClickHandler = function(e) {
+            // Check if click is on a language switcher button
+            const button = e.target.closest('.lang-switcher button, .lang-switcher [data-lang]');
+            if (!button) return;
             
-            // Add click listener to the container (event delegation)
-            newSwitcher.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                const button = e.target.closest('button, [data-lang]');
-                if (!button) return;
-                
-                const lang = button.getAttribute('data-lang');
-                if (lang && (lang === 'el' || lang === 'en')) {
-                    self.setLanguage(lang);
-                }
-            });
-        });
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const lang = button.getAttribute('data-lang');
+            console.log('Language button clicked:', lang); // Debug
+            if (lang && (lang === 'el' || lang === 'en')) {
+                console.log('Setting language to:', lang); // Debug
+                self.setLanguage(lang);
+            } else {
+                console.warn('Invalid language:', lang); // Debug
+            }
+        };
+        
+        // Add listener to document (event delegation)
+        document.addEventListener('click', this._languageClickHandler);
     }
 }
 
