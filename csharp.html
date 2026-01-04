@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitleCSharp">C# Windows Applications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 dark:bg-gray-800 border-b border-gray-700 dark:border-gray-700 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-xl font-bold text-blue-400" data-i18n="navHome">Αρχική</a>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="home-assistant.html" class="hover:text-blue-400 transition-colors" data-i18n="navHomeAssistant">Home Assistant</a>
+                        <a href="flutter.html" class="hover:text-blue-400 transition-colors" data-i18n="navFlutter">Flutter Apps</a>
+                        <a href="csharp.html" class="hover:text-blue-400 transition-colors" data-i18n="navCSharp">C# Windows Apps</a>
+                        <a href="esp32.html" class="hover:text-blue-400 transition-colors" data-i18n="navESP32">ESP32 Devices</a>
+                        <a href="assets/pdf/cv-placeholder.pdf" target="_blank" class="hover:text-blue-400 transition-colors" data-i18n="navCV">Βιογραφικό</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="theme-switcher">
+                        <button data-theme="midnight" class="active" title="Midnight">🌙</button>
+                        <button data-theme="clean-office" title="Clean Office">☀️</button>
+                    </div>
+                    <div class="lang-switcher">
+                        <button data-lang="el" class="active">EL</button>
+                        <button data-lang="en">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-20 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 fade-in" data-i18n="pageTitleCSharp">C# Windows Applications</h1>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto fade-in" data-i18n="descCSharp">Windows desktop applications σε C#</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="bg-gray-800 rounded-lg p-8 text-center">
+            <p class="text-xl text-gray-400 mb-4" data-i18n="placeholderProjects">Projects θα προστεθούν σύντομα...</p>
+            <p class="text-gray-500" data-i18n="placeholderDescription">Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.</p>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="container mx-auto px-4 py-8 text-center">
+        <a href="index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition-colors" data-i18n="btnBackHome">Επιστροφή στην αρχική</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 mt-20">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0" data-i18n="footerText">© 2024 Portfolio. Όλα τα δικαιώματα διατηρούνται.</p>
+                <p class="text-gray-400" data-i18n="footerContact">Επικοινωνία</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>
+

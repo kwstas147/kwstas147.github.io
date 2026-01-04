@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="heroTitle">Καλώς ήρθατε στο Portfolio μου</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 dark:bg-gray-800 border-b border-gray-700 dark:border-gray-700 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-xl font-bold text-blue-400" data-i18n="navHome">Αρχική</a>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="home-assistant.html" class="hover:text-blue-400 transition-colors" data-i18n="navHomeAssistant">Home Assistant</a>
+                        <a href="flutter.html" class="hover:text-blue-400 transition-colors" data-i18n="navFlutter">Flutter Apps</a>
+                        <a href="csharp.html" class="hover:text-blue-400 transition-colors" data-i18n="navCSharp">C# Windows Apps</a>
+                        <a href="esp32.html" class="hover:text-blue-400 transition-colors" data-i18n="navESP32">ESP32 Devices</a>
+                        <a href="assets/pdf/cv-placeholder.pdf" target="_blank" class="hover:text-blue-400 transition-colors" data-i18n="navCV">Βιογραφικό</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="theme-switcher">
+                        <button data-theme="midnight" class="active" title="Midnight">🌙</button>
+                        <button data-theme="clean-office" title="Clean Office">☀️</button>
+                    </div>
+                    <div class="lang-switcher">
+                        <button data-lang="el" class="active">EL</button>
+                        <button data-lang="en">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-20 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 fade-in" data-i18n="heroTitle">Καλώς ήρθατε στο Portfolio μου</h1>
+        <p class="text-2xl md:text-3xl text-gray-400 mb-6 fade-in" data-i18n="heroSubtitle">Επαγγελματική παρουσίαση των έργων μου</p>
+        <p class="text-lg text-gray-500 max-w-2xl mx-auto fade-in" data-i18n="heroDescription">Εξερευνήστε τα projects μου σε Home Assistant, Flutter mobile apps, C# Windows applications και ESP32 smart devices.</p>
+    </section>
+
+    <!-- Projects Overview -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Home Assistant -->
+            <div class="bg-gray-800 rounded-lg p-6 project-card">
+                <h2 class="text-2xl font-bold mb-4 text-blue-400" data-i18n="sectionHomeAssistant">Home Assistant Projects</h2>
+                <p class="text-gray-400 mb-6" data-i18n="descHomeAssistant">Έργα αυτοματισμού σπιτιού με Home Assistant</p>
+                <a href="home-assistant.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors" data-i18n="btnViewMore">Δείτε περισσότερα</a>
+            </div>
+
+            <!-- Flutter -->
+            <div class="bg-gray-800 rounded-lg p-6 project-card">
+                <h2 class="text-2xl font-bold mb-4 text-blue-400" data-i18n="sectionFlutter">Flutter Mobile Apps</h2>
+                <p class="text-gray-400 mb-6" data-i18n="descFlutter">Mobile εφαρμογές που έχω αναπτύξει με Flutter</p>
+                <a href="flutter.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors" data-i18n="btnViewMore">Δείτε περισσότερα</a>
+            </div>
+
+            <!-- C# -->
+            <div class="bg-gray-800 rounded-lg p-6 project-card">
+                <h2 class="text-2xl font-bold mb-4 text-blue-400" data-i18n="sectionCSharp">C# Windows Applications</h2>
+                <p class="text-gray-400 mb-6" data-i18n="descCSharp">Windows desktop applications σε C#</p>
+                <a href="csharp.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors" data-i18n="btnViewMore">Δείτε περισσότερα</a>
+            </div>
+
+            <!-- ESP32 -->
+            <div class="bg-gray-800 rounded-lg p-6 project-card">
+                <h2 class="text-2xl font-bold mb-4 text-blue-400" data-i18n="sectionESP32">ESP32 Smart Devices</h2>
+                <p class="text-gray-400 mb-6" data-i18n="descESP32">Έξυπνες συσκευές με ESP32 microcontrollers</p>
+                <a href="esp32.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors" data-i18n="btnViewMore">Δείτε περισσότερα</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Activity Graph Section -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-400" data-i18n="githubActivity">GitHub Activity</h2>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto" data-i18n="githubActivityDescription">Οι συνεισφορές μου στο GitHub - ένα "πράσινο" προφίλ είναι η καλύτερη απόδειξη ότι γράφω κώδικα καθημερινά.</p>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg p-6 project-card max-w-5xl mx-auto">
+            <div class="github-activity-container">
+                <!-- GitHub Contribution Graph -->
+                <div class="flex justify-center items-center mb-4">
+                    <img 
+                        id="github-activity-graph" 
+                        src="https://github-readme-activity-graph.vercel.app/graph?username=kwstas147&theme=github-dark&area=true&hide_border=true" 
+                        alt="GitHub Activity Graph"
+                        class="w-full h-auto rounded-lg"
+                        onerror="this.style.display='none'; document.getElementById('github-fallback').style.display='block';"
+                    />
+                    <div id="github-fallback" style="display: none;" class="text-center text-gray-400 p-8">
+                        <p>GitHub Activity Graph</p>
+                        <p class="text-sm mt-2">Loading contribution graph...</p>
+                    </div>
+                </div>
+                
+                <!-- GitHub Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div class="text-center p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">
+                        <div class="text-2xl font-bold text-blue-400" id="github-stats-commits" title="View contribution graph for commit details">📊</div>
+                        <div class="text-sm text-gray-400 mt-1">Contribution Graph</div>
+                        <div class="text-xs text-gray-500 mt-1">Hover over graph</div>
+                    </div>
+                    <div class="text-center p-4 bg-gray-700 rounded-lg">
+                        <div class="text-2xl font-bold text-blue-400" id="github-stats-repos">-</div>
+                        <div class="text-sm text-gray-400 mt-1">Public Repos</div>
+                    </div>
+                    <div class="text-center p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">
+                        <div class="text-2xl font-bold text-blue-400" id="github-stats-streak" title="View contribution graph for current streak">🔥</div>
+                        <div class="text-sm text-gray-400 mt-1">Activity Streak</div>
+                        <div class="text-xs text-gray-500 mt-1">See graph above</div>
+                    </div>
+                </div>
+                
+                <!-- GitHub Profile Link -->
+                <div class="text-center mt-6">
+                    <a 
+                        href="https://github.com/kwstas147" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition-colors"
+                        data-i18n="githubViewProfile"
+                    >
+                        Δείτε το προφίλ μου στο GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 mt-20">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0" data-i18n="footerText">© 2024 Portfolio. Όλα τα δικαιώματα διατηρούνται.</p>
+                <p class="text-gray-400" data-i18n="footerContact">Επικοινωνία</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/github-activity.js"></script>
+</body>
+</html>
+
