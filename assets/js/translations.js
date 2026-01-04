@@ -41,8 +41,10 @@ const translations = {
         btnDownloadCV: "Κατεβάστε το CV",
         
         // Footer
-        footerText: "© 2024 Portfolio. Όλα τα δικαιώματα διατηρούνται.",
+        footerText: "© 2026 Portfolio. Όλα τα δικαιώματα διατηρούνται.",
         footerContact: "Επικοινωνία",
+        footerEmail: "kwstas147@gmail.com",
+        footerFollow: "Ακολουθήστε με",
         
         // Project pages
         pageTitleHomeAssistant: "Home Assistant Projects",
@@ -57,7 +59,7 @@ const translations = {
         // GitHub Activity
         githubActivity: "GitHub Activity",
         githubActivityDescription: "Οι συνεισφορές μου στο GitHub - ένα \"πράσινο\" προφίλ είναι η καλύτερη απόδειξη ότι γράφω κώδικα καθημερινά.",
-        githubViewProfile: "Δείτε το προφίλ μου στο GitHub"
+        githubViewProfile: "Προφίλ"
     },
     en: {
         // Navigation
@@ -100,8 +102,10 @@ const translations = {
         btnDownloadCV: "Download CV",
         
         // Footer
-        footerText: "© 2024 Portfolio. All rights reserved.",
+        footerText: "© 2026 Portfolio. All rights reserved.",
         footerContact: "Contact",
+        footerEmail: "kwstas147@gmail.com",
+        footerFollow: "Follow me",
         
         // Project pages
         pageTitleHomeAssistant: "Home Assistant Projects",
@@ -116,7 +120,7 @@ const translations = {
         // GitHub Activity
         githubActivity: "GitHub Activity",
         githubActivityDescription: "My GitHub contributions - a 'green' profile is the best proof that I write code daily.",
-        githubViewProfile: "View my GitHub profile"
+        githubViewProfile: "Profile"
     }
 };
 

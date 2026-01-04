@@ -26,8 +26,8 @@ class GitHubActivity {
         const currentTheme = document.documentElement.getAttribute('data-theme') || 'midnight';
         const theme = currentTheme === 'midnight' ? 'github-dark' : 'github';
         
-        // Update graph URL with new theme
-        const baseUrl = `https://github-readme-activity-graph.vercel.app/graph?username=${this.username}&theme=${theme}&area=true&hide_border=true`;
+        // Update graph URL with new theme and compact size
+        const baseUrl = `https://github-readme-activity-graph.vercel.app/graph?username=${this.username}&theme=${theme}&area=true&hide_border=true&height=150`;
         graphImg.src = baseUrl;
     }
 
@@ -96,6 +96,9 @@ class GitHubActivity {
             const reposElement = document.getElementById('github-stats-repos');
             if (reposElement) {
                 reposElement.textContent = totalRepos.toString();
+                console.log('GitHub repos count updated:', totalRepos);
+            } else {
+                console.warn('GitHub repos element not found');
             }
 
             // Load contribution stats using GitHub Readme Stats
