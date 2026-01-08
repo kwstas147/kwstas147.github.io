@@ -60,6 +60,11 @@ const translations = {
         btnViewMore: "Δείτε περισσότερα",
         btnBackHome: "Επιστροφή στην αρχική",
         btnDownloadCV: "Κατεβάστε το CV",
+        btnDownloadPDF: "📥 Κατεβάστε το CV ως PDF",
+        pdfOptimizedMessage: "Η σελίδα είναι βελτιστοποιημένη για εκτύπωση. Κάντε κλικ στο κουμπί για να κατεβάσετε το PDF.",
+        pdfGenerating: "⏳ Δημιουργία PDF...",
+        pdfSuccess: "✅ PDF Κατέβηκε!",
+        pdfError: "❌ Σφάλμα - Δοκιμάστε ξανά",
         
         // Footer
         footerText: "© 2026 Portfolio. Όλα τα δικαιώματα διατηρούνται.",
@@ -226,6 +231,11 @@ const translations = {
         btnViewMore: "View More",
         btnBackHome: "Back to Home",
         btnDownloadCV: "Download CV",
+        btnDownloadPDF: "📥 Download CV as PDF",
+        pdfOptimizedMessage: "The page is optimized for printing. Click the button to download the PDF.",
+        pdfGenerating: "⏳ Generating PDF...",
+        pdfSuccess: "✅ PDF Downloaded!",
+        pdfError: "❌ Error - Try Again",
         
         // Footer
         footerText: "© 2026 Portfolio. All rights reserved.",
