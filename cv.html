@@ -22,12 +22,12 @@
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-8">
-                    <a href="index.html" class="text-xl font-bold text-blue-400" data-i18n="navHome">Αρχική</a>
+                    <a href="index.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="index" data-i18n="navHome">Αρχική</a>
                     <div class="hidden md:flex space-x-6">
-                        <a href="3d-printing.html" class="hover:text-blue-400 transition-colors" data-i18n="nav3DPrinting">3D Printing</a>
-                        <a href="fusion360.html" class="hover:text-blue-400 transition-colors" data-i18n="navFusion360">Fusion360</a>
-                        <a href="programming.html" class="hover:text-blue-400 transition-colors" data-i18n="navProgramming">Development</a>
-                        <a href="cv.html" class="hover:text-blue-400 transition-colors" data-i18n="navCV">Βιογραφικό</a>
+                        <a href="3d-printing.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="3d-printing" data-i18n="nav3DPrinting">3D Printing</a>
+                        <a href="fusion360.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="fusion360" data-i18n="navFusion360">Fusion360</a>
+                        <a href="programming.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="programming" data-i18n="navProgramming">Development</a>
+                        <a href="cv.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="cv" data-i18n="navCV">Βιογραφικό</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-4">
@@ -72,7 +72,7 @@
                         <span data-i18n="cvSectionSummary">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ</span>
                     </h2>
                     <p class="text-gray-300 leading-relaxed" data-i18n="cvSummaryText">
-                        Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων (Ασφαλτικά Παρασκευαστήρια). Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την "hands-on" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD). Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού.
+                        Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων (Ασφαλτικά Παρασκευαστήρια). Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την "hands-on" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD). Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού. <span data-i18n="cvSummaryHomelab" class="text-gray-400">Επιπλέον, διαχειρίζομαι self-hosted infrastructure με Proxmox και Docker containers.</span>
                     </p>
                 </div>
 
@@ -251,6 +251,9 @@
                             <p class="text-gray-300 text-sm leading-relaxed" data-i18n="cvTechProject3Desc">
                                 Ανάπτυξη εφαρμογών σε Python για την αυτοματοποίηση υπολογισμών και τη διαχείριση δεδομένων, εφαρμόζοντας τις γνώσεις από τα προγράμματα του ΕΚΠΑ.
                             </p>
+                            <p class="text-gray-400 text-xs leading-relaxed mt-3 italic" data-i18n="cvTechProject3Homelab">
+                                Self-hosted infrastructure: Proxmox home lab με Tailscale VPN, Debian Docker stack (N8N, Nextcloud, Portainer, WordPress, pgAdmin, Flame, PostgreSQL).
+                            </p>
                         </div>
                     </div>
 
@@ -377,6 +380,7 @@
     <script src="assets/js/translations.js?v=2"></script>
     <script src="assets/js/language.js?v=2"></script>
     <script src="assets/js/theme.js?v=1"></script>
+    <script src="assets/js/navigation.js?v=1"></script>
     <script>
         lucide.createIcons();
         
