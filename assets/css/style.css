@@ -688,6 +688,26 @@ aside {
     transition: all 0.3s ease-in-out;
 }
 
+/* CV Layout - Prevent Overlap */
+#cv-main-content {
+    min-width: 0; /* Prevents flex item from overflowing */
+    max-width: 100%;
+}
+
+#cv-sidebar {
+    min-width: 0; /* Prevents flex item from overflowing */
+    max-width: 100%;
+}
+
+/* Ensure proper flex behavior */
+.flex.flex-col.lg\:flex-row {
+    align-items: flex-start;
+}
+
+.flex.flex-col.lg\:flex-row > * {
+    box-sizing: border-box;
+}
+
 /* Responsive adjustments for CV */
 @media (max-width: 1024px) {
     .timeline-container {
