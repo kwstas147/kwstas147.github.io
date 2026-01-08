@@ -27,9 +27,9 @@
         #pdf-content {
             background: white;
             padding: 20px;
-            width: 210mm;
-            min-width: 210mm;
-            max-width: 210mm;
+            width: 794px;
+            min-width: 794px;
+            max-width: 794px;
             margin: 0 auto;
             box-sizing: border-box;
             overflow: visible;
@@ -153,51 +153,35 @@
             margin-bottom: 5px;
         }
         .cv-container {
-            display: block;
+            display: flex;
+            flex-direction: row;
             width: 100%;
-            overflow: hidden;
+            gap: 20px;
         }
         .main-content {
-            float: left;
-            width: 66.666%;
+            flex: 2;
+            min-width: 0;
             box-sizing: border-box;
-            padding-right: 20px;
         }
         .sidebar {
-            float: right;
-            width: 33.333%;
+            flex: 1;
+            min-width: 0;
             box-sizing: border-box;
-            padding-left: 20px;
-        }
-        .cv-container::after {
-            content: "";
-            display: table;
-            clear: both;
         }
         .summary {
             text-align: justify;
             line-height: 1.8;
         }
         .about-grid {
-            display: block;
+            display: flex;
+            flex-direction: row;
             width: 100%;
+            gap: 20px;
         }
         .about-grid > div {
-            float: left;
-            width: 48%;
-            vertical-align: top;
-            padding-right: 2%;
+            flex: 1;
+            min-width: 0;
             box-sizing: border-box;
-        }
-        .about-grid > div:last-child {
-            float: right;
-            padding-right: 0;
-            padding-left: 2%;
-        }
-        .about-grid::after {
-            content: "";
-            display: table;
-            clear: both;
         }
         .tech-projects {
             margin-bottom: 15px;
@@ -473,14 +457,17 @@
             const element = document.getElementById('pdf-content');
             const btn = this;
             
+            // Fixed pixel width for A4 (210mm = 794px at 96 DPI)
+            const fixedWidth = 794;
+            
             // Force layout recalculation
             element.style.display = 'block';
             element.offsetHeight; // Force reflow
             
-            // Calculate actual dimensions
-            const computedStyle = window.getComputedStyle(element);
-            const width = parseFloat(computedStyle.width) || element.offsetWidth;
+            // Calculate height - use scrollHeight for accurate content height
             const height = element.scrollHeight || element.offsetHeight;
+            
+            console.log('PDF Generation - Width:', fixedWidth, 'Height:', height);
             
             const opt = {
                 margin: [15, 15, 15, 15],
@@ -489,23 +476,62 @@
                 html2canvas: { 
                     scale: 2,
                     useCORS: true,
-                    logging: false,
+                    logging: true,
                     letterRendering: true,
                     backgroundColor: '#ffffff',
-                    width: width,
+                    width: fixedWidth,
                     height: height,
-                    windowWidth: width,
+                    windowWidth: fixedWidth,
                     windowHeight: height,
                     removeContainer: false,
                     allowTaint: false,
                     foreignObjectRendering: false,
-                    onclone: function(clonedDoc) {
-                        // Ensure cloned document has correct width
+                    onclone: function(clonedDoc, element) {
+                        console.log('onclone called - setting up cloned document');
+                        
+                        // Ensure cloned document has correct width and styles
                         const clonedElement = clonedDoc.getElementById('pdf-content');
                         if (clonedElement) {
-                            clonedElement.style.width = width + 'px';
-                            clonedElement.style.minWidth = width + 'px';
-                            clonedElement.style.maxWidth = width + 'px';
+                            clonedElement.style.width = fixedWidth + 'px';
+                            clonedElement.style.minWidth = fixedWidth + 'px';
+                            clonedElement.style.maxWidth = fixedWidth + 'px';
+                            clonedElement.style.display = 'block';
+                            clonedElement.style.boxSizing = 'border-box';
+                            
+                            // Ensure flexbox layout is preserved
+                            const clonedContainer = clonedElement.querySelector('.cv-container');
+                            if (clonedContainer) {
+                                clonedContainer.style.display = 'flex';
+                                clonedContainer.style.flexDirection = 'row';
+                                clonedContainer.style.width = '100%';
+                                clonedContainer.style.gap = '20px';
+                            }
+                            
+                            // Set explicit styles for main-content and sidebar
+                            const clonedMain = clonedElement.querySelector('.main-content');
+                            const clonedSidebar = clonedElement.querySelector('.sidebar');
+                            if (clonedMain) {
+                                clonedMain.style.flex = '2';
+                                clonedMain.style.minWidth = '0';
+                                clonedMain.style.boxSizing = 'border-box';
+                            }
+                            if (clonedSidebar) {
+                                clonedSidebar.style.flex = '1';
+                                clonedSidebar.style.minWidth = '0';
+                                clonedSidebar.style.boxSizing = 'border-box';
+                            }
+                            
+                            // Ensure fonts are loaded - copy font styles from original
+                            const originalElement = document.getElementById('pdf-content');
+                            if (originalElement) {
+                                const originalStyle = window.getComputedStyle(originalElement);
+                                clonedElement.style.fontFamily = originalStyle.fontFamily;
+                                clonedElement.style.fontSize = originalStyle.fontSize;
+                                clonedElement.style.lineHeight = originalStyle.lineHeight;
+                            }
+                            
+                            // Force reflow in cloned document
+                            clonedElement.offsetHeight;
                         }
                     }
                 },
@@ -525,6 +551,7 @@
             // Small delay to ensure layout is stable
             setTimeout(() => {
                 html2pdf().set(opt).from(element).save().then(() => {
+                    console.log('PDF generated successfully');
                     btn.textContent = '✅ PDF Κατέβηκε!';
                     setTimeout(() => {
                         btn.textContent = '📥 Κατεβάστε το CV ως PDF';

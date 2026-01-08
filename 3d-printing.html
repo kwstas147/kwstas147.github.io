@@ -18,7 +18,7 @@
 </head>
 <body class="min-h-screen">
     <!-- Navigation -->
-    <nav class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50">
+    <nav class="bg-nav border-b border-theme sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-8">
@@ -57,8 +57,8 @@
     <section class="container mx-auto px-4 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Project Card Example - Replace with your actual projects -->
-            <div class="bg-slate-800 rounded-lg p-6 project-card">
-                <div class="aspect-video bg-slate-700 rounded mb-4 overflow-hidden relative">
+            <div class="bg-card rounded-lg p-6 project-card">
+                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
                     <img 
                         src="assets/images/3d-printing/project-example.jpg" 
                         srcset="assets/images/3d-printing/project-example-400w.jpg 400w,
@@ -72,22 +72,22 @@
                         height="450"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
-                    <div class="absolute inset-0 bg-slate-700 rounded flex items-center justify-center" style="display: none;">
+                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
                         <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
                     </div>
                 </div>
                 <h3 class="text-xl font-bold mb-2 text-blue-400">Project Title</h3>
                 <p class="text-gray-400 text-sm mb-4" data-i18n="placeholderDescription">Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.</p>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">PLA</span>
-                    <span class="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">2024</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">PLA</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">2024</span>
                 </div>
             </div>
             
             <!-- Add more project cards following the same structure -->
             <!-- 
-            <div class="bg-slate-800 rounded-lg p-6 project-card">
-                <div class="aspect-video bg-slate-700 rounded mb-4 overflow-hidden relative">
+            <div class="bg-card rounded-lg p-6 project-card">
+                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
                     <img 
                         src="assets/images/3d-printing/your-project.jpg" 
                         srcset="assets/images/3d-printing/your-project-400w.jpg 400w,
@@ -101,15 +101,15 @@
                         height="450"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
-                    <div class="absolute inset-0 bg-slate-700 rounded flex items-center justify-center" style="display: none;">
+                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
                         <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
                     </div>
                 </div>
                 <h3 class="text-xl font-bold mb-2 text-blue-400">Your Project Name</h3>
                 <p class="text-gray-400 text-sm mb-4">Description of your project...</p>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">Material</span>
-                    <span class="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">Year</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Material</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Year</span>
                 </div>
             </div>
             -->
@@ -122,7 +122,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-800 border-t border-slate-700 mt-20">
+    <footer class="bg-footer border-t border-theme mt-20">
         <div class="container mx-auto px-4 py-6">
             <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4">
                 <span class="text-xs text-gray-500 hidden md:inline" data-i18n="footerFollow">Ακολουθήστε με</span>
@@ -133,7 +133,7 @@
                     <a href="mailto:kwstas147@gmail.com" class="text-gray-500 hover:text-blue-400 transition-colors" title="Email"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
                 </div>
             </div>
-            <div class="flex justify-center items-center pt-4 border-t border-slate-700">
+            <div class="flex justify-center items-center pt-4 border-t border-theme">
                 <p class="text-gray-400 text-sm" data-i18n="footerText">© 2026 Portfolio. Όλα τα δικαιώματα διατηρούνται.</p>
             </div>
             <!-- Visitor Counter -->

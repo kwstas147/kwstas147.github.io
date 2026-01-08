@@ -58,6 +58,56 @@ html:not([data-theme]) {
     color: var(--text-primary);
 }
 
+/* Theme-aware utility classes */
+.bg-card {
+    background-color: var(--card-bg) !important;
+}
+
+.bg-nav {
+    background-color: var(--bg-secondary) !important;
+}
+
+.bg-footer {
+    background-color: var(--bg-secondary) !important;
+}
+
+.bg-tertiary {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.border-theme {
+    border-color: var(--border-color) !important;
+}
+
+.text-theme-primary {
+    color: var(--text-primary) !important;
+}
+
+.text-theme-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.text-theme-tertiary {
+    color: var(--text-tertiary) !important;
+}
+
+/* Theme-aware text-white - becomes dark in light mode for better readability */
+html[data-theme="midnight"] .text-white,
+html:not([data-theme]) .text-white {
+    color: #ffffff !important;
+}
+
+/* White text becomes primary text color in light mode for better contrast on light backgrounds */
+html[data-theme="clean-office"] .text-white {
+    color: var(--text-primary) !important;
+}
+
+/* Keep white text on accent-colored buttons (they have dark backgrounds) */
+html[data-theme="clean-office"] .bg-blue-600.text-white,
+html[data-theme="clean-office"] .bg-blue-600:hover.text-white {
+    color: #ffffff !important;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -293,6 +343,24 @@ html[data-theme="clean-office"] .text-gray-500 {
     color: var(--text-tertiary) !important;
 }
 
+html[data-theme="midnight"] .text-gray-300,
+html:not([data-theme]) .text-gray-300 {
+    color: var(--text-secondary) !important;
+}
+
+html[data-theme="clean-office"] .text-gray-300 {
+    color: var(--text-secondary) !important;
+}
+
+html[data-theme="midnight"] .text-slate-500,
+html:not([data-theme]) .text-slate-500 {
+    color: #64748b !important;
+}
+
+html[data-theme="clean-office"] .text-slate-500 {
+    color: var(--text-tertiary) !important;
+}
+
 /* Accent colors */
 html[data-theme="midnight"] .text-blue-400,
 html:not([data-theme]) .text-blue-400 {
@@ -330,6 +398,8 @@ html[data-theme="clean-office"] .bg-gray-800 {
 /* GitHub Activity Graph Styling */
 .github-activity-container {
     width: 100%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
 }
 
 #github-activity-graph {
@@ -358,19 +428,32 @@ html[data-theme="clean-office"] .github-activity-container .bg-gray-700 {
     background-color: var(--bg-tertiary) !important;
 }
 
-/* Code block styling for industrial theme */
-pre[class*="language-"] {
+/* Code block styling with theme support */
+html[data-theme="midnight"] pre[class*="language-"],
+html:not([data-theme]) pre[class*="language-"] {
     background-color: #0f172a !important;
     color: #e2e8f0 !important;
-    border: 1px solid #334155;
-    border-left: 3px solid #3b82f6;
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent-color);
     padding: 1.25rem;
     border-radius: 0.5rem;
     overflow-x: auto;
     margin: 1.5rem 0;
 }
 
-code[class*="language-"] {
+html[data-theme="clean-office"] pre[class*="language-"] {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent-color);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+html[data-theme="midnight"] code[class*="language-"],
+html:not([data-theme]) code[class*="language-"] {
     background-color: transparent;
     color: #e2e8f0;
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
@@ -378,10 +461,27 @@ code[class*="language-"] {
     line-height: 1.6;
 }
 
+html[data-theme="clean-office"] code[class*="language-"] {
+    background-color: transparent;
+    color: var(--text-primary);
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+html[data-theme="midnight"] :not(pre) > code[class*="language-"],
+html:not([data-theme]) :not(pre) > code[class*="language-"] {
     background-color: #1e293b;
     color: #60a5fa;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+html[data-theme="clean-office"] :not(pre) > code[class*="language-"] {
+    background-color: var(--bg-tertiary);
+    color: var(--accent-color);
     padding: 0.125rem 0.375rem;
     border-radius: 0.25rem;
     font-size: 0.875rem;
@@ -411,13 +511,14 @@ code[class*="language-"] {
 
 /* Category card hover effects with blue glow */
 .category-card {
-    border: 1px solid #334155;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease-in-out;
 }
 
 .category-card:hover {
-    border-color: #3b82f6;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px var(--card-hover-shadow);
     transform: translateY(-4px);
 }
 
