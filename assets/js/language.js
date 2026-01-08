@@ -17,15 +17,21 @@ class LanguageManager {
     }
 
     initializeLanguage() {
-        // Wait a bit to ensure DOM is fully ready
+        // Check if we need to hide content for English
+        const needsHiding = this.currentLang === 'en';
+        
+        // Wait a bit to ensure DOM is fully ready, but less delay for English
+        const delay = needsHiding ? 0 : 10;
         setTimeout(() => {
-            // Set initial language
+            // Set initial language (this is the first load)
+            this.isInitialLoad = true;
             this.setLanguage(this.currentLang);
+            this.isInitialLoad = false;
             
             // Update language switcher and attach event listeners
             this.updateLanguageSwitcher();
             this.attachEventListeners();
-        }, 10);
+        }, delay);
     }
 
     getStoredLanguage() {
@@ -94,6 +100,9 @@ class LanguageManager {
             return;
         }
         
+        // On initial load with 'en', apply translations immediately without fade to prevent flash
+        const isInitialEnglishLoad = this.isInitialLoad && this.currentLang === 'en';
+        
         elements.forEach(element => {
             // Skip title element as it's handled above
             if (element.tagName === 'TITLE') return;
@@ -104,49 +113,88 @@ class LanguageManager {
             const translation = this.getTranslation(key);
             
             if (translation !== null && translation !== undefined) {
-                // Add fade transition
-                const originalOpacity = element.style.opacity || '1';
-                element.style.opacity = '0';
-                element.style.transition = 'opacity 0.2s ease-in-out';
-                
-                setTimeout(() => {
-                    // Update text content or innerHTML based on element type
-                    if (element.tagName === 'INPUT' && (element.type === 'button' || element.type === 'submit')) {
-                        element.value = translation;
-                    } else if (element.hasAttribute('placeholder')) {
-                        element.placeholder = translation;
-                    } else if (element.tagName === 'A' || element.tagName === 'BUTTON') {
-                        // For links and buttons, preserve any child elements but update text
-                        const children = element.children;
-                        if (children.length === 0) {
-                            element.textContent = translation;
-                        } else {
-                            // If there are child elements, find text nodes or update first text node
-                            let textNode = null;
-                            for (let node of element.childNodes) {
-                                if (node.nodeType === Node.TEXT_NODE) {
-                                    textNode = node;
-                                    break;
-                                }
-                            }
-                            if (textNode) {
-                                textNode.textContent = translation;
-                            } else {
-                                // If no text node, prepend text
-                                element.insertBefore(document.createTextNode(translation), element.firstChild);
-                            }
-                        }
-                    } else {
-                        element.textContent = translation;
-                    }
+                if (isInitialEnglishLoad) {
+                    // On initial load with English, apply translation immediately without fade
+                    this.applyTranslation(element, translation);
+                    // Mark as ready immediately to show content
+                    element.classList.add('i18n-ready');
+                } else {
+                    // On language switch, use fade transition
+                    const originalOpacity = element.style.opacity || '1';
+                    element.style.opacity = '0';
+                    element.style.transition = 'opacity 0.2s ease-in-out';
                     
-                    // Fade in
-                    element.style.opacity = '1';
-                }, 100);
+                    setTimeout(() => {
+                        this.applyTranslation(element, translation);
+                        // Mark as ready
+                        element.classList.add('i18n-ready');
+                        // Fade in
+                        element.style.opacity = '1';
+                    }, 100);
+                }
             } else {
                 console.warn(`Translation not found for key: ${key}`);
+                // Even if translation not found, mark as ready to avoid permanent hiding
+                element.classList.add('i18n-ready');
             }
         });
+        
+        // Ensure all elements are marked as ready after translation
+        // This handles cases where translation might have been applied but class wasn't added
+        if (isInitialEnglishLoad) {
+            // Immediate marking for faster display
+            requestAnimationFrame(() => {
+                elements.forEach(element => {
+                    if (element.tagName !== 'TITLE' && !element.classList.contains('i18n-ready')) {
+                        element.classList.add('i18n-ready');
+                    }
+                });
+            });
+        }
+        
+        // Fallback: Ensure elements are visible after a short timeout even if something goes wrong
+        if (this.currentLang === 'en') {
+            setTimeout(() => {
+                elements.forEach(element => {
+                    if (element.tagName !== 'TITLE' && !element.classList.contains('i18n-ready')) {
+                        console.warn('Adding i18n-ready fallback for element:', element);
+                        element.classList.add('i18n-ready');
+                    }
+                });
+            }, 500);
+        }
+    }
+    
+    applyTranslation(element, translation) {
+        // Update text content or innerHTML based on element type
+        if (element.tagName === 'INPUT' && (element.type === 'button' || element.type === 'submit')) {
+            element.value = translation;
+        } else if (element.hasAttribute('placeholder')) {
+            element.placeholder = translation;
+        } else if (element.tagName === 'A' || element.tagName === 'BUTTON') {
+            // For links and buttons, preserve any child elements but update text
+            const children = element.children;
+            if (children.length === 0) {
+                element.textContent = translation;
+            } else {
+                // If there are child elements, find text nodes or update first text node
+                let textNode = null;
+                for (let node of element.childNodes) {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        textNode = node;
+                        break;
+                    }
+                }
+                if (textNode) {
+                    textNode.textContent = translation;
+                } else {
+                    // If no text node, prepend text
+                    element.insertBefore(document.createTextNode(translation), element.firstChild);
+                }
+            }
+        } else {
+            element.textContent = translation;
+        }
     }
 
     getTranslation(key) {

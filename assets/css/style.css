@@ -1,5 +1,24 @@
 /* Custom styles for portfolio with theme support */
 
+/* Hide translated content until language is applied - prevents flash of wrong language */
+html[lang="en"] [data-i18n]:not(.i18n-ready) {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: auto !important; /* Preserve layout */
+}
+
+html[lang="en"] [data-i18n].i18n-ready {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: opacity 0.15s ease-in-out;
+}
+
+/* For Greek (default), always show - no hiding needed */
+html[lang="el"] [data-i18n] {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* Smooth transitions for language switching */
 [data-i18n] {
     transition: opacity 0.2s ease-in-out;

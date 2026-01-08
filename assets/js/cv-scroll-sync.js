@@ -16,6 +16,7 @@
     let containerHeight = 0;
     let viewportHeight = 0;
     let navHeight = 0;
+    let lastScrollY = 0;
 
     function initScrollSync() {
         // Find the containers
@@ -34,6 +35,9 @@
 
         // Calculate initial positions and heights
         updateDimensions();
+
+        // Initialize lastScrollY
+        lastScrollY = window.scrollY;
 
         // Listen to window scroll events
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -71,6 +75,10 @@
         if (isUpdating) return;
 
         const scrollY = window.scrollY;
+        
+        // Determine scroll direction
+        const scrollDirection = scrollY > lastScrollY ? 'down' : (scrollY < lastScrollY ? 'up' : 'none');
+        lastScrollY = scrollY;
 
         // Calculate how much the container section has scrolled from its initial position
         const containerScrollProgress = Math.max(0, scrollY - containerInitialTop);
@@ -90,37 +98,55 @@
             return;
         }
 
-        // Calculate scroll ratio based on main content progress (0 to 1)
-        let scrollRatio = 0;
+        // Calculate scroll progress for main content (0 to 1)
+        let mainContentScrollProgress = 0;
         if (mainContentScrollableDistance > 0) {
-            scrollRatio = Math.min(1, Math.max(0, containerScrollProgress / mainContentScrollableDistance));
+            mainContentScrollProgress = Math.min(1, Math.max(0, containerScrollProgress / mainContentScrollableDistance));
         }
 
-        // Calculate target scroll offset for sidebar using transform
-        const sidebarTargetOffset = scrollRatio * sidebarScrollableDistance;
+        // Calculate scroll progress for sidebar based on main content (0 to 1)
+        let sidebarScrollProgress = mainContentScrollProgress;
 
-        // Check if sidebar has reached its end
-        const sidebarReachedEnd = scrollRatio >= 1;
-        const sidebarReachedStart = scrollRatio <= 0;
+        // Check states
+        const mainContentReachedEnd = mainContentScrollProgress >= 1;
+        const mainContentReachedTop = mainContentScrollProgress <= 0;
+        const sidebarReachedEnd = sidebarScrollProgress >= 1;
+        const sidebarReachedStart = sidebarScrollProgress <= 0;
 
         isUpdating = true;
 
-        if (sidebarReachedEnd) {
-            // Sidebar has reached its end - keep it at maximum offset
-            sidebar.style.position = 'relative';
-            sidebar.style.top = 'auto';
-            sidebar.style.transform = `translateY(${sidebarScrollableDistance}px)`;
-        } else if (sidebarReachedStart) {
-            // Sidebar at start
-            sidebar.style.position = 'relative';
-            sidebar.style.top = 'auto';
-            sidebar.style.transform = 'translateY(0)';
+        let sidebarTargetOffset = 0;
+
+        if (scrollDirection === 'down') {
+            // Scrolling down
+            if (sidebarReachedEnd && !mainContentReachedEnd) {
+                // Sidebar has reached its end, but main content hasn't - keep sidebar at end
+                sidebarTargetOffset = sidebarScrollableDistance;
+            } else {
+                // Normal proportional sync
+                sidebarTargetOffset = sidebarScrollProgress * sidebarScrollableDistance;
+            }
+        } else if (scrollDirection === 'up') {
+            // Scrolling up
+            if (mainContentReachedTop) {
+                // Main content has reached top - sidebar should follow to top
+                sidebarTargetOffset = 0;
+            } else if (sidebarReachedEnd && !mainContentReachedEnd) {
+                // Sidebar was at end, main content hasn't reached top yet - keep sidebar at end
+                sidebarTargetOffset = sidebarScrollableDistance;
+            } else {
+                // Normal proportional sync
+                sidebarTargetOffset = sidebarScrollProgress * sidebarScrollableDistance;
+            }
         } else {
-            // Normal sync - use transform to move sidebar proportionally
-            sidebar.style.position = 'relative';
-            sidebar.style.top = 'auto';
-            sidebar.style.transform = `translateY(${sidebarTargetOffset}px)`;
+            // No direction change (initial load or no movement)
+            sidebarTargetOffset = sidebarScrollProgress * sidebarScrollableDistance;
         }
+
+        // Apply the transform
+        sidebar.style.position = 'relative';
+        sidebar.style.top = 'auto';
+        sidebar.style.transform = `translateY(${sidebarTargetOffset}px)`;
 
         requestAnimationFrame(() => {
             isUpdating = false;

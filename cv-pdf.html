@@ -679,9 +679,20 @@
                 // Force a reflow to ensure styles are applied
                 void element.offsetHeight;
                 
-                // Check if element has content
-                const height = element.scrollHeight || element.offsetHeight;
-                const width = element.scrollWidth || element.offsetWidth || 794;
+                // Check if element has content - calculate full height including margins and padding
+                const computedStyle = window.getComputedStyle(element);
+                const paddingTop = parseInt(computedStyle.paddingTop) || 0;
+                const paddingBottom = parseInt(computedStyle.paddingBottom) || 0;
+                const marginTop = parseInt(computedStyle.marginTop) || 0;
+                const marginBottom = parseInt(computedStyle.marginBottom) || 0;
+                
+                const rawHeight = element.scrollHeight || element.offsetHeight || element.clientHeight;
+                // Add all margins/padding plus extra safety margin
+                const totalPadding = paddingTop + paddingBottom + marginTop + marginBottom;
+                const height = rawHeight > 0 ? rawHeight + totalPadding + 100 : 0; // Extra 100px for safety
+                
+                const rawWidth = element.scrollWidth || element.offsetWidth || element.clientWidth;
+                const width = rawWidth > 0 ? rawWidth : 794;
                 
                 if (height === 0 || width === 0) {
                     console.error('PDF content element has no dimensions', { 
@@ -696,7 +707,13 @@
                     return;
                 }
                 
-                console.log('Generating PDF with dimensions:', { width, height, scrollHeight: element.scrollHeight });
+                console.log('Generating PDF with dimensions:', { 
+                    width, 
+                    height, 
+                    scrollHeight: element.scrollHeight, 
+                    offsetHeight: element.offsetHeight,
+                    clientHeight: element.clientHeight
+                });
                 
                 const opt = {
                     margin: [10, 10, 10, 10],
@@ -711,10 +728,15 @@
                         logging: true,
                         letterRendering: true,
                         backgroundColor: '#ffffff',
+                        width: width,
+                        height: height,
+                        windowWidth: width,
+                        windowHeight: height,
                         scrollX: 0,
                         scrollY: 0,
                         allowTaint: false,
                         foreignObjectRendering: true,
+                        removeContainer: false,
                         onclone: function(clonedDoc) {
                             // Force white background
                             const clonedBody = clonedDoc.body;
@@ -739,8 +761,9 @@
                                 clonedElement.style.boxSizing = 'border-box';
                                 clonedElement.style.backgroundColor = '#ffffff';
                                 clonedElement.style.overflow = 'visible';
-                                clonedElement.style.height = 'auto';
-                                clonedElement.style.minHeight = '100px';
+                                clonedElement.style.height = height + 'px';
+                                clonedElement.style.minHeight = height + 'px';
+                                clonedElement.style.maxHeight = 'none';
                                 
                                 console.log('Cloned element dimensions:', {
                                     width: clonedElement.offsetWidth,
@@ -884,7 +907,22 @@
                                     grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
                                     grid.style.gap = '15px';
                                     grid.style.width = '100%';
+                                    grid.style.marginBottom = '20px';
                                 });
+                                
+                                // Ensure timeline container styling
+                                const timelineContainers = clonedElement.querySelectorAll('.timeline-container');
+                                timelineContainers.forEach(container => {
+                                    container.style.position = 'relative';
+                                    container.style.paddingLeft = '2rem';
+                                });
+                                
+                                // Force reflow to ensure all dimensions are calculated
+                                clonedElement.offsetHeight;
+                                const finalHeight = clonedElement.scrollHeight || clonedElement.offsetHeight;
+                                if (finalHeight > height) {
+                                    console.log('Adjusted height from', height, 'to', finalHeight);
+                                }
                                 
                                 // Ensure tech project cards styling
                                 const techCards = clonedElement.querySelectorAll('.tech-project-card');
@@ -937,10 +975,10 @@
                         precision: 2
                     },
                     pagebreak: { 
-                        mode: ['avoid-all', 'css', 'legacy'],
+                        mode: ['css', 'legacy'],
                         before: '.page-break-before',
                         after: '.page-break-after',
-                        avoid: ['.timeline-item', '.job-entry', '.education-entry', '.tech-project-card']
+                        avoid: ['.timeline-item', '.job-entry', '.education-entry', '.tech-project-card', '.section', '.section-title']
                     }
                 };
                 
