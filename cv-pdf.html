@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Κωνσταντίνος Λαθύρης</title>
+    <title data-i18n="pageTitleCV">CV - Κωνσταντίνος Λαθύρης</title>
     <style>
         @media print {
             @page {
@@ -27,10 +27,11 @@
         #pdf-content {
             background: white;
             padding: 20px;
-            max-width: 210mm;
+            width: 210mm;
+            max-width: 100%;
             margin: 0 auto;
-            width: 100%;
             box-sizing: border-box;
+            overflow: visible;
         }
         .header {
             text-align: center;
@@ -138,6 +139,9 @@
         .skills-grid {
             display: block;
         }
+        .skills-grid .skill-category {
+            margin-bottom: 12px;
+        }
         .skill-category {
             margin-bottom: 15px;
             page-break-inside: avoid;
@@ -147,22 +151,41 @@
             color: #1e293b;
             margin-bottom: 5px;
         }
-        .main-content {
+        .cv-container {
+            display: table;
             width: 100%;
+            table-layout: fixed;
+        }
+        .main-content {
+            display: table-cell;
+            width: 66.666%;
+            vertical-align: top;
+            padding-right: 20px;
         }
         .sidebar {
-            width: 100%;
-            margin-top: 30px;
+            display: table-cell;
+            width: 33.333%;
+            vertical-align: top;
+            padding-left: 20px;
         }
         .summary {
             text-align: justify;
             line-height: 1.8;
         }
         .about-grid {
-            display: block;
+            display: table;
+            width: 100%;
+            table-layout: fixed;
         }
         .about-grid > div {
-            margin-bottom: 20px;
+            display: table-cell;
+            width: 50%;
+            vertical-align: top;
+            padding-right: 15px;
+        }
+        .about-grid > div:last-child {
+            padding-right: 0;
+            padding-left: 15px;
         }
         .tech-projects {
             margin-bottom: 15px;
@@ -177,40 +200,34 @@
 <body>
     <div id="pdf-content">
         <div class="header">
-            <h1>Κωνσταντίνος Λαθύρης</h1>
-            <div class="title">Industrial Operations Manager | IoT & Digital Tech Enthusiast</div>
+            <h1 data-i18n="cvName">Κωνσταντίνος Λαθύρης</h1>
+            <div class="title" data-i18n="cvTitle">Industrial Operations Manager | IoT & Digital Tech Enthusiast</div>
         </div>
 
-        <div class="contact-info">
-            <div>📍 Λαμία, Ελλάδα</div>
-            <div>📞 (+30) 6974030956</div>
-            <div>✉️ lathyris.kon@gmail.com</div>
-            <div>🌐 kwstas147.github.io</div>
-            <div>💼 LinkedIn: Konstantinos Lathyris</div>
-        </div>
 
+        <div class="cv-container">
         <div class="main-content">
             <div class="section">
-                <div class="section-title">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ</div>
+                <div class="section-title" data-i18n="cvSectionSummary">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ</div>
                 <div class="summary">
-                    Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων (Ασφαλτικά Παρασκευαστήρια). Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την "hands-on" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD). Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού. Επιπλέον, διαχειρίζομαι self-hosted infrastructure με Proxmox και Docker containers.
+                    <span data-i18n="cvSummaryText">Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων (Ασφαλτικά Παρασκευαστήρια). Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την "hands-on" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD). Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού.</span> <span data-i18n="cvSummaryHomelab" class="text-gray-400">Επιπλέον, διαχειρίζομαι self-hosted infrastructure με Proxmox και Docker containers.</span>
                 </div>
             </div>
 
             <div class="section">
-                <div class="section-title">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</div>
+                <div class="section-title" data-i18n="cvAboutTitle">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</div>
                 <div class="about-grid">
                     <div>
-                        <h4 style="font-weight: bold; color: #1e293b; margin-bottom: 10px;">Τεχνολογίες Ανάπτυξης</h4>
+                        <h4 style="font-weight: bold; color: #1e293b; margin-bottom: 10px;" data-i18n="cvAboutDevSkills">Τεχνολογίες Ανάπτυξης</h4>
                         <div style="font-size: 14px; line-height: 1.8;">
-                            <div><strong>Mobile Development:</strong> Cross-platform development με Flutter/Dart, React Native, και native Android με Kotlin</div>
-                            <div style="margin-top: 8px;"><strong>Development Tools:</strong> VS Code, Cursor (AI-powered IDE), Android Studio</div>
-                            <div style="margin-top: 8px;"><strong>AI-Assisted Development:</strong> Χρήση τεχνητής νοημοσύνης για efficient development workflows</div>
+                            <div><strong data-i18n="cvAboutDevSkillsMobileTitle">Mobile Development:</strong> <span data-i18n="cvAboutDevSkillsMobile">Cross-platform development με Flutter/Dart, React Native, και native Android με Kotlin</span></div>
+                            <div style="margin-top: 8px;"><strong data-i18n="cvAboutDevSkillsToolsTitle">Development Tools:</strong> <span data-i18n="cvAboutDevSkillsTools">VS Code, Cursor (AI-powered IDE), Android Studio</span></div>
+                            <div style="margin-top: 8px;"><strong data-i18n="cvAboutDevSkillsAITitle">AI-Assisted Development:</strong> <span data-i18n="cvAboutDevSkillsAI">Χρήση τεχνητής νοημοσύνης για efficient development workflows</span></div>
                         </div>
                     </div>
                     <div>
-                        <h4 style="font-weight: bold; color: #1e293b; margin-bottom: 10px;">Προσωπικά Projects</h4>
-                        <p style="font-size: 14px; line-height: 1.8;">
+                        <h4 style="font-weight: bold; color: #1e293b; margin-bottom: 10px;" data-i18n="cvAboutPersonalProjects">Προσωπικά Projects</h4>
+                        <p style="font-size: 14px; line-height: 1.8;" data-i18n="cvAboutPersonalProjectsDesc">
                             Αναπτύσσω πολλαπλά projects στον ελεύθερο χρόνο μου, εξερευνώντας νέες τεχνολογίες και λύσεις. Κάθε project είναι μια ευκαιρία για μάθηση και πειραματισμό με σύγχρονες πλατφόρμες και frameworks.
                         </p>
                     </div>
@@ -218,196 +235,228 @@
             </div>
 
             <div class="section">
-                <div class="section-title">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ</div>
+                <div class="section-title" data-i18n="cvSectionExperience">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ</div>
                 
                 <div class="job-entry">
                     <div class="job-header">
-                        <div class="job-title">Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου</div>
-                        <div class="job-date">04/2022 – Σήμερα</div>
+                        <div class="job-title" data-i18n="cvJob1Title">Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου</div>
+                        <div class="job-date" data-i18n="cvJob1Period">04/2022 – Σήμερα</div>
                     </div>
-                    <div class="job-company">ΤΕΡΝΑ Α.Ε.</div>
+                    <div class="job-company" data-i18n="cvJob1Company">ΤΕΡΝΑ Α.Ε.</div>
                     <div class="job-description">
                         <ul>
-                            <li>Άμεση λειτουργία, επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.</li>
-                            <li>Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.</li>
-                            <li>Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.</li>
+                            <li data-i18n="cvJob1Desc1">Άμεση λειτουργία, επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.</li>
+                            <li data-i18n="cvJob1Desc2">Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.</li>
+                            <li data-i18n="cvJob1Desc3">Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="job-entry">
                     <div class="job-header">
-                        <div class="job-title">Χειριστής Μηχανημάτων Έργου</div>
-                        <div class="job-date">12/2021 – 03/2022</div>
+                        <div class="job-title" data-i18n="cvJob2Title">Χειριστής Μηχανημάτων Έργου</div>
+                        <div class="job-date" data-i18n="cvJob2Period">12/2021 – 03/2022</div>
                     </div>
-                    <div class="job-company">Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)</div>
+                    <div class="job-company" data-i18n="cvJob2Company">Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)</div>
                     <div class="job-description">
                         <ul>
-                            <li>Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο.</li>
+                            <li data-i18n="cvJob2Desc1">Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="job-entry">
                     <div class="job-header">
-                        <div class="job-title">Υπεύθυνος Παραγωγής & Χειριστής Λατομικού Συγκροτήματος</div>
-                        <div class="job-date">09/2019 – 12/2022</div>
+                        <div class="job-title" data-i18n="cvJob3Title">Υπεύθυνος Παραγωγής & Χειριστής Λατομικού Συγκροτήματος</div>
+                        <div class="job-date" data-i18n="cvJob3Period">09/2019 – 12/2022</div>
                     </div>
-                    <div class="job-company">ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.</div>
+                    <div class="job-company" data-i18n="cvJob3Company">ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.</div>
                     <div class="job-description">
                         <ul>
-                            <li>Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών.</li>
+                            <li data-i18n="cvJob3Desc1">Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="job-entry">
                     <div class="job-header">
-                        <div class="job-title">Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας & Διαχείρισης</div>
-                        <div class="job-date">06/2000 – 08/2019</div>
+                        <div class="job-title" data-i18n="cvJob4Title">Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας & Διαχείρισης</div>
+                        <div class="job-date" data-i18n="cvJob4Period">06/2000 – 08/2019</div>
                     </div>
-                    <div class="job-company">ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ</div>
+                    <div class="job-company" data-i18n="cvJob4Company">ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ</div>
                     <div class="job-description">
                         <ul>
-                            <li>19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος.</li>
-                            <li>Διοικητικές Ικανότητες: Διαχείριση ανθρώπινου δυναμικού, προμηθειών, logistics και έκδοση παραστατικών.</li>
+                            <li data-i18n="cvJob4Desc1">19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος.</li>
+                            <li data-i18n="cvJob4Desc2">Διοικητικές Ικανότητες: Διαχείριση ανθρώπινου δυναμικού, προμηθειών, logistics και έκδοση παραστατικών.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="job-entry">
                     <div class="job-header">
-                        <div class="job-title">Τεχνικός Ψυκτικών Εφαρμογών & Κατασκευών Inox</div>
-                        <div class="job-date">01/2000 – 05/2000</div>
+                        <div class="job-title" data-i18n="cvJob5Title">Τεχνικός Ψυκτικών Εφαρμογών & Κατασκευών Inox</div>
+                        <div class="job-date" data-i18n="cvJob5Period">01/2000 – 05/2000</div>
                     </div>
-                    <div class="job-company">Ζυγούρης Κ.</div>
+                    <div class="job-company" data-i18n="cvJob5Company">Ζυγούρης Κ.</div>
                     <div class="job-description">
                         <ul>
-                            <li>Κατασκευή επαγγελματικού εξοπλισμού και εγκατάσταση ψυκτικών συστημάτων.</li>
+                            <li data-i18n="cvJob5Desc1">Κατασκευή επαγγελματικού εξοπλισμού και εγκατάσταση ψυκτικών συστημάτων.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="job-entry">
                     <div class="job-header">
-                        <div class="job-title">Βοηθός Ηλεκτρολόγου Εσωτερικών Εγκαταστάσεων</div>
-                        <div class="job-date">02/1997 – 04/1998</div>
+                        <div class="job-title" data-i18n="cvJob6Title">Βοηθός Ηλεκτρολόγου Εσωτερικών Εγκαταστάσεων</div>
+                        <div class="job-date" data-i18n="cvJob6Period">02/1997 – 04/1998</div>
                     </div>
-                    <div class="job-company">Τσάκας Ι.</div>
+                    <div class="job-company" data-i18n="cvJob6Company">Τσάκας Ι.</div>
                 </div>
             </div>
 
             <div class="section">
-                <div class="section-title">ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ</div>
+                <div class="section-title" data-i18n="cvSectionEducation">ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ</div>
                 
                 <div class="education-entry">
-                    <div class="education-title">Τεχνικός Εσωτερικών Ηλεκτρικών Εγκαταστάσεων</div>
-                    <div class="education-institution">ΙΕΚ ΟΜΗΡΟΣ</div>
-                    <div>2024 – 2025 (Σε εξέλιξη)</div>
+                    <div class="education-title" data-i18n="cvEdu1Title">Τεχνικός Εσωτερικών Ηλεκτρικών Εγκαταστάσεων</div>
+                    <div class="education-institution" data-i18n="cvEdu1Institution">ΙΕΚ ΟΜΗΡΟΣ</div>
+                    <div data-i18n="cvEdu1Period">2024 – 2025 (Σε εξέλιξη)</div>
                 </div>
 
                 <div class="education-entry">
-                    <div class="education-title">Προηγμένες Τεχνολογίες Δικτύων & Προγραμματισμός</div>
-                    <div class="education-institution">E-Learning Εθνικό & Καποδιστριακό Πανεπιστήμιο Αθηνών (ΕΚΠΑ)</div>
+                    <div class="education-title" data-i18n="cvEdu2Title">Προηγμένες Τεχνολογίες Δικτύων & Προγραμματισμός</div>
+                    <div class="education-institution" data-i18n="cvEdu2Institution">E-Learning Εθνικό & Καποδιστριακό Πανεπιστήμιο Αθηνών (ΕΚΠΑ)</div>
                     <div style="margin-top: 10px;">
-                        <span class="badge">Advanced Network Technologies (2024-2025)</span>
-                        <span class="badge">Programming with Python (2023)</span>
-                        <span class="badge">Product Design & 3D Printing Specialization (2021)</span>
+                        <span class="badge" data-i18n="cvEdu2Badge1">Advanced Network Technologies (2024-2025)</span>
+                        <span class="badge" data-i18n="cvEdu2Badge2">Programming with Python (2023)</span>
+                        <span class="badge" data-i18n="cvEdu2Badge3">Product Design & 3D Printing Specialization (2021)</span>
                     </div>
                 </div>
 
                 <div class="education-entry">
-                    <div class="education-title">Βασική Τεχνική Εκπαίδευση</div>
-                    <div class="education-institution">Ηλεκτρολόγος Εσωτερικών Εγκαταστάσεων</div>
-                    <div>2ο ΤΕΛ Λαμίας</div>
-                    <div style="margin-top: 5px;">Δίπλωμα & Πιστοποίηση Χειριστή Μηχανημάτων Έργου (Όλες οι κατηγορίες)</div>
+                    <div class="education-title" data-i18n="cvEdu3Title">Βασική Τεχνική Εκπαίδευση</div>
+                    <div class="education-institution" data-i18n="cvEdu3Institution">Ηλεκτρολόγος Εσωτερικών Εγκαταστάσεων</div>
+                    <div data-i18n="cvEdu3Location">2ο ΤΕΛ Λαμίας</div>
+                    <div style="margin-top: 5px;" data-i18n="cvEdu3Cert">Δίπλωμα & Πιστοποίηση Χειριστή Μηχανημάτων Έργου (Όλες οι κατηγορίες)</div>
                 </div>
             </div>
 
             <div class="section">
-                <div class="section-title">ΤΕΧΝΟΛΟΓΙΚΑ PROJECT & ΚΑΙΝΟΤΟΜΙΑ</div>
-                <div style="font-style: italic; margin-bottom: 15px; color: #64748b;">Προσωπικά Project & Έρευνα (R&D)</div>
+                <div class="section-title" data-i18n="cvSectionTechProjects">ΤΕΧΝΟΛΟΓΙΚΑ PROJECT & ΚΑΙΝΟΤΟΜΙΑ</div>
+                <div style="font-style: italic; margin-bottom: 15px; color: #64748b;" data-i18n="cvTechProjectsSubtitle">Προσωπικά Project & Έρευνα (R&D)</div>
                 
                 <div class="tech-projects">
-                    <strong>Smart Home Ecosystem:</strong> Σχεδιασμός και υλοποίηση κεντρικού συστήματος αυτοματισμού με Home Assistant και ESPHome. Ανάπτυξη custom αισθητήρων (ESP32) για την παρακολούθηση κρίσιμων παραμέτρων περιβάλλοντος.
+                    <strong data-i18n="cvTechProject1Title">Smart Home Ecosystem:</strong> <span data-i18n="cvTechProject1Desc">Σχεδιασμός και υλοποίηση κεντρικού συστήματος αυτοματισμού με Home Assistant και ESPHome. Ανάπτυξη custom αισθητήρων (ESP32) για την παρακολούθηση κρίσιμων παραμέτρων περιβάλλοντος.</span>
                 </div>
                 
                 <div class="tech-projects">
-                    <strong>Additive Manufacturing (3D Printing):</strong> Σχεδιασμός εξαρτημάτων στο Fusion360 και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία.
+                    <strong data-i18n="cvTechProject2Title">Additive Manufacturing (3D Printing):</strong> <span data-i18n="cvTechProject2Desc">Σχεδιασμός εξαρτημάτων στο Fusion360 και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία.</span>
                 </div>
                 
                 <div class="tech-projects">
-                    <strong>Software Development:</strong> Ανάπτυξη εφαρμογών σε Python για την αυτοματοποίηση υπολογισμών και τη διαχείριση δεδομένων, εφαρμόζοντας τις γνώσεις από τα προγράμματα του ΕΚΠΑ.
+                    <strong data-i18n="cvTechProject3Title">Software Development:</strong> <span data-i18n="cvTechProject3Desc">Ανάπτυξη εφαρμογών σε Python για την αυτοματοποίηση υπολογισμών και τη διαχείριση δεδομένων, εφαρμόζοντας τις γνώσεις από τα προγράμματα του ΕΚΠΑ.</span>
                 </div>
                 
                 <div class="tech-projects">
-                    <strong>AI-Assisted Development:</strong> Χρήση τεχνητής νοημοσύνης για efficient code generation, debugging, και application development workflows.
+                    <strong>AI-Assisted Development:</strong> <span data-i18n="cvTechProject3AIDev">Χρήση τεχνητής νοημοσύνης για efficient code generation, debugging, και application development workflows.</span>
                 </div>
                 
                 <div style="font-size: 12px; color: #64748b; font-style: italic; margin-top: 10px;">
-                    <strong>Self-hosted Infrastructure:</strong> Proxmox home lab με Tailscale VPN, Debian Docker stack (N8N, Nextcloud, Portainer, WordPress, pgAdmin, Flame, PostgreSQL).
+                    <strong>Self-hosted Infrastructure:</strong> <span data-i18n="cvTechProject3Homelab">Proxmox home lab με Tailscale VPN, Debian Docker stack (N8N, Nextcloud, Portainer, WordPress, pgAdmin, Flame, PostgreSQL).</span>
                 </div>
             </div>
         </div>
 
         <div class="sidebar">
             <div class="section">
-                <div class="section-title">ΤΕΧΝΙΚΕΣ & ΨΗΦΙΑΚΕΣ ΔΕΞΙΟΤΗΤΕΣ</div>
+                <div class="section-title" data-i18n="cvSectionContact">ΕΠΙΚΟΙΝΩΝΙΑ</div>
+                <div style="font-size: 14px; line-height: 1.8;">
+                    <div style="margin-bottom: 8px;">📍 <span data-i18n="cvLocation">Λαμία, Ελλάδα</span></div>
+                    <div style="margin-bottom: 8px;">📞 <span data-i18n="cvPhone">(+30) 6974030956</span></div>
+                    <div style="margin-bottom: 8px;">✉️ <span data-i18n="cvEmail">lathyris.kon@gmail.com</span></div>
+                    <div style="margin-bottom: 8px;">💼 LinkedIn: <span data-i18n="cvLinkedIn">Konstantinos Lathyris</span></div>
+                    <div style="margin-bottom: 8px;">🌐 <span data-i18n="cvPortfolio">kwstas147.github.io</span></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title" data-i18n="cvSectionSkills">ΤΕΧΝΙΚΕΣ & ΨΗΦΙΑΚΕΣ ΔΕΞΙΟΤΗΤΕΣ</div>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h4>Industrial</h4>
-                        <div>Χειρισμός & Συντήρηση Βαρέων Μηχανημάτων, Διαχείριση Παραγωγής, Ηλεκτρολογικό Σχέδιο</div>
+                        <h4 data-i18n="cvSkillsIndustrial">Industrial</h4>
+                        <div data-i18n="cvSkillsIndustrialDesc">Χειρισμός & Συντήρηση Βαρέων Μηχανημάτων, Διαχείριση Παραγωγής, Ηλεκτρολογικό Σχέδιο</div>
                     </div>
                     <div class="skill-category">
-                        <h4>Digital Design</h4>
-                        <div>CAD Design (Fusion360), 3D Printing (Slicing & Optimization)</div>
+                        <h4 data-i18n="cvSkillsDigital">Digital Design</h4>
+                        <div data-i18n="cvSkillsDigitalDesc">CAD Design (Fusion360), 3D Printing (Slicing & Optimization)</div>
                     </div>
                     <div class="skill-category">
-                        <h4>Programming & IoT</h4>
-                        <div>Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks</div>
+                        <h4 data-i18n="cvSkillsProgramming">Programming & IoT</h4>
+                        <div data-i18n="cvSkillsProgrammingDesc">Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks</div>
                     </div>
                     <div class="skill-category">
-                        <h4>Mobile Development</h4>
-                        <div>Cross-platform mobile app development (Flutter/Dart, React Native, Kotlin)</div>
+                        <h4 data-i18n="cvSkillsMobile">Mobile Development</h4>
+                        <div data-i18n="cvSkillsMobileDesc">Cross-platform mobile app development (Flutter/Dart, React Native, Kotlin)</div>
                     </div>
                     <div class="skill-category">
-                        <h4>Development Tools</h4>
-                        <div>VS Code, Cursor (AI-powered IDE), Android Studio. AI-assisted development workflows</div>
+                        <h4 data-i18n="cvSkillsDevTools">Development Tools</h4>
+                        <div data-i18n="cvSkillsDevToolsDesc">VS Code, Cursor (AI-powered IDE), Android Studio. AI-assisted development workflows</div>
                     </div>
                     <div class="skill-category">
-                        <h4>Soft Skills</h4>
-                        <div>Ηγεσία ομάδων, Στρατηγικός σχεδιασμός προμηθειών, Διαχείριση κρίσεων σε τεχνικά έργα</div>
+                        <h4 data-i18n="cvSkillsSoft">Soft Skills</h4>
+                        <div data-i18n="cvSkillsSoftDesc">Ηγεσία ομάδων, Στρατηγικός σχεδιασμός προμηθειών, Διαχείριση κρίσεων σε τεχνικά έργα</div>
                     </div>
                 </div>
             </div>
 
             <div class="section">
-                <div class="section-title">ΓΛΩΣΣΕΣ & ΑΔΕΙΕΣ</div>
+                <div class="section-title" data-i18n="cvSectionLanguages">ΓΛΩΣΣΕΣ & ΑΔΕΙΕΣ</div>
                 <div>
-                    <div><strong>Ελληνικά:</strong> Μητρική</div>
-                    <div><strong>Αγγλικά:</strong> Επίπεδο B1</div>
+                    <div><strong data-i18n="cvLangGreek">Ελληνικά:</strong> <span data-i18n="cvLangGreekLevel">Μητρική</span></div>
+                    <div><strong data-i18n="cvLangEnglish">Αγγλικά:</strong> <span data-i18n="cvLangEnglishLevel">Επίπεδο B1</span></div>
                 </div>
                 <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e2e8f0;">
-                    <div><strong>Άδειες Οδήγησης:</strong> A, B, C, D</div>
-                    <div style="font-size: 12px; color: #64748b; margin-top: 5px;">(Πλήρης κάλυψη οχημάτων και μηχανημάτων)</div>
+                    <div><strong data-i18n="cvLicenses">Άδειες Οδήγησης:</strong> <span data-i18n="cvLicensesTypes">A, B, C, D</span></div>
+                    <div style="font-size: 12px; color: #64748b; margin-top: 5px;" data-i18n="cvLicensesNote">(Πλήρης κάλυψη οχημάτων και μηχανημάτων)</div>
                 </div>
                 <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e2e8f0;">
-                    <div><strong>Άδεια Χειριστή Μηχανημάτων Έργου:</strong></div>
-                    <div style="font-size: 13px; margin-top: 5px;">1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β</div>
+                    <div><strong data-i18n="cvMachineOperatorLicense">Άδεια Χειριστή Μηχανημάτων Έργου:</strong></div>
+                    <div style="font-size: 13px; margin-top: 5px;" data-i18n="cvMachineOperatorSpecialties">1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β</div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
     <div class="no-print" style="text-align: center; padding: 20px; background: #f3f4f6; margin: 20px 0; border-radius: 8px;">
+        <div style="margin-bottom: 15px;">
+            <div class="lang-switcher" style="display: inline-flex; gap: 0.25rem;">
+                <button data-lang="el" style="padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; cursor: pointer; border: 1px solid #3b82f6; background: rgba(51, 65, 85, 0.5); color: #cbd5e1;">EL</button>
+                <button data-lang="en" style="padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; cursor: pointer; border: 1px solid #3b82f6; background: rgba(51, 65, 85, 0.5); color: #cbd5e1;">EN</button>
+            </div>
+        </div>
         <button id="downloadBtn" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600;">
             📥 Κατεβάστε το CV ως PDF
         </button>
         <p style="margin-top: 10px; color: #64748b; font-size: 14px;">Η σελίδα είναι βελτιστοποιημένη για εκτύπωση. Κάντε κλικ στο κουμπί για να κατεβάσετε το PDF.</p>
     </div>
 
+    <script src="assets/js/translations.js?v=2"></script>
+    <script src="assets/js/language.js?v=2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
+        // Update html lang attribute when language changes
+        if (window.languageManager) {
+            const originalSetLanguage = window.languageManager.setLanguage.bind(window.languageManager);
+            window.languageManager.setLanguage = function(lang) {
+                originalSetLanguage(lang);
+                document.documentElement.setAttribute('lang', lang);
+            };
+            // Set initial lang
+            const currentLang = window.languageManager.getStoredLanguage() || 'el';
+            document.documentElement.setAttribute('lang', currentLang);
+        }
+        
         document.getElementById('downloadBtn').addEventListener('click', function() {
             const element = document.getElementById('pdf-content');
             const opt = {
@@ -415,16 +464,16 @@
                 filename: 'CV_Konstantinos_Lathyris.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
                 html2canvas: { 
-                    scale: 3,
+                    scale: 2,
                     useCORS: true,
                     logging: false,
                     letterRendering: true,
                     backgroundColor: '#ffffff',
-                    width: element.scrollWidth,
-                    height: element.scrollHeight,
-                    windowWidth: element.scrollWidth,
-                    windowHeight: element.scrollHeight,
-                    removeContainer: true,
+                    width: element.offsetWidth || element.scrollWidth,
+                    height: element.offsetHeight || element.scrollHeight,
+                    windowWidth: element.offsetWidth || element.scrollWidth,
+                    windowHeight: element.offsetHeight || element.scrollHeight,
+                    removeContainer: false,
                     allowTaint: false,
                     foreignObjectRendering: false
                 },
