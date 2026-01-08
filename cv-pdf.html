@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Κωνσταντίνος Λαθύρης</title>
+    <style>
+        @media print {
+            @page {
+                margin: 1.5cm;
+            }
+            body {
+                background: white;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin: 0;
+            color: #1e293b;
+        }
+        .header .title {
+            font-size: 18px;
+            color: #3b82f6;
+            margin: 10px 0;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #3b82f6;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .job-entry {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 5px;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #1e293b;
+        }
+        .job-date {
+            color: #64748b;
+            font-size: 14px;
+        }
+        .job-company {
+            color: #3b82f6;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .job-description {
+            margin-left: 15px;
+        }
+        .job-description ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        .job-description li {
+            margin-bottom: 5px;
+        }
+        .education-entry {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+        .education-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #1e293b;
+        }
+        .education-institution {
+            color: #3b82f6;
+            margin: 5px 0;
+        }
+        .badge {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin: 3px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        .skill-category h4 {
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        @media print {
+            .two-column {
+                display: block;
+            }
+            .sidebar {
+                margin-top: 20px;
+            }
+        }
+        .summary {
+            text-align: justify;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Κωνσταντίνος Λαθύρης</h1>
+        <div class="title">Industrial Operations Manager | IoT & Digital Tech Specialist</div>
+    </div>
+
+    <div class="contact-info">
+        <div>📍 Λαμία, Ελλάδα</div>
+        <div>📞 (+30) 6974030956</div>
+        <div>✉️ lathyris.kon@gmail.com</div>
+        <div>🌐 kwstas147.github.io</div>
+        <div>💼 LinkedIn: Konstantinos Lathyris</div>
+    </div>
+
+    <div class="two-column">
+        <div class="main-content">
+            <div class="section">
+                <div class="section-title">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ</div>
+                <div class="summary">
+                    Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων (Ασφαλτικά Παρασκευαστήρια). Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την "hands-on" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD). Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ</div>
+                
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου</div>
+                        <div class="job-date">04/2022 – Σήμερα</div>
+                    </div>
+                    <div class="job-company">ΤΕΡΝΑ Α.Ε.</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.</li>
+                            <li>Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.</li>
+                            <li>Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">Χειριστής Μηχανημάτων Έργου</div>
+                        <div class="job-date">12/2021 – 03/2022</div>
+                    </div>
+                    <div class="job-company">Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">Υπεύθυνος Παραγωγής & Χειριστής Λατομικού Συγκροτήματος</div>
+                        <div class="job-date">09/2019 – 12/2022</div>
+                    </div>
+                    <div class="job-company">ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας & Διαχείρισης</div>
+                        <div class="job-date">06/2000 – 08/2019</div>
+                    </div>
+                    <div class="job-company">ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος.</li>
+                            <li>Διοικητικές Ικανότητες: Διαχείριση ανθρώπινου δυναμικού, προμηθειών, logistics και έκδοση παραστατικών.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">Τεχνικός Ψυκτικών Εφαρμογών & Κατασκευών Inox</div>
+                        <div class="job-date">01/2000 – 05/2000</div>
+                    </div>
+                    <div class="job-company">Ζυγούρης Κ.</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Κατασκευή επαγγελματικού εξοπλισμού και εγκατάσταση ψυκτικών συστημάτων.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">Βοηθός Ηλεκτρολόγου Εσωτερικών Εγκαταστάσεων</div>
+                        <div class="job-date">02/1997 – 04/1998</div>
+                    </div>
+                    <div class="job-company">Τσάκας Ι.</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ</div>
+                
+                <div class="education-entry">
+                    <div class="education-title">Τεχνικός Εσωτερικών Ηλεκτρικών Εγκαταστάσεων</div>
+                    <div class="education-institution">ΙΕΚ ΟΜΗΡΟΣ</div>
+                    <div>2024 – 2025 (Σε εξέλιξη)</div>
+                </div>
+
+                <div class="education-entry">
+                    <div class="education-title">Προηγμένες Τεχνολογίες Δικτύων & Προγραμματισμός</div>
+                    <div class="education-institution">E-Learning Εθνικό & Καποδιστριακό Πανεπιστήμιο Αθηνών (ΕΚΠΑ)</div>
+                    <div style="margin-top: 10px;">
+                        <span class="badge">Advanced Network Technologies (2024-2025)</span>
+                        <span class="badge">Programming with Python (2023)</span>
+                        <span class="badge">Product Design & 3D Printing Specialization (2021)</span>
+                    </div>
+                </div>
+
+                <div class="education-entry">
+                    <div class="education-title">Βασική Τεχνική Εκπαίδευση</div>
+                    <div class="education-institution">Ηλεκτρολόγος Εσωτερικών Εγκαταστάσεων</div>
+                    <div>2ο ΤΕΛ Λαμίας</div>
+                    <div style="margin-top: 5px;">Δίπλωμα & Πιστοποίηση Χειριστή Μηχανημάτων Έργου (Όλες οι κατηγορίες)</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">ΤΕΧΝΟΛΟΓΙΚΑ PROJECT & ΚΑΙΝΟΤΟΜΙΑ</div>
+                <div style="font-style: italic; margin-bottom: 15px; color: #64748b;">Προσωπικά Project & Έρευνα (R&D)</div>
+                
+                <div style="margin-bottom: 15px;">
+                    <strong>Smart Home Ecosystem:</strong> Σχεδιασμός και υλοποίηση κεντρικού συστήματος αυτοματισμού με Home Assistant και ESPHome. Ανάπτυξη custom αισθητήρων (ESP32) για την παρακολούθηση κρίσιμων παραμέτρων περιβάλλοντος.
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <strong>Additive Manufacturing (3D Printing):</strong> Σχεδιασμός εξαρτημάτων στο Fusion360 και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία.
+                </div>
+                
+                <div>
+                    <strong>Software Development:</strong> Ανάπτυξη εφαρμογών σε Python για την αυτοματοποίηση υπολογισμών και τη διαχείριση δεδομένων, εφαρμόζοντας τις γνώσεις από τα προγράμματα του ΕΚΠΑ.
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="section">
+                <div class="section-title">ΤΕΧΝΙΚΕΣ & ΨΗΦΙΑΚΕΣ ΔΕΞΙΟΤΗΤΕΣ</div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Industrial</h4>
+                        <div>Χειρισμός & Συντήρηση Βαρέων Μηχανημάτων, Διαχείριση Παραγωγής, Ηλεκτρολογικό Σχέδιο</div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Digital Design</h4>
+                        <div>CAD Design (Fusion360), 3D Printing (Slicing & Optimization)</div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Programming & IoT</h4>
+                        <div>Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks</div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Soft Skills</h4>
+                        <div>Ηγεσία ομάδων, Στρατηγικός σχεδιασμός προμηθειών, Διαχείριση κρίσεων σε τεχνικά έργα</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">ΓΛΩΣΣΕΣ & ΑΔΕΙΕΣ</div>
+                <div>
+                    <div><strong>Ελληνικά:</strong> Μητρική</div>
+                    <div><strong>Αγγλικά:</strong> Επίπεδο B1</div>
+                </div>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e2e8f0;">
+                    <div><strong>Άδειες Οδήγησης:</strong> A, B, C, D</div>
+                    <div style="font-size: 12px; color: #64748b; margin-top: 5px;">(Πλήρης κάλυψη οχημάτων και μηχανημάτων)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="no-print" style="text-align: center; padding: 20px; background: #f3f4f6; margin: 20px 0; border-radius: 8px;">
+        <button id="downloadBtn" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600;">
+            📥 Κατεβάστε το CV ως PDF
+        </button>
+        <p style="margin-top: 10px; color: #64748b; font-size: 14px;">Η σελίδα είναι βελτιστοποιημένη για εκτύπωση. Κάντε κλικ στο κουμπί για να κατεβάσετε το PDF.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const element = document.body;
+            const opt = {
+                margin: [15, 15, 15, 15],
+                filename: 'CV_Konstantinos_Lathyris.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { 
+                    scale: 2, 
+                    useCORS: true,
+                    logging: false,
+                    windowWidth: element.scrollWidth,
+                    windowHeight: element.scrollHeight
+                },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+            
+            this.textContent = '⏳ Δημιουργία PDF...';
+            this.disabled = true;
+            
+            html2pdf().set(opt).from(element).save().then(() => {
+                this.textContent = '✅ PDF Κατέβηκε!';
+                setTimeout(() => {
+                    this.textContent = '📥 Κατεβάστε το CV ως PDF';
+                    this.disabled = false;
+                }, 2000);
+            }).catch(err => {
+                console.error('PDF generation error:', err);
+                this.textContent = '❌ Σφάλμα - Δοκιμάστε ξανά';
+                this.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>

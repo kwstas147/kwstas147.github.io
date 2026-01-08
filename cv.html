@@ -47,10 +47,10 @@
     <!-- Discreet Download CV Button -->
     <div class="container mx-auto px-4 py-3 relative">
         <div class="flex justify-end">
-            <a href="assets/pdf/cv-placeholder.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-sm border border-blue-400 text-blue-400 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-200">
+            <button id="downloadCVBtn" class="inline-flex items-center gap-2 px-4 py-2 text-sm border border-blue-400 text-blue-400 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-200 cursor-pointer">
                 <i data-lucide="download" class="w-4 h-4"></i>
                 <span data-i18n="btnDownloadCV">Κατεβάστε το CV</span>
-            </a>
+            </button>
         </div>
     </div>
 
@@ -379,6 +379,11 @@
     <script src="assets/js/theme.js?v=1"></script>
     <script>
         lucide.createIcons();
+        
+        // Handle CV download button
+        document.getElementById('downloadCVBtn').addEventListener('click', function() {
+            window.open('cv-pdf.html', '_blank');
+        });
     </script>
 </body>
 </html>
