@@ -292,16 +292,24 @@
         }
     </style>
     <script>
-        // Critical: Apply theme before rendering to prevent flash
+        // Critical: Apply theme and language before rendering to prevent flash
         (function() {
             try {
+                // Apply theme
                 const savedTheme = localStorage.getItem('portfolio_theme') || 'midnight';
                 if (savedTheme === 'clean-office' || savedTheme === 'midnight') {
                     document.documentElement.setAttribute('data-theme', savedTheme);
                 }
+                
+                // Apply language
+                const savedLang = localStorage.getItem('portfolio_language') || 'el';
+                if (savedLang === 'el' || savedLang === 'en') {
+                    document.documentElement.setAttribute('lang', savedLang);
+                }
             } catch(e) {
-                // Fallback to default if localStorage fails
+                // Fallback to defaults if localStorage fails
                 document.documentElement.setAttribute('data-theme', 'midnight');
+                document.documentElement.setAttribute('lang', 'el');
             }
         })();
     </script>
