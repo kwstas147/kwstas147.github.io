@@ -20,7 +20,7 @@ const translations = {
         // Home page
         heroTitle: "Καλώς ήρθατε στο Portfolio μου",
         heroName: "Κωνσταντίνος Λαθύρης",
-        heroSubtitle: "Industrial Operations Manager | IoT & Digital Tech Specialist",
+        heroSubtitle: "Industrial Operations Manager | IoT & Digital Tech Enthusiast",
         heroDescription: "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων. Εξερευνήστε τις δημιουργίες μου σε 3D Printing, Fusion360 Designs, Software Development και IoT Automation.",
         aboutTitle: "Σχετικά με εμένα",
         aboutText: "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων. Διαθέτω ένα μοναδικό προφίλ που συνδυάζει hands-on γνώση βαρέων μηχανημάτων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD).",
@@ -85,7 +85,7 @@ const translations = {
         // CV Page
         pageTitleCV: "Curriculum Vitae",
         cvName: "Κωνσταντίνος Λαθύρης",
-        cvTitle: "Industrial Operations Manager | IoT & Digital Tech Specialist",
+        cvTitle: "Industrial Operations Manager | IoT & Digital Tech Enthusiast",
         cvSectionSummary: "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ",
         cvSummaryText: "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων (Ασφαλτικά Παρασκευαστήρια). Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την \"hands-on\" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD). Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού.",
         cvSummaryHomelab: "Επιπλέον, διαχειρίζομαι self-hosted infrastructure με Proxmox και Docker containers.",
@@ -186,7 +186,7 @@ const translations = {
         // Home page
         heroTitle: "Welcome to My Portfolio",
         heroName: "Konstantinos Lathyris",
-        heroSubtitle: "Industrial Operations Manager | IoT & Digital Tech Specialist",
+        heroSubtitle: "Industrial Operations Manager | IoT & Digital Tech Enthusiast",
         heroDescription: "Experienced technical professional with 25 years in technical project management and industrial plant operations. Explore my creations in 3D Printing, Fusion360 Designs, Software Development, and IoT Automation.",
         aboutTitle: "About Me",
         aboutText: "Experienced technical professional with 25 years in technical project management and industrial plant operations. I possess a unique profile combining hands-on heavy machinery knowledge with advanced digital skills in Programming (Python), Networks, and Product Design (3D Printing / CAD).",
@@ -251,7 +251,7 @@ const translations = {
         // CV Page
         pageTitleCV: "Curriculum Vitae",
         cvName: "Konstantinos Lathyris",
-        cvTitle: "Industrial Operations Manager | IoT & Digital Tech Specialist",
+        cvTitle: "Industrial Operations Manager | IoT & Digital Tech Enthusiast",
         cvSectionSummary: "PROFESSIONAL SUMMARY",
         cvSummaryText: "Experienced technical professional with 25 years of experience in technical project management and industrial plant operations (Asphalt Plants). I possess a unique profile that combines hands-on knowledge of heavy machinery and electrical installations with advanced digital skills in Programming (Python), Networks, and Product Design (3D Printing / CAD). I focus on modernizing production processes through IoT and automation.",
         cvSummaryHomelab: "Additionally, I manage self-hosted infrastructure with Proxmox and Docker containers.",
