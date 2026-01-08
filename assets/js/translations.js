@@ -93,10 +93,9 @@ const translations = {
         cvJob1Title: "Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου",
         cvJob1Company: "ΤΕΡΝΑ Α.Ε.",
         cvJob1Period: "04/2022 – Σήμερα",
-        cvJob1Desc1: "Επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.",
+        cvJob1Desc1: "Άμεση λειτουργία, επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.",
         cvJob1Desc2: "Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.",
         cvJob1Desc3: "Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.",
-        cvJob1Desc4: "Άμεση λειτουργία και χειρισμός του ασφαλτικού παρασκευαστηρίου.",
         cvJob2Title: "Χειριστής Μηχανημάτων Έργου",
         cvJob2Company: "Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)",
         cvJob2Period: "12/2021 – 03/2022",
@@ -163,7 +162,9 @@ const translations = {
         cvLangEnglishLevel: "Επίπεδο B1",
         cvLicenses: "Άδειες Οδήγησης",
         cvLicensesTypes: "A, B, C, D",
-        cvLicensesNote: "(Πλήρης κάλυψη οχημάτων και μηχανημάτων)"
+        cvLicensesNote: "(Πλήρης κάλυψη οχημάτων και μηχανημάτων)",
+        cvMachineOperatorLicense: "Άδεια Χειριστή Μηχανημάτων Έργου",
+        cvMachineOperatorSpecialties: "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β"
     },
     en: {
         // Navigation
@@ -258,10 +259,9 @@ const translations = {
         cvJob1Title: "Operations Manager & Heavy Equipment Operator",
         cvJob1Company: "TERNA S.A.",
         cvJob1Period: "04/2022 – Present",
-        cvJob1Desc1: "Supervision and ensuring smooth operation of asphalt plant.",
+        cvJob1Desc1: "Direct operation, supervision and ensuring smooth operation of asphalt plant.",
         cvJob1Desc2: "Preventive and corrective maintenance of complex mechanical equipment.",
         cvJob1Desc3: "Operation of specialized machinery in demanding technical projects.",
-        cvJob1Desc4: "Direct operation and handling of the asphalt plant.",
         cvJob2Title: "Heavy Equipment Operator",
         cvJob2Company: "Region of Central Greece (Technical Works Directorate)",
         cvJob2Period: "12/2021 – 03/2022",
@@ -332,7 +332,9 @@ const translations = {
         cvLangEnglishLevel: "Level B1",
         cvLicenses: "Driving Licenses",
         cvLicensesTypes: "A, B, C, D",
-        cvLicensesNote: "(Full coverage for vehicles and machinery)"
+        cvLicensesNote: "(Full coverage for vehicles and machinery)",
+        cvMachineOperatorLicense: "Heavy Equipment Operator License",
+        cvMachineOperatorSpecialties: "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β"
     }
 };
 
