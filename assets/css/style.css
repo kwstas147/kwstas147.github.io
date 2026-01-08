@@ -737,3 +737,79 @@ html[data-theme="clean-office"] .tech-project-card:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* Print Media Queries - Fix PDF Layout */
+@media print {
+    /* 1. Εξαναγκασμός σε μονή στήλη για να μη βγαίνει εκτός ορίων */
+    #cv-main-content, 
+    #cv-sidebar {
+        width: 100% !important;
+        flex: none !important;
+        max-width: 100% !important;
+    }
+
+    /* Μετατροπή flex-row σε block layout */
+    .flex.flex-col.lg\:flex-row,
+    div.flex.flex-col.lg\:flex-row {
+        display: block !important;
+        flex-direction: column !important;
+    }
+
+    /* 2. Απόκρυψη στοιχείων που δεν χρειάζονται στο PDF */
+    nav, 
+    footer, 
+    #downloadCVBtn, 
+    .theme-switcher,
+    .lang-switcher,
+    a[href="index.html"],
+    .no-print {
+        display: none !important;
+    }
+
+    /* 3. Διόρθωση περιθωρίων σελίδας */
+    @page {
+        margin: 1.5cm;
+        size: A4;
+    }
+
+    body {
+        background-color: white !important;
+        color: black !important;
+        font-size: 11pt;
+    }
+
+    /* 4. Διόρθωση cards για καλύτερη εκτύπωση */
+    .bg-card {
+        background-color: transparent !important;
+        border: 1px solid #e2e8f0 !important;
+        margin-bottom: 1rem;
+        break-inside: avoid; /* Εμποδίζει το κόψιμο μιας κάρτας στη μέση της σελίδας */
+        page-break-inside: avoid;
+    }
+
+    /* 5. Διόρθωση container width */
+    .container {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* 6. Διόρθωση sidebar positioning */
+    aside#cv-sidebar {
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        margin-top: 2rem;
+    }
+
+    /* 7. Διόρθωση timeline για εκτύπωση */
+    .timeline-container {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .timeline-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
