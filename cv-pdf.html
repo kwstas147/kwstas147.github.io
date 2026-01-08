@@ -291,6 +291,20 @@
             page-break-inside: avoid;
         }
     </style>
+    <script>
+        // Critical: Apply theme before rendering to prevent flash
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('portfolio_theme') || 'midnight';
+                if (savedTheme === 'clean-office' || savedTheme === 'midnight') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+            } catch(e) {
+                // Fallback to default if localStorage fails
+                document.documentElement.setAttribute('data-theme', 'midnight');
+            }
+        })();
+    </script>
 </head>
 <body>
     <div id="pdf-content">
@@ -634,8 +648,8 @@
             btn.textContent = loadingText;
             btn.disabled = true;
             
-            // Wait for any pending renders and translations
-            setTimeout(() => {
+            // Define PDF generation function
+            function generatePDF() {
                 // Force layout recalculation
                 element.style.display = 'block';
                 element.style.visibility = 'visible';
@@ -647,10 +661,10 @@
                     filename: 'CV_Konstantinos_Lathyris.pdf',
                     image: { 
                         type: 'jpeg', 
-                        quality: 0.95 
+                        quality: 0.98 
                     },
                     html2canvas: { 
-                        scale: 2,
+                        scale: 3,
                         useCORS: true,
                         logging: false,
                         letterRendering: true,
@@ -709,11 +723,110 @@
                                     clonedSidebar.style.boxSizing = 'border-box';
                                 }
                                 
-                                // Ensure timeline container styles
+                                // Ensure section titles have proper styling
+                                const sectionTitles = clonedElement.querySelectorAll('.section-title');
+                                sectionTitles.forEach(title => {
+                                    title.style.fontSize = '20px';
+                                    title.style.fontWeight = 'bold';
+                                    title.style.color = '#3b82f6';
+                                    title.style.borderBottom = '2px solid #3b82f6';
+                                    title.style.paddingBottom = '5px';
+                                    title.style.marginBottom = '15px';
+                                });
+                                
+                                // Ensure header styling
+                                const header = clonedElement.querySelector('.header');
+                                if (header) {
+                                    header.style.textAlign = 'center';
+                                    header.style.borderBottom = '3px solid #3b82f6';
+                                    header.style.paddingBottom = '20px';
+                                    header.style.marginBottom = '30px';
+                                }
+                                const headerH1 = clonedElement.querySelector('.header h1');
+                                if (headerH1) {
+                                    headerH1.style.fontSize = '32px';
+                                    headerH1.style.color = '#1e293b';
+                                    headerH1.style.fontWeight = '700';
+                                }
+                                const headerTitle = clonedElement.querySelector('.header .title');
+                                if (headerTitle) {
+                                    headerTitle.style.fontSize = '18px';
+                                    headerTitle.style.color = '#3b82f6';
+                                    headerTitle.style.fontWeight = '600';
+                                }
+                                
+                                // Ensure job entries styling
+                                const jobTitles = clonedElement.querySelectorAll('.job-title');
+                                jobTitles.forEach(title => {
+                                    title.style.fontWeight = 'bold';
+                                    title.style.fontSize = '16px';
+                                    title.style.color = '#1e293b';
+                                });
+                                const jobCompanies = clonedElement.querySelectorAll('.job-company');
+                                jobCompanies.forEach(company => {
+                                    company.style.color = '#3b82f6';
+                                    company.style.fontWeight = '600';
+                                });
+                                
+                                // Ensure education entries styling
+                                const educationTitles = clonedElement.querySelectorAll('.education-title');
+                                educationTitles.forEach(title => {
+                                    title.style.fontWeight = 'bold';
+                                    title.style.fontSize = '16px';
+                                    title.style.color = '#1e293b';
+                                });
+                                const educationInstitutions = clonedElement.querySelectorAll('.education-institution');
+                                educationInstitutions.forEach(inst => {
+                                    inst.style.color = '#3b82f6';
+                                });
+                                
+                                // Ensure badges (ekpa-badge) have gradient backgrounds
+                                const badges = clonedElement.querySelectorAll('.ekpa-badge');
+                                badges.forEach(badge => {
+                                    badge.style.display = 'inline-block';
+                                    badge.style.padding = '4px 12px';
+                                    badge.style.background = 'linear-gradient(135deg, #3b82f6, #2563eb)';
+                                    badge.style.color = 'white';
+                                    badge.style.borderRadius = '4px';
+                                    badge.style.fontSize = '11px';
+                                    badge.style.fontWeight = '600';
+                                    badge.style.margin = '3px';
+                                });
+                                
+                                // Ensure timeline container styles with proper visibility
                                 const timelineContainers = clonedElement.querySelectorAll('.timeline-container');
                                 timelineContainers.forEach(container => {
                                     container.style.position = 'relative';
                                     container.style.paddingLeft = '2rem';
+                                    // Ensure timeline line is visible
+                                    const style = clonedDoc.createElement('style');
+                                    style.textContent = `
+                                        .timeline-container::before {
+                                            content: '';
+                                            position: absolute;
+                                            left: 0.5rem;
+                                            top: 0;
+                                            bottom: 0;
+                                            width: 2px;
+                                            background: linear-gradient(to bottom, #3b82f6, #e5e7eb);
+                                            z-index: 0;
+                                        }
+                                    `;
+                                    clonedDoc.head.appendChild(style);
+                                });
+                                
+                                // Ensure timeline dots are visible
+                                const timelineDots = clonedElement.querySelectorAll('.timeline-dot');
+                                timelineDots.forEach(dot => {
+                                    dot.style.position = 'absolute';
+                                    dot.style.left = '-1.75rem';
+                                    dot.style.width = '1rem';
+                                    dot.style.height = '1rem';
+                                    dot.style.borderRadius = '50%';
+                                    dot.style.backgroundColor = '#3b82f6';
+                                    dot.style.border = '3px solid #ffffff';
+                                    dot.style.boxShadow = '0 0 0 2px #3b82f6';
+                                    dot.style.zIndex = '1';
                                 });
                                 
                                 // Ensure tech projects grid
@@ -725,13 +838,46 @@
                                     grid.style.width = '100%';
                                 });
                                 
+                                // Ensure tech project cards styling
+                                const techCards = clonedElement.querySelectorAll('.tech-project-card');
+                                techCards.forEach(card => {
+                                    card.style.backgroundColor = '#f9fafb';
+                                    card.style.border = '1px solid #e5e7eb';
+                                    card.style.borderRadius = '8px';
+                                    card.style.padding = '15px';
+                                });
+                                
+                                // Ensure education border styling
+                                const educationBorders = clonedElement.querySelectorAll('.education-border');
+                                educationBorders.forEach(border => {
+                                    border.style.borderLeft = '2px solid #3b82f6';
+                                    border.style.paddingLeft = '20px';
+                                });
+                                
+                                // Ensure about grid layout
+                                const aboutGrids = clonedElement.querySelectorAll('.about-grid');
+                                aboutGrids.forEach(grid => {
+                                    grid.style.display = 'flex';
+                                    grid.style.flexDirection = 'row';
+                                    grid.style.width = '100%';
+                                    grid.style.gap = '20px';
+                                });
+                                
+                                // Ensure skill categories styling
+                                const skillCategories = clonedElement.querySelectorAll('.skill-category h4');
+                                skillCategories.forEach(h4 => {
+                                    h4.style.fontWeight = 'bold';
+                                    h4.style.color = '#1e293b';
+                                });
+                                
                                 // Force reflow
                                 clonedElement.offsetHeight;
                             }
                             
-                            // Wait for any async rendering
+                            // Wait for any async rendering and ensure fonts are loaded
                             return new Promise(resolve => {
-                                setTimeout(resolve, 100);
+                                // Wait a bit longer to ensure all styles are applied
+                                setTimeout(resolve, 200);
                             });
                         }
                     },
@@ -785,6 +931,18 @@
                         btn.disabled = false;
                     }, 2000);
                 });
+            }
+            
+            // Wait for any pending renders, translations, and fonts to load
+            setTimeout(() => {
+                // Ensure fonts are loaded
+                if (document.fonts && document.fonts.ready) {
+                    document.fonts.ready.then(() => {
+                        generatePDF();
+                    });
+                } else {
+                    generatePDF();
+                }
             }, 300);
         });
     </script>

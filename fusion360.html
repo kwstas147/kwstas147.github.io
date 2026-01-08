@@ -15,6 +15,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        // Critical: Apply theme before rendering to prevent flash
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('portfolio_theme') || 'midnight';
+                if (savedTheme === 'clean-office' || savedTheme === 'midnight') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+            } catch(e) {
+                // Fallback to default if localStorage fails
+                document.documentElement.setAttribute('data-theme', 'midnight');
+            }
+        })();
+    </script>
 </head>
 <body class="min-h-screen">
     <!-- Navigation -->
