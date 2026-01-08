@@ -90,10 +90,11 @@
         // Calculate total scrollable distance for sidebar
         const sidebarScrollableDistance = Math.max(0, sidebarHeight - viewportHeight + navHeight);
 
-        // If sidebar fits in viewport, no sync needed
+        // If sidebar fits in viewport, no sync needed - use relative positioning
         if (sidebarScrollableDistance <= 0) {
             sidebar.style.position = 'relative';
             sidebar.style.top = 'auto';
+            sidebar.style.bottom = 'auto';
             sidebar.style.transform = 'none';
             return;
         }
@@ -115,38 +116,69 @@
 
         isUpdating = true;
 
-        let sidebarTargetOffset = 0;
-
+        // Calculate where sidebar should be positioned to "touch" viewport edges
+        // When scrolling down: bottom of sidebar touches bottom of viewport
+        // When scrolling up: top of sidebar touches top of viewport (below nav)
+        
+        // Use sticky positioning with dynamic top/bottom values
+        // This allows the sidebar to "stick" to viewport edges while scrolling
+        
         if (scrollDirection === 'down') {
-            // Scrolling down
+            // Scrolling down: make bottom of sidebar touch bottom of viewport
             if (sidebarReachedEnd && !mainContentReachedEnd) {
-                // Sidebar has reached its end, but main content hasn't - keep sidebar at end
-                sidebarTargetOffset = sidebarScrollableDistance;
+                // Sidebar has reached its end - keep it at end using transform
+                sidebar.style.position = 'relative';
+                sidebar.style.top = 'auto';
+                sidebar.style.bottom = 'auto';
+                sidebar.style.transform = `translateY(${sidebarScrollableDistance}px)`;
             } else {
-                // Normal proportional sync
-                sidebarTargetOffset = sidebarScrollProgress * sidebarScrollableDistance;
+                // Use sticky positioning with bottom = 0 so bottom touches viewport bottom
+                sidebar.style.position = 'sticky';
+                sidebar.style.top = 'auto';
+                sidebar.style.bottom = '0px';
+                sidebar.style.transform = 'none';
             }
         } else if (scrollDirection === 'up') {
-            // Scrolling up
+            // Scrolling up: make top of sidebar touch top of viewport (below nav)
             if (mainContentReachedTop) {
-                // Main content has reached top - sidebar should follow to top
-                sidebarTargetOffset = 0;
+                // Main content has reached top - sidebar should be at top (relative)
+                sidebar.style.position = 'relative';
+                sidebar.style.top = 'auto';
+                sidebar.style.bottom = 'auto';
+                sidebar.style.transform = 'none';
             } else if (sidebarReachedEnd && !mainContentReachedEnd) {
                 // Sidebar was at end, main content hasn't reached top yet - keep sidebar at end
-                sidebarTargetOffset = sidebarScrollableDistance;
+                sidebar.style.position = 'relative';
+                sidebar.style.top = 'auto';
+                sidebar.style.bottom = 'auto';
+                sidebar.style.transform = `translateY(${sidebarScrollableDistance}px)`;
             } else {
-                // Normal proportional sync
-                sidebarTargetOffset = sidebarScrollProgress * sidebarScrollableDistance;
+                // Use sticky positioning with top = navHeight so top touches viewport top (below nav)
+                sidebar.style.position = 'sticky';
+                sidebar.style.top = `${navHeight}px`;
+                sidebar.style.bottom = 'auto';
+                sidebar.style.transform = 'none';
             }
         } else {
-            // No direction change (initial load or no movement)
-            sidebarTargetOffset = sidebarScrollProgress * sidebarScrollableDistance;
+            // Initial state or no movement - determine based on current position
+            if (mainContentReachedTop) {
+                sidebar.style.position = 'relative';
+                sidebar.style.top = 'auto';
+                sidebar.style.bottom = 'auto';
+                sidebar.style.transform = 'none';
+            } else if (sidebarReachedEnd) {
+                sidebar.style.position = 'relative';
+                sidebar.style.top = 'auto';
+                sidebar.style.bottom = 'auto';
+                sidebar.style.transform = `translateY(${sidebarScrollableDistance}px)`;
+            } else {
+                // Default: use sticky with bottom alignment (for scrolling down)
+                sidebar.style.position = 'sticky';
+                sidebar.style.top = 'auto';
+                sidebar.style.bottom = '0px';
+                sidebar.style.transform = 'none';
+            }
         }
-
-        // Apply the transform
-        sidebar.style.position = 'relative';
-        sidebar.style.top = 'auto';
-        sidebar.style.transform = `translateY(${sidebarTargetOffset}px)`;
 
         requestAnimationFrame(() => {
             isUpdating = false;

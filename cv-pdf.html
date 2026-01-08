@@ -5,15 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="pageTitleCV">CV - Κωνσταντίνος Λαθύρης</title>
     <style>
+        /* Professional Print Stylesheet - ATS-Friendly */
         @media print {
             @page {
                 margin: 1.5cm;
+                size: A4;
+            }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
             }
             body {
-                background: white;
+                background: white !important;
+                color: #000000 !important;
             }
+            #pdf-content {
+                background: white !important;
+            }
+            /* Force all text to be dark/black for ATS compatibility */
+            h1, h2, h3, h4, h5, h6,
+            .header h1,
+            .section-title,
+            .job-title,
+            .education-title,
+            .skill-category h4,
+            .tech-project-card h3 {
+                color: #000000 !important;
+            }
+            /* Keep section titles readable but dark */
+            .section-title {
+                color: #000000 !important;
+                border-bottom-color: #000000 !important;
+            }
+            /* Header title can be slightly lighter but still dark */
+            .header .title {
+                color: #1a1a1a !important;
+            }
+            /* Company names and institutions - dark but readable */
+            .job-company,
+            .education-institution {
+                color: #1a1a1a !important;
+            }
+            /* All body text dark */
+            p, li, div, span {
+                color: #000000 !important;
+            }
+            /* Badges - white background with dark text for ATS */
+            .ekpa-badge,
+            .badge {
+                background: #ffffff !important;
+                color: #000000 !important;
+                border: 1px solid #000000 !important;
+            }
+            /* Tech project cards - white background */
+            .tech-project-card {
+                background-color: #ffffff !important;
+                border: 1px solid #000000 !important;
+            }
+            /* Timeline elements - dark for visibility */
+            .timeline-container::before {
+                background: #000000 !important;
+            }
+            .timeline-dot {
+                background-color: #000000 !important;
+                border-color: #ffffff !important;
+                box-shadow: 0 0 0 2px #000000 !important;
+            }
+            /* Hide non-printable elements */
             .no-print {
-                display: none;
+                display: none !important;
             }
         }
         body {
@@ -707,12 +768,19 @@
                     return;
                 }
                 
-                console.log('Generating PDF with dimensions:', { 
+                console.log('=== PDF Generation Started ===');
+                console.log('Element dimensions:', { 
                     width, 
                     height, 
                     scrollHeight: element.scrollHeight, 
                     offsetHeight: element.offsetHeight,
-                    clientHeight: element.clientHeight
+                    clientHeight: element.clientHeight,
+                    innerHTMLLength: element.innerHTML.length
+                });
+                console.log('Element computed styles:', {
+                    display: window.getComputedStyle(element).display,
+                    visibility: window.getComputedStyle(element).visibility,
+                    opacity: window.getComputedStyle(element).opacity
                 });
                 
                 const opt = {
@@ -723,248 +791,123 @@
                         quality: 0.98 
                     },
                     html2canvas: { 
-                        scale: 2,
+                        scale: 1.5,
                         useCORS: true,
                         logging: true,
                         letterRendering: true,
                         backgroundColor: '#ffffff',
-                        width: width,
-                        height: height,
-                        windowWidth: width,
-                        windowHeight: height,
                         scrollX: 0,
                         scrollY: 0,
                         allowTaint: false,
-                        foreignObjectRendering: true,
-                        removeContainer: false,
                         onclone: function(clonedDoc) {
-                            // Force white background
+                            // Force white background on body - ATS-friendly
                             const clonedBody = clonedDoc.body;
                             if (clonedBody) {
                                 clonedBody.style.backgroundColor = '#ffffff';
-                                clonedBody.style.color = '#333';
+                                clonedBody.style.color = '#000000';
                                 clonedBody.style.margin = '0';
                                 clonedBody.style.padding = '0';
                             }
                             
-                            // Fix PDF content container - ensure it's visible and has dimensions
+                            // Critical: Ensure PDF content container is visible
                             const clonedElement = clonedDoc.getElementById('pdf-content');
                             if (clonedElement) {
-                                clonedElement.style.width = '794px';
-                                clonedElement.style.minWidth = '794px';
-                                clonedElement.style.maxWidth = '794px';
+                                // Essential visibility styles only
                                 clonedElement.style.display = 'block';
                                 clonedElement.style.visibility = 'visible';
                                 clonedElement.style.opacity = '1';
-                                clonedElement.style.position = 'relative';
-                                clonedElement.style.zIndex = '1';
-                                clonedElement.style.boxSizing = 'border-box';
                                 clonedElement.style.backgroundColor = '#ffffff';
-                                clonedElement.style.overflow = 'visible';
-                                clonedElement.style.height = height + 'px';
-                                clonedElement.style.minHeight = height + 'px';
+                                clonedElement.style.position = 'relative';
+                                
+                                // Ensure width is set but height is auto
+                                clonedElement.style.width = '794px';
+                                clonedElement.style.minWidth = '794px';
+                                clonedElement.style.maxWidth = '794px';
+                                clonedElement.style.height = 'auto';
+                                clonedElement.style.minHeight = 'auto';
                                 clonedElement.style.maxHeight = 'none';
                                 
-                                console.log('Cloned element dimensions:', {
-                                    width: clonedElement.offsetWidth,
-                                    height: clonedElement.offsetHeight,
-                                    scrollHeight: clonedElement.scrollHeight
+                                // ATS-Friendly: Force dark text colors
+                                const allTextElements = clonedElement.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, div, span');
+                                allTextElements.forEach(el => {
+                                    const computedColor = window.getComputedStyle(el).color;
+                                    // Only change if it's not already dark (avoid changing white text on badges before we fix badges)
+                                    if (computedColor && !computedColor.includes('rgb(0, 0, 0)') && !computedColor.includes('#000')) {
+                                        // Check if parent has colored background (like badges)
+                                        const parentBg = window.getComputedStyle(el.parentElement).backgroundColor;
+                                        if (!parentBg || parentBg === 'rgba(0, 0, 0, 0)' || parentBg === 'transparent') {
+                                            el.style.color = '#000000';
+                                        }
+                                    }
                                 });
                                 
-                                // Ensure flexbox layout
+                                // ATS-Friendly: Force section titles to be dark
+                                const sectionTitles = clonedElement.querySelectorAll('.section-title');
+                                sectionTitles.forEach(title => {
+                                    title.style.color = '#000000';
+                                    title.style.borderBottomColor = '#000000';
+                                });
+                                
+                                // ATS-Friendly: Force header elements to be dark
+                                const headerH1 = clonedElement.querySelector('.header h1');
+                                if (headerH1) headerH1.style.color = '#000000';
+                                const headerTitle = clonedElement.querySelector('.header .title');
+                                if (headerTitle) headerTitle.style.color = '#1a1a1a';
+                                
+                                // ATS-Friendly: Force job and education titles to be dark
+                                const jobTitles = clonedElement.querySelectorAll('.job-title, .education-title');
+                                jobTitles.forEach(title => title.style.color = '#000000');
+                                
+                                // ATS-Friendly: Force company/institution names to be dark
+                                const companies = clonedElement.querySelectorAll('.job-company, .education-institution');
+                                companies.forEach(comp => comp.style.color = '#1a1a1a');
+                                
+                                // ATS-Friendly: Badges - white background with dark text
+                                const badges = clonedElement.querySelectorAll('.ekpa-badge, .badge');
+                                badges.forEach(badge => {
+                                    badge.style.background = '#ffffff';
+                                    badge.style.color = '#000000';
+                                    badge.style.border = '1px solid #000000';
+                                });
+                                
+                                // ATS-Friendly: Tech project cards - white background
+                                const techCards = clonedElement.querySelectorAll('.tech-project-card');
+                                techCards.forEach(card => {
+                                    card.style.backgroundColor = '#ffffff';
+                                    card.style.border = '1px solid #000000';
+                                });
+                                
+                                // ATS-Friendly: Timeline elements - dark for visibility
+                                const timelineDots = clonedElement.querySelectorAll('.timeline-dot');
+                                timelineDots.forEach(dot => {
+                                    dot.style.backgroundColor = '#000000';
+                                    dot.style.borderColor = '#ffffff';
+                                    dot.style.boxShadow = '0 0 0 2px #000000';
+                                });
+                                
+                                // Ensure flexbox layout is maintained
                                 const clonedContainer = clonedElement.querySelector('.cv-container');
                                 if (clonedContainer) {
                                     clonedContainer.style.display = 'flex';
                                     clonedContainer.style.flexDirection = 'row';
-                                    clonedContainer.style.width = '100%';
-                                    clonedContainer.style.gap = '20px';
                                 }
                                 
-                                // Fix main content and sidebar
-                                const clonedMain = clonedElement.querySelector('.main-content');
-                                const clonedSidebar = clonedElement.querySelector('.sidebar');
-                                if (clonedMain) {
-                                    clonedMain.style.flex = '2';
-                                    clonedMain.style.minWidth = '0';
-                                    clonedMain.style.boxSizing = 'border-box';
-                                }
-                                if (clonedSidebar) {
-                                    clonedSidebar.style.flex = '1';
-                                    clonedSidebar.style.minWidth = '0';
-                                    clonedSidebar.style.boxSizing = 'border-box';
-                                }
+                                // Force reflow to calculate dimensions
+                                void clonedElement.offsetHeight;
                                 
-                                // Ensure section titles have proper styling
-                                const sectionTitles = clonedElement.querySelectorAll('.section-title');
-                                sectionTitles.forEach(title => {
-                                    title.style.fontSize = '20px';
-                                    title.style.fontWeight = 'bold';
-                                    title.style.color = '#3b82f6';
-                                    title.style.borderBottom = '2px solid #3b82f6';
-                                    title.style.paddingBottom = '5px';
-                                    title.style.marginBottom = '15px';
+                                console.log('=== OnClone: Cloned Element Ready (ATS-Friendly) ===');
+                                console.log('Cloned element dimensions:', {
+                                    width: clonedElement.offsetWidth,
+                                    height: clonedElement.offsetHeight,
+                                    scrollHeight: clonedElement.scrollHeight,
+                                    hasContent: clonedElement.innerHTML.length > 0,
+                                    display: window.getComputedStyle(clonedElement).display,
+                                    visibility: window.getComputedStyle(clonedElement).visibility
                                 });
-                                
-                                // Ensure header styling
-                                const header = clonedElement.querySelector('.header');
-                                if (header) {
-                                    header.style.textAlign = 'center';
-                                    header.style.borderBottom = '3px solid #3b82f6';
-                                    header.style.paddingBottom = '20px';
-                                    header.style.marginBottom = '30px';
-                                }
-                                const headerH1 = clonedElement.querySelector('.header h1');
-                                if (headerH1) {
-                                    headerH1.style.fontSize = '32px';
-                                    headerH1.style.color = '#1e293b';
-                                    headerH1.style.fontWeight = '700';
-                                }
-                                const headerTitle = clonedElement.querySelector('.header .title');
-                                if (headerTitle) {
-                                    headerTitle.style.fontSize = '18px';
-                                    headerTitle.style.color = '#3b82f6';
-                                    headerTitle.style.fontWeight = '600';
-                                }
-                                
-                                // Ensure job entries styling
-                                const jobTitles = clonedElement.querySelectorAll('.job-title');
-                                jobTitles.forEach(title => {
-                                    title.style.fontWeight = 'bold';
-                                    title.style.fontSize = '16px';
-                                    title.style.color = '#1e293b';
-                                });
-                                const jobCompanies = clonedElement.querySelectorAll('.job-company');
-                                jobCompanies.forEach(company => {
-                                    company.style.color = '#3b82f6';
-                                    company.style.fontWeight = '600';
-                                });
-                                
-                                // Ensure education entries styling
-                                const educationTitles = clonedElement.querySelectorAll('.education-title');
-                                educationTitles.forEach(title => {
-                                    title.style.fontWeight = 'bold';
-                                    title.style.fontSize = '16px';
-                                    title.style.color = '#1e293b';
-                                });
-                                const educationInstitutions = clonedElement.querySelectorAll('.education-institution');
-                                educationInstitutions.forEach(inst => {
-                                    inst.style.color = '#3b82f6';
-                                });
-                                
-                                // Ensure badges (ekpa-badge) have gradient backgrounds
-                                const badges = clonedElement.querySelectorAll('.ekpa-badge');
-                                badges.forEach(badge => {
-                                    badge.style.display = 'inline-block';
-                                    badge.style.padding = '4px 12px';
-                                    badge.style.background = 'linear-gradient(135deg, #3b82f6, #2563eb)';
-                                    badge.style.color = 'white';
-                                    badge.style.borderRadius = '4px';
-                                    badge.style.fontSize = '11px';
-                                    badge.style.fontWeight = '600';
-                                    badge.style.margin = '3px';
-                                });
-                                
-                                // Ensure timeline container styles with proper visibility
-                                const timelineContainers = clonedElement.querySelectorAll('.timeline-container');
-                                timelineContainers.forEach(container => {
-                                    container.style.position = 'relative';
-                                    container.style.paddingLeft = '2rem';
-                                    // Ensure timeline line is visible
-                                    const style = clonedDoc.createElement('style');
-                                    style.textContent = `
-                                        .timeline-container::before {
-                                            content: '';
-                                            position: absolute;
-                                            left: 0.5rem;
-                                            top: 0;
-                                            bottom: 0;
-                                            width: 2px;
-                                            background: linear-gradient(to bottom, #3b82f6, #e5e7eb);
-                                            z-index: 0;
-                                        }
-                                    `;
-                                    clonedDoc.head.appendChild(style);
-                                });
-                                
-                                // Ensure timeline dots are visible
-                                const timelineDots = clonedElement.querySelectorAll('.timeline-dot');
-                                timelineDots.forEach(dot => {
-                                    dot.style.position = 'absolute';
-                                    dot.style.left = '-1.75rem';
-                                    dot.style.width = '1rem';
-                                    dot.style.height = '1rem';
-                                    dot.style.borderRadius = '50%';
-                                    dot.style.backgroundColor = '#3b82f6';
-                                    dot.style.border = '3px solid #ffffff';
-                                    dot.style.boxShadow = '0 0 0 2px #3b82f6';
-                                    dot.style.zIndex = '1';
-                                });
-                                
-                                // Ensure tech projects grid
-                                const techGrids = clonedElement.querySelectorAll('.tech-projects-grid');
-                                techGrids.forEach(grid => {
-                                    grid.style.display = 'grid';
-                                    grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-                                    grid.style.gap = '15px';
-                                    grid.style.width = '100%';
-                                    grid.style.marginBottom = '20px';
-                                });
-                                
-                                // Ensure timeline container styling
-                                const timelineContainers = clonedElement.querySelectorAll('.timeline-container');
-                                timelineContainers.forEach(container => {
-                                    container.style.position = 'relative';
-                                    container.style.paddingLeft = '2rem';
-                                });
-                                
-                                // Force reflow to ensure all dimensions are calculated
-                                clonedElement.offsetHeight;
-                                const finalHeight = clonedElement.scrollHeight || clonedElement.offsetHeight;
-                                if (finalHeight > height) {
-                                    console.log('Adjusted height from', height, 'to', finalHeight);
-                                }
-                                
-                                // Ensure tech project cards styling
-                                const techCards = clonedElement.querySelectorAll('.tech-project-card');
-                                techCards.forEach(card => {
-                                    card.style.backgroundColor = '#f9fafb';
-                                    card.style.border = '1px solid #e5e7eb';
-                                    card.style.borderRadius = '8px';
-                                    card.style.padding = '15px';
-                                });
-                                
-                                // Ensure education border styling
-                                const educationBorders = clonedElement.querySelectorAll('.education-border');
-                                educationBorders.forEach(border => {
-                                    border.style.borderLeft = '2px solid #3b82f6';
-                                    border.style.paddingLeft = '20px';
-                                });
-                                
-                                // Ensure about grid layout
-                                const aboutGrids = clonedElement.querySelectorAll('.about-grid');
-                                aboutGrids.forEach(grid => {
-                                    grid.style.display = 'flex';
-                                    grid.style.flexDirection = 'row';
-                                    grid.style.width = '100%';
-                                    grid.style.gap = '20px';
-                                });
-                                
-                                // Ensure skill categories styling
-                                const skillCategories = clonedElement.querySelectorAll('.skill-category h4');
-                                skillCategories.forEach(h4 => {
-                                    h4.style.fontWeight = 'bold';
-                                    h4.style.color = '#1e293b';
-                                });
-                                
-                                // Force reflow
-                                clonedElement.offsetHeight;
                             }
                             
-                            // Wait for any async rendering and ensure fonts are loaded
-                            return new Promise(resolve => {
-                                // Wait a bit longer to ensure all styles are applied
-                                setTimeout(resolve, 200);
-                            });
+                            // Minimal delay for rendering
+                            return new Promise(resolve => setTimeout(resolve, 100));
                         }
                     },
                     jsPDF: { 
@@ -984,7 +927,7 @@
                 
                 // Generate PDF with better error handling
                 html2pdf().set(opt).from(element).save().then(() => {
-                    console.log('PDF generated successfully');
+                    console.log('=== PDF Generated Successfully ===');
                     const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
                     const successText = (window.translations && window.translations[currentLang] && window.translations[currentLang].pdfSuccess) 
                         ? window.translations[currentLang].pdfSuccess 
@@ -1001,14 +944,19 @@
                         btn.disabled = false;
                     }, 2000);
                 }).catch(err => {
-                    console.error('PDF generation error:', err);
-                    console.error('Element info:', {
+                    console.error('=== PDF Generation Failed ===');
+                    console.error('Error details:', err);
+                    console.error('Error stack:', err.stack);
+                    console.error('Element info at error time:', {
                         exists: !!element,
                         display: element ? window.getComputedStyle(element).display : 'N/A',
                         visibility: element ? window.getComputedStyle(element).visibility : 'N/A',
                         height: element ? element.offsetHeight : 'N/A',
-                        width: element ? element.offsetWidth : 'N/A'
+                        width: element ? element.offsetWidth : 'N/A',
+                        scrollHeight: element ? element.scrollHeight : 'N/A',
+                        innerHTMLLength: element ? element.innerHTML.length : 'N/A'
                     });
+                    console.error('html2pdf options used:', JSON.stringify(opt, null, 2));
                     const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
                     const errorText = (window.translations && window.translations[currentLang] && window.translations[currentLang].pdfError) 
                         ? window.translations[currentLang].pdfError 
@@ -1027,8 +975,8 @@
                 });
             }
             
-            // Wait for any pending renders, translations, and fonts to load
-            setTimeout(() => {
+            // Wait for translations, fonts, and ensure element is ready
+            const waitForReady = async () => {
                 // Check if html2pdf is loaded
                 if (typeof html2pdf === 'undefined') {
                     console.error('html2pdf library not loaded');
@@ -1044,12 +992,45 @@
                     return;
                 }
                 
-                // Double-check element is visible and has content
-                if (!element || element.offsetHeight === 0) {
+                // Wait for translations to be applied
+                if (window.languageManager) {
+                    // Give time for translations to render
+                    await new Promise(resolve => setTimeout(resolve, 300));
+                }
+                
+                // Wait for fonts to load
+                if (document.fonts && document.fonts.ready) {
+                    await document.fonts.ready;
+                }
+                
+                // Additional wait for DOM to settle
+                await new Promise(resolve => setTimeout(resolve, 200));
+                
+                // Validate element is ready
+                if (!element) {
+                    console.error('PDF content element not found');
+                    btn.disabled = false;
+                    btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Στοιχείο δεν βρέθηκε' : '❌ Error: Element not found';
+                    return;
+                }
+                
+                // Force visibility check
+                element.style.display = 'block';
+                element.style.visibility = 'visible';
+                void element.offsetHeight; // Force reflow
+                
+                // Check if element has content
+                const hasContent = element.innerHTML.trim().length > 0;
+                const hasHeight = element.offsetHeight > 0 || element.scrollHeight > 0;
+                
+                if (!hasContent || !hasHeight) {
                     console.error('Element not ready for PDF generation', {
                         exists: !!element,
-                        offsetHeight: element ? element.offsetHeight : 0,
-                        innerHTML: element ? element.innerHTML.length : 0
+                        hasContent,
+                        hasHeight,
+                        offsetHeight: element.offsetHeight,
+                        scrollHeight: element.scrollHeight,
+                        innerHTMLLength: element.innerHTML.length
                     });
                     btn.disabled = false;
                     btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Περιεχόμενο δεν είναι έτοιμο' : '❌ Error: Content not ready';
@@ -1063,15 +1044,22 @@
                     return;
                 }
                 
-                // Ensure fonts are loaded
-                if (document.fonts && document.fonts.ready) {
-                    document.fonts.ready.then(() => {
-                        generatePDF();
-                    });
-                } else {
-                    generatePDF();
-                }
-            }, 500);
+                console.log('Element ready for PDF generation:', {
+                    offsetHeight: element.offsetHeight,
+                    scrollHeight: element.scrollHeight,
+                    innerHTMLLength: element.innerHTML.length
+                });
+                
+                // Generate PDF
+                generatePDF();
+            };
+            
+            // Start the wait process
+            waitForReady().catch(err => {
+                console.error('Error in waitForReady:', err);
+                btn.disabled = false;
+                btn.textContent = currentLang === 'el' ? '❌ Σφάλμα κατά την προετοιμασία' : '❌ Error during preparation';
+            });
         });
     </script>
 </body>
