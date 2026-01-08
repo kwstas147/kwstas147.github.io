@@ -686,22 +686,115 @@ html[data-theme="clean-office"] .lazy-image {
 /* Sidebar Styling */
 aside {
     transition: all 0.3s ease-in-out;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 
-/* CV Layout - Prevent Overlap */
-#cv-main-content {
-    min-width: 0; /* Prevents flex item from overflowing */
+/* Ensure sidebar content wraps properly */
+#cv-sidebar,
+#cv-sidebar * {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
     max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Prevent text overflow in sidebar cards */
+#cv-sidebar .bg-card {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-x: hidden;
+}
+
+/* Ensure all text in sidebar wraps */
+#cv-sidebar p,
+#cv-sidebar span,
+#cv-sidebar div {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Handle long URLs and email addresses */
+#cv-sidebar a {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all; /* More aggressive for URLs */
+    display: inline-block;
+    max-width: 100%;
+}
+
+/* Ensure container doesn't overflow */
+section.container {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Force proper CV layout structure */
+section.container > div.flex {
+    display: flex !important;
+}
+
+section.container > div.flex.flex-col {
+    flex-direction: column !important;
+}
+
+@media (min-width: 1024px) {
+    section.container > div.flex.lg\:flex-row {
+        flex-direction: row !important;
+    }
+}
+
+/* CV Layout - Prevent Overlap and Ensure Two-Column Layout */
+#cv-main-content {
+    min-width: 0 !important; /* Prevents flex item from overflowing */
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 #cv-sidebar {
-    min-width: 0; /* Prevents flex item from overflowing */
+    min-width: 0 !important; /* Prevents flex item from overflowing */
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure proper flex behavior for CV layout */
+section.container > div.flex.flex-col.lg\:flex-row {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
     max-width: 100%;
 }
 
-/* Ensure proper flex behavior */
-.flex.flex-col.lg\:flex-row {
-    align-items: flex-start;
+@media (min-width: 1024px) {
+    section.container > div.flex.flex-col.lg\:flex-row {
+        flex-direction: row !important;
+        align-items: flex-start !important;
+    }
+    
+    #cv-main-content {
+        width: 66.666667% !important; /* 2/3 */
+        flex: 0 0 66.666667% !important;
+        max-width: 66.666667% !important;
+    }
+    
+    #cv-sidebar {
+        width: 33.333333% !important; /* 1/3 */
+        flex: 0 0 33.333333% !important;
+        max-width: 33.333333% !important;
+    }
 }
 
 .flex.flex-col.lg\:flex-row > * {
