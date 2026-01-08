@@ -216,6 +216,31 @@ html[data-theme="clean-office"] nav {
     border-bottom-color: var(--border-color);
 }
 
+/* Navigation links alignment - ensure all links are vertically aligned */
+nav .nav-link,
+nav a[data-nav-page] {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.25;
+    min-height: 1.75rem;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Ensure active nav links maintain center alignment with others */
+nav .nav-link.text-xl,
+nav a[data-nav-page].text-xl {
+    line-height: 1.25;
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.75rem;
+}
+
+/* Ensure consistent center alignment for all nav links container */
+nav > div > div:first-child {
+    display: flex;
+    align-items: center;
+}
+
 html[data-theme="midnight"] nav a,
 html:not([data-theme]) nav a {
     color: var(--text-secondary);
