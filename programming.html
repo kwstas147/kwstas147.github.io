@@ -284,10 +284,11 @@ sensor:
                                 assets/images/development/1dev-1200w.jpg 1200w"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt="Flame dashboard running in Docker on Proxmox home lab" 
-                        class="w-full h-full object-cover lazy-image"
+                        class="w-full h-full object-cover lazy-image lightbox-image"
                         loading="lazy"
                         width="800"
                         height="450"
+                        data-fullsize="assets/images/development/1dev-1200w.jpg"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
                     <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
@@ -313,10 +314,11 @@ sensor:
                                 assets/images/development/2dev-1200w.jpg 1200w"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt="Proxmox home lab server infrastructure" 
-                        class="w-full h-full object-cover lazy-image"
+                        class="w-full h-full object-cover lazy-image lightbox-image"
                         loading="lazy"
                         width="800"
                         height="450"
+                        data-fullsize="assets/images/development/2dev-1200w.jpg"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
                     <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
@@ -342,10 +344,11 @@ sensor:
                                 assets/images/development/3dev-1200w.jpg 1200w"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt="Portainer Docker container management interface" 
-                        class="w-full h-full object-cover lazy-image"
+                        class="w-full h-full object-cover lazy-image lightbox-image"
                         loading="lazy"
                         width="800"
                         height="450"
+                        data-fullsize="assets/images/development/3dev-1200w.jpg"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
                     <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
@@ -393,6 +396,20 @@ sensor:
         </div>
     </footer>
 
+    <!-- Image Lightbox Modal -->
+    <div id="imageLightbox" class="image-lightbox">
+        <span class="image-lightbox-close" id="lightboxClose">&times;</span>
+        <div class="image-lightbox-zoom-level" id="zoomLevel">100%</div>
+        <div class="image-lightbox-content">
+            <img id="lightboxImage" class="image-lightbox-img" src="" alt="">
+        </div>
+        <div class="image-lightbox-zoom-controls">
+            <button class="image-lightbox-zoom-btn" id="zoomOut">-</button>
+            <button class="image-lightbox-zoom-btn image-lightbox-zoom-reset" id="zoomReset">Reset</button>
+            <button class="image-lightbox-zoom-btn" id="zoomIn">+</button>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
@@ -402,6 +419,188 @@ sensor:
     <script src="assets/js/navigation.js?v=1"></script>
     <script>
         lucide.createIcons();
+        
+        // Image Lightbox with Zoom Functionality
+        (function() {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxClose = document.getElementById('lightboxClose');
+            const zoomInBtn = document.getElementById('zoomIn');
+            const zoomOutBtn = document.getElementById('zoomOut');
+            const zoomResetBtn = document.getElementById('zoomReset');
+            const zoomLevel = document.getElementById('zoomLevel');
+            
+            let currentZoom = 1;
+            const minZoom = 0.5;
+            const maxZoom = 5;
+            const zoomStep = 0.25;
+            let isDragging = false;
+            let startX, startY, scrollLeft, scrollTop;
+            
+            // Get all lightbox images
+            const lightboxImages = document.querySelectorAll('.lightbox-image');
+            
+            // Open lightbox on image click
+            lightboxImages.forEach(img => {
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const fullSizeSrc = this.getAttribute('data-fullsize') || this.srcset.split(', ').pop().split(' ')[0] || this.src;
+                    lightboxImage.src = fullSizeSrc;
+                    lightboxImage.alt = this.alt;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    currentZoom = 1;
+                    translateX = 0;
+                    translateY = 0;
+                    updateZoom();
+                });
+            });
+            
+            // Close lightbox
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+                currentZoom = 1;
+                translateX = 0;
+                translateY = 0;
+                updateZoom();
+            }
+            
+            lightboxClose.addEventListener('click', closeLightbox);
+            
+            // Close on background click
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+            
+            // Close on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+            
+            // Pan/drag image when zoomed
+            let translateX = 0;
+            let translateY = 0;
+            let startMouseX = 0;
+            let startMouseY = 0;
+            
+            // Zoom functions
+            function updateTransform() {
+                lightboxImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentZoom})`;
+            }
+            
+            function updateZoom() {
+                updateTransform();
+                zoomLevel.textContent = Math.round(currentZoom * 100) + '%';
+                lightboxImage.style.cursor = currentZoom > 1 ? 'grab' : 'default';
+            }
+            
+            zoomInBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (currentZoom < maxZoom) {
+                    currentZoom = Math.min(currentZoom + zoomStep, maxZoom);
+                    updateZoom();
+                }
+            });
+            
+            zoomOutBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (currentZoom > minZoom) {
+                    currentZoom = Math.max(currentZoom - zoomStep, minZoom);
+                    updateZoom();
+                }
+            });
+            
+            zoomResetBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                currentZoom = 1;
+                translateX = 0;
+                translateY = 0;
+                updateZoom();
+            });
+            
+            // Mouse wheel zoom
+            lightboxImage.addEventListener('wheel', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const delta = e.deltaY > 0 ? -zoomStep : zoomStep;
+                const newZoom = Math.max(minZoom, Math.min(maxZoom, currentZoom + delta));
+                
+                if (newZoom !== currentZoom) {
+                    currentZoom = newZoom;
+                    updateZoom();
+                }
+            }, { passive: false });
+            
+            // Touch pinch zoom (mobile)
+            let initialDistance = 0;
+            let initialZoom = 1;
+            
+            lightboxImage.addEventListener('touchstart', function(e) {
+                if (e.touches.length === 2) {
+                    e.preventDefault();
+                    initialDistance = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                    );
+                    initialZoom = currentZoom;
+                }
+            });
+            
+            lightboxImage.addEventListener('touchmove', function(e) {
+                if (e.touches.length === 2) {
+                    e.preventDefault();
+                    const currentDistance = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                    );
+                    const zoomFactor = currentDistance / initialDistance;
+                    currentZoom = Math.max(minZoom, Math.min(maxZoom, initialZoom * zoomFactor));
+                    updateZoom();
+                }
+            });
+            
+            // Initialize translate values when opening lightbox
+            lightboxImages.forEach(img => {
+                img.addEventListener('click', function(e) {
+                    translateX = 0;
+                    translateY = 0;
+                });
+            });
+            
+            lightboxImage.addEventListener('mousedown', function(e) {
+                if (currentZoom > 1) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    isDragging = true;
+                    startMouseX = e.clientX - translateX;
+                    startMouseY = e.clientY - translateY;
+                    lightboxImage.classList.add('dragging');
+                    lightboxImage.style.cursor = 'grabbing';
+                }
+            });
+            
+            document.addEventListener('mousemove', function(e) {
+                if (!isDragging || currentZoom <= 1) return;
+                e.preventDefault();
+                translateX = e.clientX - startMouseX;
+                translateY = e.clientY - startMouseY;
+                updateTransform();
+            });
+            
+            document.addEventListener('mouseup', function() {
+                if (isDragging) {
+                    isDragging = false;
+                    lightboxImage.classList.remove('dragging');
+                    lightboxImage.style.cursor = currentZoom > 1 ? 'grab' : 'default';
+                }
+            });
+        })();
     </script>
 </body>
 </html>
