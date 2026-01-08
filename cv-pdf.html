@@ -658,11 +658,45 @@
             
             // Define PDF generation function
             function generatePDF() {
-                // Force layout recalculation
+                // Validate element exists and has content
+                if (!element) {
+                    console.error('PDF content element not found');
+                    btn.disabled = false;
+                    btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Στοιχείο δεν βρέθηκε' : '❌ Error: Element not found';
+                    return;
+                }
+                
+                // Scroll element into view to ensure it's rendered
+                element.scrollIntoView({ behavior: 'instant', block: 'start' });
+                
+                // Force layout recalculation and ensure element is visible
                 element.style.display = 'block';
                 element.style.visibility = 'visible';
-                const height = element.scrollHeight;
-                const width = 794; // A4 width in pixels at 96 DPI
+                element.style.opacity = '1';
+                element.style.position = 'relative';
+                element.style.zIndex = '1';
+                
+                // Force a reflow to ensure styles are applied
+                void element.offsetHeight;
+                
+                // Check if element has content
+                const height = element.scrollHeight || element.offsetHeight;
+                const width = element.scrollWidth || element.offsetWidth || 794;
+                
+                if (height === 0 || width === 0) {
+                    console.error('PDF content element has no dimensions', { 
+                        height, 
+                        width, 
+                        scrollHeight: element.scrollHeight,
+                        offsetHeight: element.offsetHeight,
+                        innerHTML: element.innerHTML.substring(0, 100)
+                    });
+                    btn.disabled = false;
+                    btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Κενό περιεχόμενο' : '❌ Error: Empty content';
+                    return;
+                }
+                
+                console.log('Generating PDF with dimensions:', { width, height, scrollHeight: element.scrollHeight });
                 
                 const opt = {
                     margin: [10, 10, 10, 10],
@@ -672,18 +706,13 @@
                         quality: 0.98 
                     },
                     html2canvas: { 
-                        scale: 3,
+                        scale: 2,
                         useCORS: true,
-                        logging: false,
+                        logging: true,
                         letterRendering: true,
                         backgroundColor: '#ffffff',
-                        width: width,
-                        height: height,
-                        windowWidth: width,
-                        windowHeight: height,
                         scrollX: 0,
                         scrollY: 0,
-                        removeContainer: true,
                         allowTaint: false,
                         foreignObjectRendering: true,
                         onclone: function(clonedDoc) {
@@ -696,17 +725,28 @@
                                 clonedBody.style.padding = '0';
                             }
                             
-                            // Fix PDF content container
+                            // Fix PDF content container - ensure it's visible and has dimensions
                             const clonedElement = clonedDoc.getElementById('pdf-content');
                             if (clonedElement) {
-                                clonedElement.style.width = width + 'px';
-                                clonedElement.style.minWidth = width + 'px';
-                                clonedElement.style.maxWidth = width + 'px';
+                                clonedElement.style.width = '794px';
+                                clonedElement.style.minWidth = '794px';
+                                clonedElement.style.maxWidth = '794px';
                                 clonedElement.style.display = 'block';
                                 clonedElement.style.visibility = 'visible';
+                                clonedElement.style.opacity = '1';
+                                clonedElement.style.position = 'relative';
+                                clonedElement.style.zIndex = '1';
                                 clonedElement.style.boxSizing = 'border-box';
                                 clonedElement.style.backgroundColor = '#ffffff';
                                 clonedElement.style.overflow = 'visible';
+                                clonedElement.style.height = 'auto';
+                                clonedElement.style.minHeight = '100px';
+                                
+                                console.log('Cloned element dimensions:', {
+                                    width: clonedElement.offsetWidth,
+                                    height: clonedElement.offsetHeight,
+                                    scrollHeight: clonedElement.scrollHeight
+                                });
                                 
                                 // Ensure flexbox layout
                                 const clonedContainer = clonedElement.querySelector('.cv-container');
@@ -904,6 +944,7 @@
                     }
                 };
                 
+                // Generate PDF with better error handling
                 html2pdf().set(opt).from(element).save().then(() => {
                     console.log('PDF generated successfully');
                     const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
@@ -923,6 +964,13 @@
                     }, 2000);
                 }).catch(err => {
                     console.error('PDF generation error:', err);
+                    console.error('Element info:', {
+                        exists: !!element,
+                        display: element ? window.getComputedStyle(element).display : 'N/A',
+                        visibility: element ? window.getComputedStyle(element).visibility : 'N/A',
+                        height: element ? element.offsetHeight : 'N/A',
+                        width: element ? element.offsetWidth : 'N/A'
+                    });
                     const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
                     const errorText = (window.translations && window.translations[currentLang] && window.translations[currentLang].pdfError) 
                         ? window.translations[currentLang].pdfError 
@@ -943,6 +991,40 @@
             
             // Wait for any pending renders, translations, and fonts to load
             setTimeout(() => {
+                // Check if html2pdf is loaded
+                if (typeof html2pdf === 'undefined') {
+                    console.error('html2pdf library not loaded');
+                    btn.disabled = false;
+                    btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Βιβλιοθήκη δεν φορτώθηκε' : '❌ Error: Library not loaded';
+                    setTimeout(() => {
+                        if (window.translations && window.translations[currentLang] && window.translations[currentLang].btnDownloadPDF) {
+                            btn.textContent = window.translations[currentLang].btnDownloadPDF;
+                        } else {
+                            btn.textContent = currentLang === 'el' ? '📥 Κατεβάστε το CV ως PDF' : '📥 Download CV as PDF';
+                        }
+                    }, 2000);
+                    return;
+                }
+                
+                // Double-check element is visible and has content
+                if (!element || element.offsetHeight === 0) {
+                    console.error('Element not ready for PDF generation', {
+                        exists: !!element,
+                        offsetHeight: element ? element.offsetHeight : 0,
+                        innerHTML: element ? element.innerHTML.length : 0
+                    });
+                    btn.disabled = false;
+                    btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Περιεχόμενο δεν είναι έτοιμο' : '❌ Error: Content not ready';
+                    setTimeout(() => {
+                        if (window.translations && window.translations[currentLang] && window.translations[currentLang].btnDownloadPDF) {
+                            btn.textContent = window.translations[currentLang].btnDownloadPDF;
+                        } else {
+                            btn.textContent = currentLang === 'el' ? '📥 Κατεβάστε το CV ως PDF' : '📥 Download CV as PDF';
+                        }
+                    }, 2000);
+                    return;
+                }
+                
                 // Ensure fonts are loaded
                 if (document.fonts && document.fonts.ready) {
                     document.fonts.ready.then(() => {
@@ -951,7 +1033,7 @@
                 } else {
                     generatePDF();
                 }
-            }, 300);
+            }, 500);
         });
     </script>
 </body>
