@@ -76,6 +76,49 @@
                     </p>
                 </div>
 
+                <!-- About Section -->
+                <div class="bg-slate-800 rounded-lg p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
+                        <i data-lucide="user" class="w-6 h-6"></i>
+                        <span data-i18n="cvAboutTitle">Σχετικά με εμένα</span>
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Development Skills -->
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                                <i data-lucide="code-2" class="w-5 h-5 text-blue-400"></i>
+                                <span data-i18n="cvAboutDevSkills">Τεχνολογίες Ανάπτυξης</span>
+                            </h3>
+                            <div class="space-y-3 text-sm">
+                                <div>
+                                    <h4 class="text-white font-semibold mb-1" data-i18n="cvAboutDevSkillsMobileTitle">Mobile Development</h4>
+                                    <p class="text-gray-300" data-i18n="cvAboutDevSkillsMobile">Cross-platform development με Flutter/Dart, React Native, και native Android με Kotlin</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold mb-1" data-i18n="cvAboutDevSkillsToolsTitle">Development Tools</h4>
+                                    <p class="text-gray-300" data-i18n="cvAboutDevSkillsTools">VS Code, Cursor (AI-powered IDE), Android Studio</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold mb-1" data-i18n="cvAboutDevSkillsAITitle">AI-Assisted Development</h4>
+                                    <p class="text-gray-300" data-i18n="cvAboutDevSkillsAI">Χρήση τεχνητής νοημοσύνης για efficient development workflows</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personal Projects -->
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                                <i data-lucide="folder-kanban" class="w-5 h-5 text-blue-400"></i>
+                                <span data-i18n="cvAboutPersonalProjects">Προσωπικά Projects</span>
+                            </h3>
+                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n="cvAboutPersonalProjectsDesc">
+                                Αναπτύσσω πολλαπλά projects στον ελεύθερο χρόνο μου, εξερευνώντας νέες τεχνολογίες και λύσεις. Κάθε project είναι μια ευκαιρία για μάθηση και πειραματισμό με σύγχρονες πλατφόρμες και frameworks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Work Experience Timeline -->
                 <div class="bg-slate-800 rounded-lg p-8 mb-8">
                     <h2 class="text-2xl font-bold mb-8 text-blue-400 flex items-center gap-3">
@@ -251,6 +294,9 @@
                             <p class="text-gray-300 text-sm leading-relaxed" data-i18n="cvTechProject3Desc">
                                 Ανάπτυξη εφαρμογών σε Python για την αυτοματοποίηση υπολογισμών και τη διαχείριση δεδομένων, εφαρμόζοντας τις γνώσεις από τα προγράμματα του ΕΚΠΑ.
                             </p>
+                            <p class="text-gray-300 text-sm leading-relaxed mt-3" data-i18n="cvTechProject3AIDev">
+                                AI-Assisted Development: Χρήση τεχνητής νοημοσύνης για efficient code generation, debugging, και application development workflows.
+                            </p>
                             <p class="text-gray-400 text-xs leading-relaxed mt-3 italic" data-i18n="cvTechProject3Homelab">
                                 Self-hosted infrastructure: Proxmox home lab με Tailscale VPN, Debian Docker stack (N8N, Nextcloud, Portainer, WordPress, pgAdmin, Flame, PostgreSQL).
                             </p>
@@ -317,6 +363,14 @@
                         <div>
                             <h3 class="text-sm font-semibold text-white mb-2" data-i18n="cvSkillsProgramming">Programming & IoT</h3>
                             <p class="text-gray-300 text-sm" data-i18n="cvSkillsProgrammingDesc">Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks</p>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold text-white mb-2" data-i18n="cvSkillsMobile">Mobile Development</h3>
+                            <p class="text-gray-300 text-sm" data-i18n="cvSkillsMobileDesc">Cross-platform mobile app development (Flutter/Dart, React Native, Kotlin)</p>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold text-white mb-2" data-i18n="cvSkillsDevTools">Development Tools</h3>
+                            <p class="text-gray-300 text-sm" data-i18n="cvSkillsDevToolsDesc">VS Code, Cursor (AI-powered IDE), Android Studio. AI-assisted development workflows</p>
                         </div>
                         <div>
                             <h3 class="text-sm font-semibold text-white mb-2" data-i18n="cvSkillsSoft">Soft Skills</h3>
