@@ -45,12 +45,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="container mx-auto px-4 py-20 text-center">
-        <div class="flex justify-center mb-6">
-            <i data-lucide="file-text" class="w-16 h-16 text-blue-400"></i>
-        </div>
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 fade-in" data-i18n="pageTitleCV">Curriculum Vitae</h1>
-        <div class="mt-8">
+    <section class="container mx-auto px-4 py-12 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-2 fade-in" data-i18n="cvName">Κωνσταντίνος Λαθύρης</h1>
+        <p class="text-xl md:text-2xl text-blue-400 mb-4" data-i18n="cvTitle">Industrial Operations Manager | IoT & Digital Tech Specialist</p>
+        <div class="mt-6">
             <a href="assets/pdf/cv-placeholder.pdf" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition-colors flex items-center gap-2 mx-auto">
                 <i data-lucide="download" class="w-5 h-5"></i>
                 <span data-i18n="btnDownloadCV">Κατεβάστε το CV</span>
@@ -58,85 +56,286 @@
         </div>
     </section>
 
-    <!-- CV Content -->
-    <section class="container mx-auto px-4 py-12 max-w-4xl">
-        <!-- Personal Info -->
-        <div class="bg-slate-800 rounded-lg p-8 mb-8">
-            <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
-                <i data-lucide="user" class="w-6 h-6"></i>
-                <span>Personal Information</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <p class="text-gray-400 text-sm mb-2">Name</p>
-                    <p class="text-white">[Placeholder]</p>
+    <!-- CV Content - Main Layout with Sidebar -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
+            <!-- Main Content Area -->
+            <div class="flex-1 lg:w-2/3">
+                <!-- Professional Summary -->
+                <div class="bg-slate-800 rounded-lg p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
+                        <i data-lucide="user-circle" class="w-6 h-6"></i>
+                        <span data-i18n="cvSectionSummary">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ</span>
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed" data-i18n="cvSummaryText">
+                        Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων (Ασφαλτικά Παρασκευαστήρια). Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την "hands-on" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD). Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού.
+                    </p>
                 </div>
-                <div>
-                    <p class="text-gray-400 text-sm mb-2">Email</p>
-                    <p class="text-white">kwstas147@gmail.com</p>
-                </div>
-                <div>
-                    <p class="text-gray-400 text-sm mb-2">Phone</p>
-                    <p class="text-white">[Placeholder]</p>
-                </div>
-                <div>
-                    <p class="text-gray-400 text-sm mb-2">Location</p>
-                    <p class="text-white">[Placeholder]</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Experience -->
-        <div class="bg-slate-800 rounded-lg p-8 mb-8">
-            <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
-                <i data-lucide="briefcase" class="w-6 h-6"></i>
-                <span>Experience</span>
-            </h2>
-            <div class="space-y-6">
-                <div class="border-l-2 border-blue-400 pl-6">
-                    <h3 class="text-xl font-bold text-white mb-2">[Job Title]</h3>
-                    <p class="text-blue-400 mb-2">[Company Name]</p>
-                    <p class="text-gray-400 text-sm mb-2">[Date Range]</p>
-                    <p class="text-gray-300">[Description placeholder]</p>
-                </div>
-            </div>
-        </div>
+                <!-- Work Experience Timeline -->
+                <div class="bg-slate-800 rounded-lg p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-8 text-blue-400 flex items-center gap-3">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                        <span data-i18n="cvSectionExperience">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ</span>
+                    </h2>
+                    <div class="timeline-container">
+                        <!-- Timeline Entry 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                                    <h3 class="text-xl font-bold text-white" data-i18n="cvJob1Title">Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου</h3>
+                                    <span class="text-sm text-blue-400 font-semibold" data-i18n="cvJob1Period">04/2022 – Σήμερα</span>
+                                </div>
+                                <p class="text-blue-400 mb-3 font-semibold" data-i18n="cvJob1Company">ΤΕΡΝΑ Α.Ε.</p>
+                                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                                    <li data-i18n="cvJob1Desc1">Επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.</li>
+                                    <li data-i18n="cvJob1Desc2">Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.</li>
+                                    <li data-i18n="cvJob1Desc3">Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.</li>
+                                </ul>
+                            </div>
+                        </div>
 
-        <!-- Education -->
-        <div class="bg-slate-800 rounded-lg p-8 mb-8">
-            <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
-                <i data-lucide="graduation-cap" class="w-6 h-6"></i>
-                <span>Education</span>
-            </h2>
-            <div class="space-y-6">
-                <div class="border-l-2 border-blue-400 pl-6">
-                    <h3 class="text-xl font-bold text-white mb-2">[Degree]</h3>
-                    <p class="text-blue-400 mb-2">[Institution]</p>
-                    <p class="text-gray-400 text-sm">[Date Range]</p>
-                </div>
-            </div>
-        </div>
+                        <!-- Timeline Entry 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                                    <h3 class="text-xl font-bold text-white" data-i18n="cvJob2Title">Χειριστής Μηχανημάτων Έργου</h3>
+                                    <span class="text-sm text-blue-400 font-semibold" data-i18n="cvJob2Period">12/2021 – 03/2022</span>
+                                </div>
+                                <p class="text-blue-400 mb-3 font-semibold" data-i18n="cvJob2Company">Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)</p>
+                                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                                    <li data-i18n="cvJob2Desc1">Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο.</li>
+                                </ul>
+                            </div>
+                        </div>
 
-        <!-- Skills -->
-        <div class="bg-slate-800 rounded-lg p-8 mb-8">
-            <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
-                <i data-lucide="award" class="w-6 h-6"></i>
-                <span>Skills</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-4">Programming Languages</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-700 text-sm text-gray-300 rounded">[Skill]</span>
+                        <!-- Timeline Entry 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                                    <h3 class="text-xl font-bold text-white" data-i18n="cvJob3Title">Υπεύθυνος Παραγωγής & Χειριστής Λατομικού Συγκροτήματος</h3>
+                                    <span class="text-sm text-blue-400 font-semibold" data-i18n="cvJob3Period">09/2019 – 12/2022</span>
+                                </div>
+                                <p class="text-blue-400 mb-3 font-semibold" data-i18n="cvJob3Company">ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.</p>
+                                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                                    <li data-i18n="cvJob3Desc1">Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Entry 4 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                                    <h3 class="text-xl font-bold text-white" data-i18n="cvJob4Title">Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας & Διαχείρισης</h3>
+                                    <span class="text-sm text-blue-400 font-semibold" data-i18n="cvJob4Period">06/2000 – 08/2019</span>
+                                </div>
+                                <p class="text-blue-400 mb-3 font-semibold" data-i18n="cvJob4Company">ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ</p>
+                                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                                    <li data-i18n="cvJob4Desc1">19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος.</li>
+                                    <li data-i18n="cvJob4Desc2">Διοικητικές Ικανότητες: Διαχείριση ανθρώπινου δυναμικού, προμηθειών, logistics και έκδοση παραστατικών.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Entry 5 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                                    <h3 class="text-xl font-bold text-white" data-i18n="cvJob5Title">Τεχνικός Ψυκτικών Εφαρμογών & Κατασκευών Inox</h3>
+                                    <span class="text-sm text-blue-400 font-semibold" data-i18n="cvJob5Period">01/2000 – 05/2000</span>
+                                </div>
+                                <p class="text-blue-400 mb-3 font-semibold" data-i18n="cvJob5Company">Ζυγούρης Κ.</p>
+                                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                                    <li data-i18n="cvJob5Desc1">Κατασκευή επαγγελματικού εξοπλισμού και εγκατάσταση ψυκτικών συστημάτων.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Entry 6 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                                    <h3 class="text-xl font-bold text-white" data-i18n="cvJob6Title">Βοηθός Ηλεκτρολόγου Εσωτερικών Εγκαταστάσεων</h3>
+                                    <span class="text-sm text-blue-400 font-semibold" data-i18n="cvJob6Period">02/1997 – 04/1998</span>
+                                </div>
+                                <p class="text-blue-400 mb-3 font-semibold" data-i18n="cvJob6Company">Τσάκας Ι.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-4">Technologies & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-700 text-sm text-gray-300 rounded">[Technology]</span>
+
+                <!-- Education & Certifications -->
+                <div class="bg-slate-800 rounded-lg p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        <span data-i18n="cvSectionEducation">ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ</span>
+                    </h2>
+                    <div class="space-y-6">
+                        <!-- Current Education -->
+                        <div class="border-l-2 border-blue-400 pl-6">
+                            <h3 class="text-lg font-bold text-white mb-2" data-i18n="cvEdu1Title">Τεχνικός Εσωτερικών Ηλεκτρικών Εγκαταστάσεων</h3>
+                            <p class="text-blue-400 mb-2" data-i18n="cvEdu1Institution">ΙΕΚ ΟΜΗΡΟΣ</p>
+                            <p class="text-gray-400 text-sm" data-i18n="cvEdu1Period">2024 – 2025 (Σε εξέλιξη)</p>
+                        </div>
+
+                        <!-- EKPA Certifications -->
+                        <div class="border-l-2 border-blue-400 pl-6">
+                            <h3 class="text-lg font-bold text-white mb-4" data-i18n="cvEdu2Title">Προηγμένες Τεχνολογίες Δικτύων & Προγραμματισμός</h3>
+                            <p class="text-blue-400 mb-4" data-i18n="cvEdu2Institution">E-Learning Εθνικό & Καποδιστριακό Πανεπιστήμιο Αθηνών (ΕΚΠΑ)</p>
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <span class="ekpa-badge" data-i18n="cvEdu2Badge1">Advanced Network Technologies (2024-2025)</span>
+                                <span class="ekpa-badge" data-i18n="cvEdu2Badge2">Programming with Python (2023)</span>
+                                <span class="ekpa-badge" data-i18n="cvEdu2Badge3">Product Design & 3D Printing Specialization (2021)</span>
+                            </div>
+                        </div>
+
+                        <!-- Basic Technical Education -->
+                        <div class="border-l-2 border-blue-400 pl-6">
+                            <h3 class="text-lg font-bold text-white mb-2" data-i18n="cvEdu3Title">Βασική Τεχνική Εκπαίδευση</h3>
+                            <p class="text-blue-400 mb-2" data-i18n="cvEdu3Institution">Ηλεκτρολόγος Εσωτερικών Εγκαταστάσεων</p>
+                            <p class="text-gray-400 text-sm mb-2" data-i18n="cvEdu3Location">2ο ΤΕΛ Λαμίας</p>
+                            <p class="text-gray-300 text-sm" data-i18n="cvEdu3Cert">Δίπλωμα & Πιστοποίηση Χειριστή Μηχανημάτων Έργου (Όλες οι κατηγορίες)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Projects & Innovation Section -->
+                <div class="bg-slate-800 rounded-lg p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-8 text-blue-400 flex items-center gap-3">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        <span data-i18n="cvSectionTechProjects">Τεχνολογικά Project & Καινοτομία</span>
+                    </h2>
+                    <p class="text-gray-400 mb-6 text-sm italic" data-i18n="cvTechProjectsSubtitle">Προσωπικά Project & Έρευνα (R&D)</p>
+                    
+                    <!-- Feature Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <!-- Smart Home Card -->
+                        <div class="tech-project-card">
+                            <div class="flex justify-center mb-4">
+                                <i data-lucide="home" class="w-12 h-12 text-blue-400"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3" data-i18n="cvTechProject1Title">Smart Home Ecosystem</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n="cvTechProject1Desc">
+                                Σχεδιασμός και υλοποίηση κεντρικού συστήματος αυτοματισμού με Home Assistant και ESPHome. Ανάπτυξη custom αισθητήρων (ESP32) για την παρακολούθηση κρίσιμων παραμέτρων περιβάλλοντος.
+                            </p>
+                        </div>
+
+                        <!-- 3D Printing Card -->
+                        <div class="tech-project-card">
+                            <div class="flex justify-center mb-4">
+                                <i data-lucide="box" class="w-12 h-12 text-blue-400"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3" data-i18n="cvTechProject2Title">Additive Manufacturing (3D Printing)</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n="cvTechProject2Desc">
+                                Σχεδιασμός εξαρτημάτων στο Fusion360 και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία.
+                            </p>
+                        </div>
+
+                        <!-- Software Development Card -->
+                        <div class="tech-project-card">
+                            <div class="flex justify-center mb-4">
+                                <i data-lucide="terminal" class="w-12 h-12 text-blue-400"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3" data-i18n="cvTechProject3Title">Software Development</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n="cvTechProject3Desc">
+                                Ανάπτυξη εφαρμογών σε Python για την αυτοματοποίηση υπολογισμών και τη διαχείριση δεδομένων, εφαρμόζοντας τις γνώσεις από τα προγράμματα του ΕΚΠΑ.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- View Projects Button -->
+                    <div class="text-center">
+                        <a href="index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors flex items-center gap-2 mx-auto">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            <span data-i18n="cvViewProjects">Δείτε τα Projects μου</span>
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <!-- Sidebar -->
+            <aside class="lg:w-1/3 lg:sticky lg:top-24 lg:h-fit">
+                <!-- Contact Information -->
+                <div class="bg-slate-800 rounded-lg p-6 mb-6">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400 flex items-center gap-2">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <span data-i18n="cvSectionContact">ΕΠΙΚΟΙΝΩΝΙΑ</span>
+                    </h2>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-blue-400 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-300" data-i18n="cvLocation">Λαμία, Ελλάδα</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-blue-400 mt-1 flex-shrink-0"></i>
+                            <a href="tel:+306974030956" class="text-gray-300 hover:text-blue-400 transition-colors" data-i18n="cvPhone">(+30) 6974030956</a>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-blue-400 mt-1 flex-shrink-0"></i>
+                            <a href="mailto:lathyris.kon@gmail.com" class="text-gray-300 hover:text-blue-400 transition-colors break-all" data-i18n="cvEmail">lathyris.kon@gmail.com</a>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="linkedin" class="w-4 h-4 text-blue-400 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-300" data-i18n="cvLinkedIn">Konstantinos Lathyris</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="globe" class="w-4 h-4 text-blue-400 mt-1 flex-shrink-0"></i>
+                            <a href="https://kwstas147.github.io" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors" data-i18n="cvPortfolio">kwstas147.github.io</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="bg-slate-800 rounded-lg p-6 mb-6">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400 flex items-center gap-2">
+                        <i data-lucide="award" class="w-5 h-5"></i>
+                        <span data-i18n="cvSectionSkills">ΤΕΧΝΙΚΕΣ & ΨΗΦΙΑΚΕΣ ΔΕΞΙΟΤΗΤΕΣ</span>
+                    </h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-sm font-semibold text-white mb-2" data-i18n="cvSkillsIndustrial">Industrial</h3>
+                            <p class="text-gray-300 text-sm" data-i18n="cvSkillsIndustrialDesc">Χειρισμός & Συντήρηση Βαρέων Μηχανημάτων, Διαχείριση Παραγωγής, Ηλεκτρολογικό Σχέδιο</p>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold text-white mb-2" data-i18n="cvSkillsDigital">Digital Design</h3>
+                            <p class="text-gray-300 text-sm" data-i18n="cvSkillsDigitalDesc">CAD Design (Fusion360), 3D Printing (Slicing & Optimization)</p>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold text-white mb-2" data-i18n="cvSkillsProgramming">Programming & IoT</h3>
+                            <p class="text-gray-300 text-sm" data-i18n="cvSkillsProgrammingDesc">Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks</p>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold text-white mb-2" data-i18n="cvSkillsSoft">Soft Skills</h3>
+                            <p class="text-gray-300 text-sm" data-i18n="cvSkillsSoftDesc">Ηγεσία ομάδων, Στρατηγικός σχεδιασμός προμηθειών, Διαχείριση κρίσεων σε τεχνικά έργα</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages & Licenses -->
+                <div class="bg-slate-800 rounded-lg p-6">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400 flex items-center gap-2">
+                        <i data-lucide="languages" class="w-5 h-5"></i>
+                        <span data-i18n="cvSectionLanguages">ΓΛΩΣΣΕΣ & ΑΔΕΙΕΣ</span>
+                    </h2>
+                    <div class="space-y-3 text-sm">
+                        <div>
+                            <p class="text-gray-300"><span class="font-semibold text-white" data-i18n="cvLangGreek">Ελληνικά:</span> <span data-i18n="cvLangGreekLevel">Μητρική</span></p>
+                            <p class="text-gray-300"><span class="font-semibold text-white" data-i18n="cvLangEnglish">Αγγλικά:</span> <span data-i18n="cvLangEnglishLevel">Επίπεδο B1</span></p>
+                        </div>
+                        <div class="pt-2 border-t border-slate-700">
+                            <p class="text-gray-300"><span class="font-semibold text-white" data-i18n="cvLicenses">Άδειες Οδήγησης:</span> <span data-i18n="cvLicensesTypes">A, B, C, D</span></p>
+                            <p class="text-gray-400 text-xs mt-1" data-i18n="cvLicensesNote">(Πλήρης κάλυψη οχημάτων και μηχανημάτων)</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
     </section>
 
@@ -179,4 +378,3 @@
     </script>
 </body>
 </html>
-

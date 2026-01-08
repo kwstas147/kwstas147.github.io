@@ -56,10 +56,25 @@
     <!-- Projects Grid Gallery -->
     <section class="container mx-auto px-4 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Placeholder Project Cards -->
+            <!-- Project Card Example - Replace with your actual projects -->
             <div class="bg-slate-800 rounded-lg p-6 project-card">
-                <div class="aspect-video bg-slate-700 rounded mb-4 flex items-center justify-center">
-                    <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
+                <div class="aspect-video bg-slate-700 rounded mb-4 overflow-hidden relative">
+                    <img 
+                        src="assets/images/3d-printing/project-example.jpg" 
+                        srcset="assets/images/3d-printing/project-example-400w.jpg 400w,
+                                assets/images/3d-printing/project-example-800w.jpg 800w,
+                                assets/images/3d-printing/project-example-1200w.jpg 1200w"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        alt="3D Printed Project Example" 
+                        class="w-full h-full object-cover lazy-image"
+                        loading="lazy"
+                        width="800"
+                        height="450"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    >
+                    <div class="absolute inset-0 bg-slate-700 rounded flex items-center justify-center" style="display: none;">
+                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
+                    </div>
                 </div>
                 <h3 class="text-xl font-bold mb-2 text-blue-400">Project Title</h3>
                 <p class="text-gray-400 text-sm mb-4" data-i18n="placeholderDescription">Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.</p>
@@ -68,9 +83,36 @@
                     <span class="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">2024</span>
                 </div>
             </div>
-        </div>
-        <div class="mt-8 text-center">
-            <p class="text-gray-400" data-i18n="placeholderProjects">Projects θα προστεθούν σύντομα...</p>
+            
+            <!-- Add more project cards following the same structure -->
+            <!-- 
+            <div class="bg-slate-800 rounded-lg p-6 project-card">
+                <div class="aspect-video bg-slate-700 rounded mb-4 overflow-hidden relative">
+                    <img 
+                        src="assets/images/3d-printing/your-project.jpg" 
+                        srcset="assets/images/3d-printing/your-project-400w.jpg 400w,
+                                assets/images/3d-printing/your-project-800w.jpg 800w,
+                                assets/images/3d-printing/your-project-1200w.jpg 1200w"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        alt="Description of your 3D printed project" 
+                        class="w-full h-full object-cover lazy-image"
+                        loading="lazy"
+                        width="800"
+                        height="450"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    >
+                    <div class="absolute inset-0 bg-slate-700 rounded flex items-center justify-center" style="display: none;">
+                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-blue-400">Your Project Name</h3>
+                <p class="text-gray-400 text-sm mb-4">Description of your project...</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">Material</span>
+                    <span class="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">Year</span>
+                </div>
+            </div>
+            -->
         </div>
     </section>
 
