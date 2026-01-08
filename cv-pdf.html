@@ -28,7 +28,8 @@
             background: white;
             padding: 20px;
             width: 210mm;
-            max-width: 100%;
+            min-width: 210mm;
+            max-width: 210mm;
             margin: 0 auto;
             box-sizing: border-box;
             overflow: visible;
@@ -152,40 +153,51 @@
             margin-bottom: 5px;
         }
         .cv-container {
-            display: table;
+            display: block;
             width: 100%;
-            table-layout: fixed;
+            overflow: hidden;
         }
         .main-content {
-            display: table-cell;
+            float: left;
             width: 66.666%;
-            vertical-align: top;
+            box-sizing: border-box;
             padding-right: 20px;
         }
         .sidebar {
-            display: table-cell;
+            float: right;
             width: 33.333%;
-            vertical-align: top;
+            box-sizing: border-box;
             padding-left: 20px;
+        }
+        .cv-container::after {
+            content: "";
+            display: table;
+            clear: both;
         }
         .summary {
             text-align: justify;
             line-height: 1.8;
         }
         .about-grid {
-            display: table;
+            display: block;
             width: 100%;
-            table-layout: fixed;
         }
         .about-grid > div {
-            display: table-cell;
-            width: 50%;
+            float: left;
+            width: 48%;
             vertical-align: top;
-            padding-right: 15px;
+            padding-right: 2%;
+            box-sizing: border-box;
         }
         .about-grid > div:last-child {
+            float: right;
             padding-right: 0;
-            padding-left: 15px;
+            padding-left: 2%;
+        }
+        .about-grid::after {
+            content: "";
+            display: table;
+            clear: both;
         }
         .tech-projects {
             margin-bottom: 15px;
@@ -459,6 +471,17 @@
         
         document.getElementById('downloadBtn').addEventListener('click', function() {
             const element = document.getElementById('pdf-content');
+            const btn = this;
+            
+            // Force layout recalculation
+            element.style.display = 'block';
+            element.offsetHeight; // Force reflow
+            
+            // Calculate actual dimensions
+            const computedStyle = window.getComputedStyle(element);
+            const width = parseFloat(computedStyle.width) || element.offsetWidth;
+            const height = element.scrollHeight || element.offsetHeight;
+            
             const opt = {
                 margin: [15, 15, 15, 15],
                 filename: 'CV_Konstantinos_Lathyris.pdf',
@@ -469,13 +492,22 @@
                     logging: false,
                     letterRendering: true,
                     backgroundColor: '#ffffff',
-                    width: element.offsetWidth || element.scrollWidth,
-                    height: element.offsetHeight || element.scrollHeight,
-                    windowWidth: element.offsetWidth || element.scrollWidth,
-                    windowHeight: element.offsetHeight || element.scrollHeight,
+                    width: width,
+                    height: height,
+                    windowWidth: width,
+                    windowHeight: height,
                     removeContainer: false,
                     allowTaint: false,
-                    foreignObjectRendering: false
+                    foreignObjectRendering: false,
+                    onclone: function(clonedDoc) {
+                        // Ensure cloned document has correct width
+                        const clonedElement = clonedDoc.getElementById('pdf-content');
+                        if (clonedElement) {
+                            clonedElement.style.width = width + 'px';
+                            clonedElement.style.minWidth = width + 'px';
+                            clonedElement.style.maxWidth = width + 'px';
+                        }
+                    }
                 },
                 jsPDF: { 
                     unit: 'mm', 
@@ -487,20 +519,23 @@
                 pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
             };
             
-            this.textContent = '⏳ Δημιουργία PDF...';
-            this.disabled = true;
+            btn.textContent = '⏳ Δημιουργία PDF...';
+            btn.disabled = true;
             
-            html2pdf().set(opt).from(element).save().then(() => {
-                this.textContent = '✅ PDF Κατέβηκε!';
-                setTimeout(() => {
-                    this.textContent = '📥 Κατεβάστε το CV ως PDF';
-                    this.disabled = false;
-                }, 2000);
-            }).catch(err => {
-                console.error('PDF generation error:', err);
-                this.textContent = '❌ Σφάλμα - Δοκιμάστε ξανά';
-                this.disabled = false;
-            });
+            // Small delay to ensure layout is stable
+            setTimeout(() => {
+                html2pdf().set(opt).from(element).save().then(() => {
+                    btn.textContent = '✅ PDF Κατέβηκε!';
+                    setTimeout(() => {
+                        btn.textContent = '📥 Κατεβάστε το CV ως PDF';
+                        btn.disabled = false;
+                    }, 2000);
+                }).catch(err => {
+                    console.error('PDF generation error:', err);
+                    btn.textContent = '❌ Σφάλμα - Δοκιμάστε ξανά';
+                    btn.disabled = false;
+                });
+            }, 100);
         });
     </script>
 </body>
