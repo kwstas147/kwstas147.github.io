@@ -1,0 +1,27 @@
+Ανοίγεις Terminal/PowerShell από οποιοδήποτε μέρος και τρέχεις:
+
+cd c:\Users\kwsta\AndroidStudioProjects\kwstas147.github.io
+python assets\images\development\optimize_images.py "C:\Users\kwsta\Documents\development" "assets\images\development"
+
+
+
+Η σύνταξη είναι:
+
+python [path-to-script] [path-with-your-images] [output-folder]
+
+
+Παράδειγμα:
+
+
+python assets\images\development\optimize_images.py "C:\Users\kwsta\Documents\development" "assets\images\development"
+#                      ↑ script location              ↑ input (όπου έχεις τις εικόνες)  ↑ output (όπου θα πάνε)
+
+
+
+
+   python assets\images\3d-printing\optimize_images.py "C:\MyImages" "assets\images\3d-printing"
+
+
+
+   
+
