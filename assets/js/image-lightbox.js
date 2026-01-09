@@ -13,7 +13,7 @@
     let currentZoom = 1;
     const minZoom = 0.5;
     const maxZoom = 5;
-    const zoomStep = 0.25;
+    const zoomStep = 0.05;
     let translateX = 0;
     let translateY = 0;
     let isDragging = false;
@@ -325,7 +325,9 @@
                 e.preventDefault();
                 e.stopPropagation();
                 
-                const delta = e.deltaY > 0 ? -zoomStep : zoomStep;
+                // Μείωση ευαισθησίας: χρήση μικρότερου step και scaling με βάση το deltaY
+                const sensitivity = 0.3; // Μείωση ευαισθησίας κατά 70%
+                const delta = (e.deltaY > 0 ? -zoomStep : zoomStep) * sensitivity;
                 const newZoom = Math.max(minZoom, Math.min(maxZoom, currentZoom + delta));
                 
                 if (newZoom !== currentZoom) {

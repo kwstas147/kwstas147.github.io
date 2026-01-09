@@ -837,7 +837,7 @@ html[data-theme="clean-office"] .lazy-image {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
+    display: none !important;
     gap: 10px;
     z-index: 10000;
     background-color: rgba(0, 0, 0, 0.7);
