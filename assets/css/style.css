@@ -3,13 +3,14 @@
 /* Hero Section with Background Image */
 .hero-section {
     position: relative;
-    min-height: 70vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--bg-primary);
     margin-top: 0;
     overflow: hidden;
+    padding-bottom: 8rem;
 }
 
 .hero-background {
@@ -22,7 +23,7 @@
     height: 100%;
     background-image: url('../images/hero-background.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: 0;
@@ -55,12 +56,13 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(
-        135deg,
+        to bottom,
         rgba(15, 23, 42, 0.88) 0%,
-        rgba(30, 41, 59, 0.78) 30%,
-        rgba(51, 65, 85, 0.70) 50%,
-        rgba(30, 41, 59, 0.78) 70%,
-        rgba(15, 23, 42, 0.88) 100%
+        rgba(30, 41, 59, 0.75) 30%,
+        rgba(51, 65, 85, 0.65) 50%,
+        rgba(30, 41, 59, 0.60) 70%,
+        rgba(15, 23, 42, 0.50) 85%,
+        rgba(15, 23, 42, 0.35) 100%
     );
     z-index: 2;
 }
@@ -68,12 +70,13 @@
 /* Theme-specific overlay adjustments */
 html[data-theme="clean-office"] .hero-overlay {
     background: linear-gradient(
-        135deg,
+        to bottom,
         rgba(255, 255, 255, 0.88) 0%,
-        rgba(249, 250, 251, 0.78) 30%,
-        rgba(243, 244, 246, 0.70) 50%,
-        rgba(249, 250, 251, 0.78) 70%,
-        rgba(255, 255, 255, 0.88) 100%
+        rgba(249, 250, 251, 0.75) 30%,
+        rgba(243, 244, 246, 0.65) 50%,
+        rgba(249, 250, 251, 0.60) 70%,
+        rgba(255, 255, 255, 0.50) 85%,
+        rgba(255, 255, 255, 0.35) 100%
     );
 }
 
@@ -107,12 +110,17 @@ html[data-theme="clean-office"] .hero-section .text-blue-400 {
     .hero-background {
         background-attachment: scroll;
     }
+    
+    .hero-section {
+        min-height: 90vh;
+        padding-bottom: 6rem;
+    }
 }
 
 @media (max-width: 768px) {
     .hero-section {
-        min-height: 60vh;
-        padding: 3rem 1rem;
+        min-height: 80vh;
+        padding: 3rem 1rem 4rem 1rem;
     }
     
     .hero-background {
