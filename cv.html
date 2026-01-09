@@ -115,49 +115,6 @@
                     </p>
                 </div>
 
-                <!-- About Section -->
-                <div class="bg-card rounded-lg p-8 mb-8">
-                    <h2 class="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
-                        <i data-lucide="user" class="w-6 h-6"></i>
-                        <span data-i18n="cv.about.title">Σχετικά με εμένα</span>
-                    </h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Development Skills -->
-                        <div>
-                            <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                <i data-lucide="code-2" class="w-5 h-5 text-blue-400"></i>
-                                <span data-i18n="cv.about.devSkills">Τεχνολογίες Ανάπτυξης</span>
-                            </h3>
-                            <div class="space-y-3 text-sm">
-                                <div>
-                                    <h4 class="text-white font-semibold mb-1" data-i18n="cv.about.devSkillsMobileTitle">Mobile Development</h4>
-                                    <p class="text-gray-300" data-i18n="cv.about.devSkillsMobile">Cross-platform development με Flutter/Dart, React Native, και native Android με Kotlin</p>
-                                </div>
-                                <div>
-                                    <h4 class="text-white font-semibold mb-1" data-i18n="cv.about.devSkillsToolsTitle">Development Tools</h4>
-                                    <p class="text-gray-300" data-i18n="cv.about.devSkillsTools">VS Code, Cursor (AI-powered IDE), Android Studio</p>
-                                </div>
-                                <div>
-                                    <h4 class="text-white font-semibold mb-1" data-i18n="cv.about.devSkillsAITitle">AI-Assisted Development</h4>
-                                    <p class="text-gray-300" data-i18n="cv.about.devSkillsAI">Χρήση τεχνητής νοημοσύνης για efficient development workflows</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Personal Projects -->
-                        <div>
-                            <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                <i data-lucide="folder-kanban" class="w-5 h-5 text-blue-400"></i>
-                                <span data-i18n="cv.about.personalProjects">Προσωπικά Projects</span>
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n="cv.about.personalProjectsDesc">
-                                Αναπτύσσω πολλαπλά projects στον ελεύθερο χρόνο μου, εξερευνώντας νέες τεχνολογίες και λύσεις. Κάθε project είναι μια ευκαιρία για μάθηση και πειραματισμό με σύγχρονες πλατφόρμες και frameworks.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Work Experience Timeline -->
                 <div class="bg-card rounded-lg p-8 mb-8">
                     <h2 class="text-2xl font-bold mb-8 text-blue-400 flex items-center gap-3">
@@ -293,62 +250,95 @@
                     </div>
                 </div>
 
-                <!-- Tech Projects & Innovation Section -->
+                <!-- Soft Skills & Hobbies Section -->
                 <div class="bg-card rounded-lg p-8 mb-8">
-                    <h2 class="text-2xl font-bold mb-8 text-blue-400 flex items-center gap-3">
-                        <i data-lucide="sparkles" class="w-6 h-6"></i>
-                        <span data-i18n="cv.sections.techProjects">Τεχνολογικά Project & Καινοτομία</span>
+                    <h2 class="text-2xl font-bold mb-4 text-blue-400 flex items-center gap-3">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                        <span data-i18n="cv.softSkills.title">Soft Skills & Hobbies</span>
                     </h2>
-                    <p class="text-gray-400 mb-6 text-sm italic" data-i18n="cv.techProjects.subtitle">Προσωπικά Project & Έρευνα (R&D)</p>
+                    <p class="text-gray-400 mb-8 text-sm italic" data-i18n="cv.softSkills.subtitle">Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.</p>
                     
-                    <!-- Feature Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                        <!-- Smart Home Card -->
-                        <div class="tech-project-card" data-i18n-tech-project="0">
-                            <div class="flex justify-center mb-4">
-                                <i data-lucide="home" class="w-12 h-12 text-blue-400"></i>
+                    <!-- Soft Skills Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Programming & Development -->
+                        <div class="bg-tertiary rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="flex-shrink-0">
+                                    <i data-lucide="code" class="w-10 h-10 text-blue-400"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="cv.softSkills.programming.title">Programming & Development</h3>
+                                    <p class="text-gray-300 text-sm mb-3" data-i18n="cv.softSkills.programming.description">
+                                        Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE, GitHub Copilot) για efficient code generation και debugging.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">AI-Assisted</span>
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">Python</span>
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">Flutter</span>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="text-lg font-bold text-white mb-3" data-i18n-tech-title>Smart Home Ecosystem</h3>
-                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n-tech-desc>
-                                Σχεδιασμός και υλοποίηση κεντρικού συστήματος αυτοματισμού με Home Assistant και ESPHome. Ανάπτυξη custom αισθητήρων (ESP32) για την παρακολούθηση κρίσιμων παραμέτρων περιβάλλοντος.
-                            </p>
                         </div>
 
-                        <!-- 3D Printing Card -->
-                        <div class="tech-project-card" data-i18n-tech-project="1">
-                            <div class="flex justify-center mb-4">
-                                <i data-lucide="box" class="w-12 h-12 text-blue-400"></i>
+                        <!-- Design & 3D Printing -->
+                        <div class="bg-tertiary rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="flex-shrink-0">
+                                    <i data-lucide="printer" class="w-10 h-10 text-blue-400"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="cv.softSkills.design.title">Design & 3D Printing</h3>
+                                    <p class="text-gray-300 text-sm mb-3" data-i18n="cv.softSkills.design.description">
+                                        Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">Fusion360</span>
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">3D Printing</span>
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">AI Design</span>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="text-lg font-bold text-white mb-3" data-i18n-tech-title>Additive Manufacturing (3D Printing)</h3>
-                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n-tech-desc>
-                                Σχεδιασμός εξαρτημάτων στο Fusion360 και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία.
-                            </p>
                         </div>
 
-                        <!-- Software Development Card -->
-                        <div class="tech-project-card" data-i18n-tech-project="2">
-                            <div class="flex justify-center mb-4">
-                                <i data-lucide="terminal" class="w-12 h-12 text-blue-400"></i>
+                        <!-- Smart Home Automation -->
+                        <div class="bg-tertiary rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="flex-shrink-0">
+                                    <i data-lucide="home" class="w-10 h-10 text-blue-400"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="cv.softSkills.smartHome.title">Smart Home Automation</h3>
+                                    <p class="text-gray-300 text-sm mb-3" data-i18n="cv.softSkills.smartHome.description">
+                                        Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management και predictive maintenance.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">Home Assistant</span>
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">ESP32</span>
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">AI Automation</span>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="text-lg font-bold text-white mb-3" data-i18n-tech-title>Software Development</h3>
-                            <p class="text-gray-300 text-sm leading-relaxed" data-i18n-tech-desc>
-                                Ανάπτυξη εφαρμογών σε Python για την αυτοματοποίηση υπολογισμών και τη διαχείριση δεδομένων, εφαρμόζοντας τις γνώσεις από τα προγράμματα του ΕΚΠΑ.
-                            </p>
-                            <p class="text-gray-300 text-sm leading-relaxed mt-3" data-i18n-tech-aidev>
-                                AI-Assisted Development: Χρήση τεχνητής νοημοσύνης για efficient code generation, debugging, και application development workflows.
-                            </p>
-                            <p class="text-gray-400 text-xs leading-relaxed mt-3 italic" data-i18n-tech-homelab>
-                                Self-hosted infrastructure: Proxmox home lab με Tailscale VPN, Debian Docker stack (N8N, Nextcloud, Portainer, WordPress, pgAdmin, Flame, PostgreSQL).
-                            </p>
                         </div>
-                    </div>
 
-                    <!-- View Projects Button -->
-                    <div class="text-center">
-                        <a href="index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors flex items-center gap-2 mx-auto">
-                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                            <span data-i18n="cv.techProjects.viewProjects">Δείτε τα Projects μου</span>
-                        </a>
+                        <!-- AI-Assisted Innovation -->
+                        <div class="bg-tertiary rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="flex-shrink-0">
+                                    <i data-lucide="sparkles" class="w-10 h-10 text-blue-400"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="cv.softSkills.ai.title">AI-Assisted Innovation</h3>
+                                    <p class="text-gray-300 text-sm mb-3" data-i18n="cv.softSkills.ai.description">
+                                        Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools, ChatGPT integration.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">AI Tools</span>
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">Automation</span>
+                                        <span class="px-2 py-1 bg-card text-xs text-gray-300 rounded">Innovation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -376,7 +366,7 @@
                         </div>
                         <div class="flex items-start gap-3">
                             <i data-lucide="linkedin" class="w-4 h-4 text-blue-400 mt-1 flex-shrink-0"></i>
-                            <span class="text-gray-300" data-i18n="cv.contact.linkedin">Konstantinos Lathyris</span>
+                            <a href="https://linkedin.com/in/konstantinos-lathyris-5b98931b0" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-blue-400 transition-colors" data-i18n="cv.contact.linkedin">Konstantinos Lathyris</a>
                         </div>
                         <div class="flex items-start gap-3">
                             <i data-lucide="globe" class="w-4 h-4 text-blue-400 mt-1 flex-shrink-0"></i>

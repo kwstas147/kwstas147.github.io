@@ -156,6 +156,26 @@
           "description": "Ηγεσία ομάδων, Στρατηγικός σχεδιασμός προμηθειών, Διαχείριση κρίσεων σε τεχνικά έργα, Predictive Maintenance"
         }
       },
+      "softSkills": {
+        "title": "Soft Skills & Hobbies",
+        "subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
+        "programming": {
+          "title": "Programming & Development",
+          "description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE, GitHub Copilot) για efficient code generation και debugging."
+        },
+        "design": {
+          "title": "Design & 3D Printing",
+          "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
+        },
+        "smartHome": {
+          "title": "Smart Home Automation",
+          "description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management και predictive maintenance."
+        },
+        "ai": {
+          "title": "AI-Assisted Innovation",
+          "description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
+        }
+      },
       "contact": {
         "location": "Λαμία, Ελλάδα",
         "phone": "(+30) 6974030956",
@@ -497,6 +517,26 @@
         "soft": {
           "title": "Soft Skills",
           "description": "Team leadership, Strategic procurement planning, Crisis management in technical projects, Predictive Maintenance"
+        }
+      },
+      "softSkills": {
+        "title": "Soft Skills & Hobbies",
+        "subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
+        "programming": {
+          "title": "Programming & Development",
+          "description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE, GitHub Copilot) for efficient code generation and debugging."
+        },
+        "design": {
+          "title": "Design & 3D Printing",
+          "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
+        },
+        "smartHome": {
+          "title": "Smart Home Automation",
+          "description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management and predictive maintenance."
+        },
+        "ai": {
+          "title": "AI-Assisted Innovation",
+          "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
         }
       },
       "contact": {

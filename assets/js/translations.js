@@ -173,6 +173,18 @@ const translations = {
         cvMachineOperatorLicense: "Άδεια Χειριστή Μηχανημάτων Έργου",
         cvMachineOperatorSpecialties: "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β",
         
+        // CV Soft Skills & Hobbies
+        "cv.softSkills.title": "Soft Skills & Hobbies",
+        "cv.softSkills.subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
+        "cv.softSkills.programming.title": "Programming & Development",
+        "cv.softSkills.programming.description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE, GitHub Copilot) για efficient code generation και debugging.",
+        "cv.softSkills.design.title": "Design & 3D Printing",
+        "cv.softSkills.design.description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts.",
+        "cv.softSkills.smartHome.title": "Smart Home Automation",
+        "cv.softSkills.smartHome.description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management και predictive maintenance.",
+        "cv.softSkills.ai.title": "AI-Assisted Innovation",
+        "cv.softSkills.ai.description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools, ChatGPT integration.",
+        
         // Professional Summary & Timeline
         "professional.summary.title": "Επαγγελματική Σύνοψη",
         "professional.summary.asphalt.title": "Ασφαλτικά Παρασκευαστήρια",
@@ -414,6 +426,18 @@ const translations = {
         cvLicensesNote: "(Full coverage for vehicles and machinery)",
         cvMachineOperatorLicense: "Heavy Equipment Operator License",
         cvMachineOperatorSpecialties: "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β",
+        
+        // CV Soft Skills & Hobbies
+        "cv.softSkills.title": "Soft Skills & Hobbies",
+        "cv.softSkills.subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
+        "cv.softSkills.programming.title": "Programming & Development",
+        "cv.softSkills.programming.description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE, GitHub Copilot) for efficient code generation and debugging.",
+        "cv.softSkills.design.title": "Design & 3D Printing",
+        "cv.softSkills.design.description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts.",
+        "cv.softSkills.smartHome.title": "Smart Home Automation",
+        "cv.softSkills.smartHome.description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management and predictive maintenance.",
+        "cv.softSkills.ai.title": "AI-Assisted Innovation",
+        "cv.softSkills.ai.description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools, ChatGPT integration.",
         
         // Professional Summary & Timeline
         "professional.summary.title": "Professional Summary",
