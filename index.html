@@ -14,7 +14,7 @@
     <title data-i18n="hero.title">Καλώς ήρθατε στο Portfolio μου</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
     <script>
         // Critical: Apply theme and language before rendering to prevent flash
         (function() {
@@ -75,40 +75,40 @@
             <p class="text-xl md:text-2xl text-blue-400 mb-4 fade-in hero-text" data-i18n="hero.subtitle">Χειριστής Ασφαλτικών Παρασκευαστηρίων | Χειριστής Μηχανημάτων Έργου</p>
             <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto fade-in hero-text" data-i18n="hero.description">Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών.</p>
         </div>
-    </section>
-
-    <!-- Professional Summary Section -->
-    <section class="container mx-auto px-4 py-16">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-400" data-i18n="professional.summary.title">Επαγγελματική Σύνοψη</h2>
-            <div class="bg-card rounded-lg p-8 mb-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div class="flex items-start gap-4">
-                        <i data-lucide="factory" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.asphalt.title">Ασφαλτικά Παρασκευαστήρια</h3>
-                            <p class="text-gray-300" data-i18n="professional.summary.asphalt.description">25+ έτη εμπειρίας στη λειτουργία, επίβλεψη και συντήρηση ασφαλτικών παρασκευαστηρίων. Άμεση ευθύνη για την παραγωγή, ποιότητα και ασφάλεια λειτουργίας.</p>
+        
+        <!-- Professional Summary Section -->
+        <div class="container mx-auto px-4 py-16 relative z-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-400 hero-text" data-i18n="professional.summary.title">Επαγγελματική Σύνοψη</h2>
+                <div class="bg-card rounded-lg p-8 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="factory" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.asphalt.title">Ασφαλτικά Παρασκευαστήρια</h3>
+                                <p class="text-gray-300" data-i18n="professional.summary.asphalt.description">25+ έτη εμπειρίας στη λειτουργία, επίβλεψη και συντήρηση ασφαλτικών παρασκευαστηρίων. Άμεση ευθύνη για την παραγωγή, ποιότητα και ασφάλεια λειτουργίας.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <i data-lucide="tractor" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.machinery.title">Μηχανήματα Έργου</h3>
-                            <p class="text-gray-300" data-i18n="professional.summary.machinery.description">Εξειδικευμένος χειριστής βαρέων μηχανημάτων έργου με πιστοποίηση σε πολλαπλές ειδικότητες. Εμπειρία σε απαιτητικά τεχνικά έργα υποδομής.</p>
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="tractor" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.machinery.title">Μηχανήματα Έργου</h3>
+                                <p class="text-gray-300" data-i18n="professional.summary.machinery.description">Εξειδικευμένος χειριστής βαρέων μηχανημάτων έργου με πιστοποίηση σε πολλαπλές ειδικότητες. Εμπειρία σε απαιτητικά τεχνικά έργα υποδομής.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <i data-lucide="settings" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.maintenance.title">Συντήρηση & Διαχείριση</h3>
-                            <p class="text-gray-300" data-i18n="professional.summary.maintenance.description">Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού και ηλεκτρολογικού εξοπλισμού. Διαχείριση ανθρώπινου δυναμικού και logistics.</p>
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="settings" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.maintenance.title">Συντήρηση & Διαχείριση</h3>
+                                <p class="text-gray-300" data-i18n="professional.summary.maintenance.description">Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού και ηλεκτρολογικού εξοπλισμού. Διαχείριση ανθρώπινου δυναμικού και logistics.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <i data-lucide="trending-up" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.optimization.title">Βελτιστοποίηση</h3>
-                            <p class="text-gray-300" data-i18n="professional.summary.optimization.description">Data analysis και παρακολούθηση παραμέτρων παραγωγής για βελτιστοποίηση διαδικασιών. Εφαρμογή σύγχρονων τεχνικών διαχείρισης.</p>
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.optimization.title">Βελτιστοποίηση</h3>
+                                <p class="text-gray-300" data-i18n="professional.summary.optimization.description">Data analysis και παρακολούθηση παραμέτρων παραγωγής για βελτιστοποίηση διαδικασιών. Εφαρμογή σύγχρονων τεχνικών διαχείρισης.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

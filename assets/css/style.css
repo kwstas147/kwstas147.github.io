@@ -3,14 +3,15 @@
 /* Hero Section with Background Image */
 .hero-section {
     position: relative;
-    min-height: 100vh;
+    min-height: 140vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: var(--bg-primary);
     margin-top: 0;
     overflow: hidden;
-    padding-bottom: 8rem;
+    padding-bottom: 12rem;
 }
 
 .hero-background {
@@ -23,7 +24,7 @@
     height: 100%;
     background-image: url('../images/hero-background.png');
     background-size: cover;
-    background-position: center top;
+    background-position: center 25%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: 0;
@@ -58,11 +59,12 @@
     background: linear-gradient(
         to bottom,
         rgba(15, 23, 42, 0.88) 0%,
-        rgba(30, 41, 59, 0.75) 30%,
-        rgba(51, 65, 85, 0.65) 50%,
-        rgba(30, 41, 59, 0.60) 70%,
-        rgba(15, 23, 42, 0.50) 85%,
-        rgba(15, 23, 42, 0.35) 100%
+        rgba(30, 41, 59, 0.75) 25%,
+        rgba(51, 65, 85, 0.65) 45%,
+        rgba(30, 41, 59, 0.70) 60%,
+        rgba(15, 23, 42, 0.75) 75%,
+        rgba(15, 23, 42, 0.80) 90%,
+        rgba(15, 23, 42, 0.85) 100%
     );
     z-index: 2;
 }
@@ -72,11 +74,12 @@ html[data-theme="clean-office"] .hero-overlay {
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.88) 0%,
-        rgba(249, 250, 251, 0.75) 30%,
-        rgba(243, 244, 246, 0.65) 50%,
-        rgba(249, 250, 251, 0.60) 70%,
-        rgba(255, 255, 255, 0.50) 85%,
-        rgba(255, 255, 255, 0.35) 100%
+        rgba(249, 250, 251, 0.75) 25%,
+        rgba(243, 244, 246, 0.65) 45%,
+        rgba(249, 250, 251, 0.70) 60%,
+        rgba(255, 255, 255, 0.75) 75%,
+        rgba(255, 255, 255, 0.80) 90%,
+        rgba(255, 255, 255, 0.85) 100%
     );
 }
 
@@ -105,6 +108,20 @@ html[data-theme="clean-office"] .hero-section .text-blue-400 {
     text-shadow: 0 2px 12px rgba(37, 99, 235, 0.4), 0 4px 20px rgba(255, 255, 255, 0.7);
 }
 
+/* Enhanced card styling within hero section for better readability */
+.hero-section .bg-card {
+    background-color: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="clean-office"] .hero-section .bg-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
 /* Responsive adjustments for hero section */
 @media (max-width: 1024px) {
     .hero-background {
@@ -112,28 +129,36 @@ html[data-theme="clean-office"] .hero-section .text-blue-400 {
     }
     
     .hero-section {
-        min-height: 90vh;
-        padding-bottom: 6rem;
+        min-height: 120vh;
+        padding-bottom: 8rem;
+    }
+    
+    .hero-background {
+        background-position: center 20%;
     }
 }
 
 @media (max-width: 768px) {
     .hero-section {
-        min-height: 80vh;
-        padding: 3rem 1rem 4rem 1rem;
+        min-height: 110vh;
+        padding: 3rem 1rem 6rem 1rem;
     }
     
     .hero-background {
         background-attachment: scroll;
+        background-position: center 18%;
         filter: brightness(0.65) contrast(1.15);
     }
     
     .hero-overlay {
         background: linear-gradient(
-            135deg,
-            rgba(15, 23, 42, 0.92) 0%,
-            rgba(30, 41, 59, 0.85) 50%,
-            rgba(15, 23, 42, 0.92) 100%
+            to bottom,
+            rgba(15, 23, 42, 0.90) 0%,
+            rgba(30, 41, 59, 0.80) 30%,
+            rgba(51, 65, 85, 0.75) 50%,
+            rgba(30, 41, 59, 0.80) 70%,
+            rgba(15, 23, 42, 0.85) 90%,
+            rgba(15, 23, 42, 0.88) 100%
         );
     }
 }
