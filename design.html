@@ -103,10 +103,11 @@
                                 assets/images/fusion360/1fusion-1200w.jpg 1200w"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt="CAD Design Project 1" 
-                        class="w-full h-full object-cover lazy-image"
+                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
                         loading="lazy"
                         width="800"
                         height="450"
+                        data-fullsize="assets/images/fusion360/1fusion-1200w.jpg"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
                     <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
@@ -131,10 +132,11 @@
                                 assets/images/fusion360/2fusion-1200w.jpg 1200w"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt="CAD Design Project 2" 
-                        class="w-full h-full object-cover lazy-image"
+                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
                         loading="lazy"
                         width="800"
                         height="450"
+                        data-fullsize="assets/images/fusion360/2fusion-1200w.jpg"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
                     <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
@@ -159,10 +161,11 @@
                                 assets/images/fusion360/3fusion-1200w.jpg 1200w"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt="CAD Design Project 3" 
-                        class="w-full h-full object-cover lazy-image"
+                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
                         loading="lazy"
                         width="800"
                         height="450"
+                        data-fullsize="assets/images/fusion360/3fusion-1200w.jpg"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
                     <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
@@ -187,10 +190,11 @@
                                 assets/images/fusion360/4fusion-1200w.jpg 1200w"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt="CAD Design Project 4" 
-                        class="w-full h-full object-cover lazy-image"
+                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
                         loading="lazy"
                         width="800"
                         height="450"
+                        data-fullsize="assets/images/fusion360/4fusion-1200w.jpg"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
                     <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
@@ -215,10 +219,11 @@
                                 assets/images/fusion360/5fusion-1200w.jpg 1200w"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt="CAD Design Project 5" 
-                        class="w-full h-full object-cover lazy-image"
+                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
                         loading="lazy"
                         width="800"
                         height="450"
+                        data-fullsize="assets/images/fusion360/5fusion-1200w.jpg"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                     >
                     <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
@@ -265,11 +270,28 @@
         </div>
     </footer>
 
+    <!-- Image Lightbox Modal -->
+    <div id="imageLightbox" class="image-lightbox">
+        <span class="image-lightbox-close" id="lightboxClose">&times;</span>
+        <div class="image-lightbox-zoom-level" id="zoomLevel">100%</div>
+        <button class="image-lightbox-nav-arrow image-lightbox-nav-prev" id="lightboxNavPrev" aria-label="Previous image">‹</button>
+        <div class="image-lightbox-content">
+            <img id="lightboxImage" class="image-lightbox-img" src="" alt="">
+        </div>
+        <button class="image-lightbox-nav-arrow image-lightbox-nav-next" id="lightboxNavNext" aria-label="Next image">›</button>
+        <div class="image-lightbox-zoom-controls">
+            <button class="image-lightbox-zoom-btn" id="zoomOut">-</button>
+            <button class="image-lightbox-zoom-btn image-lightbox-zoom-reset" id="zoomReset">Reset</button>
+            <button class="image-lightbox-zoom-btn" id="zoomIn">+</button>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="assets/js/translations.js?v=2"></script>
     <script src="assets/js/language.js?v=2"></script>
     <script src="assets/js/theme.js?v=1"></script>
     <script src="assets/js/navigation.js?v=1"></script>
+    <script src="assets/js/image-lightbox.js?v=1"></script>
     <script>
         lucide.createIcons();
     </script>

@@ -903,6 +903,70 @@ html[data-theme="clean-office"] .lazy-image {
     backdrop-filter: blur(10px);
 }
 
+/* Navigation Arrows */
+.image-lightbox-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+    user-select: none;
+}
+
+.image-lightbox-nav-arrow:hover {
+    background-color: rgba(59, 130, 246, 0.8);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.image-lightbox-nav-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.image-lightbox-nav-prev {
+    left: 30px;
+}
+
+.image-lightbox-nav-next {
+    right: 30px;
+}
+
+.image-lightbox-nav-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Hide arrows on mobile when there's only one image */
+@media (max-width: 768px) {
+    .image-lightbox-nav-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+    
+    .image-lightbox-nav-prev {
+        left: 15px;
+    }
+    
+    .image-lightbox-nav-next {
+        right: 15px;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
