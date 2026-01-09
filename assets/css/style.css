@@ -3,15 +3,14 @@
 /* Hero Section with Background Image */
 .hero-section {
     position: relative;
-    min-height: 140vh;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: var(--bg-primary);
     margin-top: 0;
     overflow: hidden;
-    padding-bottom: 12rem;
+    padding-bottom: 4rem;
 }
 
 .hero-background {
@@ -122,6 +121,14 @@ html[data-theme="clean-office"] .hero-section .bg-card {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
+/* Remove background boxes from Professional Summary items in hero section */
+.hero-section .hero-text {
+    background: none !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
 /* Responsive adjustments for hero section */
 @media (max-width: 1024px) {
     .hero-background {
@@ -130,7 +137,7 @@ html[data-theme="clean-office"] .hero-section .bg-card {
     
     .hero-section {
         min-height: 120vh;
-        padding-bottom: 8rem;
+        padding-bottom: 4rem;
     }
     
     .hero-background {
