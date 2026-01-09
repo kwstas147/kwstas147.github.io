@@ -183,7 +183,7 @@
         },
         "design": {
           "title": "Design & 3D Printing",
-          "description": "Σχεδίαση εξαρτημάτων με CAD tools και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
+          "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
         },
         "smartHome": {
           "title": "Smart Home Automation",
@@ -202,7 +202,7 @@
         },
         "design": {
           "title": "Design & 3D Printing",
-          "description": "Σχεδίαση εξαρτημάτων με CAD tools και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
+          "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
         },
         "smartHome": {
           "title": "Smart Home Automation",
@@ -600,7 +600,7 @@
         },
         "design": {
           "title": "Design & 3D Printing",
-            "description": "Component design with CAD tools and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
+            "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
         },
         "smartHome": {
           "title": "Smart Home Automation",
@@ -619,7 +619,7 @@
         },
         "design": {
           "title": "Design & 3D Printing",
-            "description": "Component design with CAD tools and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
+            "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
         },
         "smartHome": {
           "title": "Smart Home Automation",
