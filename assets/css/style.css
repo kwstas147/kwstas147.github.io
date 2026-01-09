@@ -1,5 +1,127 @@
 /* Custom styles for portfolio with theme support */
 
+/* Hero Section with Background Image */
+.hero-section {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-primary);
+    margin-top: 0;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/hero-background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0;
+    filter: brightness(0.7) contrast(1.1);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Subtle animation on background */
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(15, 23, 42, 0.3) 100%);
+    z-index: 1;
+}
+
+/* Overlay for better text readability with industrial theme matching */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.88) 0%,
+        rgba(30, 41, 59, 0.78) 30%,
+        rgba(51, 65, 85, 0.70) 50%,
+        rgba(30, 41, 59, 0.78) 70%,
+        rgba(15, 23, 42, 0.88) 100%
+    );
+    z-index: 2;
+}
+
+/* Theme-specific overlay adjustments */
+html[data-theme="clean-office"] .hero-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.88) 0%,
+        rgba(249, 250, 251, 0.78) 30%,
+        rgba(243, 244, 246, 0.70) 50%,
+        rgba(249, 250, 251, 0.78) 70%,
+        rgba(255, 255, 255, 0.88) 100%
+    );
+}
+
+html[data-theme="clean-office"] .hero-background {
+    filter: brightness(0.9) contrast(1.05);
+}
+
+/* Hero text styling for better contrast */
+.hero-text {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7), 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 3;
+}
+
+html[data-theme="clean-office"] .hero-text {
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.9), 0 4px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Enhanced blue accent for hero subtitle */
+.hero-section .text-blue-400 {
+    text-shadow: 0 2px 12px rgba(59, 130, 246, 0.5), 0 4px 20px rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+}
+
+html[data-theme="clean-office"] .hero-section .text-blue-400 {
+    text-shadow: 0 2px 12px rgba(37, 99, 235, 0.4), 0 4px 20px rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments for hero section */
+@media (max-width: 1024px) {
+    .hero-background {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+        padding: 3rem 1rem;
+    }
+    
+    .hero-background {
+        background-attachment: scroll;
+        filter: brightness(0.65) contrast(1.15);
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(
+            135deg,
+            rgba(15, 23, 42, 0.92) 0%,
+            rgba(30, 41, 59, 0.85) 50%,
+            rgba(15, 23, 42, 0.92) 100%
+        );
+    }
+}
+
 /* Hide translated content until language is applied - prevents flash of wrong language */
 html[lang="en"] [data-i18n]:not(.i18n-ready) {
     visibility: hidden !important;
