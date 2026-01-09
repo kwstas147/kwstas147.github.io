@@ -324,6 +324,7 @@
         "sections": {
           "mobileApps": "Mobile Apps (Flutter)",
           "windowsApps": "Windows Apps (C#/.NET)",
+          "pythonApps": "Desktop Applications (Python)",
           "webApps": "Web Apps",
           "espHome": "ESPHome/ESP32",
           "homeAssistant": "Home Assistant Automations",
@@ -352,6 +353,14 @@
           "myInventory": {
             "title": "MyInventory",
             "description": "Μια Flutter mobile εφαρμογή για στοιχειώδη διαχείριση αποθήκης, που αναπτύχθηκε από την ανάγκη διαχείρισης αποθήκης στην εργασία. Η εφαρμογή προσφέρει πλήρη λύση διαχείρισης αποθηκών με υποστήριξη πολλαπλών αποθηκών, διαχείριση προϊόντων, μεταφορές αποθεμάτων μεταξύ αποθηκών, ειδοποιήσεις χαμηλού αποθέματος, backup & restore λειτουργικότητα, και AI Assistant με ενσωμάτωση Google Gemini API. Ιδανική για οποιονδήποτε χρειάζεται αποτελεσματική και απλή διαχείριση αποθήκης."
+          },
+          "countdownTimer": {
+            "title": "Countdown Timer",
+            "description": "Πρώτη Python desktop εφαρμογή - ένα απλό αλλά αποτελεσματικό αντιστροφό χρονομετρητή (countdown timer) με ενσωματωμένες ειδοποιήσεις και audio playback. Όταν ο χρόνος ολοκληρώνεται, η εφαρμογή εμφανίζει ειδοποίηση και αναπαράγει αυτόματα μουσική από αρχεία στον ίδιο φάκελο. Ιδανική για time management, Pomodoro technique, και προσωπική παραγωγικότητα."
+          },
+          "pdfToMp3": {
+            "title": "PDF to MP3 Converter",
+            "description": "Python desktop εφαρμογή που μετατρέπει PDF αρχεία σε MP3 audio files, επιτρέποντας την ακουστική κατανάλωση περιεχομένου κατά τη διάρκεια άλλων δραστηριοτήτων όπως γυμναστική, τρέξιμο, ή καθημερινές εργασίες. Αναπτύχθηκε από ανάγκη και προσωπική ικανοποίηση για να βελτιώσει την αποδοτικότητα μάθησης και να αξιοποιήσει καλύτερα τον διαθέσιμο χρόνο. Ιδανική για continuous learning και multitasking."
           }
         }
       }
@@ -695,6 +704,7 @@
         "sections": {
           "mobileApps": "Mobile Apps (Flutter)",
           "windowsApps": "Windows Apps (C#/.NET)",
+          "pythonApps": "Desktop Applications (Python)",
           "webApps": "Web Apps",
           "espHome": "ESPHome/ESP32",
           "homeAssistant": "Home Assistant Automations",
@@ -723,6 +733,14 @@
           "myInventory": {
             "title": "MyInventory",
             "description": "A Flutter mobile application for basic warehouse management, developed from the need for warehouse management at work. The application provides a complete warehouse management solution with multi-warehouse support, product management, stock transfers between warehouses, low stock alerts, backup & restore functionality, and AI Assistant with Google Gemini API integration. Ideal for anyone who needs effective and simple warehouse management."
+          },
+          "countdownTimer": {
+            "title": "Countdown Timer",
+            "description": "My first Python desktop application - a simple yet effective countdown timer with built-in notifications and audio playback. When the timer completes, the application displays a notification and automatically plays music files from the same directory. Ideal for time management, Pomodoro technique, and personal productivity."
+          },
+          "pdfToMp3": {
+            "title": "PDF to MP3 Converter",
+            "description": "Python desktop application that converts PDF files to MP3 audio files, enabling audio consumption of content during other activities such as exercise, running, or daily tasks. Developed out of necessity and personal satisfaction to improve learning efficiency and better utilize available time. Ideal for continuous learning and multitasking."
           }
         }
       }
