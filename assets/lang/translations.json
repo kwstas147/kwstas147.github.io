@@ -19,6 +19,8 @@
         "education": "ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ",
         "techProjects": "Τεχνολογικά Project & Καινοτομία",
         "skills": "ΤΕΧΝΙΚΕΣ & ΨΗΦΙΑΚΕΣ ΔΕΞΙΟΤΗΤΕΣ",
+        "softSkills": "SOFT SKILLS",
+        "hobbies": "HOBBIES",
         "contact": "ΕΠΙΚΟΙΝΩΝΙΑ",
         "languages": "ΓΛΩΣΣΕΣ & ΑΔΕΙΕΣ"
       },
@@ -158,6 +160,41 @@
       },
       "softSkills": {
         "title": "Soft Skills & Hobbies",
+        "subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
+        "leadership": {
+          "title": "Ηγεσία Ομάδων",
+          "description": "Διαχείριση ανθρώπινου δυναμικού και συντονισμός ομάδων σε απαιτητικά τεχνικά έργα. Εμπειρία στη διαχείριση παραγωγής και επίβλεψη λειτουργιών."
+        },
+        "strategic": {
+          "title": "Στρατηγικός Σχεδιασμός",
+          "description": "Στρατηγικός σχεδιασμός προμηθειών, logistics και διαχείριση πόρων. Εφαρμογή σύγχρονων τεχνικών διαχείρισης για βελτιστοποίηση διαδικασιών."
+        },
+        "crisis": {
+          "title": "Διαχείριση Κρίσεων",
+          "description": "Διαχείριση κρίσεων σε τεχνικά έργα και λειτουργίες παραγωγής. Άμεση ανταπόκριση σε προκλήσεις και επίλυση προβλημάτων υπό πίεση."
+        },
+        "predictive": {
+          "title": "Predictive Maintenance",
+          "description": "Προληπτική συντήρηση εξοπλισμού με data analysis και παρακολούθηση παραμέτρων. Χρήση IoT και automation για βελτιστοποίηση διαδικασιών συντήρησης."
+        },
+        "programming": {
+          "title": "Programming & Development",
+          "description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE, GitHub Copilot) για efficient code generation και debugging."
+        },
+        "design": {
+          "title": "Design & 3D Printing",
+          "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
+        },
+        "smartHome": {
+          "title": "Smart Home Automation",
+          "description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management και predictive maintenance."
+        },
+        "ai": {
+          "title": "AI-Assisted Innovation",
+          "description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
+        }
+      },
+      "hobbies": {
         "subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
         "programming": {
           "title": "Programming & Development",
@@ -399,6 +436,8 @@
         "education": "EDUCATION & CERTIFICATIONS",
         "techProjects": "Tech Projects & Innovation",
         "skills": "TECHNICAL & DIGITAL SKILLS",
+        "softSkills": "SOFT SKILLS",
+        "hobbies": "HOBBIES",
         "contact": "CONTACT",
         "languages": "LANGUAGES & LICENSES"
       },
@@ -538,6 +577,41 @@
       },
       "softSkills": {
         "title": "Soft Skills & Hobbies",
+        "subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
+        "leadership": {
+          "title": "Team Leadership",
+          "description": "Management of human resources and coordination of teams in demanding technical projects. Experience in production management and operational supervision."
+        },
+        "strategic": {
+          "title": "Strategic Planning",
+          "description": "Strategic planning of supplies, logistics and resource management. Application of modern management techniques for process optimization."
+        },
+        "crisis": {
+          "title": "Crisis Management",
+          "description": "Crisis management in technical projects and production operations. Immediate response to challenges and problem solving under pressure."
+        },
+        "predictive": {
+          "title": "Predictive Maintenance",
+          "description": "Predictive equipment maintenance with data analysis and parameter monitoring. Use of IoT and automation to optimize maintenance processes."
+        },
+        "programming": {
+          "title": "Programming & Development",
+          "description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE, GitHub Copilot) for efficient code generation and debugging."
+        },
+        "design": {
+          "title": "Design & 3D Printing",
+          "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
+        },
+        "smartHome": {
+          "title": "Smart Home Automation",
+          "description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management and predictive maintenance."
+        },
+        "ai": {
+          "title": "AI-Assisted Innovation",
+          "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
+        }
+      },
+      "hobbies": {
         "subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
         "programming": {
           "title": "Programming & Development",
