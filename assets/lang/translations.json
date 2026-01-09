@@ -3,7 +3,7 @@
     "nav": {
       "home": "Αρχική",
       "3dPrinting": "3D Printing",
-      "fusion360": "Fusion360",
+      "design": "Σχεδιασμός",
       "programming": "Development",
       "cv": "Βιογραφικό"
     },
@@ -121,7 +121,7 @@
           },
           {
             "title": "Additive Manufacturing (3D Printing)",
-            "description": "Σχεδιασμός εξαρτημάτων στο Fusion360 και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία."
+            "description": "Σχεδιασμός εξαρτημάτων με CAD tools και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία."
           },
           {
             "title": "Software Development",
@@ -139,7 +139,7 @@
         },
         "digital": {
           "title": "Digital Design",
-          "description": "CAD Design (Fusion360), 3D Printing (Slicing & Optimization)"
+          "description": "CAD Design, 3D Printing (Slicing & Optimization)"
         },
         "programming": {
           "title": "Programming & IoT",
@@ -183,7 +183,7 @@
         },
         "design": {
           "title": "Design & 3D Printing",
-          "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
+          "description": "Σχεδίαση εξαρτημάτων με CAD tools και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
         },
         "smartHome": {
           "title": "Smart Home Automation",
@@ -202,7 +202,7 @@
         },
         "design": {
           "title": "Design & 3D Printing",
-          "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
+          "description": "Σχεδίαση εξαρτημάτων με CAD tools και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
         },
         "smartHome": {
           "title": "Smart Home Automation",
@@ -311,7 +311,7 @@
       },
       "design": {
         "title": "Design & 3D Printing",
-        "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization και functional parts."
+        "description": "Σχεδίαση εξαρτημάτων με CAD tools και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization και functional parts."
       },
       "smartHome": {
         "title": "Smart Home Automation",
@@ -322,7 +322,7 @@
         "description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools."
       },
       "viewMore": "Δείτε περισσότερα",
-      "fusion360": "Fusion360",
+      "design": "Σχεδιασμός",
       "3dPrinting": "3D Printing"
     },
     "projectCategories": {
@@ -330,13 +330,13 @@
     },
     "categories": {
       "3dPrinting": "3D Printing Creations",
-      "fusion360": "Fusion360 Designs",
+      "design": "Σχεδιασμός",
       "programming": "Development Hub",
       "cv": "Curriculum Vitae"
     },
     "categoryDescriptions": {
       "3dPrinting": "Λειτουργικά ανταλλακτικά και εργαλεία μέσω Additive Manufacturing",
-      "fusion360": "CAD σχεδίαση και μηχανική ανάλυση με Fusion360",
+      "design": "CAD σχεδίαση και μηχανική ανάλυση",
       "programming": "Python automation, IoT solutions και software development",
       "cv": "Πλήρες επαγγελματικό βιογραφικό με 25+ έτη εμπειρίας"
     },
@@ -351,8 +351,8 @@
         "title": "3D Printing Creations",
         "description": "Φυσικές κατασκευές και εκτυπώσεις 3D"
       },
-      "fusion360": {
-        "title": "Fusion360 Designs",
+      "design": {
+        "title": "Σχεδιασμός",
         "description": "CAD μοντέλα και σχεδίαση μηχανικών"
       },
       "programming": {
@@ -420,7 +420,7 @@
     "nav": {
       "home": "Home",
       "3dPrinting": "3D Printing",
-      "fusion360": "Fusion360",
+      "design": "Σχεδιασμός",
       "programming": "Development",
       "cv": "CV"
     },
@@ -538,7 +538,7 @@
           },
           {
             "title": "Additive Manufacturing (3D Printing)",
-            "description": "Component design in Fusion360 and production through 3D printing. Focus on creating functional spare parts and tools that improve daily work."
+            "description": "Component design with CAD tools and production through 3D printing. Focus on creating functional spare parts and tools that improve daily work."
           },
           {
             "title": "Software Development",
@@ -556,7 +556,7 @@
         },
         "digital": {
           "title": "Digital Design",
-          "description": "CAD Design (Fusion360), 3D Printing (Slicing & Optimization)"
+          "description": "CAD Design, 3D Printing (Slicing & Optimization)"
         },
         "programming": {
           "title": "Programming & IoT",
@@ -600,7 +600,7 @@
         },
         "design": {
           "title": "Design & 3D Printing",
-          "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
+            "description": "Component design with CAD tools and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
         },
         "smartHome": {
           "title": "Smart Home Automation",
@@ -619,7 +619,7 @@
         },
         "design": {
           "title": "Design & 3D Printing",
-          "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
+            "description": "Component design with CAD tools and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
         },
         "smartHome": {
           "title": "Smart Home Automation",
@@ -728,7 +728,7 @@
       },
       "design": {
         "title": "Design & 3D Printing",
-        "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization and functional parts."
+        "description": "Component design with CAD tools and production through 3D printing. Use of AI-assisted design tools for optimization and functional parts."
       },
       "smartHome": {
         "title": "Smart Home Automation",
@@ -739,7 +739,7 @@
         "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools."
       },
       "viewMore": "View More",
-      "fusion360": "Fusion360",
+      "design": "Σχεδιασμός",
       "3dPrinting": "3D Printing"
     },
     "projectCategories": {
@@ -747,13 +747,13 @@
     },
     "categories": {
       "3dPrinting": "3D Printing Creations",
-      "fusion360": "Fusion360 Designs",
+      "design": "Σχεδιασμός",
       "programming": "Development Hub",
       "cv": "Curriculum Vitae"
     },
     "categoryDescriptions": {
       "3dPrinting": "Functional spare parts and tools through Additive Manufacturing",
-      "fusion360": "CAD design and engineering analysis with Fusion360",
+      "design": "CAD design and engineering analysis",
       "programming": "Python automation, IoT solutions and software development",
       "cv": "Complete professional CV with 25+ years of experience"
     },
@@ -768,8 +768,8 @@
         "title": "3D Printing Creations",
         "description": "Physical constructions and 3D prints"
       },
-      "fusion360": {
-        "title": "Fusion360 Designs",
+      "design": {
+        "title": "Design",
         "description": "CAD models and mechanical design"
       },
       "programming": {

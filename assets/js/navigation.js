@@ -10,7 +10,7 @@
         '': 'index', // root path also maps to index
         'programming.html': 'programming',
         '3d-printing.html': '3d-printing',
-        'fusion360.html': 'fusion360',
+        'design.html': 'design',
         'cv.html': 'cv'
     };
 

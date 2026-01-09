@@ -4,7 +4,7 @@ const translations = {
         // Navigation
         navHome: "Αρχική",
         nav3DPrinting: "3D Printing",
-        navFusion360: "Fusion360",
+        navDesign: "Σχεδιασμός",
         navProgramming: "Development",
         navCV: "Βιογραφικό",
         
@@ -48,13 +48,13 @@ const translations = {
         
         // Categories
         category3DPrinting: "3D Printing Creations",
-        categoryFusion360: "Fusion360 Designs",
+        categoryDesign: "Σχεδιασμός",
         categoryProgramming: "Development Hub",
         categoryCV: "Curriculum Vitae",
         
         // Category descriptions
         desc3DPrinting: "Λειτουργικά ανταλλακτικά και εργαλεία μέσω Additive Manufacturing",
-        descFusion360: "CAD σχεδίαση και μηχανική ανάλυση με Fusion360",
+        descDesign: "CAD σχεδίαση και μηχανική ανάλυση",
         descProgramming: "Python automation, IoT solutions και software development",
         descCV: "Πλήρες επαγγελματικό βιογραφικό με 25+ έτη εμπειρίας",
         
@@ -141,7 +141,7 @@ const translations = {
         cvTechProject1Title: "Smart Home Ecosystem",
         cvTechProject1Desc: "Σχεδιασμός και υλοποίηση κεντρικού συστήματος αυτοματισμού με Home Assistant και ESPHome. Ανάπτυξη custom αισθητήρων (ESP32) για την παρακολούθηση κρίσιμων παραμέτρων περιβάλλοντος.",
         cvTechProject2Title: "Additive Manufacturing (3D Printing)",
-        cvTechProject2Desc: "Σχεδιασμός εξαρτημάτων στο Fusion360 και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία.",
+        cvTechProject2Desc: "Σχεδιασμός εξαρτημάτων με CAD tools και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία.",
         cvTechProject3Title: "Software Development",
         cvTechProject3Desc: "Ανάπτυξη εφαρμογών σε Python για την αυτοματοποίηση υπολογισμών και τη διαχείριση δεδομένων, εφαρμόζοντας τις γνώσεις από τα προγράμματα του ΕΚΠΑ.",
         cvTechProject3AIDev: "AI-Assisted Development: Χρήση τεχνητής νοημοσύνης για efficient code generation, debugging, και application development workflows.",
@@ -157,7 +157,7 @@ const translations = {
         cvSkillsIndustrial: "Industrial",
         cvSkillsIndustrialDesc: "Χειρισμός & Συντήρηση Βαρέων Μηχανημάτων, Διαχείριση Παραγωγής, Ηλεκτρολογικό Σχέδιο",
         cvSkillsDigital: "Digital Design",
-        cvSkillsDigitalDesc: "CAD Design (Fusion360), 3D Printing (Slicing & Optimization)",
+        cvSkillsDigitalDesc: "CAD Design, 3D Printing (Slicing & Optimization)",
         cvSkillsProgramming: "Programming & IoT",
         cvSkillsProgrammingDesc: "Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks",
         cvSkillsSoft: "Soft Skills",
@@ -179,7 +179,7 @@ const translations = {
         "cv.softSkills.programming.title": "Programming & Development",
         "cv.softSkills.programming.description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE, GitHub Copilot) για efficient code generation και debugging.",
         "cv.softSkills.design.title": "Design & 3D Printing",
-        "cv.softSkills.design.description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts.",
+        "cv.softSkills.design.description": "Σχεδίαση εξαρτημάτων με CAD tools και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts.",
         "cv.softSkills.smartHome.title": "Smart Home Automation",
         "cv.softSkills.smartHome.description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management και predictive maintenance.",
         "cv.softSkills.ai.title": "AI-Assisted Innovation",
@@ -225,13 +225,13 @@ const translations = {
         "softSkills.programming.title": "Programming & Development",
         "softSkills.programming.description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE) για efficient code generation και debugging.",
         "softSkills.design.title": "Design & 3D Printing",
-        "softSkills.design.description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization και functional parts.",
+        "softSkills.design.description": "Σχεδίαση εξαρτημάτων με CAD tools και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization και functional parts.",
         "softSkills.smartHome.title": "Smart Home Automation",
         "softSkills.smartHome.description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management.",
         "softSkills.ai.title": "AI-Assisted Innovation",
         "softSkills.ai.description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools.",
         "softSkills.viewMore": "Δείτε περισσότερα",
-        "softSkills.fusion360": "Fusion360",
+        "softSkills.design": "Σχεδιασμός",
         "softSkills.3dPrinting": "3D Printing",
         
         // Project Categories
@@ -239,13 +239,28 @@ const translations = {
         
         // Categories (updated for nested structure)
         "categories.3dPrinting": "3D Printing Creations",
-        "categories.fusion360": "Fusion360 Designs",
+        "categories.design": "Σχεδιασμός",
         "categories.programming": "Development Hub",
         "categories.cv": "Curriculum Vitae",
         "categoryDescriptions.3dPrinting": "Φυσικές κατασκευές και εκτυπώσεις 3D",
-        "categoryDescriptions.fusion360": "CAD μοντέλα και σχεδίαση μηχανικών",
+        "categoryDescriptions.design": "CAD μοντέλα και σχεδίαση μηχανικών",
         "categoryDescriptions.programming": "Ενοποιημένη σελίδα για software projects",
         "categoryDescriptions.cv": "Επαγγελματικό βιογραφικό",
+        
+        // Design Page
+        "pages.design.title": "Σχεδιασμός",
+        "pages.design.description": "CAD μοντέλα και σχεδίαση μηχανικών",
+        "design.tag": "Σχεδιασμός",
+        "design.project1.title": "Μηχανικό Εξάρτημα - Design 1",
+        "design.project1.description": "Σχεδιασμός μηχανικού εξαρτήματος με parametric modeling. Βελτιστοποίηση για λειτουργικότητα και αντοχή με χρήση AI-assisted tools.",
+        "design.project2.title": "Συνθετικό Σύστημα - Design 2",
+        "design.project2.description": "Σχεδιασμός συνθετικού συστήματος με πολλαπλά εξαρτήματα. Functional analysis και material optimization για καλύτερη απόδοση.",
+        "design.project3.title": "Εργαλείο & Ανταλλακτικό - Design 3",
+        "design.project3.description": "Σχεδιασμός λειτουργικού εργαλείου και ανταλλακτικού για καθημερινή χρήση. Focus στη δημιουργία functional parts με material efficiency.",
+        "design.project4.title": "Μηχανική Κατασκευή - Design 4",
+        "design.project4.description": "Προηγμένη μηχανική κατασκευή με detailed engineering analysis. Parametric design για ευελιξία και προσαρμογή στις ανάγκες.",
+        "design.project5.title": "Optimized Component - Design 5",
+        "design.project5.description": "Βελτιστοποιημένο εξάρτημα με AI-assisted optimization. Συνδυασμός αισθητικής και λειτουργικότητας για optimal performance.",
         
         // GitHub
         "github.viewProfile": "View Profile"
@@ -254,7 +269,7 @@ const translations = {
         // Navigation
         navHome: "Home",
         nav3DPrinting: "3D Printing",
-        navFusion360: "Fusion360",
+        navDesign: "Design",
         navProgramming: "Development",
         navCV: "CV",
         
@@ -298,13 +313,13 @@ const translations = {
         
         // Categories
         category3DPrinting: "3D Printing Creations",
-        categoryFusion360: "Fusion360 Designs",
+        categoryDesign: "Design",
         categoryProgramming: "Development Hub",
         categoryCV: "Curriculum Vitae",
         
         // Category descriptions
         desc3DPrinting: "Functional spare parts and tools through Additive Manufacturing",
-        descFusion360: "CAD design and engineering analysis with Fusion360",
+        descDesign: "CAD design and engineering analysis",
         descProgramming: "Python automation, IoT solutions and software development",
         descCV: "Complete professional CV with 25+ years of experience",
         
@@ -391,7 +406,7 @@ const translations = {
         cvTechProject1Title: "Smart Home Ecosystem",
         cvTechProject1Desc: "Design and implementation of central automation system with Home Assistant and ESPHome. Development of custom sensors (ESP32) for monitoring critical environmental parameters.",
         cvTechProject2Title: "Additive Manufacturing (3D Printing)",
-        cvTechProject2Desc: "Component design in Fusion360 and production through 3D printing. Focus on creating functional spare parts and tools that improve daily work.",
+        cvTechProject2Desc: "Component design with CAD tools and production through 3D printing. Focus on creating functional spare parts and tools that improve daily work.",
         cvTechProject3Title: "Software Development",
         cvTechProject3Desc: "Python application development for calculation automation and data management, applying knowledge from NKUA programs.",
         cvTechProject3AIDev: "AI-Assisted Development: Leveraging artificial intelligence for efficient code generation, debugging, and application development workflows.",
@@ -407,7 +422,7 @@ const translations = {
         cvSkillsIndustrial: "Industrial",
         cvSkillsIndustrialDesc: "Heavy Machinery Operation & Maintenance, Production Management, Electrical Design",
         cvSkillsDigital: "Digital Design",
-        cvSkillsDigitalDesc: "CAD Design (Fusion360), 3D Printing (Slicing & Optimization)",
+        cvSkillsDigitalDesc: "CAD Design, 3D Printing (Slicing & Optimization)",
         cvSkillsProgramming: "Programming & IoT",
         cvSkillsProgrammingDesc: "Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks",
         cvSkillsMobile: "Mobile Development",
@@ -433,7 +448,7 @@ const translations = {
         "cv.softSkills.programming.title": "Programming & Development",
         "cv.softSkills.programming.description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE, GitHub Copilot) for efficient code generation and debugging.",
         "cv.softSkills.design.title": "Design & 3D Printing",
-        "cv.softSkills.design.description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts.",
+        "cv.softSkills.design.description": "Component design with CAD tools and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts.",
         "cv.softSkills.smartHome.title": "Smart Home Automation",
         "cv.softSkills.smartHome.description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management and predictive maintenance.",
         "cv.softSkills.ai.title": "AI-Assisted Innovation",
@@ -479,13 +494,13 @@ const translations = {
         "softSkills.programming.title": "Programming & Development",
         "softSkills.programming.description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE) for efficient code generation and debugging.",
         "softSkills.design.title": "Design & 3D Printing",
-        "softSkills.design.description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization and functional parts.",
+        "softSkills.design.description": "Component design with CAD tools and production through 3D printing. Use of AI-assisted design tools for optimization and functional parts.",
         "softSkills.smartHome.title": "Smart Home Automation",
         "softSkills.smartHome.description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management.",
         "softSkills.ai.title": "AI-Assisted Innovation",
         "softSkills.ai.description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools.",
         "softSkills.viewMore": "View More",
-        "softSkills.fusion360": "Fusion360",
+        "softSkills.design": "Design",
         "softSkills.3dPrinting": "3D Printing",
         
         // Project Categories
@@ -493,13 +508,28 @@ const translations = {
         
         // Categories (updated for nested structure)
         "categories.3dPrinting": "3D Printing Creations",
-        "categories.fusion360": "Fusion360 Designs",
+        "categories.design": "Design",
         "categories.programming": "Development Hub",
         "categories.cv": "Curriculum Vitae",
         "categoryDescriptions.3dPrinting": "Physical constructions and 3D prints",
-        "categoryDescriptions.fusion360": "CAD models and mechanical design",
+        "categoryDescriptions.design": "CAD models and mechanical design",
         "categoryDescriptions.programming": "Integrated page for software projects",
         "categoryDescriptions.cv": "Professional CV",
+        
+        // Design Page
+        "pages.design.title": "Design",
+        "pages.design.description": "CAD models and mechanical design",
+        "design.tag": "Design",
+        "design.project1.title": "Mechanical Component - Design 1",
+        "design.project1.description": "Mechanical component design with parametric modeling. Optimization for functionality and durability using AI-assisted tools.",
+        "design.project2.title": "Complex System - Design 2",
+        "design.project2.description": "Complex system design with multiple components. Functional analysis and material optimization for better performance.",
+        "design.project3.title": "Tool & Spare Part - Design 3",
+        "design.project3.description": "Functional tool and spare part design for everyday use. Focus on creating functional parts with material efficiency.",
+        "design.project4.title": "Mechanical Assembly - Design 4",
+        "design.project4.description": "Advanced mechanical assembly with detailed engineering analysis. Parametric design for flexibility and adaptation to needs.",
+        "design.project5.title": "Optimized Component - Design 5",
+        "design.project5.description": "Optimized component with AI-assisted optimization. Combination of aesthetics and functionality for optimal performance.",
         
         // GitHub
         "github.viewProfile": "View Profile",
@@ -519,11 +549,11 @@ const translations = {
         
         // AI Design
         "aiDesign.title": "AI-Assisted Design & Optimization",
-        "aiDesign.description": "My designs in Fusion360 and 3D prints use AI-assisted tools for optimization, material efficiency and functional design. Artificial intelligence helps in designing functional spare parts and tools that improve daily work.",
+        "aiDesign.description": "My CAD designs and 3D prints use AI-assisted tools for optimization, material efficiency and functional design. Artificial intelligence helps in designing functional spare parts and tools that improve daily work.",
         
         // AI CAD
         "aiCAD.title": "AI-Assisted CAD Design",
-        "aiCAD.description": "I use AI-assisted design tools in Fusion360 for optimization, parametric design and functional analysis. Artificial intelligence helps in designing components that are not only aesthetically appealing but also functionally efficient, with focus on creating functional parts for everyday use."
+        "aiCAD.description": "I use AI-assisted design tools for optimization, parametric design and functional analysis. Artificial intelligence helps in designing components that are not only aesthetically appealing but also functionally efficient, with focus on creating functional parts for everyday use."
     }
 };
 
