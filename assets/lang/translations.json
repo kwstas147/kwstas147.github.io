@@ -184,6 +184,78 @@
         }
       }
     },
+    "hero": {
+      "title": "Καλώς ήρθατε στο Portfolio μου",
+      "name": "Κωνσταντίνος Λαθύρης",
+      "subtitle": "Industrial Operations Manager | IoT & Digital Tech Specialist",
+      "description": "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων. Εξερευνήστε τις δημιουργίες μου σε 3D Printing, Fusion360 Designs, Software Development και IoT Automation."
+    },
+    "categories": {
+      "3dPrinting": "3D Printing Creations",
+      "fusion360": "Fusion360 Designs",
+      "programming": "Development Hub",
+      "cv": "Curriculum Vitae"
+    },
+    "categoryDescriptions": {
+      "3dPrinting": "Λειτουργικά ανταλλακτικά και εργαλεία μέσω Additive Manufacturing",
+      "fusion360": "CAD σχεδίαση και μηχανική ανάλυση με Fusion360",
+      "programming": "Python automation, IoT solutions και software development",
+      "cv": "Πλήρες επαγγελματικό βιογραφικό με 25+ έτη εμπειρίας"
+    },
+    "buttons": {
+      "viewMore": "Δείτε περισσότερα",
+      "backHome": "Επιστροφή στην αρχική",
+      "downloadCV": "Κατεβάστε το CV",
+      "downloadPDF": "📥 Κατεβάστε το CV ως PDF"
+    },
+    "pages": {
+      "3dPrinting": {
+        "title": "3D Printing Creations",
+        "description": "Φυσικές κατασκευές και εκτυπώσεις 3D"
+      },
+      "fusion360": {
+        "title": "Fusion360 Designs",
+        "description": "CAD μοντέλα και σχεδίαση μηχανικών"
+      },
+      "programming": {
+        "title": "Development Hub",
+        "description": "Ενοποιημένη σελίδα για software projects",
+        "sections": {
+          "mobileApps": "Mobile Apps (Flutter)",
+          "windowsApps": "Windows Apps (C#/.NET)",
+          "webApps": "Web Apps",
+          "espHome": "ESPHome/ESP32",
+          "homeAssistant": "Home Assistant Automations",
+          "smartHome": "Smart Home Setups",
+          "homeLab": "Home Lab & Infrastructure"
+        },
+        "codeExample": "Code Example",
+        "esphomeConfigExample": "ESPHome Configuration Example",
+        "projects": {
+          "flame": {
+            "title": "Flame",
+            "description": "Personal homepage και dashboard που τρέχει σε Docker container στο VM Debian μέσα στον Proxmox home lab server. Προσφέρει ένα μοντέρνο και customizable interface για διαχείριση bookmarks και links."
+          },
+          "proxmox": {
+            "title": "Proxmox Home Lab Server",
+            "description": "Proxmox VE virtualization platform για home lab environment. Προσφέρει πλήρη virtualization capabilities με support για containers και VMs, ιδανικό για testing και development."
+          },
+          "portainer": {
+            "title": "Portainer - Docker Management",
+            "description": "Portainer container management platform που τρέχει σε Docker στο VM Debian. Παρέχει web-based UI για διαχείριση Docker containers, images, volumes και networks."
+          }
+        }
+      }
+    },
+    "placeholders": {
+      "projects": "Projects θα προστεθούν σύντομα...",
+      "description": "Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον."
+    },
+    "github": {
+      "activity": "GitHub Activity",
+      "activityDescription": "Οι συνεισφορές μου στο GitHub - ένα \"πράσινο\" προφίλ είναι η καλύτερη απόδειξη ότι γράφω κώδικα καθημερινά.",
+      "viewProfile": "View Profile"
+    },
     "pageTitleCV": "Curriculum Vitae",
     "btnBackHome": "Επιστροφή στην αρχική",
     "footerText": "© 2026 Portfolio. Όλα τα δικαιώματα διατηρούνται.",
@@ -373,6 +445,78 @@
           }
         }
       }
+    },
+    "hero": {
+      "title": "Welcome to My Portfolio",
+      "name": "Konstantinos Lathyris",
+      "subtitle": "Industrial Operations Manager | IoT & Digital Tech Specialist",
+      "description": "Experienced technical professional with 25 years in technical project management and industrial plant operations. Explore my creations in 3D Printing, Fusion360 Designs, Software Development, and IoT Automation."
+    },
+    "categories": {
+      "3dPrinting": "3D Printing Creations",
+      "fusion360": "Fusion360 Designs",
+      "programming": "Development Hub",
+      "cv": "Curriculum Vitae"
+    },
+    "categoryDescriptions": {
+      "3dPrinting": "Functional spare parts and tools through Additive Manufacturing",
+      "fusion360": "CAD design and engineering analysis with Fusion360",
+      "programming": "Python automation, IoT solutions and software development",
+      "cv": "Complete professional CV with 25+ years of experience"
+    },
+    "buttons": {
+      "viewMore": "View More",
+      "backHome": "Back to Home",
+      "downloadCV": "Download CV",
+      "downloadPDF": "📥 Download CV as PDF"
+    },
+    "pages": {
+      "3dPrinting": {
+        "title": "3D Printing Creations",
+        "description": "Physical constructions and 3D prints"
+      },
+      "fusion360": {
+        "title": "Fusion360 Designs",
+        "description": "CAD models and mechanical design"
+      },
+      "programming": {
+        "title": "Development Hub",
+        "description": "Integrated page for software projects",
+        "sections": {
+          "mobileApps": "Mobile Apps (Flutter)",
+          "windowsApps": "Windows Apps (C#/.NET)",
+          "webApps": "Web Apps",
+          "espHome": "ESPHome/ESP32",
+          "homeAssistant": "Home Assistant Automations",
+          "smartHome": "Smart Home Setups",
+          "homeLab": "Home Lab & Infrastructure"
+        },
+        "codeExample": "Code Example",
+        "esphomeConfigExample": "ESPHome Configuration Example",
+        "projects": {
+          "flame": {
+            "title": "Flame",
+            "description": "Personal homepage and dashboard running in Docker container on Debian VM within Proxmox home lab server. Provides a modern and customizable interface for managing bookmarks and links."
+          },
+          "proxmox": {
+            "title": "Proxmox Home Lab Server",
+            "description": "Proxmox VE virtualization platform for home lab environment. Provides full virtualization capabilities with support for containers and VMs, ideal for testing and development."
+          },
+          "portainer": {
+            "title": "Portainer - Docker Management",
+            "description": "Portainer container management platform running in Docker on Debian VM. Provides web-based UI for managing Docker containers, images, volumes and networks."
+          }
+        }
+      }
+    },
+    "placeholders": {
+      "projects": "Projects will be added soon...",
+      "description": "This section contains projects that will be added in the future."
+    },
+    "github": {
+      "activity": "GitHub Activity",
+      "activityDescription": "My GitHub contributions - a 'green' profile is the best proof that I write code daily.",
+      "viewProfile": "View Profile"
     },
     "pageTitleCV": "Curriculum Vitae",
     "btnBackHome": "Back to Home",
