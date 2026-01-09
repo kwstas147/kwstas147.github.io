@@ -46,7 +46,7 @@ if not exist "%INPUT_FOLDER%" (
 )
 
 REM Set output folder (relative to project root)
-set OUTPUT_FOLDER=assets\images\New folder
+set OUTPUT_FOLDER=assets\images\development\countdown timer
 
 REM Get project root (parent of assets folder)
 set SCRIPT_DIR=%~dp0
