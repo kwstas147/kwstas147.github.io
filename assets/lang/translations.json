@@ -22,7 +22,8 @@
         "contact": "ΕΠΙΚΟΙΝΩΝΙΑ",
         "languages": "ΓΛΩΣΣΕΣ & ΑΔΕΙΕΣ"
       },
-      "summaryText": "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων (Ασφαλτικά Παρασκευαστήρια). Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την \"hands-on\" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD). Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού (Automation). Επιπλέον, διαχειρίζομαι self-hosted infrastructure με Proxmox και Docker containers για data logging και predictive maintenance.",
+      "summaryText": "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών. Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την \"hands-on\" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD).",
+      "summaryText2": "Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού (Automation). Επιπλέον, διαχειρίζομαι self-hosted infrastructure με Proxmox και Docker containers για data logging και predictive maintenance. Τα προσωπικά μου projects (programming, design, 3D printing, smart home) αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
       "about": {
         "title": "Σχετικά με εμένα",
         "devSkills": "Τεχνολογίες Ανάπτυξης",
@@ -187,8 +188,88 @@
     "hero": {
       "title": "Καλώς ήρθατε στο Portfolio μου",
       "name": "Κωνσταντίνος Λαθύρης",
-      "subtitle": "Industrial Operations Manager | IoT & Digital Tech Specialist",
-      "description": "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων. Εξερευνήστε τις δημιουργίες μου σε 3D Printing, Fusion360 Designs, Software Development και IoT Automation."
+      "subtitle": "Χειριστής Ασφαλτικών Παρασκευαστηρίων | Χειριστής Μηχανημάτων Έργου",
+      "description": "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών."
+    },
+    "professional": {
+      "summary": {
+        "title": "Επαγγελματική Σύνοψη",
+        "asphalt": {
+          "title": "Ασφαλτικά Παρασκευαστήρια",
+          "description": "25+ έτη εμπειρίας στη λειτουργία, επίβλεψη και συντήρηση ασφαλτικών παρασκευαστηρίων. Άμεση ευθύνη για την παραγωγή, ποιότητα και ασφάλεια λειτουργίας."
+        },
+        "machinery": {
+          "title": "Μηχανήματα Έργου",
+          "description": "Εξειδικευμένος χειριστής βαρέων μηχανημάτων έργου με πιστοποίηση σε πολλαπλές ειδικότητες. Εμπειρία σε απαιτητικά τεχνικά έργα υποδομής."
+        },
+        "maintenance": {
+          "title": "Συντήρηση & Διαχείριση",
+          "description": "Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού και ηλεκτρολογικού εξοπλισμού. Διαχείριση ανθρώπινου δυναμικού και logistics."
+        },
+        "optimization": {
+          "title": "Βελτιστοποίηση",
+          "description": "Data analysis και παρακολούθηση παραμέτρων παραγωγής για βελτιστοποίηση διαδικασιών. Εφαρμογή σύγχρονων τεχνικών διαχείρισης."
+        }
+      },
+      "timeline": {
+        "title": "Επαγγελματική Διαδρομή",
+        "job1": {
+          "title": "Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου",
+          "company": "ΤΕΡΝΑ Α.Ε.",
+          "period": "04/2022 – Σήμερα",
+          "description": "Άμεση λειτουργία και επίβλεψη ασφαλτικού παρασκευαστηρίου. Προληπτική συντήρηση εξοπλισμού. Χειρισμός εξειδικευμένων μηχανημάτων σε τεχνικά έργα."
+        },
+        "job2": {
+          "title": "Χειριστής Μηχανημάτων Έργου",
+          "company": "Περιφέρεια Στερεάς Ελλάδας",
+          "period": "12/2021 – 03/2022",
+          "description": "Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο."
+        },
+        "job3": {
+          "title": "Υπεύθυνος Παραγωγής & Χειριστής Λατομικού",
+          "company": "ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.",
+          "period": "09/2019 – 12/2022",
+          "description": "Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών."
+        },
+        "job4": {
+          "title": "Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας",
+          "company": "ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ",
+          "period": "06/2000 – 08/2019",
+          "description": "19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος. Διαχείριση ανθρώπινου δυναμικού, προμηθειών και logistics."
+        }
+      }
+    },
+    "cvSection": {
+      "title": "Πλήρες Επαγγελματικό Βιογραφικό",
+      "cardTitle": "Curriculum Vitae",
+      "cardDescription": "25+ έτη επαγγελματικής εμπειρίας σε ασφαλτικά παρασκευαστήρια και μηχανήματα έργου. Πλήρες βιογραφικό με λεπτομερείς πληροφορίες.",
+      "viewFull": "Δείτε το πλήρες CV"
+    },
+    "softSkills": {
+      "title": "Soft Skills & Hobbies",
+      "subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
+      "programming": {
+        "title": "Programming & Development",
+        "description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE) για efficient code generation και debugging."
+      },
+      "design": {
+        "title": "Design & 3D Printing",
+        "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization και functional parts."
+      },
+      "smartHome": {
+        "title": "Smart Home Automation",
+        "description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management."
+      },
+      "ai": {
+        "title": "AI-Assisted Innovation",
+        "description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools."
+      },
+      "viewMore": "Δείτε περισσότερα",
+      "fusion360": "Fusion360",
+      "3dPrinting": "3D Printing"
+    },
+    "projectCategories": {
+      "title": "Projects & Creations"
     },
     "categories": {
       "3dPrinting": "3D Printing Creations",
@@ -284,7 +365,8 @@
         "contact": "CONTACT",
         "languages": "LANGUAGES & LICENSES"
       },
-      "summaryText": "Experienced technical professional with 25 years of experience in technical project management and industrial plant operations (Asphalt Plants). I possess a unique profile that combines hands-on knowledge of heavy machinery and electrical installations with advanced digital skills in Programming (Python), Networks, and Product Design (3D Printing / CAD). I focus on modernizing production processes through IoT and automation. Additionally, I manage self-hosted infrastructure with Proxmox and Docker containers for data logging and predictive maintenance.",
+      "summaryText": "Experienced technical professional with 25+ years of experience in asphalt plant operations and heavy equipment operation. Specialized in production management, equipment maintenance, and process optimization. I possess a unique profile that combines hands-on knowledge of heavy machinery and electrical installations with advanced digital skills in Programming (Python), Networks, and Product Design (3D Printing / CAD).",
+      "summaryText2": "I focus on modernizing production processes through IoT and automation. Additionally, I manage self-hosted infrastructure with Proxmox and Docker containers for data logging and predictive maintenance. My personal projects (programming, design, 3D printing, smart home) are developed using artificial intelligence for efficient workflows and innovation.",
       "about": {
         "title": "About Me",
         "devSkills": "Development Technologies",
@@ -449,8 +531,88 @@
     "hero": {
       "title": "Welcome to My Portfolio",
       "name": "Konstantinos Lathyris",
-      "subtitle": "Industrial Operations Manager | IoT & Digital Tech Specialist",
-      "description": "Experienced technical professional with 25 years in technical project management and industrial plant operations. Explore my creations in 3D Printing, Fusion360 Designs, Software Development, and IoT Automation."
+      "subtitle": "Asphalt Plant Operator | Heavy Equipment Operator",
+      "description": "Experienced technical professional with 25+ years of experience in asphalt plant operations and heavy equipment operation. Specialized in production management, equipment maintenance, and process optimization."
+    },
+    "professional": {
+      "summary": {
+        "title": "Professional Summary",
+        "asphalt": {
+          "title": "Asphalt Plants",
+          "description": "25+ years of experience in operation, supervision and maintenance of asphalt plants. Direct responsibility for production, quality and operational safety."
+        },
+        "machinery": {
+          "title": "Heavy Equipment",
+          "description": "Specialized heavy equipment operator with multiple specialty certifications. Experience in demanding infrastructure technical projects."
+        },
+        "maintenance": {
+          "title": "Maintenance & Management",
+          "description": "Preventive and corrective maintenance of complex mechanical and electrical equipment. Human resources and logistics management."
+        },
+        "optimization": {
+          "title": "Optimization",
+          "description": "Data analysis and production parameter monitoring for process optimization. Application of modern management techniques."
+        }
+      },
+      "timeline": {
+        "title": "Professional Journey",
+        "job1": {
+          "title": "Operations Manager & Heavy Equipment Operator",
+          "company": "TERNA S.A.",
+          "period": "04/2022 – Present",
+          "description": "Direct operation and supervision of asphalt plant. Preventive equipment maintenance. Operation of specialized machinery in technical projects."
+        },
+        "job2": {
+          "title": "Heavy Equipment Operator",
+          "company": "Region of Central Greece",
+          "period": "12/2021 – 03/2022",
+          "description": "Execution of infrastructure projects and management of technical challenges in the field."
+        },
+        "job3": {
+          "title": "Production Manager & Quarry Operator",
+          "company": "KALTSAS TECHNICAL S.A.",
+          "period": "09/2019 – 12/2022",
+          "description": "Production coordination and supervision of quarry operations."
+        },
+        "job4": {
+          "title": "Asphalt Unit Production Manager",
+          "company": "ASPHALTOLATOMIKI ATEVE",
+          "period": "06/2000 – 08/2019",
+          "description": "19 years of responsibility for operation and maintenance of asphalt complex. Human resources, procurement and logistics management."
+        }
+      }
+    },
+    "cvSection": {
+      "title": "Complete Professional CV",
+      "cardTitle": "Curriculum Vitae",
+      "cardDescription": "25+ years of professional experience in asphalt plants and heavy equipment. Complete CV with detailed information.",
+      "viewFull": "View Full CV"
+    },
+    "softSkills": {
+      "title": "Soft Skills & Hobbies",
+      "subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
+      "programming": {
+        "title": "Programming & Development",
+        "description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE) for efficient code generation and debugging."
+      },
+      "design": {
+        "title": "Design & 3D Printing",
+        "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization and functional parts."
+      },
+      "smartHome": {
+        "title": "Smart Home Automation",
+        "description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management."
+      },
+      "ai": {
+        "title": "AI-Assisted Innovation",
+        "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools."
+      },
+      "viewMore": "View More",
+      "fusion360": "Fusion360",
+      "3dPrinting": "3D Printing"
+    },
+    "projectCategories": {
+      "title": "Projects & Creations"
     },
     "categories": {
       "3dPrinting": "3D Printing Creations",

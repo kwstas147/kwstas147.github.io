@@ -69,13 +69,241 @@
     <!-- Hero Section -->
     <section class="container mx-auto px-4 py-20 text-center">
         <h1 class="text-4xl md:text-6xl font-bold mb-3 fade-in" data-i18n="hero.name">Κωνσταντίνος Λαθύρης</h1>
-        <p class="text-xl md:text-2xl text-blue-400 mb-4 fade-in" data-i18n="hero.subtitle">Industrial Operations Manager | IoT & Digital Tech Specialist</p>
-        <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto fade-in" data-i18n="hero.description">Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων. Εξερευνήστε τις δημιουργίες μου σε 3D Printing, Fusion360 Designs, Software Development και IoT Automation.</p>
+        <p class="text-xl md:text-2xl text-blue-400 mb-4 fade-in" data-i18n="hero.subtitle">Χειριστής Ασφαλτικών Παρασκευαστηρίων | Χειριστής Μηχανημάτων Έργου</p>
+        <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto fade-in" data-i18n="hero.description">Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών.</p>
     </section>
 
-    <!-- Categories Section -->
+    <!-- Professional Summary Section -->
     <section class="container mx-auto px-4 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-400" data-i18n="professional.summary.title">Επαγγελματική Σύνοψη</h2>
+            <div class="bg-card rounded-lg p-8 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="flex items-start gap-4">
+                        <i data-lucide="factory" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.asphalt.title">Ασφαλτικά Παρασκευαστήρια</h3>
+                            <p class="text-gray-300" data-i18n="professional.summary.asphalt.description">25+ έτη εμπειρίας στη λειτουργία, επίβλεψη και συντήρηση ασφαλτικών παρασκευαστηρίων. Άμεση ευθύνη για την παραγωγή, ποιότητα και ασφάλεια λειτουργίας.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i data-lucide="tractor" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.machinery.title">Μηχανήματα Έργου</h3>
+                            <p class="text-gray-300" data-i18n="professional.summary.machinery.description">Εξειδικευμένος χειριστής βαρέων μηχανημάτων έργου με πιστοποίηση σε πολλαπλές ειδικότητες. Εμπειρία σε απαιτητικά τεχνικά έργα υποδομής.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i data-lucide="settings" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.maintenance.title">Συντήρηση & Διαχείριση</h3>
+                            <p class="text-gray-300" data-i18n="professional.summary.maintenance.description">Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού και ηλεκτρολογικού εξοπλισμού. Διαχείριση ανθρώπινου δυναμικού και logistics.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="professional.summary.optimization.title">Βελτιστοποίηση</h3>
+                            <p class="text-gray-300" data-i18n="professional.summary.optimization.description">Data analysis και παρακολούθηση παραμέτρων παραγωγής για βελτιστοποίηση διαδικασιών. Εφαρμογή σύγχρονων τεχνικών διαχείρισης.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Timeline Section -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-400" data-i18n="professional.timeline.title">Επαγγελματική Διαδρομή</h2>
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-400 opacity-30 hidden md:block"></div>
+                
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- Current Position -->
+                    <div class="relative flex items-start gap-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="briefcase" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <div class="flex-1 bg-card rounded-lg p-6">
+                            <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                                <h3 class="text-xl font-bold text-white" data-i18n="professional.timeline.job1.title">Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου</h3>
+                                <span class="text-sm text-blue-400 font-semibold" data-i18n="professional.timeline.job1.period">04/2022 – Σήμερα</span>
+                            </div>
+                            <p class="text-blue-400 mb-3 font-semibold" data-i18n="professional.timeline.job1.company">ΤΕΡΝΑ Α.Ε.</p>
+                            <p class="text-gray-300" data-i18n="professional.timeline.job1.description">Άμεση λειτουργία και επίβλεψη ασφαλτικού παρασκευαστηρίου. Προληπτική συντήρηση εξοπλισμού. Χειρισμός εξειδικευμένων μηχανημάτων σε τεχνικά έργα.</p>
+                        </div>
+                    </div>
+
+                    <!-- Previous Position 1 -->
+                    <div class="relative flex items-start gap-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-card border-2 border-blue-400 rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="wrench" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <div class="flex-1 bg-card rounded-lg p-6">
+                            <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                                <h3 class="text-xl font-bold text-white" data-i18n="professional.timeline.job2.title">Χειριστής Μηχανημάτων Έργου</h3>
+                                <span class="text-sm text-blue-400 font-semibold" data-i18n="professional.timeline.job2.period">12/2021 – 03/2022</span>
+                            </div>
+                            <p class="text-blue-400 mb-3 font-semibold" data-i18n="professional.timeline.job2.company">Περιφέρεια Στερεάς Ελλάδας</p>
+                            <p class="text-gray-300" data-i18n="professional.timeline.job2.description">Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο.</p>
+                        </div>
+                    </div>
+
+                    <!-- Previous Position 2 -->
+                    <div class="relative flex items-start gap-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-card border-2 border-blue-400 rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="hammer" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <div class="flex-1 bg-card rounded-lg p-6">
+                            <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                                <h3 class="text-xl font-bold text-white" data-i18n="professional.timeline.job3.title">Υπεύθυνος Παραγωγής & Χειριστής Λατομικού</h3>
+                                <span class="text-sm text-blue-400 font-semibold" data-i18n="professional.timeline.job3.period">09/2019 – 12/2022</span>
+                            </div>
+                            <p class="text-blue-400 mb-3 font-semibold" data-i18n="professional.timeline.job3.company">ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.</p>
+                            <p class="text-gray-300" data-i18n="professional.timeline.job3.description">Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών.</p>
+                        </div>
+                    </div>
+
+                    <!-- Previous Position 3 -->
+                    <div class="relative flex items-start gap-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-card border-2 border-blue-400 rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="award" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <div class="flex-1 bg-card rounded-lg p-6">
+                            <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                                <h3 class="text-xl font-bold text-white" data-i18n="professional.timeline.job4.title">Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας</h3>
+                                <span class="text-sm text-blue-400 font-semibold" data-i18n="professional.timeline.job4.period">06/2000 – 08/2019</span>
+                            </div>
+                            <p class="text-blue-400 mb-3 font-semibold" data-i18n="professional.timeline.job4.company">ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ</p>
+                            <p class="text-gray-300" data-i18n="professional.timeline.job4.description">19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος. Διαχείριση ανθρώπινου δυναμικού, προμηθειών και logistics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section - First Priority -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-400" data-i18n="cvSection.title">Πλήρες Επαγγελματικό Βιογραφικό</h2>
+            <a href="cv.html" class="category-card bg-card rounded-lg p-8 text-center hover:scale-105 transition-all duration-300 block">
+                <div class="flex justify-center mb-4">
+                    <i data-lucide="file-text" class="w-16 h-16 text-blue-400"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-3 text-blue-400" data-i18n="cvSection.cardTitle">Curriculum Vitae</h2>
+                <p class="text-gray-400 mb-4" data-i18n="cvSection.cardDescription">25+ έτη επαγγελματικής εμπειρίας σε ασφαλτικά παρασκευαστήρια και μηχανήματα έργου. Πλήρες βιογραφικό με λεπτομερείς πληροφορίες.</p>
+                <div class="inline-flex items-center gap-2 text-blue-400">
+                    <span data-i18n="cvSection.viewFull">Δείτε το πλήρες CV</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Soft Skills & Hobbies Section -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-blue-400" data-i18n="softSkills.title">Soft Skills & Hobbies</h2>
+            <p class="text-lg text-gray-400 text-center mb-12 max-w-3xl mx-auto" data-i18n="softSkills.subtitle">Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Programming -->
+                <div class="bg-card rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0">
+                            <i data-lucide="code" class="w-10 h-10 text-blue-400"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="softSkills.programming.title">Programming & Development</h3>
+                            <p class="text-gray-300 text-sm mb-3" data-i18n="softSkills.programming.description">Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE) για efficient code generation και debugging.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">AI-Assisted</span>
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Python</span>
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Flutter</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="programming.html" class="text-blue-400 hover:text-blue-300 text-sm flex items-center gap-1">
+                        <span data-i18n="softSkills.viewMore">Δείτε περισσότερα</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Design & 3D Printing -->
+                <div class="bg-card rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0">
+                            <i data-lucide="printer" class="w-10 h-10 text-blue-400"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="softSkills.design.title">Design & 3D Printing</h3>
+                            <p class="text-gray-300 text-sm mb-3" data-i18n="softSkills.design.description">Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization και functional parts.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Fusion360</span>
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">3D Printing</span>
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">AI Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="fusion360.html" class="text-blue-400 hover:text-blue-300 text-sm flex items-center gap-1">
+                            <span data-i18n="softSkills.fusion360">Fusion360</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="3d-printing.html" class="text-blue-400 hover:text-blue-300 text-sm flex items-center gap-1">
+                            <span data-i18n="softSkills.3dPrinting">3D Printing</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Smart Home -->
+                <div class="bg-card rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0">
+                            <i data-lucide="home" class="w-10 h-10 text-blue-400"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="softSkills.smartHome.title">Smart Home Automation</h3>
+                            <p class="text-gray-300 text-sm mb-3" data-i18n="softSkills.smartHome.description">Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Home Assistant</span>
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">ESP32</span>
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Innovation -->
+                <div class="bg-card rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0">
+                            <i data-lucide="sparkles" class="w-10 h-10 text-blue-400"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="softSkills.ai.title">AI-Assisted Innovation</h3>
+                            <p class="text-gray-300 text-sm mb-3" data-i18n="softSkills.ai.description">Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">AI Tools</span>
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Automation</span>
+                                <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Categories Section -->
+    <section class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-400" data-i18n="projectCategories.title">Projects & Creations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <!-- 3D Printing -->
             <a href="3d-printing.html" class="category-card bg-card rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
                 <div class="flex justify-center mb-4">
@@ -101,15 +329,6 @@
                 </div>
                 <h2 class="text-2xl font-bold mb-3 text-blue-400" data-i18n="categories.programming">Development Hub</h2>
                 <p class="text-gray-400 text-sm" data-i18n="categoryDescriptions.programming">Ενοποιημένη σελίδα για software projects</p>
-            </a>
-
-            <!-- CV -->
-            <a href="cv.html" class="category-card bg-card rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
-                <div class="flex justify-center mb-4">
-                    <i data-lucide="file-text" class="w-12 h-12 text-blue-400"></i>
-                </div>
-                <h2 class="text-2xl font-bold mb-3 text-blue-400" data-i18n="categories.cv">Curriculum Vitae</h2>
-                <p class="text-gray-400 text-sm" data-i18n="categoryDescriptions.cv">Επαγγελματικό βιογραφικό</p>
             </a>
         </div>
     </section>

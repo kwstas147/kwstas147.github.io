@@ -20,8 +20,10 @@ const translations = {
         // Home page
         heroTitle: "Καλώς ήρθατε στο Portfolio μου",
         heroName: "Κωνσταντίνος Λαθύρης",
-        heroSubtitle: "Industrial Operations Manager | IoT & Digital Tech Enthusiast",
-        heroDescription: "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων. Εξερευνήστε τις δημιουργίες μου σε 3D Printing, Fusion360 Designs, Software Development και IoT Automation.",
+        "hero.subtitle": "Χειριστής Ασφαλτικών Παρασκευαστηρίων | Χειριστής Μηχανημάτων Έργου",
+        "hero.description": "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών.",
+        heroSubtitle: "Χειριστής Ασφαλτικών Παρασκευαστηρίων | Χειριστής Μηχανημάτων Έργου",
+        heroDescription: "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών.",
         aboutTitle: "Σχετικά με εμένα",
         aboutText: "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων. Διαθέτω ένα μοναδικό προφίλ που συνδυάζει hands-on γνώση βαρέων μηχανημάτων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD).",
         aboutDevSkills: "Τεχνολογίες Ανάπτυξης",
@@ -169,7 +171,72 @@ const translations = {
         cvLicensesTypes: "A, B, C, D",
         cvLicensesNote: "(Πλήρης κάλυψη οχημάτων και μηχανημάτων)",
         cvMachineOperatorLicense: "Άδεια Χειριστή Μηχανημάτων Έργου",
-        cvMachineOperatorSpecialties: "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β"
+        cvMachineOperatorSpecialties: "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β",
+        
+        // Professional Summary & Timeline
+        "professional.summary.title": "Επαγγελματική Σύνοψη",
+        "professional.summary.asphalt.title": "Ασφαλτικά Παρασκευαστήρια",
+        "professional.summary.asphalt.description": "25+ έτη εμπειρίας στη λειτουργία, επίβλεψη και συντήρηση ασφαλτικών παρασκευαστηρίων. Άμεση ευθύνη για την παραγωγή, ποιότητα και ασφάλεια λειτουργίας.",
+        "professional.summary.machinery.title": "Μηχανήματα Έργου",
+        "professional.summary.machinery.description": "Εξειδικευμένος χειριστής βαρέων μηχανημάτων έργου με πιστοποίηση σε πολλαπλές ειδικότητες. Εμπειρία σε απαιτητικά τεχνικά έργα υποδομής.",
+        "professional.summary.maintenance.title": "Συντήρηση & Διαχείριση",
+        "professional.summary.maintenance.description": "Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού και ηλεκτρολογικού εξοπλισμού. Διαχείριση ανθρώπινου δυναμικού και logistics.",
+        "professional.summary.optimization.title": "Βελτιστοποίηση",
+        "professional.summary.optimization.description": "Data analysis και παρακολούθηση παραμέτρων παραγωγής για βελτιστοποίηση διαδικασιών. Εφαρμογή σύγχρονων τεχνικών διαχείρισης.",
+        "professional.timeline.title": "Επαγγελματική Διαδρομή",
+        "professional.timeline.job1.title": "Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου",
+        "professional.timeline.job1.company": "ΤΕΡΝΑ Α.Ε.",
+        "professional.timeline.job1.period": "04/2022 – Σήμερα",
+        "professional.timeline.job1.description": "Άμεση λειτουργία και επίβλεψη ασφαλτικού παρασκευαστηρίου. Προληπτική συντήρηση εξοπλισμού. Χειρισμός εξειδικευμένων μηχανημάτων σε τεχνικά έργα.",
+        "professional.timeline.job2.title": "Χειριστής Μηχανημάτων Έργου",
+        "professional.timeline.job2.company": "Περιφέρεια Στερεάς Ελλάδας",
+        "professional.timeline.job2.period": "12/2021 – 03/2022",
+        "professional.timeline.job2.description": "Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο.",
+        "professional.timeline.job3.title": "Υπεύθυνος Παραγωγής & Χειριστής Λατομικού",
+        "professional.timeline.job3.company": "ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.",
+        "professional.timeline.job3.period": "09/2019 – 12/2022",
+        "professional.timeline.job3.description": "Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών.",
+        "professional.timeline.job4.title": "Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας",
+        "professional.timeline.job4.company": "ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ",
+        "professional.timeline.job4.period": "06/2000 – 08/2019",
+        "professional.timeline.job4.description": "19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος. Διαχείριση ανθρώπινου δυναμικού, προμηθειών και logistics.",
+        
+        // CV Section
+        "cvSection.title": "Πλήρες Επαγγελματικό Βιογραφικό",
+        "cvSection.cardTitle": "Curriculum Vitae",
+        "cvSection.cardDescription": "25+ έτη επαγγελματικής εμπειρίας σε ασφαλτικά παρασκευαστήρια και μηχανήματα έργου. Πλήρες βιογραφικό με λεπτομερείς πληροφορίες.",
+        "cvSection.viewFull": "Δείτε το πλήρες CV",
+        
+        // Soft Skills & Hobbies
+        "softSkills.title": "Soft Skills & Hobbies",
+        "softSkills.subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
+        "softSkills.programming.title": "Programming & Development",
+        "softSkills.programming.description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE) για efficient code generation και debugging.",
+        "softSkills.design.title": "Design & 3D Printing",
+        "softSkills.design.description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization και functional parts.",
+        "softSkills.smartHome.title": "Smart Home Automation",
+        "softSkills.smartHome.description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management.",
+        "softSkills.ai.title": "AI-Assisted Innovation",
+        "softSkills.ai.description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools.",
+        "softSkills.viewMore": "Δείτε περισσότερα",
+        "softSkills.fusion360": "Fusion360",
+        "softSkills.3dPrinting": "3D Printing",
+        
+        // Project Categories
+        "projectCategories.title": "Projects & Creations",
+        
+        // Categories (updated for nested structure)
+        "categories.3dPrinting": "3D Printing Creations",
+        "categories.fusion360": "Fusion360 Designs",
+        "categories.programming": "Development Hub",
+        "categories.cv": "Curriculum Vitae",
+        "categoryDescriptions.3dPrinting": "Φυσικές κατασκευές και εκτυπώσεις 3D",
+        "categoryDescriptions.fusion360": "CAD μοντέλα και σχεδίαση μηχανικών",
+        "categoryDescriptions.programming": "Ενοποιημένη σελίδα για software projects",
+        "categoryDescriptions.cv": "Επαγγελματικό βιογραφικό",
+        
+        // GitHub
+        "github.viewProfile": "View Profile"
     },
     en: {
         // Navigation
@@ -191,8 +258,10 @@ const translations = {
         // Home page
         heroTitle: "Welcome to My Portfolio",
         heroName: "Konstantinos Lathyris",
-        heroSubtitle: "Industrial Operations Manager | IoT & Digital Tech Enthusiast",
-        heroDescription: "Experienced technical professional with 25 years in technical project management and industrial plant operations. Explore my creations in 3D Printing, Fusion360 Designs, Software Development, and IoT Automation.",
+        "hero.subtitle": "Asphalt Plant Operator | Heavy Equipment Operator",
+        "hero.description": "Experienced technical professional with 25+ years of experience in asphalt plant operations and heavy equipment operation. Specialized in production management, equipment maintenance, and process optimization.",
+        heroSubtitle: "Asphalt Plant Operator | Heavy Equipment Operator",
+        heroDescription: "Experienced technical professional with 25+ years of experience in asphalt plant operations and heavy equipment operation. Specialized in production management, equipment maintenance, and process optimization.",
         aboutTitle: "About Me",
         aboutText: "Experienced technical professional with 25 years in technical project management and industrial plant operations. I possess a unique profile combining hands-on heavy machinery knowledge with advanced digital skills in Programming (Python), Networks, and Product Design (3D Printing / CAD).",
         aboutDevSkills: "Development Technologies",
@@ -344,7 +413,93 @@ const translations = {
         cvLicensesTypes: "A, B, C, D",
         cvLicensesNote: "(Full coverage for vehicles and machinery)",
         cvMachineOperatorLicense: "Heavy Equipment Operator License",
-        cvMachineOperatorSpecialties: "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β"
+        cvMachineOperatorSpecialties: "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β",
+        
+        // Professional Summary & Timeline
+        "professional.summary.title": "Professional Summary",
+        "professional.summary.asphalt.title": "Asphalt Plants",
+        "professional.summary.asphalt.description": "25+ years of experience in operation, supervision and maintenance of asphalt plants. Direct responsibility for production, quality and operational safety.",
+        "professional.summary.machinery.title": "Heavy Equipment",
+        "professional.summary.machinery.description": "Specialized heavy equipment operator with multiple specialty certifications. Experience in demanding infrastructure technical projects.",
+        "professional.summary.maintenance.title": "Maintenance & Management",
+        "professional.summary.maintenance.description": "Preventive and corrective maintenance of complex mechanical and electrical equipment. Human resources and logistics management.",
+        "professional.summary.optimization.title": "Optimization",
+        "professional.summary.optimization.description": "Data analysis and production parameter monitoring for process optimization. Application of modern management techniques.",
+        "professional.timeline.title": "Professional Journey",
+        "professional.timeline.job1.title": "Operations Manager & Heavy Equipment Operator",
+        "professional.timeline.job1.company": "TERNA S.A.",
+        "professional.timeline.job1.period": "04/2022 – Present",
+        "professional.timeline.job1.description": "Direct operation and supervision of asphalt plant. Preventive equipment maintenance. Operation of specialized machinery in technical projects.",
+        "professional.timeline.job2.title": "Heavy Equipment Operator",
+        "professional.timeline.job2.company": "Region of Central Greece",
+        "professional.timeline.job2.period": "12/2021 – 03/2022",
+        "professional.timeline.job2.description": "Execution of infrastructure projects and management of technical challenges in the field.",
+        "professional.timeline.job3.title": "Production Manager & Quarry Operator",
+        "professional.timeline.job3.company": "KALTSAS TECHNICAL S.A.",
+        "professional.timeline.job3.period": "09/2019 – 12/2022",
+        "professional.timeline.job3.description": "Production coordination and supervision of quarry operations.",
+        "professional.timeline.job4.title": "Asphalt Unit Production Manager",
+        "professional.timeline.job4.company": "ASPHALTOLATOMIKI ATEVE",
+        "professional.timeline.job4.period": "06/2000 – 08/2019",
+        "professional.timeline.job4.description": "19 years of responsibility for operation and maintenance of asphalt complex. Human resources, procurement and logistics management.",
+        
+        // CV Section
+        "cvSection.title": "Complete Professional CV",
+        "cvSection.cardTitle": "Curriculum Vitae",
+        "cvSection.cardDescription": "25+ years of professional experience in asphalt plants and heavy equipment. Complete CV with detailed information.",
+        "cvSection.viewFull": "View Full CV",
+        
+        // Soft Skills & Hobbies
+        "softSkills.title": "Soft Skills & Hobbies",
+        "softSkills.subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
+        "softSkills.programming.title": "Programming & Development",
+        "softSkills.programming.description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE) for efficient code generation and debugging.",
+        "softSkills.design.title": "Design & 3D Printing",
+        "softSkills.design.description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization and functional parts.",
+        "softSkills.smartHome.title": "Smart Home Automation",
+        "softSkills.smartHome.description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management.",
+        "softSkills.ai.title": "AI-Assisted Innovation",
+        "softSkills.ai.description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools.",
+        "softSkills.viewMore": "View More",
+        "softSkills.fusion360": "Fusion360",
+        "softSkills.3dPrinting": "3D Printing",
+        
+        // Project Categories
+        "projectCategories.title": "Projects & Creations",
+        
+        // Categories (updated for nested structure)
+        "categories.3dPrinting": "3D Printing Creations",
+        "categories.fusion360": "Fusion360 Designs",
+        "categories.programming": "Development Hub",
+        "categories.cv": "Curriculum Vitae",
+        "categoryDescriptions.3dPrinting": "Physical constructions and 3D prints",
+        "categoryDescriptions.fusion360": "CAD models and mechanical design",
+        "categoryDescriptions.programming": "Integrated page for software projects",
+        "categoryDescriptions.cv": "Professional CV",
+        
+        // GitHub
+        "github.viewProfile": "View Profile",
+        
+        // AI Development
+        "aiDev.title": "AI-Assisted Development",
+        "aiDev.description": "I use artificial intelligence in all my development projects for efficient workflows, code generation, debugging and optimization. The use of AI tools such as Cursor IDE significantly speeds up development and improves code quality.",
+        "aiDev.tools.title": "AI Tools & IDE",
+        "aiDev.tools.cursor": "Cursor IDE (AI-powered code editor)",
+        "aiDev.tools.copilot": "GitHub Copilot integration",
+        "aiDev.tools.chatgpt": "ChatGPT for code review & debugging",
+        "aiDev.benefits.title": "Benefits",
+        "aiDev.benefits.speed": "Faster code generation",
+        "aiDev.benefits.quality": "Improved code quality",
+        "aiDev.benefits.learning": "Continuous learning & improvement",
+        "aiDev.note": "All projects on this page have been developed with the help of artificial intelligence, demonstrating how AI can enhance productivity and innovation in programming.",
+        
+        // AI Design
+        "aiDesign.title": "AI-Assisted Design & Optimization",
+        "aiDesign.description": "My designs in Fusion360 and 3D prints use AI-assisted tools for optimization, material efficiency and functional design. Artificial intelligence helps in designing functional spare parts and tools that improve daily work.",
+        
+        // AI CAD
+        "aiCAD.title": "AI-Assisted CAD Design",
+        "aiCAD.description": "I use AI-assisted design tools in Fusion360 for optimization, parametric design and functional analysis. Artificial intelligence helps in designing components that are not only aesthetically appealing but also functionally efficient, with focus on creating functional parts for everyday use."
     }
 };
 
