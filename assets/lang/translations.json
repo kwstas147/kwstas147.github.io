@@ -420,7 +420,7 @@
     "nav": {
       "home": "Home",
       "3dPrinting": "3D Printing",
-      "design": "Σχεδιασμός",
+      "design": "Design",
       "programming": "Development",
       "cv": "CV"
     },
@@ -739,7 +739,7 @@
         "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools."
       },
       "viewMore": "View More",
-      "design": "Σχεδιασμός",
+      "design": "Design",
       "3dPrinting": "3D Printing"
     },
     "projectCategories": {
@@ -747,7 +747,7 @@
     },
     "categories": {
       "3dPrinting": "3D Printing Creations",
-      "design": "Σχεδιασμός",
+      "design": "Design",
       "programming": "Development Hub",
       "cv": "Curriculum Vitae"
     },
@@ -756,6 +756,33 @@
       "design": "CAD design and engineering analysis",
       "programming": "Python automation, IoT solutions and software development",
       "cv": "Complete professional CV with 25+ years of experience"
+    },
+    "design": {
+      "tag": "Design",
+      "project1": {
+        "title": "Mechanical Component - Design 1",
+        "description": "Mechanical component design with parametric modeling. Optimization for functionality and durability using AI-assisted tools."
+      },
+      "project2": {
+        "title": "Complex System - Design 2",
+        "description": "Complex system design with multiple components. Functional analysis and material optimization for better performance."
+      },
+      "project3": {
+        "title": "Tool & Spare Part - Design 3",
+        "description": "Functional tool and spare part design for everyday use. Focus on creating functional parts with material efficiency."
+      },
+      "project4": {
+        "title": "Mechanical Assembly - Design 4",
+        "description": "Advanced mechanical assembly with detailed engineering analysis. Parametric design for flexibility and adaptation to needs."
+      },
+      "project5": {
+        "title": "Optimized Component - Design 5",
+        "description": "Optimized component with AI-assisted optimization. Combination of aesthetics and functionality for optimal performance."
+      }
+    },
+    "aiCAD": {
+      "title": "AI-Assisted CAD Design",
+      "description": "I use AI-assisted design tools for optimization, parametric design and functional analysis. Artificial intelligence helps in designing components that are not only aesthetically appealing but also functionally efficient, with focus on creating functional parts for everyday use."
     },
     "buttons": {
       "viewMore": "View More",
