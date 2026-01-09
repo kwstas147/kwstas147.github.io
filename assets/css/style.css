@@ -9,6 +9,7 @@
     justify-content: center;
     background-color: var(--bg-primary);
     margin-top: 0;
+    overflow: hidden;
 }
 
 .hero-background {
@@ -17,7 +18,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../images/hero-background.jpg');
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/hero-background.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -25,7 +28,12 @@
     z-index: 0;
     filter: brightness(0.7) contrast(1.1);
     transition: filter 0.3s ease-in-out;
+    will-change: transform;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
+
 
 /* Subtle animation on background */
 .hero-background::before {
