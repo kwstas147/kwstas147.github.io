@@ -663,8 +663,8 @@
                 <button data-lang="en" style="padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; cursor: pointer; border: 1px solid #3b82f6; background: rgba(243, 244, 246, 0.8); color: #4b5563; transition: all 0.2s;">EN</button>
             </div>
         </div>
-        <button id="downloadBtn" data-i18n="btnDownloadPDF" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s;"></button>
-        <p data-i18n="pdfOptimizedMessage" style="margin-top: 10px; color: #64748b; font-size: 14px;"></p>
+        <button id="downloadBtn" data-i18n="btnDownloadPDF" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 200px; display: inline-block; visibility: visible; opacity: 1;">📥 Κατεβάστε το CV ως PDF</button>
+        <p id="pdfMessage" data-i18n="pdfOptimizedMessage" style="margin-top: 10px; color: #64748b; font-size: 14px;">Η σελίδα είναι βελτιστοποιημένη για εκτύπωση. Κάντε κλικ στο κουμπί για να κατεβάσετε το PDF.</p>
     </div>
 
     <script src="assets/js/translations.js?v=2"></script>
@@ -701,8 +701,12 @@
                     // Update download button and message text (they have data-i18n, so they should update automatically, but ensure it happens)
                     setTimeout(() => {
                         const downloadBtn = document.getElementById('downloadBtn');
+                        const pdfMessage = document.getElementById('pdfMessage');
                         if (downloadBtn && window.translations && window.translations[lang]) {
                             downloadBtn.textContent = window.translations[lang].btnDownloadPDF || downloadBtn.textContent;
+                        }
+                        if (pdfMessage && window.translations && window.translations[lang]) {
+                            pdfMessage.textContent = window.translations[lang].pdfOptimizedMessage || pdfMessage.textContent;
                         }
                     }, 150);
                 };
@@ -735,6 +739,16 @@
                 // If button doesn't exist yet, try again after a short delay
                 setTimeout(setupDownloadButton, 100);
                 return;
+            }
+            
+            // Set initial button text if empty (fallback)
+            if (!downloadBtn.textContent || downloadBtn.textContent.trim() === '') {
+                const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
+                if (window.translations && window.translations[currentLang] && window.translations[currentLang].btnDownloadPDF) {
+                    downloadBtn.textContent = window.translations[currentLang].btnDownloadPDF;
+                } else {
+                    downloadBtn.textContent = currentLang === 'el' ? '📥 Κατεβάστε το CV ως PDF' : '📥 Download CV as PDF';
+                }
             }
             
             // Remove any existing listeners by cloning the button
@@ -1004,19 +1018,23 @@
                         : (currentLang === 'el' ? '✅ PDF Κατέβηκε!' : '✅ PDF Downloaded!');
                     
                     btn.textContent = successText;
+                    btn.style.background = '#10b981'; // Green for success
                     setTimeout(() => {
-                        // Restore button text from translation
+                        // Restore button text and style from translation
+                        btn.style.background = '#3b82f6'; // Restore blue
                         if (window.translations && window.translations[currentLang] && window.translations[currentLang].btnDownloadPDF) {
                             btn.textContent = window.translations[currentLang].btnDownloadPDF;
                         } else {
                             btn.textContent = currentLang === 'el' ? '📥 Κατεβάστε το CV ως PDF' : '📥 Download CV as PDF';
                         }
                         btn.disabled = false;
-                    }, 2000);
+                    }, 2500);
                 }).catch(err => {
                     console.error('=== PDF Generation Failed ===');
                     console.error('Error details:', err);
-                    console.error('Error stack:', err.stack);
+                    if (err.stack) {
+                        console.error('Error stack:', err.stack);
+                    }
                     console.error('Element info at error time:', {
                         exists: !!element,
                         display: element ? window.getComputedStyle(element).display : 'N/A',
@@ -1027,21 +1045,24 @@
                         innerHTMLLength: element ? element.innerHTML.length : 'N/A'
                     });
                     console.error('html2pdf options used:', JSON.stringify(opt, null, 2));
+                    
                     const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
                     const errorText = (window.translations && window.translations[currentLang] && window.translations[currentLang].pdfError) 
                         ? window.translations[currentLang].pdfError 
                         : (currentLang === 'el' ? '❌ Σφάλμα - Δοκιμάστε ξανά' : '❌ Error - Try Again');
                     btn.textContent = errorText;
+                    btn.style.background = '#ef4444'; // Red for error
                     
                     setTimeout(() => {
-                        // Restore button text from translation
+                        // Restore button text and style from translation
+                        btn.style.background = '#3b82f6'; // Restore blue
                         if (window.translations && window.translations[currentLang] && window.translations[currentLang].btnDownloadPDF) {
                             btn.textContent = window.translations[currentLang].btnDownloadPDF;
                         } else {
                             btn.textContent = currentLang === 'el' ? '📥 Κατεβάστε το CV ως PDF' : '📥 Download CV as PDF';
                         }
                         btn.disabled = false;
-                    }, 2000);
+                    }, 3000);
                 });
             }
             
@@ -1051,20 +1072,26 @@
                 if (typeof html2pdf === 'undefined') {
                     console.error('html2pdf library not loaded');
                     btn.disabled = false;
-                    btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Βιβλιοθήκη δεν φορτώθηκε' : '❌ Error: Library not loaded';
+                    const errorText = (window.translations && window.translations[currentLang] && window.translations[currentLang].pdfError) 
+                        ? window.translations[currentLang].pdfError 
+                        : (currentLang === 'el' ? '❌ Σφάλμα: Βιβλιοθήκη δεν φορτώθηκε' : '❌ Error: Library not loaded');
+                    btn.textContent = errorText;
                     setTimeout(() => {
                         if (window.translations && window.translations[currentLang] && window.translations[currentLang].btnDownloadPDF) {
                             btn.textContent = window.translations[currentLang].btnDownloadPDF;
                         } else {
                             btn.textContent = currentLang === 'el' ? '📥 Κατεβάστε το CV ως PDF' : '📥 Download CV as PDF';
                         }
-                    }, 2000);
+                    }, 3000);
                     return;
                 }
                 
-                // Wait for translations to be applied
+                // Wait for translations to be applied and ensure all content is ready
                 if (window.languageManager) {
                     // Give time for translations to render
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                } else {
+                    // Fallback wait if languageManager is not available
                     await new Promise(resolve => setTimeout(resolve, 300));
                 }
                 

@@ -87,6 +87,11 @@
       "cvLicensesNote": "(Πλήρης κάλυψη οχημάτων και μηχανημάτων)",
       "cvMachineOperatorLicense": "Άδεια Χειριστή Μηχανημάτων Έργου",
       "cvMachineOperatorSpecialties": "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β",
+      "btnDownloadPDF": "📥 Κατεβάστε το CV ως PDF",
+      "pdfOptimizedMessage": "Η σελίδα είναι βελτιστοποιημένη για εκτύπωση. Κάντε κλικ στο κουμπί για να κατεβάσετε το PDF.",
+      "pdfGenerating": "⏳ Δημιουργία PDF...",
+      "pdfSuccess": "✅ PDF Κατέβηκε!",
+      "pdfError": "❌ Σφάλμα - Δοκιμάστε ξανά",
       "about": {
         "title": "Σχετικά με εμένα",
         "devSkills": "Τεχνολογίες Ανάπτυξης",
@@ -565,6 +570,11 @@
       "cvLicensesNote": "(Full coverage for vehicles and machinery)",
       "cvMachineOperatorLicense": "Heavy Equipment Operator License",
       "cvMachineOperatorSpecialties": "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β",
+      "btnDownloadPDF": "📥 Download CV as PDF",
+      "pdfOptimizedMessage": "The page is optimized for printing. Click the button to download the PDF.",
+      "pdfGenerating": "⏳ Generating PDF...",
+      "pdfSuccess": "✅ PDF Downloaded!",
+      "pdfError": "❌ Error - Try Again",
       "about": {
         "title": "About Me",
         "devSkills": "Development Technologies",
