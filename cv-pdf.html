@@ -76,6 +76,24 @@
             .no-print {
                 display: none !important;
             }
+            /* Word wrapping for PDF - prevent text overflow */
+            .sidebar,
+            .sidebar * {
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+                word-break: break-word !important;
+            }
+            .skill-category,
+            .skill-category div,
+            .skill-category h4 {
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+                word-break: break-word !important;
+            }
+            .section-title {
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+            }
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'DejaVu Sans', sans-serif;
@@ -126,6 +144,8 @@
             padding-bottom: 5px;
             margin-bottom: 15px;
             page-break-after: avoid;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         .contact-info {
             display: flex;
@@ -207,11 +227,21 @@
         .skill-category {
             margin-bottom: 15px;
             page-break-inside: avoid;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
         .skill-category h4 {
             font-weight: bold;
             color: #1e293b;
             margin-bottom: 5px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .skill-category div {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
         .cv-container {
             display: flex;
@@ -228,6 +258,9 @@
             flex: 1;
             min-width: 0;
             box-sizing: border-box;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
         .summary {
             text-align: justify;
@@ -393,118 +426,6 @@
             </div>
 
             <div class="section">
-                <div class="section-title" data-i18n="cvSectionExperience">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ</div>
-                
-                <div class="timeline-container">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                <div class="job-entry">
-                    <div class="job-header">
-                        <div class="job-title" data-i18n="cvJob1Title">Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου</div>
-                        <div class="job-date" data-i18n="cvJob1Period">04/2022 – Σήμερα</div>
-                    </div>
-                    <div class="job-company" data-i18n="cvJob1Company">ΤΕΡΝΑ Α.Ε.</div>
-                    <div class="job-description">
-                        <ul>
-                            <li data-i18n="cvJob1Desc1">Άμεση λειτουργία, επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.</li>
-                            <li data-i18n="cvJob1Desc2">Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.</li>
-                            <li data-i18n="cvJob1Desc3">Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.</li>
-                        </ul>
-                    </div>
-                </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                <div class="job-entry">
-                    <div class="job-header">
-                        <div class="job-title" data-i18n="cvJob2Title">Χειριστής Μηχανημάτων Έργου</div>
-                        <div class="job-date" data-i18n="cvJob2Period">12/2021 – 03/2022</div>
-                    </div>
-                    <div class="job-company" data-i18n="cvJob2Company">Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)</div>
-                    <div class="job-description">
-                        <ul>
-                            <li data-i18n="cvJob2Desc1">Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο.</li>
-                        </ul>
-                    </div>
-                </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                <div class="job-entry">
-                    <div class="job-header">
-                        <div class="job-title" data-i18n="cvJob3Title">Υπεύθυνος Παραγωγής & Χειριστής Λατομικού Συγκροτήματος</div>
-                        <div class="job-date" data-i18n="cvJob3Period">09/2019 – 12/2022</div>
-                    </div>
-                    <div class="job-company" data-i18n="cvJob3Company">ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.</div>
-                    <div class="job-description">
-                        <ul>
-                            <li data-i18n="cvJob3Desc1">Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών.</li>
-                        </ul>
-                    </div>
-                </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                <div class="job-entry">
-                    <div class="job-header">
-                        <div class="job-title" data-i18n="cvJob4Title">Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας & Διαχείρισης</div>
-                        <div class="job-date" data-i18n="cvJob4Period">06/2000 – 08/2019</div>
-                    </div>
-                    <div class="job-company" data-i18n="cvJob4Company">ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ</div>
-                    <div class="job-description">
-                        <ul>
-                            <li data-i18n="cvJob4Desc1">19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος.</li>
-                            <li data-i18n="cvJob4Desc2">Διοικητικές Ικανότητες: Διαχείριση ανθρώπινου δυναμικού, προμηθειών, logistics και έκδοση παραστατικών.</li>
-                        </ul>
-                    </div>
-                </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                <div class="job-entry">
-                    <div class="job-header">
-                        <div class="job-title" data-i18n="cvJob5Title">Τεχνικός Ψυκτικών Εφαρμογών & Κατασκευών Inox</div>
-                        <div class="job-date" data-i18n="cvJob5Period">01/2000 – 05/2000</div>
-                    </div>
-                    <div class="job-company" data-i18n="cvJob5Company">Ζυγούρης Κ.</div>
-                    <div class="job-description">
-                        <ul>
-                            <li data-i18n="cvJob5Desc1">Κατασκευή επαγγελματικού εξοπλισμού και εγκατάσταση ψυκτικών συστημάτων.</li>
-                        </ul>
-                    </div>
-                </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                <div class="job-entry">
-                    <div class="job-header">
-                        <div class="job-title" data-i18n="cvJob6Title">Βοηθός Ηλεκτρολόγου Εσωτερικών Εγκαταστάσεων</div>
-                        <div class="job-date" data-i18n="cvJob6Period">02/1997 – 04/1998</div>
-                    </div>
-                    <div class="job-company" data-i18n="cvJob6Company">Τσάκας Ι.</div>
-                </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <div class="section">
                 <div class="section-title" data-i18n="cvSectionEducation">ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ</div>
                 
                 <div class="education-entry education-border">
@@ -650,6 +571,118 @@
                 </div>
             </div>
         </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title" data-i18n="cvSectionExperience">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ</div>
+            
+            <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+            <div class="job-entry">
+                <div class="job-header">
+                    <div class="job-title" data-i18n="cvJob1Title">Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου</div>
+                    <div class="job-date" data-i18n="cvJob1Period">04/2022 – Σήμερα</div>
+                </div>
+                <div class="job-company" data-i18n="cvJob1Company">ΤΕΡΝΑ Α.Ε.</div>
+                <div class="job-description">
+                    <ul>
+                        <li data-i18n="cvJob1Desc1">Άμεση λειτουργία, επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.</li>
+                        <li data-i18n="cvJob1Desc2">Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.</li>
+                        <li data-i18n="cvJob1Desc3">Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.</li>
+                    </ul>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+            <div class="job-entry">
+                <div class="job-header">
+                    <div class="job-title" data-i18n="cvJob2Title">Χειριστής Μηχανημάτων Έργου</div>
+                    <div class="job-date" data-i18n="cvJob2Period">12/2021 – 03/2022</div>
+                </div>
+                <div class="job-company" data-i18n="cvJob2Company">Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)</div>
+                <div class="job-description">
+                    <ul>
+                        <li data-i18n="cvJob2Desc1">Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο.</li>
+                    </ul>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+            <div class="job-entry">
+                <div class="job-header">
+                    <div class="job-title" data-i18n="cvJob3Title">Υπεύθυνος Παραγωγής & Χειριστής Λατομικού Συγκροτήματος</div>
+                    <div class="job-date" data-i18n="cvJob3Period">09/2019 – 12/2022</div>
+                </div>
+                <div class="job-company" data-i18n="cvJob3Company">ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.</div>
+                <div class="job-description">
+                    <ul>
+                        <li data-i18n="cvJob3Desc1">Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών.</li>
+                    </ul>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+            <div class="job-entry">
+                <div class="job-header">
+                    <div class="job-title" data-i18n="cvJob4Title">Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας & Διαχείρισης</div>
+                    <div class="job-date" data-i18n="cvJob4Period">06/2000 – 08/2019</div>
+                </div>
+                <div class="job-company" data-i18n="cvJob4Company">ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ</div>
+                <div class="job-description">
+                    <ul>
+                        <li data-i18n="cvJob4Desc1">19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος.</li>
+                        <li data-i18n="cvJob4Desc2">Διοικητικές Ικανότητες: Διαχείριση ανθρώπινου δυναμικού, προμηθειών, logistics και έκδοση παραστατικών.</li>
+                    </ul>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+            <div class="job-entry">
+                <div class="job-header">
+                    <div class="job-title" data-i18n="cvJob5Title">Τεχνικός Ψυκτικών Εφαρμογών & Κατασκευών Inox</div>
+                    <div class="job-date" data-i18n="cvJob5Period">01/2000 – 05/2000</div>
+                </div>
+                <div class="job-company" data-i18n="cvJob5Company">Ζυγούρης Κ.</div>
+                <div class="job-description">
+                    <ul>
+                        <li data-i18n="cvJob5Desc1">Κατασκευή επαγγελματικού εξοπλισμού και εγκατάσταση ψυκτικών συστημάτων.</li>
+                    </ul>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+            <div class="job-entry">
+                <div class="job-header">
+                    <div class="job-title" data-i18n="cvJob6Title">Βοηθός Ηλεκτρολόγου Εσωτερικών Εγκαταστάσεων</div>
+                    <div class="job-date" data-i18n="cvJob6Period">02/1997 – 04/1998</div>
+                </div>
+                <div class="job-company" data-i18n="cvJob6Company">Τσάκας Ι.</div>
+            </div>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 
@@ -904,6 +937,40 @@
                                     clonedContainer.style.display = 'flex';
                                     clonedContainer.style.flexDirection = 'row';
                                 }
+                                
+                                // Word wrapping for sidebar and skill categories - prevent text overflow
+                                const clonedSidebar = clonedElement.querySelector('.sidebar');
+                                if (clonedSidebar) {
+                                    clonedSidebar.style.wordWrap = 'break-word';
+                                    clonedSidebar.style.overflowWrap = 'break-word';
+                                    clonedSidebar.style.wordBreak = 'break-word';
+                                    // Apply to all children
+                                    const sidebarChildren = clonedSidebar.querySelectorAll('*');
+                                    sidebarChildren.forEach(child => {
+                                        child.style.wordWrap = 'break-word';
+                                        child.style.overflowWrap = 'break-word';
+                                        child.style.wordBreak = 'break-word';
+                                    });
+                                }
+                                
+                                const skillCategories = clonedElement.querySelectorAll('.skill-category');
+                                skillCategories.forEach(category => {
+                                    category.style.wordWrap = 'break-word';
+                                    category.style.overflowWrap = 'break-word';
+                                    category.style.wordBreak = 'break-word';
+                                    const categoryChildren = category.querySelectorAll('div, h4');
+                                    categoryChildren.forEach(child => {
+                                        child.style.wordWrap = 'break-word';
+                                        child.style.overflowWrap = 'break-word';
+                                        child.style.wordBreak = 'break-word';
+                                    });
+                                });
+                                
+                                const sectionTitles = clonedElement.querySelectorAll('.section-title');
+                                sectionTitles.forEach(title => {
+                                    title.style.wordWrap = 'break-word';
+                                    title.style.overflowWrap = 'break-word';
+                                });
                                 
                                 // Force reflow to calculate dimensions
                                 void clonedElement.offsetHeight;
