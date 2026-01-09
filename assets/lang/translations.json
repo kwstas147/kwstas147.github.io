@@ -347,7 +347,11 @@
           },
           "mailExtractor": {
             "title": "MailExtractor",
-            "description": "Windows εφαρμογή που κατεβάζει δεδομένα email από τον λογαριασμό σας Google και εξάγει ονόματα, email addresses και τηλεφωνικούς αριθμούς σε Excel. Έχει δωρεάν χρήση αρχικά και μετά απαιτεί machine-specific key που αντιστοιχεί στο συγκεκριμένο μηχάνημα που τρέχει η εφαρμογή."
+            "description": "Windows εφαρμογή για εξαγωγή δεδομένων από Gmail. Ο χρήστης κατεβάζει αρχείο .mbox από το Google Takeout (takeout.google.com), το αποσυμπιέζει μέσα από την εφαρμογή, το επιλέγει και η εφαρμογή εξάγει αυτόματα ονόματα, email addresses και τηλεφωνικούς αριθμούς σε Excel. Διαθέτει δωρεάν χρήση αρχικά, ενώ μετά απαιτεί machine-specific key που αντιστοιχεί στο συγκεκριμένο μηχάνημα που τρέχει η εφαρμογή."
+          },
+          "myInventory": {
+            "title": "MyInventory",
+            "description": "Μια Flutter mobile εφαρμογή για στοιχειώδη διαχείριση αποθήκης, που αναπτύχθηκε από την ανάγκη διαχείρισης αποθήκης στην εργασία. Η εφαρμογή προσφέρει πλήρη λύση διαχείρισης αποθηκών με υποστήριξη πολλαπλών αποθηκών, διαχείριση προϊόντων, μεταφορές αποθεμάτων μεταξύ αποθηκών, ειδοποιήσεις χαμηλού αποθέματος, backup & restore λειτουργικότητα, και AI Assistant με ενσωμάτωση Google Gemini API. Ιδανική για οποιονδήποτε χρειάζεται αποτελεσματική και απλή διαχείριση αποθήκης."
           }
         }
       }
@@ -714,7 +718,11 @@
           },
           "mailExtractor": {
             "title": "MailExtractor",
-            "description": "Windows application that downloads email data from your Google account and extracts names, email addresses, and phone numbers to Excel. Features free use initially, then requires a machine-specific key that corresponds to the specific machine running the application."
+            "description": "Windows application for extracting data from Gmail. Users download an .mbox file from Google Takeout (takeout.google.com), decompress it within the application, select it, and the application automatically extracts names, email addresses, and phone numbers to Excel. Features free use initially, then requires a machine-specific key that corresponds to the specific machine running the application."
+          },
+          "myInventory": {
+            "title": "MyInventory",
+            "description": "A Flutter mobile application for basic warehouse management, developed from the need for warehouse management at work. The application provides a complete warehouse management solution with multi-warehouse support, product management, stock transfers between warehouses, low stock alerts, backup & restore functionality, and AI Assistant with Google Gemini API integration. Ideal for anyone who needs effective and simple warehouse management."
           }
         }
       }
