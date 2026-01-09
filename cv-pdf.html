@@ -677,47 +677,56 @@
     <script src="assets/js/language.js?v=2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
-        // Update html lang attribute when language changes and update button active state
-        if (window.languageManager) {
-            const originalSetLanguage = window.languageManager.setLanguage.bind(window.languageManager);
-            window.languageManager.setLanguage = function(lang) {
-                originalSetLanguage(lang);
-                document.documentElement.setAttribute('lang', lang);
+        // Wait for languageManager to be ready, then set up language switching
+        function setupLanguageManager() {
+            if (window.languageManager) {
+                const originalSetLanguage = window.languageManager.setLanguage.bind(window.languageManager);
+                window.languageManager.setLanguage = function(lang) {
+                    originalSetLanguage(lang);
+                    document.documentElement.setAttribute('lang', lang);
+                    
+                    // Update active state of language buttons
+                    document.querySelectorAll('[data-lang]').forEach(btn => {
+                        if (btn.getAttribute('data-lang') === lang) {
+                            btn.style.background = '#3b82f6';
+                            btn.style.color = 'white';
+                            btn.style.borderColor = '#3b82f6';
+                        } else {
+                            btn.style.background = 'rgba(243, 244, 246, 0.8)';
+                            btn.style.color = '#4b5563';
+                            btn.style.borderColor = '#3b82f6';
+                        }
+                    });
+                    
+                    // Update download button and message text (they have data-i18n, so they should update automatically, but ensure it happens)
+                    setTimeout(() => {
+                        const downloadBtn = document.getElementById('downloadBtn');
+                        if (downloadBtn && window.translations && window.translations[lang]) {
+                            downloadBtn.textContent = window.translations[lang].btnDownloadPDF || downloadBtn.textContent;
+                        }
+                    }, 150);
+                };
                 
-                // Update active state of language buttons
+                // Set initial lang and button states after translations are loaded
+                const currentLang = window.languageManager.getStoredLanguage() || 'el';
+                document.documentElement.setAttribute('lang', currentLang);
+                
+                // Set initial button states
                 document.querySelectorAll('[data-lang]').forEach(btn => {
-                    if (btn.getAttribute('data-lang') === lang) {
+                    if (btn.getAttribute('data-lang') === currentLang) {
                         btn.style.background = '#3b82f6';
                         btn.style.color = 'white';
                         btn.style.borderColor = '#3b82f6';
-                    } else {
-                        btn.style.background = 'rgba(243, 244, 246, 0.8)';
-                        btn.style.color = '#4b5563';
-                        btn.style.borderColor = '#3b82f6';
                     }
                 });
-                
-                // Update download button and message text (they have data-i18n, so they should update automatically, but ensure it happens)
-                setTimeout(() => {
-                    const downloadBtn = document.getElementById('downloadBtn');
-                    if (downloadBtn && window.translations && window.translations[lang]) {
-                        downloadBtn.textContent = window.translations[lang].btnDownloadPDF || downloadBtn.textContent;
-                    }
-                }, 150);
-            };
-            // Set initial lang
-            const currentLang = window.languageManager.getStoredLanguage() || 'el';
-            document.documentElement.setAttribute('lang', currentLang);
-            
-            // Set initial button states
-            document.querySelectorAll('[data-lang]').forEach(btn => {
-                if (btn.getAttribute('data-lang') === currentLang) {
-                    btn.style.background = '#3b82f6';
-                    btn.style.color = 'white';
-                    btn.style.borderColor = '#3b82f6';
-                }
-            });
+            } else {
+                // Retry if languageManager is not ready yet
+                setTimeout(setupLanguageManager, 100);
+            }
         }
+        
+        // Start setup
+        setupLanguageManager();
         
         // Wait for DOM to be ready before attaching event listener
         function setupDownloadButton() {

@@ -335,8 +335,19 @@ class LanguageManager {
             return null;
         }
         
+        const langData = this.translations[this.currentLang];
+        
+        // First, try direct key lookup (for flat structure like translations.js)
+        if (key in langData) {
+            const value = langData[key];
+            if (typeof value === 'string' || typeof value === 'number') {
+                return String(value);
+            }
+        }
+        
+        // Then try nested structure (for JSON structure)
         const keys = key.split('.');
-        let value = this.translations[this.currentLang];
+        let value = langData;
         
         for (const k of keys) {
             if (value && typeof value === 'object' && k in value) {
