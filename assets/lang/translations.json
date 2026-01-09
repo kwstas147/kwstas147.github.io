@@ -344,6 +344,10 @@
           "portainer": {
             "title": "Portainer - Docker Management",
             "description": "Portainer container management platform που τρέχει σε Docker στο VM Debian. Παρέχει web-based UI για διαχείριση Docker containers, images, volumes και networks."
+          },
+          "mailExtractor": {
+            "title": "MailExtractor",
+            "description": "Windows εφαρμογή που κατεβάζει δεδομένα email από τον λογαριασμό σας Google και εξάγει ονόματα, email addresses και τηλεφωνικούς αριθμούς σε Excel. Έχει δωρεάν χρήση αρχικά και μετά απαιτεί machine-specific key που αντιστοιχεί στο συγκεκριμένο μηχάνημα που τρέχει η εφαρμογή."
           }
         }
       }
@@ -707,6 +711,10 @@
           "portainer": {
             "title": "Portainer - Docker Management",
             "description": "Portainer container management platform running in Docker on Debian VM. Provides web-based UI for managing Docker containers, images, volumes and networks."
+          },
+          "mailExtractor": {
+            "title": "MailExtractor",
+            "description": "Windows application that downloads email data from your Google account and extracts names, email addresses, and phone numbers to Excel. Features free use initially, then requires a machine-specific key that corresponds to the specific machine running the application."
           }
         }
       }
