@@ -903,9 +903,9 @@ html[data-theme="clean-office"] .lazy-image {
     backdrop-filter: blur(10px);
 }
 
-/* Navigation Arrows */
+/* Navigation Arrows - Fixed position to stay on screen edges */
 .image-lightbox-nav-arrow {
-    position: absolute;
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.6);
@@ -1694,28 +1694,19 @@ footer svg:hover {
     transform: translateY(-2px);
 }
 
-/* 13. CUSTOM CURSOR GLOW (will be enhanced with JS) */
+/* 13. CUSTOM CURSOR GLOW (DISABLED - using default cursor) */
 .cursor-glow-area {
-    cursor: none;
+    /* cursor: none; - DISABLED */
 }
 
 .cursor-glow {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.8), transparent);
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s, height 0.3s, opacity 0.3s;
-    mix-blend-mode: screen;
+    /* DISABLED - Custom cursor effect disabled */
+    display: none !important;
+    visibility: hidden !important;
 }
 
 .cursor-glow.active {
-    width: 60px;
-    height: 60px;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.6), transparent);
+    /* DISABLED */
 }
 
 /* 14. TOOLTIP STYLES (will be enhanced with JS) */
@@ -1847,9 +1838,10 @@ html[data-theme="clean-office"] .nav-link:hover {
         transform: scale(1.05);
     }
     
-    /* Hide cursor glow on mobile */
+    /* Hide cursor glow on mobile (always hidden now) */
     .cursor-glow {
         display: none !important;
+        visibility: hidden !important;
     }
     
     /* Disable magnetic effect on mobile */

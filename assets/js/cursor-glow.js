@@ -1,10 +1,15 @@
 /**
  * Custom Cursor Glow Effect
  * Creates a glowing effect that follows the cursor over interactive elements
+ * 
+ * DISABLED: User prefers default cursor
  */
 
 (function() {
     'use strict';
+
+    // DISABLED - Return early to disable custom cursor effect
+    return;
 
     // Check if user prefers reduced motion or is on mobile
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

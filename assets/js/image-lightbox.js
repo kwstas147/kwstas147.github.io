@@ -8,7 +8,8 @@
 
     // Global state
     let currentImageIndex = 0;
-    let imageGallery = [];
+    let imageGalleryByProject = new Map(); // Map<HTMLElement, Array> - Groups images by project card
+    let currentProject = null; // Current project card element
     let currentZoom = 1;
     const minZoom = 0.5;
     const maxZoom = 5;
@@ -24,18 +25,34 @@
     let navPrevBtn, navNextBtn;
 
     /**
-     * Collect all lightbox images from the page
+     * Collect all lightbox images from the page, grouped by project card
      */
     function collectImages() {
         const images = document.querySelectorAll('.lightbox-image');
-        imageGallery = Array.from(images).map(img => ({
-            element: img,
-            src: img.getAttribute('data-fullsize') || 
-                 (img.srcset ? img.srcset.split(', ').pop().split(' ')[0] : null) || 
-                 img.src,
-            alt: img.alt || ''
-        }));
-        return imageGallery;
+        imageGalleryByProject.clear(); // Clear previous data
+        
+        images.forEach(img => {
+            // Find the parent project card, or use document.body as fallback
+            const projectCard = img.closest('.project-card') || document.body;
+            
+            // Initialize array for this project if it doesn't exist
+            if (!imageGalleryByProject.has(projectCard)) {
+                imageGalleryByProject.set(projectCard, []);
+            }
+            
+            // Add image to the project's array
+            const imageData = {
+                element: img,
+                src: img.getAttribute('data-fullsize') || 
+                     (img.srcset ? img.srcset.split(', ').pop().split(' ')[0] : null) || 
+                     img.src,
+                alt: img.alt || ''
+            };
+            
+            imageGalleryByProject.get(projectCard).push(imageData);
+        });
+        
+        return imageGalleryByProject;
     }
 
     /**
@@ -80,9 +97,10 @@
      * Update navigation arrows visibility
      */
     function updateNavigationArrows() {
-        if (!navPrevBtn || !navNextBtn) return;
+        if (!navPrevBtn || !navNextBtn || !currentProject) return;
         
-        const hasMultipleImages = imageGallery.length > 1;
+        const projectImages = imageGalleryByProject.get(currentProject) || [];
+        const hasMultipleImages = projectImages.length > 1;
         
         if (hasMultipleImages) {
             navPrevBtn.style.display = 'flex';
@@ -97,13 +115,25 @@
     }
 
     /**
-     * Open lightbox with specific image index
+     * Open lightbox with specific image element
      */
-    function openLightbox(index) {
-        if (!lightbox || !lightboxImage || index < 0 || index >= imageGallery.length) return;
+    function openLightbox(imageElement) {
+        if (!lightbox || !lightboxImage || !imageElement) return;
         
-        currentImageIndex = index;
-        const imageData = imageGallery[index];
+        // Find the project card for this image
+        const projectCard = imageElement.closest('.project-card') || document.body;
+        currentProject = projectCard;
+        
+        // Get images for this project
+        const projectImages = imageGalleryByProject.get(currentProject) || [];
+        if (projectImages.length === 0) return;
+        
+        // Find the index of this image in the project's array
+        const imageIndex = projectImages.findIndex(item => item.element === imageElement);
+        if (imageIndex === -1) return;
+        
+        currentImageIndex = imageIndex;
+        const imageData = projectImages[imageIndex];
         
         // Reset zoom when changing images
         resetZoom();
@@ -132,23 +162,47 @@
     }
 
     /**
-     * Navigate to next image
+     * Navigate to next image within current project
      */
     function navigateNext() {
-        if (imageGallery.length <= 1) return;
+        if (!currentProject) return;
         
-        currentImageIndex = (currentImageIndex + 1) % imageGallery.length;
-        openLightbox(currentImageIndex);
+        const projectImages = imageGalleryByProject.get(currentProject) || [];
+        if (projectImages.length <= 1) return;
+        
+        currentImageIndex = (currentImageIndex + 1) % projectImages.length;
+        const imageData = projectImages[currentImageIndex];
+        
+        // Reset zoom when changing images
+        resetZoom();
+        
+        // Load new image
+        if (lightboxImage) {
+            lightboxImage.src = imageData.src;
+            lightboxImage.alt = imageData.alt;
+        }
     }
 
     /**
-     * Navigate to previous image
+     * Navigate to previous image within current project
      */
     function navigatePrev() {
-        if (imageGallery.length <= 1) return;
+        if (!currentProject) return;
         
-        currentImageIndex = (currentImageIndex - 1 + imageGallery.length) % imageGallery.length;
-        openLightbox(currentImageIndex);
+        const projectImages = imageGalleryByProject.get(currentProject) || [];
+        if (projectImages.length <= 1) return;
+        
+        currentImageIndex = (currentImageIndex - 1 + projectImages.length) % projectImages.length;
+        const imageData = projectImages[currentImageIndex];
+        
+        // Reset zoom when changing images
+        resetZoom();
+        
+        // Load new image
+        if (lightboxImage) {
+            lightboxImage.src = imageData.src;
+            lightboxImage.alt = imageData.alt;
+        }
     }
 
     /**
@@ -198,17 +252,11 @@
 
         // Attach click handlers to all lightbox images
         const lightboxImages = document.querySelectorAll('.lightbox-image');
-        lightboxImages.forEach((img, index) => {
+        lightboxImages.forEach((img) => {
             img.addEventListener('click', function(e) {
                 e.stopPropagation();
-                // Find the index in the gallery
-                const galleryIndex = imageGallery.findIndex(item => item.element === img);
-                if (galleryIndex !== -1) {
-                    openLightbox(galleryIndex);
-                } else {
-                    // Fallback: use clicked index
-                    openLightbox(index);
-                }
+                // Open lightbox with the clicked image element
+                openLightbox(img);
             });
         });
 
