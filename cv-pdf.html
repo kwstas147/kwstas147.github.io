@@ -663,10 +663,8 @@
                 <button data-lang="en" style="padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; cursor: pointer; border: 1px solid #3b82f6; background: rgba(243, 244, 246, 0.8); color: #4b5563; transition: all 0.2s;">EN</button>
             </div>
         </div>
-        <button id="downloadBtn" data-i18n="btnDownloadPDF" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s;">
-            📥 Κατεβάστε το CV ως PDF
-        </button>
-        <p data-i18n="pdfOptimizedMessage" style="margin-top: 10px; color: #64748b; font-size: 14px;">Η σελίδα είναι βελτιστοποιημένη για εκτύπωση. Κάντε κλικ στο κουμπί για να κατεβάσετε το PDF.</p>
+        <button id="downloadBtn" data-i18n="btnDownloadPDF" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s;"></button>
+        <p data-i18n="pdfOptimizedMessage" style="margin-top: 10px; color: #64748b; font-size: 14px;"></p>
     </div>
 
     <script src="assets/js/translations.js?v=2"></script>
@@ -721,9 +719,22 @@
             });
         }
         
-        document.getElementById('downloadBtn').addEventListener('click', function() {
-            const element = document.getElementById('pdf-content');
-            const btn = this;
+        // Wait for DOM to be ready before attaching event listener
+        function setupDownloadButton() {
+            const downloadBtn = document.getElementById('downloadBtn');
+            if (!downloadBtn) {
+                // If button doesn't exist yet, try again after a short delay
+                setTimeout(setupDownloadButton, 100);
+                return;
+            }
+            
+            // Remove any existing listeners by cloning the button
+            const newBtn = downloadBtn.cloneNode(true);
+            downloadBtn.parentNode.replaceChild(newBtn, downloadBtn);
+            
+            newBtn.addEventListener('click', function() {
+                const element = document.getElementById('pdf-content');
+                const btn = this;
             
             // Get loading text based on current language
             const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
@@ -1108,9 +1119,16 @@
             waitForReady().catch(err => {
                 console.error('Error in waitForReady:', err);
                 btn.disabled = false;
-                btn.textContent = currentLang === 'el' ? '❌ Σφάλμα κατά την προετοιμασία' : '❌ Error during preparation';
+                    btn.textContent = currentLang === 'el' ? '❌ Σφάλμα κατά την προετοιμασία' : '❌ Error during preparation';
             });
-        });
+        }
+        
+        // Initialize download button when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupDownloadButton);
+        } else {
+            setupDownloadButton();
+        }
     </script>
 </body>
 </html>

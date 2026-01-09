@@ -263,7 +263,67 @@ const translations = {
         "design.project5.description": "Βελτιστοποιημένο εξάρτημα με AI-assisted optimization. Συνδυασμός αισθητικής και λειτουργικότητας για optimal performance.",
         
         // GitHub
-        "github.viewProfile": "View Profile"
+        "github.viewProfile": "View Profile",
+        
+        // Programming Page
+        "pages.programming.title": "Development Hub",
+        "pages.programming.description": "Ενοποιημένη σελίδα για software projects",
+        "pages.programming.sections.mobileApps": "Mobile Apps (Flutter)",
+        "pages.programming.sections.windowsApps": "Windows Apps (C#/.NET)",
+        "pages.programming.sections.pythonApps": "Desktop Applications (Python)",
+        "pages.programming.sections.webApps": "Web Apps",
+        "pages.programming.sections.espHome": "ESPHome/ESP32",
+        "pages.programming.sections.homeAssistant": "Home Assistant Automations",
+        "pages.programming.sections.smartHome": "Smart Home Setups",
+        "pages.programming.sections.homeLab": "Home Lab & Infrastructure",
+        "pages.programming.codeExample": "Code Example",
+        "pages.programming.esphomeConfigExample": "ESPHome Configuration Example",
+        
+        // Programming Projects
+        "pages.programming.projects.myInventory.title": "MyInventory",
+        "pages.programming.projects.myInventory.description": "Μια Flutter mobile εφαρμογή για στοιχειώδη διαχείριση αποθήκης, που αναπτύχθηκε από την ανάγκη διαχείρισης αποθήκης στην εργασία. Η εφαρμογή προσφέρει πλήρη λύση διαχείρισης αποθηκών με υποστήριξη πολλαπλών αποθηκών, διαχείριση προϊόντων, μεταφορές αποθεμάτων μεταξύ αποθηκών, ειδοποιήσεις χαμηλού αποθέματος, backup & restore λειτουργικότητα, και AI Assistant με ενσωμάτωση Google Gemini API. Ιδανική για οποιονδήποτε χρειάζεται αποτελεσματική και απλή διαχείριση αποθήκης.",
+        "pages.programming.projects.mailExtractor.title": "MailExtractor",
+        "pages.programming.projects.mailExtractor.description": "Windows εφαρμογή για εξαγωγή δεδομένων από Gmail. Ο χρήστης κατεβάζει αρχείο .mbox από το Google Takeout (takeout.google.com), το αποσυμπιέζει μέσα από την εφαρμογή, το επιλέγει και η εφαρμογή εξάγει αυτόματα ονόματα, email addresses και τηλεφωνικούς αριθμούς σε Excel. Διαθέτει δωρεάν χρήση αρχικά, ενώ μετά απαιτεί machine-specific key που αντιστοιχεί στο συγκεκριμένο μηχάνημα που τρέχει η εφαρμογή.",
+        "pages.programming.projects.countdownTimer.title": "Countdown Timer",
+        "pages.programming.projects.countdownTimer.description": "Πρώτη Python desktop εφαρμογή - ένα απλό αλλά αποτελεσματικό αντιστροφό χρονομετρητή (countdown timer) με ενσωματωμένες ειδοποιήσεις και audio playback. Όταν ο χρόνος ολοκληρώνεται, η εφαρμογή εμφανίζει ειδοποίηση και αναπαράγει αυτόματα μουσική από αρχεία στον ίδιο φάκελο. Ιδανική για time management, Pomodoro technique, και προσωπική παραγωγικότητα.",
+        "pages.programming.projects.pdfToMp3.title": "PDF to MP3 Converter",
+        "pages.programming.projects.pdfToMp3.description": "Python desktop εφαρμογή που μετατρέπει PDF αρχεία σε MP3 audio files, επιτρέποντας την ακουστική κατανάλωση περιεχομένου κατά τη διάρκεια άλλων δραστηριοτήτων όπως γυμναστική, τρέξιμο, ή καθημερινές εργασίες. Αναπτύχθηκε από ανάγκη και προσωπική ικανοποίηση για να βελτιώσει την αποδοτικότητα μάθησης και να αξιοποιήσει καλύτερα τον διαθέσιμο χρόνο. Ιδανική για continuous learning και multitasking.",
+        "pages.programming.projects.flame.title": "Flame",
+        "pages.programming.projects.flame.description": "Personal homepage και dashboard που τρέχει σε Docker container στο VM Debian μέσα στον Proxmox home lab server. Προσφέρει ένα μοντέρνο και customizable interface για διαχείριση bookmarks και links.",
+        "pages.programming.projects.proxmox.title": "Proxmox Home Lab Server",
+        "pages.programming.projects.proxmox.description": "Proxmox VE virtualization platform για home lab environment. Προσφέρει πλήρη virtualization capabilities με support για containers και VMs, ιδανικό για testing και development.",
+        "pages.programming.projects.portainer.title": "Portainer - Docker Management",
+        "pages.programming.projects.portainer.description": "Portainer container management platform που τρέχει σε Docker στο VM Debian. Παρέχει web-based UI για διαχείριση Docker containers, images, volumes και networks.",
+        "pages.programming.projects.csharpApp.title": "C# Application",
+        "pages.programming.projects.webApp.title": "Web Application",
+        "pages.programming.projects.esp32Device.title": "ESP32 Device",
+        "pages.programming.projects.automation.title": "Automation",
+        "pages.programming.projects.smartSetup.title": "Smart Setup",
+        
+        // 3D Printing Page
+        "pages.3dPrinting.title": "3D Printing Creations",
+        "pages.3dPrinting.description": "Φυσικές κατασκευές και εκτυπώσεις 3D",
+        "pages.3dPrinting.projectTitle": "Project Title",
+        
+        // AI Development (Greek)
+        "aiDev.title": "AI-Assisted Development",
+        "aiDev.description": "Χρησιμοποιώ τεχνητή νοημοσύνη σε όλα τα development projects μου για efficient workflows, code generation, debugging και optimization. Η χρήση AI tools όπως το Cursor IDE επιταχύνει σημαντικά την ανάπτυξη και βελτιώνει την ποιότητα του κώδικα.",
+        "aiDev.tools.title": "AI Tools & IDE",
+        "aiDev.tools.cursor": "Cursor IDE (AI-powered code editor)",
+        "aiDev.tools.copilot": "GitHub Copilot integration",
+        "aiDev.tools.chatgpt": "ChatGPT for code review & debugging",
+        "aiDev.benefits.title": "Benefits",
+        "aiDev.benefits.speed": "Faster code generation",
+        "aiDev.benefits.quality": "Improved code quality",
+        "aiDev.benefits.learning": "Continuous learning & improvement",
+        "aiDev.note": "Όλα τα projects σε αυτή τη σελίδα έχουν αναπτυχθεί με τη βοήθεια τεχνητής νοημοσύνης, αποδεικνύοντας πώς η AI μπορεί να ενισχύσει την παραγωγικότητα και την καινοτομία στον προγραμματισμό.",
+        
+        // Placeholders
+        "placeholders.description": "Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.",
+        
+        // AI Design (Greek)
+        "aiDesign.title": "AI-Assisted Design & Optimization",
+        "aiDesign.description": "Τα CAD designs μου και οι 3D εκτυπώσεις χρησιμοποιούν AI-assisted tools για optimization, material efficiency και functional design. Η τεχνητή νοημοσύνη βοηθάει στον σχεδιασμό λειτουργικών ανταλλακτικών και εργαλείων που βελτιώνουν την καθημερινή εργασία."
     },
     en: {
         // Navigation
@@ -553,7 +613,50 @@ const translations = {
         
         // AI CAD
         "aiCAD.title": "AI-Assisted CAD Design",
-        "aiCAD.description": "I use AI-assisted design tools for optimization, parametric design and functional analysis. Artificial intelligence helps in designing components that are not only aesthetically appealing but also functionally efficient, with focus on creating functional parts for everyday use."
+        "aiCAD.description": "I use AI-assisted design tools for optimization, parametric design and functional analysis. Artificial intelligence helps in designing components that are not only aesthetically appealing but also functionally efficient, with focus on creating functional parts for everyday use.",
+        
+        // Programming Page
+        "pages.programming.title": "Development Hub",
+        "pages.programming.description": "Integrated page for software projects",
+        "pages.programming.sections.mobileApps": "Mobile Apps (Flutter)",
+        "pages.programming.sections.windowsApps": "Windows Apps (C#/.NET)",
+        "pages.programming.sections.pythonApps": "Desktop Applications (Python)",
+        "pages.programming.sections.webApps": "Web Apps",
+        "pages.programming.sections.espHome": "ESPHome/ESP32",
+        "pages.programming.sections.homeAssistant": "Home Assistant Automations",
+        "pages.programming.sections.smartHome": "Smart Home Setups",
+        "pages.programming.sections.homeLab": "Home Lab & Infrastructure",
+        "pages.programming.codeExample": "Code Example",
+        "pages.programming.esphomeConfigExample": "ESPHome Configuration Example",
+        
+        // Programming Projects
+        "pages.programming.projects.myInventory.title": "MyInventory",
+        "pages.programming.projects.myInventory.description": "A Flutter mobile application for basic warehouse management, developed from the need for warehouse management at work. The application offers a complete warehouse management solution with support for multiple warehouses, product management, stock transfers between warehouses, low stock notifications, backup & restore functionality, and AI Assistant with Google Gemini API integration. Ideal for anyone who needs effective and simple warehouse management.",
+        "pages.programming.projects.mailExtractor.title": "MailExtractor",
+        "pages.programming.projects.mailExtractor.description": "Windows application for extracting data from Gmail. The user downloads a .mbox file from Google Takeout (takeout.google.com), extracts it within the application, selects it and the application automatically extracts names, email addresses and phone numbers to Excel. It has free use initially, while later it requires a machine-specific key that corresponds to the specific machine running the application.",
+        "pages.programming.projects.countdownTimer.title": "Countdown Timer",
+        "pages.programming.projects.countdownTimer.description": "First Python desktop application - a simple but effective countdown timer with built-in notifications and audio playback. When the time is completed, the application displays a notification and automatically plays music from files in the same folder. Ideal for time management, Pomodoro technique, and personal productivity.",
+        "pages.programming.projects.pdfToMp3.title": "PDF to MP3 Converter",
+        "pages.programming.projects.pdfToMp3.description": "Python desktop application that converts PDF files to MP3 audio files, allowing audio consumption of content during other activities such as exercise, running, or daily tasks. Developed from need and personal satisfaction to improve learning efficiency and better utilize available time. Ideal for continuous learning and multitasking.",
+        "pages.programming.projects.flame.title": "Flame",
+        "pages.programming.projects.flame.description": "Personal homepage and dashboard running in Docker container on Debian VM within the Proxmox home lab server. Offers a modern and customizable interface for managing bookmarks and links.",
+        "pages.programming.projects.proxmox.title": "Proxmox Home Lab Server",
+        "pages.programming.projects.proxmox.description": "Proxmox VE virtualization platform for home lab environment. Offers full virtualization capabilities with support for containers and VMs, ideal for testing and development.",
+        "pages.programming.projects.portainer.title": "Portainer - Docker Management",
+        "pages.programming.projects.portainer.description": "Portainer container management platform running in Docker on Debian VM. Provides web-based UI for managing Docker containers, images, volumes and networks.",
+        "pages.programming.projects.csharpApp.title": "C# Application",
+        "pages.programming.projects.webApp.title": "Web Application",
+        "pages.programming.projects.esp32Device.title": "ESP32 Device",
+        "pages.programming.projects.automation.title": "Automation",
+        "pages.programming.projects.smartSetup.title": "Smart Setup",
+        
+        // 3D Printing Page
+        "pages.3dPrinting.title": "3D Printing Creations",
+        "pages.3dPrinting.description": "Physical constructions and 3D prints",
+        "pages.3dPrinting.projectTitle": "Project Title",
+        
+        // Placeholders
+        "placeholders.description": "This section contains projects that will be added in the future."
     }
 };
 
