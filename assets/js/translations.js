@@ -338,6 +338,14 @@ const translations = {
         "pages.3dPrinting.replica.title": "Replica Project - Online Games Collection",
         "pages.3dPrinting.replica.description": "Αυτό το project δημιουργήθηκε από το αίτημα των παιδιών μου για μια ρεπλίκα αντικειμένου από τα online games που παίζουν. Η ρεπλίκα του βομβιδοβόλου είναι σχεδιασμένη με προσοχή στις λεπτομέρειες και εκτυπωμένη με ακρίβεια για να είναι όσο το δυνατόν πιο πιστή στο πρωτότυπο. Αυτό το project συνδυάζει την αγάπη για τα βιντεοπαιχνίδια με τις τεχνικές δεξιότητες του 3D printing και CAD design.",
         
+        // 3D Printing Card Translations (for dynamically generated cards)
+        "pages.3dPrinting.card.printedParts.title": "3D Printed Parts Collection",
+        "pages.3dPrinting.card.printedParts.description": "Συλλογή ανταλλακτικών και λειτουργικών εξαρτημάτων",
+        "pages.3dPrinting.card.replica.title": "Replica Project - Online Games Collection",
+        "pages.3dPrinting.card.replica.description": "Bomb thrower replica από online games",
+        "pages.3dPrinting.imageCount.singular": "εικόνα",
+        "pages.3dPrinting.imageCount.plural": "εικόνες",
+        
         // AI Development (Greek)
         "aiDev.title": "AI-Assisted Development",
         "aiDev.description": "Χρησιμοποιώ τεχνητή νοημοσύνη σε όλα τα development projects μου για efficient workflows, code generation, debugging και optimization. Η χρήση AI tools όπως το Cursor IDE επιταχύνει σημαντικά την ανάπτυξη και βελτιώνει την ποιότητα του κώδικα.",
@@ -720,6 +728,14 @@ const translations = {
         "pages.3dPrinting.placeholder": "Images for this project will be added soon.",
         "pages.3dPrinting.replica.title": "Replica Project - Online Games Collection",
         "pages.3dPrinting.replica.description": "This project was created from my children's request for a replica of an object from the online games they play. The bomb thrower replica is carefully designed with attention to detail and printed with precision to be as faithful to the original as possible. This project combines the love for video games with the technical skills of 3D printing and CAD design.",
+        
+        // 3D Printing Card Translations (for dynamically generated cards)
+        "pages.3dPrinting.card.printedParts.title": "3D Printed Parts Collection",
+        "pages.3dPrinting.card.printedParts.description": "Collection of spare parts and functional components",
+        "pages.3dPrinting.card.replica.title": "Replica Project - Online Games Collection",
+        "pages.3dPrinting.card.replica.description": "Bomb thrower replica from online games",
+        "pages.3dPrinting.imageCount.singular": "image",
+        "pages.3dPrinting.imageCount.plural": "images",
         
         // Placeholders
         "placeholders.description": "This section contains projects that will be added in the future."

@@ -35,7 +35,17 @@
     }
 
     // Generate compact project card with mini-grid preview
-    function generateProjectCard(imagesArray, projectTitle, projectDescription, folder = '3d-printed parts', gridLayout = '3x2') {
+    function generateProjectCard(imagesArray, titleKey, descKey, folder = '3d-printed parts', gridLayout = '3x2') {
+        // Get translations from the global translations object
+        const currentLang = document.documentElement.getAttribute('lang') || 'en';
+        const t = translations[currentLang] || translations.en;
+        
+        const projectTitle = t[titleKey] || titleKey;
+        const projectDescription = t[descKey] || descKey;
+        const imageCountText = imagesArray.length === 1 
+            ? t["pages.3dPrinting.imageCount.singular"] || 'image'
+            : t["pages.3dPrinting.imageCount.plural"] || 'images';
+        
         const years = [...new Set(imagesArray.map(img => getYearFromTimestamp(img)))].sort().reverse();
         const yearTags = years.map(year => `<span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">${year}</span>`).join('');
         
@@ -96,6 +106,11 @@
         // Grid classes based on layout
         const gridClasses = rows ? `grid-cols-${cols} grid-rows-${rows}` : `grid-cols-${cols}`;
         
+        // Determine the appropriate i18n key for image count
+        const imageCountKey = imagesArray.length === 1 
+            ? 'pages.3dPrinting.imageCount.singular' 
+            : 'pages.3dPrinting.imageCount.plural';
+        
         return `
             <div class="bg-card rounded-lg p-6 project-card">
                 <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
@@ -104,8 +119,11 @@
                     </div>
                 </div>
                 ${hiddenImagesHTML}
-                <h3 class="text-xl font-bold mb-2 text-blue-400">${projectTitle}</h3>
-                <p class="text-gray-400 text-sm mb-4">${projectDescription} • ${imagesArray.length} ${imagesArray.length === 1 ? 'εικόνα' : 'εικόνες'}</p>
+                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="${titleKey}">${projectTitle}</h3>
+                <p class="text-gray-400 text-sm mb-4">
+                    <span data-i18n="${descKey}">${projectDescription}</span> • 
+                    ${imagesArray.length} <span data-i18n="${imageCountKey}">${imageCountText}</span>
+                </p>
                 <div class="flex flex-wrap gap-2">
                     <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">PLA</span>
                     ${yearTags}
@@ -126,8 +144,8 @@
         // Generate project card with 3x2 preview (6 images) but all 90 in lightbox
         const cardHTML = generateProjectCard(
             printedPartsImages, 
-            '3D Printed Parts Collection',
-            'Συλλογή ανταλλακτικών και λειτουργικών εξαρτημάτων',
+            'pages.3dPrinting.card.printedParts.title',
+            'pages.3dPrinting.card.printedParts.description',
             '3d-printed parts',
             '3x2'
         );
@@ -138,6 +156,11 @@
 
         // Re-initialize after DOM update - using requestAnimationFrame for proper timing
         requestAnimationFrame(() => {
+            // Apply translations IMMEDIATELY to prevent flickering
+            if (typeof window.applyTranslations === 'function') {
+                window.applyTranslations();
+            }
+            
             // Re-initialize Lucide icons for new cards
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
@@ -222,8 +245,8 @@
         // Generate project card with 3x1 preview (all 3 images)
         const cardHTML = generateProjectCard(
             replicaImages, 
-            'Replica Project - Online Games Collection',
-            'Bomb thrower replica from online games',
+            'pages.3dPrinting.card.replica.title',
+            'pages.3dPrinting.card.replica.description',
             'replica',
             '3x1'
         );
@@ -234,6 +257,11 @@
 
         // Re-initialize after DOM update - using requestAnimationFrame for proper timing
         requestAnimationFrame(() => {
+            // Apply translations IMMEDIATELY to prevent flickering
+            if (typeof window.applyTranslations === 'function') {
+                window.applyTranslations();
+            }
+            
             // Re-initialize Lucide icons for new cards
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
