@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="pageTitleCV">CV - Κωνσταντίνος Λαθύρης</title>
     <style>
-        /* Professional Print Stylesheet - ATS-Friendly */
+        /* Professional Print Stylesheet - ATS-Friendly, NO word-break! */
         @media print {
             @page {
                 margin: 1.5cm;
@@ -76,55 +76,37 @@
             .no-print {
                 display: none !important;
             }
-            /* Word wrapping for PDF - prevent text overflow */
-            .sidebar,
-            .sidebar * {
-                word-wrap: break-word !important;
-                overflow-wrap: break-word !important;
-                word-break: break-word !important;
+            /* CRITICAL: NO word-break! Only overflow-wrap for long URLs */
+            * {
+                word-break: normal !important;
+                hyphens: none !important;
             }
-            .skill-category,
-            .skill-category div,
-            .skill-category h4 {
-                word-wrap: break-word !important;
-                overflow-wrap: break-word !important;
-                word-break: break-word !important;
-            }
-            .section-title {
-                word-wrap: break-word !important;
-                overflow-wrap: break-word !important;
-            }
-            /* Tech project cards - comprehensive word wrapping */
+            /* Tech project cards */
             .tech-project-card,
             .tech-project-card *,
             .tech-project-card p,
             .tech-project-card h3 {
-                word-wrap: break-word !important;
-                overflow-wrap: break-word !important;
-                word-break: break-word !important;
                 box-sizing: border-box !important;
                 max-width: 100% !important;
+                overflow-wrap: normal !important;
             }
-            /* Contact info and sidebar */
-            .contact-info div,
-            .sidebar div,
-            .sidebar span {
-                word-wrap: break-word !important;
+            /* Only URLs/emails can break */
+            a[href^="http"],
+            a[href^="mailto"] {
                 overflow-wrap: break-word !important;
-                word-break: break-word !important;
-                max-width: 100% !important;
-                box-sizing: border-box !important;
+                word-break: break-all !important;
             }
             /* Grid container */
             .tech-projects-grid {
                 box-sizing: border-box !important;
                 max-width: 100% !important;
-                overflow: hidden !important;
+                overflow: visible !important;
+                grid-template-columns: 1fr !important;
             }
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'DejaVu Sans', sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333;
             margin: 0;
             padding: 0;
@@ -132,10 +114,10 @@
         }
         #pdf-content {
             background: white;
-            padding: 20px;
-            width: 754px;
-            min-width: 754px;
-            max-width: 754px;
+            padding: 25px 30px;
+            width: 750px;
+            min-width: 750px;
+            max-width: 750px;
             margin: 0 auto;
             box-sizing: border-box;
             overflow: visible;
@@ -160,7 +142,7 @@
             font-weight: 600;
         }
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             page-break-inside: avoid;
         }
         .section-title {
@@ -168,16 +150,14 @@
             font-weight: bold;
             color: #3b82f6;
             border-bottom: 2px solid #3b82f6;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
             page-break-after: avoid;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px 20px;
+            gap: 12px 25px;
             margin-bottom: 20px;
             font-size: 14px;
             page-break-inside: avoid;
@@ -186,11 +166,9 @@
         }
         .contact-info div {
             flex: 1 1 auto;
-            min-width: 200px;
+            min-width: 220px;
             max-width: 100%;
             box-sizing: border-box;
-            overflow-wrap: break-word;
-            word-break: break-word;
         }
         .job-entry {
             margin-bottom: 20px;
@@ -226,10 +204,7 @@
         }
         .job-description li {
             margin-bottom: 5px;
-            line-height: 1.6;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
+            line-height: 1.7;
         }
         .education-entry {
             margin-bottom: 15px;
@@ -263,47 +238,32 @@
         .skill-category {
             margin-bottom: 15px;
             page-break-inside: avoid;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            word-break: break-word;
         }
         .skill-category h4 {
             font-weight: bold;
             color: #1e293b;
             margin-bottom: 5px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
         .skill-category div {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            word-break: break-word;
+            line-height: 1.6;
         }
         .cv-container {
-            display: flex;
-            flex-direction: row;
+            display: block;
             width: 100%;
-            gap: 20px;
         }
         .main-content {
-            flex: 2;
-            min-width: 0;
+            width: 100%;
             box-sizing: border-box;
+            margin-bottom: 0;
         }
         .sidebar {
-            flex: 1;
-            min-width: 0;
+            width: 100%;
             box-sizing: border-box;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            word-break: break-word;
+            margin-top: 0;
         }
         .summary {
             text-align: justify;
             line-height: 1.8;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
         }
         .about-grid {
             display: flex;
@@ -361,20 +321,19 @@
         .timeline-content {
             background-color: transparent;
         }
-        /* Tech Project Cards Grid */
+        /* Tech Project Cards Grid - Single Column for Better Readability */
         .tech-projects-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 20px;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin-bottom: 25px;
             width: 100%;
             box-sizing: border-box;
             max-width: 100%;
-            overflow: hidden;
         }
         @media print {
             .tech-projects-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
                 page-break-inside: avoid;
             }
             .tech-project-card {
@@ -386,18 +345,13 @@
             background-color: #f9fafb;
             border: 1px solid #e5e7eb;
             border-radius: 8px;
-            padding: 15px;
+            padding: 18px;
             display: flex;
             flex-direction: column;
             page-break-inside: avoid;
             box-sizing: border-box;
             max-width: 100%;
-            overflow-wrap: break-word;
-            word-break: break-word;
-            overflow: hidden;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
+            overflow: visible;
         }
         .tech-project-card-icon {
             text-align: center;
@@ -408,27 +362,17 @@
             font-size: 16px;
             font-weight: bold;
             color: #1e293b;
-            margin-bottom: 8px;
-            overflow-wrap: break-word;
-            word-break: break-word;
+            margin-bottom: 10px;
             max-width: 100%;
             box-sizing: border-box;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
         }
         .tech-project-card p {
-            font-size: 13px;
-            line-height: 1.6;
+            font-size: 14px;
+            line-height: 1.7;
             color: #4b5563;
             flex-grow: 1;
-            overflow-wrap: break-word;
-            word-break: break-word;
             max-width: 100%;
             box-sizing: border-box;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
         }
         /* Education border styling */
         .education-border {
@@ -625,7 +569,7 @@
             <div class="education-entry education-border">
                 <div class="education-title" data-i18n="cvEdu1Title">Τεχνικός Εσωτερικών Ηλεκτρικών Εγκαταστάσεων</div>
                 <div class="education-institution" data-i18n="cvEdu1Institution">ΙΕΚ ΟΜΗΡΟΣ</div>
-                <div data-i18n="cvEdu1Period">2024 – 2025 (Σε εξέλιξη)</div>
+                <div data-i18n="cvEdu1Period">2024 – 2025 (Σε αναζήτηση πρακτικής εργασίας για την ολοκλήρωση)</div>
             </div>
 
             <div class="education-entry education-border">
@@ -964,9 +908,9 @@
                         quality: 0.98 
                     },
                     html2canvas: { 
-                        scale: 1.2,
+                        scale: 1.5,
                         useCORS: true,
-                        logging: true,
+                        logging: false,
                         letterRendering: true,
                         backgroundColor: '#ffffff',
                         scrollX: 0,
@@ -993,20 +937,34 @@
                                 clonedElement.style.position = 'relative';
                                 
                                 // Ensure width is set but height is auto
-                                clonedElement.style.width = '754px';
-                                clonedElement.style.minWidth = '754px';
-                                clonedElement.style.maxWidth = '754px';
+                                clonedElement.style.width = '750px';
+                                clonedElement.style.minWidth = '750px';
+                                clonedElement.style.maxWidth = '750px';
                                 clonedElement.style.height = 'auto';
                                 clonedElement.style.minHeight = 'auto';
                                 clonedElement.style.maxHeight = 'none';
+                                
+                                // CRITICAL: Force NO word-break on all elements!
+                                const allElements = clonedElement.querySelectorAll('*');
+                                allElements.forEach(el => {
+                                    el.style.wordBreak = 'normal';
+                                    el.style.hyphens = 'none';
+                                    el.style.webkitHyphens = 'none';
+                                    el.style.msHyphens = 'none';
+                                });
+                                
+                                // Only URLs/emails should break
+                                const links = clonedElement.querySelectorAll('a[href^="http"], a[href^="mailto"]');
+                                links.forEach(link => {
+                                    link.style.overflowWrap = 'break-word';
+                                    link.style.wordBreak = 'break-all';
+                                });
                                 
                                 // ATS-Friendly: Force dark text colors
                                 const allTextElements = clonedElement.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, div, span');
                                 allTextElements.forEach(el => {
                                     const computedColor = window.getComputedStyle(el).color;
-                                    // Only change if it's not already dark (avoid changing white text on badges before we fix badges)
                                     if (computedColor && !computedColor.includes('rgb(0, 0, 0)') && !computedColor.includes('#000')) {
-                                        // Check if parent has colored background (like badges)
                                         const parentBg = window.getComputedStyle(el.parentElement).backgroundColor;
                                         if (!parentBg || parentBg === 'rgba(0, 0, 0, 0)' || parentBg === 'transparent') {
                                             el.style.color = '#000000';
@@ -1043,69 +1001,14 @@
                                     badge.style.border = '1px solid #000000';
                                 });
                                 
-                                // ATS-Friendly: Tech project cards - white background and word wrapping
+                                // ATS-Friendly: Tech project cards - white background
                                 const techCards = clonedElement.querySelectorAll('.tech-project-card');
                                 techCards.forEach(card => {
                                     card.style.backgroundColor = '#ffffff';
                                     card.style.border = '1px solid #000000';
                                     card.style.boxSizing = 'border-box';
                                     card.style.maxWidth = '100%';
-                                    card.style.overflowWrap = 'break-word';
-                                    card.style.wordBreak = 'break-word';
-                                    card.style.overflow = 'hidden';
-                                    
-                                    // Apply word wrapping to all children elements
-                                    const cardChildren = card.querySelectorAll('*');
-                                    cardChildren.forEach(child => {
-                                        child.style.wordWrap = 'break-word';
-                                        child.style.overflowWrap = 'break-word';
-                                        child.style.wordBreak = 'break-word';
-                                        child.style.boxSizing = 'border-box';
-                                        child.style.maxWidth = '100%';
-                                    });
-                                    
-                                    // Specifically target paragraphs and headings
-                                    const cardParagraphs = card.querySelectorAll('p');
-                                    cardParagraphs.forEach(p => {
-                                        p.style.overflowWrap = 'break-word';
-                                        p.style.wordBreak = 'break-word';
-                                        p.style.maxWidth = '100%';
-                                        p.style.boxSizing = 'border-box';
-                                    });
-                                    
-                                    const cardHeadings = card.querySelectorAll('h3');
-                                    cardHeadings.forEach(h3 => {
-                                        h3.style.overflowWrap = 'break-word';
-                                        h3.style.wordBreak = 'break-word';
-                                        h3.style.maxWidth = '100%';
-                                        h3.style.boxSizing = 'border-box';
-                                    });
-                                });
-                                
-                                // Word wrapping for tech-projects-grid container
-                                const techProjectsGrid = clonedElement.querySelectorAll('.tech-projects-grid');
-                                techProjectsGrid.forEach(grid => {
-                                    grid.style.boxSizing = 'border-box';
-                                    grid.style.maxWidth = '100%';
-                                    grid.style.overflow = 'hidden';
-                                });
-                                
-                                // Word wrapping for contact-info divs
-                                const contactInfoDivs = clonedElement.querySelectorAll('.contact-info div');
-                                contactInfoDivs.forEach(div => {
-                                    div.style.maxWidth = '100%';
-                                    div.style.boxSizing = 'border-box';
-                                    div.style.overflowWrap = 'break-word';
-                                    div.style.wordBreak = 'break-word';
-                                    div.style.wordWrap = 'break-word';
-                                    
-                                    // Apply to all children (spans, etc.)
-                                    const contactChildren = div.querySelectorAll('*');
-                                    contactChildren.forEach(child => {
-                                        child.style.overflowWrap = 'break-word';
-                                        child.style.wordBreak = 'break-word';
-                                        child.style.maxWidth = '100%';
-                                    });
+                                    card.style.overflow = 'visible';
                                 });
                                 
                                 // ATS-Friendly: Timeline elements - dark for visibility
@@ -1116,69 +1019,38 @@
                                     dot.style.boxShadow = '0 0 0 2px #000000';
                                 });
                                 
-                                // Ensure flexbox layout is maintained
+                                // Force single-column layout
                                 const clonedContainer = clonedElement.querySelector('.cv-container');
                                 if (clonedContainer) {
-                                    clonedContainer.style.display = 'flex';
-                                    clonedContainer.style.flexDirection = 'row';
+                                    clonedContainer.style.display = 'block';
+                                    clonedContainer.style.width = '100%';
                                 }
                                 
-                                // Word wrapping for sidebar and skill categories - prevent text overflow
+                                const clonedMainContent = clonedElement.querySelector('.main-content');
+                                if (clonedMainContent) {
+                                    clonedMainContent.style.width = '100%';
+                                    clonedMainContent.style.maxWidth = '100%';
+                                }
+                                
                                 const clonedSidebar = clonedElement.querySelector('.sidebar');
                                 if (clonedSidebar) {
-                                    clonedSidebar.style.wordWrap = 'break-word';
-                                    clonedSidebar.style.overflowWrap = 'break-word';
-                                    clonedSidebar.style.wordBreak = 'break-word';
-                                    clonedSidebar.style.boxSizing = 'border-box';
+                                    clonedSidebar.style.width = '100%';
                                     clonedSidebar.style.maxWidth = '100%';
-                                    // Apply to all children
-                                    const sidebarChildren = clonedSidebar.querySelectorAll('*');
-                                    sidebarChildren.forEach(child => {
-                                        child.style.wordWrap = 'break-word';
-                                        child.style.overflowWrap = 'break-word';
-                                        child.style.wordBreak = 'break-word';
-                                        child.style.boxSizing = 'border-box';
-                                        child.style.maxWidth = '100%';
-                                    });
-                                    // Specifically target divs and spans in sidebar (for contact info)
-                                    const sidebarDivs = clonedSidebar.querySelectorAll('div');
-                                    sidebarDivs.forEach(div => {
-                                        div.style.maxWidth = '100%';
-                                        div.style.boxSizing = 'border-box';
-                                        div.style.overflowWrap = 'break-word';
-                                        div.style.wordBreak = 'break-word';
-                                    });
-                                    const sidebarSpans = clonedSidebar.querySelectorAll('span');
-                                    sidebarSpans.forEach(span => {
-                                        span.style.maxWidth = '100%';
-                                        span.style.overflowWrap = 'break-word';
-                                        span.style.wordBreak = 'break-word';
-                                    });
                                 }
                                 
-                                const skillCategories = clonedElement.querySelectorAll('.skill-category');
-                                skillCategories.forEach(category => {
-                                    category.style.wordWrap = 'break-word';
-                                    category.style.overflowWrap = 'break-word';
-                                    category.style.wordBreak = 'break-word';
-                                    const categoryChildren = category.querySelectorAll('div, h4');
-                                    categoryChildren.forEach(child => {
-                                        child.style.wordWrap = 'break-word';
-                                        child.style.overflowWrap = 'break-word';
-                                        child.style.wordBreak = 'break-word';
-                                    });
-                                });
-                                
-                                const sectionTitlesForWordWrap = clonedElement.querySelectorAll('.section-title');
-                                sectionTitlesForWordWrap.forEach(title => {
-                                    title.style.wordWrap = 'break-word';
-                                    title.style.overflowWrap = 'break-word';
+                                // Force single column for tech cards grid
+                                const techProjectsGrid = clonedElement.querySelectorAll('.tech-projects-grid');
+                                techProjectsGrid.forEach(grid => {
+                                    grid.style.gridTemplateColumns = '1fr';
+                                    grid.style.boxSizing = 'border-box';
+                                    grid.style.maxWidth = '100%';
+                                    grid.style.overflow = 'visible';
                                 });
                                 
                                 // Force reflow to calculate dimensions
                                 void clonedElement.offsetHeight;
                                 
-                                console.log('=== OnClone: Cloned Element Ready (ATS-Friendly) ===');
+                                console.log('=== OnClone: Cloned Element Ready (ATS-Friendly, No Word-Break) ===');
                                 console.log('Cloned element dimensions:', {
                                     width: clonedElement.offsetWidth,
                                     height: clonedElement.offsetHeight,
