@@ -34,60 +34,81 @@
         return timestamp.substring(0, 4);
     }
 
-    // Generate thumbnail HTML for a single image
-    function generateThumbnail(imageBase, folder = '3d-printed parts') {
-        const imagePath = `assets/images/3d-printing/${folder}/${imageBase}`;
-        const imageAlt = `3D Printed Part - ${imageBase}`;
-
-        return `
-            <div class="gallery-thumbnail bg-tertiary rounded overflow-hidden relative group cursor-pointer">
-                <img 
-                    src="${imagePath}-400w.jpg" 
-                    srcset="${imagePath}-400w.jpg 400w,
-                            ${imagePath}-800w.jpg 800w"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 200px"
-                    alt="${imageAlt}" 
-                    class="w-full h-full object-cover lazy-image lightbox-image hover:opacity-75 transition-opacity"
-                    loading="lazy"
-                    width="400"
-                    height="300"
-                    data-fullsize="${imagePath}-1200w.jpg"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                >
-                <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
-                    <i data-lucide="image" class="w-8 h-8 text-slate-500"></i>
-                </div>
-                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
-                    <i data-lucide="zoom-in" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                </div>
-            </div>
-        `;
-    }
-
-    // Generate project gallery container with all thumbnails
-    function generateProjectGalleryContainer(imagesArray, projectTitle, folder = '3d-printed parts') {
+    // Generate compact project card with mini-grid preview
+    function generateProjectCard(imagesArray, projectTitle, projectDescription, folder = '3d-printed parts', gridLayout = '3x2') {
         const years = [...new Set(imagesArray.map(img => getYearFromTimestamp(img)))].sort().reverse();
         const yearTags = years.map(year => `<span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">${year}</span>`).join('');
         
-        let thumbnailsHTML = '';
-        imagesArray.forEach(imageBase => {
-            thumbnailsHTML += generateThumbnail(imageBase, folder);
-        });
-
+        // Parse grid layout (e.g., "3x2" = 3 cols, 2 rows)
+        const [cols, rows] = gridLayout.split('x').map(n => parseInt(n));
+        const previewCount = cols * (rows || 1);
+        
+        // Generate mini-grid HTML with preview images (visible)
+        let miniGridHTML = '';
+        for (let i = 0; i < Math.min(previewCount, imagesArray.length); i++) {
+            const imageBase = imagesArray[i];
+            const imagePath = `assets/images/3d-printing/${folder}/${imageBase}`;
+            const imageAlt = `${projectTitle} - Image ${i + 1}`;
+            
+            miniGridHTML += `
+                <div class="relative overflow-hidden">
+                    <img 
+                        src="${imagePath}-800w.jpg" 
+                        srcset="${imagePath}-400w.jpg 400w,
+                                ${imagePath}-800w.jpg 800w,
+                                ${imagePath}-1200w.jpg 1200w"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        alt="${imageAlt}" 
+                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
+                        loading="lazy"
+                        data-fullsize="${imagePath}-1200w.jpg"
+                        onerror="this.style.display='none';"
+                    >
+                </div>
+            `;
+        }
+        
+        // Generate hidden images for lightbox (all remaining images)
+        let hiddenImagesHTML = '';
+        if (imagesArray.length > previewCount) {
+            hiddenImagesHTML = '<div class="hidden">';
+            for (let i = previewCount; i < imagesArray.length; i++) {
+                const imageBase = imagesArray[i];
+                const imagePath = `assets/images/3d-printing/${folder}/${imageBase}`;
+                const imageAlt = `${projectTitle} - Image ${i + 1}`;
+                
+                hiddenImagesHTML += `
+                    <img 
+                        src="${imagePath}-400w.jpg" 
+                        srcset="${imagePath}-400w.jpg 400w,
+                                ${imagePath}-800w.jpg 800w,
+                                ${imagePath}-1200w.jpg 1200w"
+                        alt="${imageAlt}" 
+                        class="lightbox-image"
+                        loading="lazy"
+                        data-fullsize="${imagePath}-1200w.jpg"
+                    >
+                `;
+            }
+            hiddenImagesHTML += '</div>';
+        }
+        
+        // Grid classes based on layout
+        const gridClasses = rows ? `grid-cols-${cols} grid-rows-${rows}` : `grid-cols-${cols}`;
+        
         return `
-            <div class="bg-card rounded-lg p-6 project-gallery-container">
-                <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-blue-400 mb-2">${projectTitle}</h3>
-                        <p class="text-gray-400 text-sm">${imagesArray.length} ${imagesArray.length === 1 ? 'εικόνα' : 'εικόνες'}</p>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">PLA</span>
-                        ${yearTags}
+            <div class="bg-card rounded-lg p-6 project-card">
+                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
+                    <div class="grid ${gridClasses} gap-1 w-full h-full">
+                        ${miniGridHTML}
                     </div>
                 </div>
-                <div class="project-gallery-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-                    ${thumbnailsHTML}
+                ${hiddenImagesHTML}
+                <h3 class="text-xl font-bold mb-2 text-blue-400">${projectTitle}</h3>
+                <p class="text-gray-400 text-sm mb-4">${projectDescription} • ${imagesArray.length} ${imagesArray.length === 1 ? 'εικόνα' : 'εικόνες'}</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">PLA</span>
+                    ${yearTags}
                 </div>
             </div>
         `;
@@ -98,15 +119,24 @@
         const gallery = document.getElementById('3d-printed-parts-gallery');
         if (!gallery) return;
 
-        const containerHTML = generateProjectGalleryContainer(
+        // Create grid container for project cards
+        const gridContainer = document.createElement('div');
+        gridContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+        
+        // Generate project card with 3x2 preview (6 images) but all 90 in lightbox
+        const cardHTML = generateProjectCard(
             printedPartsImages, 
-            '3D Printed Parts Collection', 
-            '3d-printed parts'
+            '3D Printed Parts Collection',
+            'Συλλογή ανταλλακτικών και λειτουργικών εξαρτημάτων',
+            '3d-printed parts',
+            '3x2'
         );
+        
+        gridContainer.innerHTML = cardHTML;
+        gallery.innerHTML = '';
+        gallery.appendChild(gridContainer);
 
-        gallery.innerHTML = containerHTML;
-
-        // Re-initialize Lucide icons for new thumbnails
+        // Re-initialize Lucide icons for new cards
         setTimeout(() => {
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
@@ -141,16 +171,24 @@
                 placeholder.style.display = 'none';
             }
             
-            // Generate gallery container
-            const containerHTML = generateProjectGalleryContainer(
+            // Create grid container for project cards
+            const gridContainer = document.createElement('div');
+            gridContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+            
+            // Generate project card with appropriate grid layout
+            const cardHTML = generateProjectCard(
                 printingProjectImages, 
-                '3D Printing Project', 
-                '3d-printing'
+                '3D Printing Project',
+                'Custom 3D printing projects',
+                '3d-printing',
+                '3x2'
             );
             
-            gallery.innerHTML = containerHTML;
+            gridContainer.innerHTML = cardHTML;
+            gallery.innerHTML = '';
+            gallery.appendChild(gridContainer);
 
-            // Re-initialize Lucide icons for new thumbnails
+            // Re-initialize Lucide icons for new cards
             setTimeout(() => {
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
@@ -179,16 +217,24 @@
         
         if (!gallery) return;
 
-        // Generate gallery container for replica images
-        const containerHTML = generateProjectGalleryContainer(
+        // Create grid container for project cards
+        const gridContainer = document.createElement('div');
+        gridContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+        
+        // Generate project card with 3x1 preview (all 3 images)
+        const cardHTML = generateProjectCard(
             replicaImages, 
-            'Replica Project - Online Games Collection', 
-            'replica'
+            'Replica Project - Online Games Collection',
+            'Bomb thrower replica from online games',
+            'replica',
+            '3x1'
         );
+        
+        gridContainer.innerHTML = cardHTML;
+        gallery.innerHTML = '';
+        gallery.appendChild(gridContainer);
 
-        gallery.innerHTML = containerHTML;
-
-        // Re-initialize Lucide icons for new thumbnails
+        // Re-initialize Lucide icons for new cards
         setTimeout(() => {
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
