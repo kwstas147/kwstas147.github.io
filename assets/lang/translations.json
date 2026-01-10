@@ -3,9 +3,9 @@
     "nav": {
       "home": "Αρχική",
       "menu": "Μενού",
-      "3dPrinting": "3D Printing",
+      "3dPrinting": "3D Εκτύπωση",
       "design": "Σχεδιασμός",
-      "programming": "Development",
+      "programming": "Κέντρο Ανάπτυξης",
       "cv": "Βιογραφικό"
     },
     "cv": {
@@ -309,6 +309,8 @@
     "cvLicensesNote": "(Πλήρης κάλυψη οχημάτων και μηχανημάτων)",
     "cvMachineOperatorLicense": "Άδεια Χειριστή Μηχανημάτων Έργου",
     "cvMachineOperatorSpecialties": "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β",
+    "heroTitle": "Καλώς ήρθατε στο Portfolio μου",
+    "heroTitle": "Welcome to My Portfolio",
     "hero": {
       "title": "Καλώς ήρθατε στο Portfolio μου",
       "name": "Κωνσταντίνος Λαθύρης",
@@ -392,13 +394,13 @@
       "3dPrinting": "3D Printing"
     },
     "projectCategories": {
-      "title": "Projects & Creations"
+      "title": "Έργα & Δημιουργίες"
     },
     "categories": {
-      "3dPrinting": "3D Printing Creations",
+      "3dPrinting": "Δημιουργίες 3D Εκτύπωσης",
       "design": "Σχεδιασμός",
-      "programming": "Development Hub",
-      "cv": "Curriculum Vitae"
+      "programming": "Κέντρο Ανάπτυξης Λογισμικού",
+      "cv": "Βιογραφικό"
     },
     "categoryDescriptions": {
       "3dPrinting": "Λειτουργικά ανταλλακτικά και εργαλεία μέσω Additive Manufacturing",
