@@ -698,14 +698,18 @@
             </div>
         </div>
         <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px;">
-            <button id="printBtn" style="background: #10b981; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 200px; display: inline-block;">
-                🖨️ <span data-i18n="btnPrintPDF">Εκτύπωση σε PDF</span>
+            <button id="printBtn" style="background: #10b981; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 180px; display: inline-block;">
+                🖨️ <span data-i18n="btnPrintPDF">Print PDF</span>
             </button>
-            <button id="downloadBtn" data-i18n="btnDownloadPDF" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 200px; display: inline-block; visibility: visible; opacity: 1;">📥 Κατεβάστε το CV ως PDF</button>
+            <button id="pdfmakeBtn" style="background: #8b5cf6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 180px; display: inline-block;">
+                ⭐ <span data-i18n="btnPdfmake">Vector PDF</span>
+            </button>
+            <button id="downloadBtn" data-i18n="btnDownloadPDF" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 180px; display: inline-block; visibility: visible; opacity: 1;">📥 Image PDF</button>
         </div>
-        <p id="pdfMessage" style="margin-top: 10px; color: #64748b; font-size: 14px;">
-            <span style="color: #10b981; font-weight: 600;">🖨️ Εκτύπωση σε PDF:</span> <span data-i18n="printPdfMessage">Τέλεια ποιότητα, χωρίς κομμένες λέξεις</span><br>
-            <span style="color: #3b82f6; font-weight: 600;">📥 Κατέβασμα:</span> <span data-i18n="pdfOptimizedMessage">Αυτόματη δημιουργία (μπορεί να έχει μικρές ατέλειες)</span>
+        <p id="pdfMessage" style="margin-top: 10px; color: #64748b; font-size: 13px; line-height: 1.6;">
+            <span style="color: #10b981; font-weight: 600;">🖨️ Print:</span> Browser dialog → Save as PDF<br>
+            <span style="color: #8b5cf6; font-weight: 600;">⭐ Vector PDF:</span> <span data-i18n="pdfmakeMessage">Τέλεια ποιότητα, auto download (ΝΕΟΣ!)</span><br>
+            <span style="color: #3b82f6; font-weight: 600;">📥 Image PDF:</span> <span data-i18n="pdfOptimizedMessage">Fallback method</span>
         </p>
     </div>
 
@@ -718,6 +722,9 @@
     </script>
     <script src="assets/js/language.js?v=2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- pdfmake for vector-quality PDFs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
     <script>
         // Wait for languageManager to be ready, then set up language switching
         function setupLanguageManager() {
@@ -814,12 +821,9 @@
             }
             
             printBtn.addEventListener('click', function() {
-                // Simple window.print() - uses browser's native PDF generation
-                // This gives PERFECT quality with no cut-off text!
                 window.print();
             });
             
-            // Hover effect
             printBtn.addEventListener('mouseenter', function() {
                 this.style.background = '#059669';
             });
@@ -830,6 +834,293 @@
         
         // Initialize print button immediately
         setupPrintButton();
+        
+        // ============================================
+        // PDFMAKE - Vector Quality PDF Generator
+        // Reusable code for future projects!
+        // ============================================
+        function setupPdfmakeButton() {
+            const pdfmakeBtn = document.getElementById('pdfmakeBtn');
+            if (!pdfmakeBtn) {
+                setTimeout(setupPdfmakeButton, 100);
+                return;
+            }
+            
+            pdfmakeBtn.addEventListener('click', function() {
+                generateVectorPDF();
+            });
+            
+            pdfmakeBtn.addEventListener('mouseenter', function() {
+                this.style.background = '#7c3aed';
+            });
+            pdfmakeBtn.addEventListener('mouseleave', function() {
+                this.style.background = '#8b5cf6';
+            });
+        }
+        
+        setupPdfmakeButton();
+        
+        // Vector PDF Generator using pdfmake
+        function generateVectorPDF() {
+            const btn = document.getElementById('pdfmakeBtn');
+            btn.textContent = '⏳ Δημιουργία...';
+            btn.disabled = true;
+            
+            // Helper function to get text content
+            const getText = (selector, defaultText = '') => {
+                const el = document.querySelector(selector);
+                return el ? el.textContent.trim() : defaultText;
+            };
+            
+            const getTexts = (selector) => {
+                return Array.from(document.querySelectorAll(selector)).map(el => el.textContent.trim());
+            };
+            
+            // Extract CV data from the HTML
+            const name = getText('.header h1', 'Κωνσταντίνος Λαθύρης');
+            const title = getText('.header .title', 'Industrial Operations Manager');
+            const summary = getText('.summary', '');
+            
+            // Extract contact info
+            const contactItems = [];
+            document.querySelectorAll('.sidebar .section div[style*="margin-bottom"]').forEach(div => {
+                contactItems.push(div.textContent.trim());
+            });
+            
+            // Extract job entries
+            const jobs = [];
+            document.querySelectorAll('.timeline-item .job-entry').forEach(entry => {
+                const jobTitle = entry.querySelector('.job-title')?.textContent.trim() || '';
+                const company = entry.querySelector('.job-company')?.textContent.trim() || '';
+                const period = entry.querySelector('.job-date')?.textContent.trim() || '';
+                const descriptions = [];
+                entry.querySelectorAll('.job-description li').forEach(li => {
+                    descriptions.push(li.textContent.trim());
+                });
+                if (jobTitle) {
+                    jobs.push({ title: jobTitle, company, period, descriptions });
+                }
+            });
+            
+            // Extract education
+            const education = [];
+            document.querySelectorAll('.education-entry').forEach(entry => {
+                const eduTitle = entry.querySelector('.education-title')?.textContent.trim() || '';
+                const institution = entry.querySelector('.education-institution')?.textContent.trim() || '';
+                if (eduTitle) {
+                    education.push({ title: eduTitle, institution });
+                }
+            });
+            
+            // Extract soft skills
+            const softSkills = [];
+            document.querySelectorAll('.section:has(.section-title[data-i18n="cv.sections.softSkills"]) .tech-project-card').forEach(card => {
+                const skillTitle = card.querySelector('h3')?.textContent.trim() || '';
+                const skillDesc = card.querySelector('p')?.textContent.trim() || '';
+                if (skillTitle) {
+                    softSkills.push({ title: skillTitle, description: skillDesc });
+                }
+            });
+            
+            // Extract hobbies
+            const hobbies = [];
+            document.querySelectorAll('.section:has(.section-title[data-i18n="cv.sections.hobbies"]) .tech-project-card').forEach(card => {
+                const hobbyTitle = card.querySelector('h3')?.textContent.trim() || '';
+                const hobbyDesc = card.querySelector('p')?.textContent.trim() || '';
+                if (hobbyTitle) {
+                    hobbies.push({ title: hobbyTitle, description: hobbyDesc });
+                }
+            });
+            
+            // Define colors
+            const blue = '#3b82f6';
+            const darkBlue = '#1e293b';
+            const gray = '#64748b';
+            
+            // Build pdfmake document definition
+            const docDefinition = {
+                pageSize: 'A4',
+                pageMargins: [40, 40, 40, 40],
+                defaultStyle: {
+                    font: 'Roboto',
+                    fontSize: 10,
+                    lineHeight: 1.4
+                },
+                content: [
+                    // Header
+                    { text: name, style: 'header', alignment: 'center' },
+                    { text: title, style: 'subheader', alignment: 'center', margin: [0, 5, 0, 20] },
+                    { canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 2, lineColor: blue }], margin: [0, 0, 0, 20] },
+                    
+                    // Summary Section
+                    { text: 'ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ', style: 'sectionTitle' },
+                    { text: summary, style: 'paragraph', margin: [0, 0, 0, 15] },
+                    
+                    // Contact Info
+                    { text: 'ΕΠΙΚΟΙΝΩΝΙΑ', style: 'sectionTitle' },
+                    {
+                        columns: contactItems.slice(0, 5).map(item => ({
+                            text: item,
+                            fontSize: 9,
+                            width: 'auto',
+                            margin: [0, 0, 15, 0]
+                        })),
+                        margin: [0, 0, 0, 15]
+                    },
+                    
+                    // Experience Section
+                    { text: 'ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ', style: 'sectionTitle' },
+                    ...jobs.map(job => ([
+                        {
+                            columns: [
+                                { text: job.title, style: 'jobTitle', width: '*' },
+                                { text: job.period, style: 'jobDate', width: 'auto', alignment: 'right' }
+                            ],
+                            margin: [0, 8, 0, 2]
+                        },
+                        { text: job.company, style: 'company', margin: [0, 0, 0, 5] },
+                        job.descriptions.length > 0 ? {
+                            ul: job.descriptions,
+                            margin: [10, 0, 0, 5],
+                            fontSize: 9
+                        } : {}
+                    ])).flat(),
+                    
+                    // Education Section
+                    { text: 'ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ', style: 'sectionTitle', pageBreak: 'before' },
+                    ...education.map(edu => ([
+                        { text: edu.title, style: 'jobTitle', margin: [0, 8, 0, 2] },
+                        { text: edu.institution, style: 'company', margin: [0, 0, 0, 8] }
+                    ])).flat(),
+                    
+                    // Soft Skills Section
+                    { text: 'SOFT SKILLS', style: 'sectionTitle' },
+                    {
+                        columns: [
+                            softSkills.slice(0, 2).map(skill => ({
+                                stack: [
+                                    { text: skill.title, style: 'cardTitle' },
+                                    { text: skill.description, fontSize: 9, margin: [0, 3, 0, 10] }
+                                ],
+                                width: '48%'
+                            }))
+                        ].flat(),
+                        columnGap: 15,
+                        margin: [0, 5, 0, 5]
+                    },
+                    {
+                        columns: [
+                            softSkills.slice(2, 4).map(skill => ({
+                                stack: [
+                                    { text: skill.title, style: 'cardTitle' },
+                                    { text: skill.description, fontSize: 9, margin: [0, 3, 0, 10] }
+                                ],
+                                width: '48%'
+                            }))
+                        ].flat(),
+                        columnGap: 15,
+                        margin: [0, 5, 0, 15]
+                    },
+                    
+                    // Hobbies Section
+                    { text: 'HOBBIES', style: 'sectionTitle' },
+                    {
+                        columns: [
+                            hobbies.slice(0, 2).map(hobby => ({
+                                stack: [
+                                    { text: hobby.title, style: 'cardTitle' },
+                                    { text: hobby.description, fontSize: 9, margin: [0, 3, 0, 10] }
+                                ],
+                                width: '48%'
+                            }))
+                        ].flat(),
+                        columnGap: 15,
+                        margin: [0, 5, 0, 5]
+                    },
+                    {
+                        columns: [
+                            hobbies.slice(2, 4).map(hobby => ({
+                                stack: [
+                                    { text: hobby.title, style: 'cardTitle' },
+                                    { text: hobby.description, fontSize: 9, margin: [0, 3, 0, 10] }
+                                ],
+                                width: '48%'
+                            }))
+                        ].flat(),
+                        columnGap: 15,
+                        margin: [0, 5, 0, 15]
+                    }
+                ],
+                styles: {
+                    header: {
+                        fontSize: 24,
+                        bold: true,
+                        color: darkBlue
+                    },
+                    subheader: {
+                        fontSize: 14,
+                        color: blue,
+                        bold: true
+                    },
+                    sectionTitle: {
+                        fontSize: 14,
+                        bold: true,
+                        color: blue,
+                        margin: [0, 15, 0, 8],
+                        decoration: 'underline',
+                        decorationColor: blue
+                    },
+                    jobTitle: {
+                        fontSize: 11,
+                        bold: true,
+                        color: darkBlue
+                    },
+                    jobDate: {
+                        fontSize: 10,
+                        color: gray
+                    },
+                    company: {
+                        fontSize: 10,
+                        color: blue,
+                        bold: true
+                    },
+                    cardTitle: {
+                        fontSize: 11,
+                        bold: true,
+                        color: darkBlue
+                    },
+                    paragraph: {
+                        fontSize: 10,
+                        alignment: 'justify',
+                        lineHeight: 1.5
+                    }
+                }
+            };
+            
+            // Generate and download PDF
+            try {
+                pdfMake.createPdf(docDefinition).download('CV_Konstantinos_Lathyris_Vector.pdf');
+                
+                setTimeout(() => {
+                    btn.textContent = '✅ Κατέβηκε!';
+                    btn.style.background = '#10b981';
+                    setTimeout(() => {
+                        btn.textContent = '⭐ Vector PDF';
+                        btn.style.background = '#8b5cf6';
+                        btn.disabled = false;
+                    }, 2000);
+                }, 500);
+            } catch (error) {
+                console.error('pdfmake error:', error);
+                btn.textContent = '❌ Σφάλμα';
+                btn.style.background = '#ef4444';
+                setTimeout(() => {
+                    btn.textContent = '⭐ Vector PDF';
+                    btn.style.background = '#8b5cf6';
+                    btn.disabled = false;
+                }, 2000);
+            }
+        }
         
         // Wait for DOM to be ready before attaching event listener
         function setupDownloadButton() {
