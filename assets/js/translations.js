@@ -280,6 +280,11 @@ const translations = {
         "design.project4.description": "Προηγμένη μηχανική κατασκευή με detailed engineering analysis. Parametric design για ευελιξία και προσαρμογή στις ανάγκες.",
         "design.project5.title": "Optimized Component - Design 5",
         "design.project5.description": "Βελτιστοποιημένο εξάρτημα με AI-assisted optimization. Συνδυασμός αισθητικής και λειτουργικότητας για optimal performance.",
+        "design.project6.title": "Σχεδιασμός Τροχαλίας - Άσκηση ΕΚΠΑ",
+        "design.project6.description": "Σχεδιασμός τροχαλίας για μάθημα eLearning του ΕΚΠΑ. Parametric design με Fusion 360, τεχνική σχεδίαση και παρουσίαση της διαδικασίας κατασκευής σε βίντεο.",
+        "design.project6.videoNotSupported": "Το πρόγραμμα περιήγησής σας δεν υποστηρίζει το στοιχείο βίντεο.",
+        "design.project7.title": "Σχεδιασμός & Κατασκευή Γραναζιών Παγωτομηχανής",
+        "design.project7.description": "Σχεδιασμός και μηχανική ανάλυση γραναζιών για παγωτομηχανή με Fusion 360. Parametric design για ακριβή engagement και smooth operation. Εστίαση στη functional design και optimization των gear ratios για optimal performance.",
         
         // GitHub
         "github.viewProfile": "View Profile",
@@ -323,6 +328,15 @@ const translations = {
         "pages.3dPrinting.title": "3D Printing Creations",
         "pages.3dPrinting.description": "Φυσικές κατασκευές και εκτυπώσεις 3D",
         "pages.3dPrinting.projectTitle": "Project Title",
+        "pages.3dPrinting.collection1.title": "Συλλογή Ανταλλακτικών 3D Printing",
+        "pages.3dPrinting.collection1.description": "Συλλογή λειτουργικών ανταλλακτικών και εργαλείων που έχουν σχεδιαστεί και εκτυπωθεί με additive manufacturing. Κάθε κομμάτι είναι βελτιστοποιημένο για λειτουργικότητα, αντοχή και αποδοτικότητα υλικού.",
+        "pages.3dPrinting.collection2.title": "3D Printing Project",
+        "pages.3dPrinting.collection2.description": "Προσωπικό project 3D printing με focus σε functional design και material optimization. Χρήση CAD tools και AI-assisted design για τη δημιουργία custom components.",
+        "pages.3dPrinting.cardTitle": "3D Printed Part",
+        "pages.3dPrinting.cardDescription": "Λειτουργικό ανταλλακτικό/εργαλείο εκτυπωμένο με additive manufacturing, βελτιστοποιημένο για functionality και durability.",
+        "pages.3dPrinting.placeholder": "Οι εικόνες για αυτό το project θα προστεθούν σύντομα.",
+        "pages.3dPrinting.replica.title": "Replica Project - Online Games Collection",
+        "pages.3dPrinting.replica.description": "Αυτό το project δημιουργήθηκε από το αίτημα των παιδιών μου για μια ρεπλίκα αντικειμένου από τα online games που παίζουν. Η ρεπλίκα του βομβιδοβόλου είναι σχεδιασμένη με προσοχή στις λεπτομέρειες και εκτυπωμένη με ακρίβεια για να είναι όσο το δυνατόν πιο πιστή στο πρωτότυπο. Αυτό το project συνδυάζει την αγάπη για τα βιντεοπαιχνίδια με τις τεχνικές δεξιότητες του 3D printing και CAD design.",
         
         // AI Development (Greek)
         "aiDev.title": "AI-Assisted Development",
@@ -628,6 +642,11 @@ const translations = {
         "design.project4.description": "Advanced mechanical assembly with detailed engineering analysis. Parametric design for flexibility and adaptation to needs.",
         "design.project5.title": "Optimized Component - Design 5",
         "design.project5.description": "Optimized component with AI-assisted optimization. Combination of aesthetics and functionality for optimal performance.",
+        "design.project6.title": "Pulley Design - ΕΚΠΑ Exercise",
+        "design.project6.description": "Pulley design for ΕΚΠΑ eLearning course. Parametric design with Fusion 360, technical drawings and video presentation of the construction process.",
+        "design.project6.videoNotSupported": "Your browser does not support the video element.",
+        "design.project7.title": "Ice Cream Machine Gear Design & Construction",
+        "design.project7.description": "Design and engineering analysis of gears for ice cream machine using Fusion 360. Parametric design for precise engagement and smooth operation. Focus on functional design and optimization of gear ratios for optimal performance.",
         
         // GitHub
         "github.viewProfile": "View Profile",
@@ -692,6 +711,15 @@ const translations = {
         "pages.3dPrinting.title": "3D Printing Creations",
         "pages.3dPrinting.description": "Physical constructions and 3D prints",
         "pages.3dPrinting.projectTitle": "Project Title",
+        "pages.3dPrinting.collection1.title": "3D-Printed Parts Collection",
+        "pages.3dPrinting.collection1.description": "Collection of functional spare parts and tools designed and printed using additive manufacturing. Each piece is optimized for functionality, durability, and material efficiency.",
+        "pages.3dPrinting.collection2.title": "3D Printing Project",
+        "pages.3dPrinting.collection2.description": "Personal 3D printing project focusing on functional design and material optimization. Using CAD tools and AI-assisted design to create custom components.",
+        "pages.3dPrinting.cardTitle": "3D Printed Part",
+        "pages.3dPrinting.cardDescription": "Functional spare part/tool printed using additive manufacturing, optimized for functionality and durability.",
+        "pages.3dPrinting.placeholder": "Images for this project will be added soon.",
+        "pages.3dPrinting.replica.title": "Replica Project - Online Games Collection",
+        "pages.3dPrinting.replica.description": "This project was created from my children's request for a replica of an object from the online games they play. The bomb thrower replica is carefully designed with attention to detail and printed with precision to be as faithful to the original as possible. This project combines the love for video games with the technical skills of 3D printing and CAD design.",
         
         // Placeholders
         "placeholders.description": "This section contains projects that will be added in the future."

@@ -133,65 +133,35 @@
 
     <!-- Projects Grid Gallery -->
     <section class="container mx-auto px-4 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Project Card Example - Replace with your actual projects -->
-            <div class="bg-card rounded-lg p-6 project-card">
-                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
-                    <img 
-                        src="assets/images/3d-printing/project-example.jpg" 
-                        srcset="assets/images/3d-printing/project-example-400w.jpg 400w,
-                                assets/images/3d-printing/project-example-800w.jpg 800w,
-                                assets/images/3d-printing/project-example-1200w.jpg 1200w"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        alt="3D Printed Project Example" 
-                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
-                        loading="lazy"
-                        width="800"
-                        height="450"
-                        data-fullsize="assets/images/3d-printing/project-example-1200w.jpg"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                    >
-                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
-                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.3dPrinting.projectTitle">Project Title</h3>
-                <p class="text-gray-400 text-sm mb-4" data-i18n="placeholders.description"></p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">PLA</span>
-                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">2024</span>
+        <!-- 3D-Printed Parts Collection Section -->
+        <div class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-400 text-center" data-i18n="pages.3dPrinting.collection1.title">Συλλογή Ανταλλακτικών 3D Printing</h2>
+            <p class="text-gray-400 text-center mb-8 max-w-3xl mx-auto" data-i18n="pages.3dPrinting.collection1.description"></p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="3d-printed-parts-gallery">
+                <!-- Project cards will be generated here -->
+            </div>
+        </div>
+
+        <!-- 3D Printing Project Section -->
+        <div class="mb-16" id="3d-printing-project-section">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-400 text-center" data-i18n="pages.3dPrinting.collection2.title">3D Printing Project</h2>
+            <p class="text-gray-400 text-center mb-8 max-w-3xl mx-auto" data-i18n="pages.3dPrinting.collection2.description"></p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="3d-printing-project-gallery">
+                <!-- Project cards will be generated here if images exist -->
+                <div class="col-span-full text-center text-gray-400 py-8" id="3d-printing-placeholder" style="display: none;">
+                    <i data-lucide="printer" class="w-16 h-16 mx-auto mb-4 text-gray-600"></i>
+                    <p data-i18n="pages.3dPrinting.placeholder">Images for this project will be added soon.</p>
                 </div>
             </div>
-            
-            <!-- Add more project cards following the same structure -->
-            <!-- 
-            <div class="bg-card rounded-lg p-6 project-card">
-                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
-                    <img 
-                        src="assets/images/3d-printing/your-project.jpg" 
-                        srcset="assets/images/3d-printing/your-project-400w.jpg 400w,
-                                assets/images/3d-printing/your-project-800w.jpg 800w,
-                                assets/images/3d-printing/your-project-1200w.jpg 1200w"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        alt="Description of your 3D printed project" 
-                        class="w-full h-full object-cover lazy-image"
-                        loading="lazy"
-                        width="800"
-                        height="450"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                    >
-                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
-                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-2 text-blue-400">Your Project Name</h3>
-                <p class="text-gray-400 text-sm mb-4">Description of your project...</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Material</span>
-                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Year</span>
-                </div>
+        </div>
+
+        <!-- Replica Project Section -->
+        <div class="mb-16" id="replica-project-section">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-400 text-center" data-i18n="pages.3dPrinting.replica.title">Replica Project - Online Games Collection</h2>
+            <p class="text-gray-400 text-center mb-8 max-w-3xl mx-auto" data-i18n="pages.3dPrinting.replica.description"></p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="replica-gallery">
+                <!-- Project cards will be generated here -->
             </div>
-            -->
         </div>
     </section>
 
@@ -249,6 +219,7 @@
     <script src="assets/js/card-tilt.js?v=1"></script>
     <script src="assets/js/tooltip.js?v=1"></script>
     <script src="assets/js/scroll-progress.js?v=1"></script>
+    <script src="assets/js/3d-printing-gallery.js?v=1"></script>
     <script>
         lucide.createIcons();
     </script>

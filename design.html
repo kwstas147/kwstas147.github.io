@@ -134,6 +134,76 @@
     <!-- Projects Grid Gallery -->
     <section class="container mx-auto px-4 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Design Project 6 - ΕΚΠΑ Exercise with Video -->
+            <div class="bg-card rounded-lg p-6 project-card">
+                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative group">
+                    <!-- Video Player -->
+                    <video 
+                        class="w-full h-full object-cover"
+                        controls
+                        preload="metadata"
+                        style="display: none;"
+                    >
+                        <source src="assets/videos/Storyboard2.mp4" type="video/mp4">
+                        <p class="text-gray-400 p-4" data-i18n="design.project6.videoNotSupported"></p>
+                    </video>
+                    
+                    <!-- Video Thumbnail/Poster Image -->
+                    <img 
+                        src="assets/images/fusion360/1view-800w.jpg" 
+                        srcset="assets/images/fusion360/1view-400w.jpg 400w,
+                                assets/images/fusion360/1view-800w.jpg 800w,
+                                assets/images/fusion360/1view-1200w.jpg 1200w"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        alt="ΕΚΠΑ Exercise - Pulley Design" 
+                        class="video-thumbnail w-full h-full object-cover lazy-image cursor-pointer hover:opacity-90 transition-opacity"
+                        loading="lazy"
+                        width="800"
+                        height="450"
+                        data-video-container="ekpa-pulley-video"
+                    >
+                    
+                    <!-- Play Button Overlay -->
+                    <div class="video-play-overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" data-video-container="ekpa-pulley-video">
+                        <div class="bg-blue-600 rounded-full p-4 hover:bg-blue-700 transition-colors">
+                            <i data-lucide="play" class="w-12 h-12 text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Fallback for missing image -->
+                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
+                        <i data-lucide="video" class="w-12 h-12 text-slate-500"></i>
+                    </div>
+                </div>
+                
+                <!-- Additional Images Gallery -->
+                <div class="grid grid-cols-2 gap-2 mb-4">
+                    <img 
+                        src="assets/images/fusion360/1view-400w.jpg" 
+                        alt="3D Render - Pulley Design" 
+                        class="w-full h-auto rounded cursor-pointer hover:opacity-90 transition-opacity lightbox-image"
+                        loading="lazy"
+                        data-fullsize="assets/images/fusion360/1view-1200w.jpg"
+                    >
+                    <img 
+                        src="assets/images/fusion360/2view-400w.jpg" 
+                        alt="Technical Drawing - Pulley Design" 
+                        class="w-full h-auto rounded cursor-pointer hover:opacity-90 transition-opacity lightbox-image"
+                        loading="lazy"
+                        data-fullsize="assets/images/fusion360/2view-1200w.jpg"
+                    >
+                </div>
+                
+                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="design.project6.title"></h3>
+                <p class="text-gray-400 text-sm mb-4" data-i18n="design.project6.description"></p>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded" data-i18n="design.tag"></span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">ΕΚΠΑ</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">eLearning</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">2024-2025</span>
+                </div>
+            </div>
+
             <!-- Design Project 1 -->
             <div class="bg-card rounded-lg p-6 project-card">
                 <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
@@ -278,6 +348,56 @@
                     <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">2024</span>
                 </div>
             </div>
+
+            <!-- Design Project 7 - Ice Cream Machine Gears -->
+            <div class="bg-card rounded-lg p-6 project-card">
+                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
+                    <img 
+                        src="assets/images/fusion360/IcecreamMachine/1icegear-800w.jpg" 
+                        srcset="assets/images/fusion360/IcecreamMachine/1icegear-400w.jpg 400w,
+                                assets/images/fusion360/IcecreamMachine/1icegear-800w.jpg 800w,
+                                assets/images/fusion360/IcecreamMachine/1icegear-1200w.jpg 1200w"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        alt="Ice Cream Machine Gears Design" 
+                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
+                        loading="lazy"
+                        width="800"
+                        height="450"
+                        data-fullsize="assets/images/fusion360/IcecreamMachine/1icegear-1200w.jpg"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    >
+                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
+                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
+                    </div>
+                </div>
+                
+                <!-- Additional Images Gallery -->
+                <div class="grid grid-cols-2 gap-2 mb-4">
+                    <img 
+                        src="assets/images/fusion360/IcecreamMachine/2icegear-400w.jpg" 
+                        alt="Ice Cream Machine Gear - View 2" 
+                        class="w-full h-auto rounded cursor-pointer hover:opacity-90 transition-opacity lightbox-image"
+                        loading="lazy"
+                        data-fullsize="assets/images/fusion360/IcecreamMachine/2icegear-1200w.jpg"
+                    >
+                    <img 
+                        src="assets/images/fusion360/IcecreamMachine/20260110-144322-400w.jpg" 
+                        alt="Ice Cream Machine Gear - Assembly View" 
+                        class="w-full h-auto rounded cursor-pointer hover:opacity-90 transition-opacity lightbox-image"
+                        loading="lazy"
+                        data-fullsize="assets/images/fusion360/IcecreamMachine/20260110-144322-1200w.jpg"
+                    >
+                </div>
+                
+                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="design.project7.title"></h3>
+                <p class="text-gray-400 text-sm mb-4" data-i18n="design.project7.description"></p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded" data-i18n="design.tag"></span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Fusion 360</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">2025</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -337,6 +457,86 @@
     <script src="assets/js/scroll-progress.js?v=1"></script>
     <script>
         lucide.createIcons();
+        
+        // Initialize video toggle functionality
+        // Handle video thumbnail and play button clicks
+        document.querySelectorAll('[data-video-container]').forEach(element => {
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation(); // Prevent triggering lightbox on thumbnail
+                
+                const container = this.closest('.aspect-video');
+                if (!container) return;
+                
+                const video = container.querySelector('video');
+                const thumbnail = container.querySelector('.video-thumbnail');
+                const playOverlay = container.querySelector('.video-play-overlay');
+                
+                if (!video) {
+                    console.warn('Video element not found');
+                    return;
+                }
+                
+                // Check if video source exists (has src attribute or source elements)
+                const hasSource = video.src || video.querySelector('source');
+                if (!hasSource) {
+                    console.warn('Video source not found. Please add video file to assets/videos/');
+                    // Use translation if available, otherwise use English
+                    const message = document.documentElement.lang === 'el' 
+                        ? 'Το βίντεο δεν είναι διαθέσιμο. Παρακαλώ προσθέστε το αρχείο Storyboard2.mp4 ή Storyboard2.wmv στον φάκελο assets/videos/'
+                        : 'Video not available. Please add Storyboard2.mp4 or Storyboard2.wmv to assets/videos/ folder';
+                    alert(message);
+                    return;
+                }
+                
+                // Show video and hide thumbnail
+                video.style.display = 'block';
+                if (thumbnail) thumbnail.style.display = 'none';
+                if (playOverlay) playOverlay.style.display = 'none';
+                
+                // Play video
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        // Video started playing successfully
+                    }).catch(err => {
+                        console.error('Video playback error:', err);
+                        // Fallback: show thumbnail again if video fails
+                        video.style.display = 'none';
+                        if (thumbnail) thumbnail.style.display = 'block';
+                        if (playOverlay) {
+                            playOverlay.style.display = 'flex';
+                            // Remove opacity-0 class so overlay is visible immediately
+                            playOverlay.classList.remove('opacity-0');
+                            playOverlay.style.opacity = '1';
+                        }
+                    });
+                }
+                
+                // When video ends, show thumbnail again (only add listener once)
+                if (!video.hasAttribute('data-ended-listener')) {
+                    video.setAttribute('data-ended-listener', 'true');
+                    video.addEventListener('ended', function() {
+                        video.style.display = 'none';
+                        if (thumbnail) thumbnail.style.display = 'block';
+                        if (playOverlay) {
+                            playOverlay.style.display = 'flex';
+                            // Remove opacity-0 class so overlay is visible immediately after video ends
+                            playOverlay.classList.remove('opacity-0');
+                            playOverlay.style.opacity = '1';
+                        }
+                        video.currentTime = 0;
+                    });
+                }
+            });
+        });
+        
+        // Re-initialize lightbox after dynamic content is added
+        if (typeof window.reinitLightbox === 'function') {
+            setTimeout(() => {
+                window.reinitLightbox();
+            }, 100);
+        }
     </script>
 </body>
 </html>

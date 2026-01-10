@@ -499,6 +499,11 @@
       "project5": {
         "title": "Βελτιστοποιημένο Εξάρτημα - Σχεδιασμός 5",
         "description": "Βελτιστοποιημένο εξάρτημα με AI-assisted optimization. Συνδυασμός αισθητικής και λειτουργικότητας για optimal performance."
+      },
+      "project6": {
+        "title": "Product Design & 3D Printing - ΕΚΠΑ",
+        "description": "Άσκηση από το πρόγραμμα Product Design & 3D Printing του ΕΚΠΑ. Σχεδιασμός μηχανικής τροχαλίας με τεχνικό σχέδιο, 3D μοντελοποίηση και animation. Η άσκηση καλύπτει ολόκληρο τον κύκλο σχεδιασμού από το conceptual design μέχρι την προσομοίωση και οπτικοποίηση, δείχνοντας την εφαρμογή σύγχρονων μεθόδων CAD design και engineering analysis.",
+        "videoNotSupported": "Το βίντεο δεν υποστηρίζεται στον browser σας. Παρακαλώ δοκιμάστε άλλο browser ή κατεβάστε το αρχείο."
       }
     },
     "aiCAD": {
@@ -963,6 +968,11 @@
       "project5": {
         "title": "Optimized Component - Design 5",
         "description": "Optimized component with AI-assisted optimization. Combination of aesthetics and functionality for optimal performance."
+      },
+      "project6": {
+        "title": "Product Design & 3D Printing - NKUA",
+        "description": "Exercise from the NKUA Product Design & 3D Printing program. Mechanical pulley design with technical drawing, 3D modeling and animation. The exercise covers the complete design cycle from conceptual design to simulation and visualization, demonstrating the application of modern CAD design methods and engineering analysis.",
+        "videoNotSupported": "Video is not supported in your browser. Please try another browser or download the file."
       }
     },
     "aiCAD": {

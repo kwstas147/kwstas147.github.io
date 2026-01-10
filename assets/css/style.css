@@ -738,6 +738,23 @@ html[data-theme="clean-office"] :not(pre) > code[class*="language-"] {
     object-position: center;
 }
 
+/* Video player styling */
+.aspect-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #000;
+}
+
+.video-thumbnail {
+    cursor: pointer;
+}
+
+.aspect-video.group:hover .absolute.inset-0 {
+    transition: opacity 0.3s ease-in-out;
+}
+
 /* Image optimization for different themes */
 html[data-theme="midnight"] .lazy-image,
 html:not([data-theme]) .lazy-image {
