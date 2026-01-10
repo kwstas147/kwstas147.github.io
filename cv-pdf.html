@@ -111,13 +111,16 @@
             margin: 0;
             padding: 0;
             background: white;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
         }
         #pdf-content {
             background: white;
-            padding: 25px 30px;
-            width: 750px;
-            min-width: 750px;
-            max-width: 750px;
+            padding: 20px 25px;
+            width: 760px;
+            min-width: 760px;
+            max-width: 760px;
             margin: 0 auto;
             box-sizing: border-box;
             overflow: visible;
@@ -146,12 +149,12 @@
             page-break-inside: avoid;
         }
         .section-title {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: bold;
             color: #3b82f6;
             border-bottom: 2px solid #3b82f6;
             padding-bottom: 8px;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             page-break-after: avoid;
         }
         .contact-info {
@@ -182,8 +185,11 @@
         }
         .job-title {
             font-weight: bold;
-            font-size: 16px;
+            font-size: 15px;
             color: #1e293b;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
         }
         .job-date {
             color: #64748b;
@@ -196,15 +202,18 @@
             margin-bottom: 8px;
         }
         .job-description {
-            margin-left: 15px;
+            margin-left: 8px;
         }
         .job-description ul {
             margin: 5px 0;
-            padding-left: 20px;
+            padding-left: 18px;
         }
         .job-description li {
             margin-bottom: 5px;
             line-height: 1.7;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
         }
         .education-entry {
             margin-bottom: 15px;
@@ -264,6 +273,9 @@
         .summary {
             text-align: justify;
             line-height: 1.8;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
         }
         .about-grid {
             display: flex;
@@ -284,15 +296,15 @@
             color: #1e293b;
             font-weight: 600;
         }
-        /* Timeline styling */
+        /* Timeline styling - Compact */
         .timeline-container {
             position: relative;
-            padding-left: 2rem;
+            padding-left: 1.2rem;
         }
         .timeline-container::before {
             content: '';
             position: absolute;
-            left: 0.5rem;
+            left: 0.35rem;
             top: 0;
             bottom: 0;
             width: 2px;
@@ -300,21 +312,21 @@
         }
         .timeline-item {
             position: relative;
-            margin-bottom: 2.5rem;
-            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
         }
         .timeline-item:last-child {
             margin-bottom: 0;
         }
         .timeline-dot {
             position: absolute;
-            left: -1.75rem;
+            left: -1.3rem;
             top: 0.25rem;
-            width: 1rem;
-            height: 1rem;
+            width: 0.85rem;
+            height: 0.85rem;
             border-radius: 50%;
             background-color: #3b82f6;
-            border: 3px solid #ffffff;
+            border: 2px solid #ffffff;
             box-shadow: 0 0 0 2px #3b82f6;
             z-index: 1;
         }
@@ -365,6 +377,9 @@
             margin-bottom: 10px;
             max-width: 100%;
             box-sizing: border-box;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
         }
         .tech-project-card p {
             font-size: 14px;
@@ -373,11 +388,14 @@
             flex-grow: 1;
             max-width: 100%;
             box-sizing: border-box;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
         }
         /* Education border styling */
         .education-border {
             border-left: 2px solid #3b82f6;
-            padding-left: 20px;
+            padding-left: 15px;
             margin-bottom: 15px;
         }
         /* Badge styling for EKPA */
@@ -674,8 +692,16 @@
                 <button data-lang="en" style="padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; cursor: pointer; border: 1px solid #3b82f6; background: rgba(243, 244, 246, 0.8); color: #4b5563; transition: all 0.2s;">EN</button>
             </div>
         </div>
-        <button id="downloadBtn" data-i18n="btnDownloadPDF" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 200px; display: inline-block; visibility: visible; opacity: 1;">📥 Κατεβάστε το CV ως PDF</button>
-        <p id="pdfMessage" data-i18n="pdfOptimizedMessage" style="margin-top: 10px; color: #64748b; font-size: 14px;">Η σελίδα είναι βελτιστοποιημένη για εκτύπωση. Κάντε κλικ στο κουμπί για να κατεβάσετε το PDF.</p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px;">
+            <button id="printBtn" style="background: #10b981; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 200px; display: inline-block;">
+                🖨️ <span data-i18n="btnPrintPDF">Εκτύπωση σε PDF</span>
+            </button>
+            <button id="downloadBtn" data-i18n="btnDownloadPDF" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 200px; display: inline-block; visibility: visible; opacity: 1;">📥 Κατεβάστε το CV ως PDF</button>
+        </div>
+        <p id="pdfMessage" style="margin-top: 10px; color: #64748b; font-size: 14px;">
+            <span style="color: #10b981; font-weight: 600;">🖨️ Εκτύπωση σε PDF:</span> <span data-i18n="printPdfMessage">Τέλεια ποιότητα, χωρίς κομμένες λέξεις</span><br>
+            <span style="color: #3b82f6; font-weight: 600;">📥 Κατέβασμα:</span> <span data-i18n="pdfOptimizedMessage">Αυτόματη δημιουργία (μπορεί να έχει μικρές ατέλειες)</span>
+        </p>
     </div>
 
     <script src="assets/js/translations.js?v=2"></script>
@@ -773,6 +799,32 @@
         
         // Start setup
         setupLanguageManager();
+        
+        // Setup Print Button (Simple & Perfect Quality!)
+        function setupPrintButton() {
+            const printBtn = document.getElementById('printBtn');
+            if (!printBtn) {
+                setTimeout(setupPrintButton, 100);
+                return;
+            }
+            
+            printBtn.addEventListener('click', function() {
+                // Simple window.print() - uses browser's native PDF generation
+                // This gives PERFECT quality with no cut-off text!
+                window.print();
+            });
+            
+            // Hover effect
+            printBtn.addEventListener('mouseenter', function() {
+                this.style.background = '#059669';
+            });
+            printBtn.addEventListener('mouseleave', function() {
+                this.style.background = '#10b981';
+            });
+        }
+        
+        // Initialize print button immediately
+        setupPrintButton();
         
         // Wait for DOM to be ready before attaching event listener
         function setupDownloadButton() {
@@ -936,24 +988,27 @@
                                 clonedElement.style.backgroundColor = '#ffffff';
                                 clonedElement.style.position = 'relative';
                                 
-                                // Ensure width is set but height is auto
-                                clonedElement.style.width = '750px';
-                                clonedElement.style.minWidth = '750px';
-                                clonedElement.style.maxWidth = '750px';
+                                // Optimized width for better text fitting
+                                clonedElement.style.width = '760px';
+                                clonedElement.style.minWidth = '760px';
+                                clonedElement.style.maxWidth = '760px';
                                 clonedElement.style.height = 'auto';
                                 clonedElement.style.minHeight = 'auto';
                                 clonedElement.style.maxHeight = 'none';
+                                clonedElement.style.padding = '20px 25px';
                                 
-                                // CRITICAL: Force NO word-break on all elements!
+                                // INTELLIGENT WRAPPING: Allow overflow-wrap and hyphens for Greek text
                                 const allElements = clonedElement.querySelectorAll('*');
                                 allElements.forEach(el => {
                                     el.style.wordBreak = 'normal';
-                                    el.style.hyphens = 'none';
-                                    el.style.webkitHyphens = 'none';
-                                    el.style.msHyphens = 'none';
+                                    el.style.overflowWrap = 'break-word';
+                                    el.style.hyphens = 'auto';
+                                    el.style.webkitHyphens = 'auto';
+                                    el.style.msHyphens = 'auto';
+                                    el.style.boxSizing = 'border-box';
                                 });
                                 
-                                // Only URLs/emails should break
+                                // Only URLs/emails should break aggressively
                                 const links = clonedElement.querySelectorAll('a[href^="http"], a[href^="mailto"]');
                                 links.forEach(link => {
                                     link.style.overflowWrap = 'break-word';
@@ -1047,10 +1102,28 @@
                                     grid.style.overflow = 'visible';
                                 });
                                 
+                                // Compact timeline for more space
+                                const timelineContainer = clonedElement.querySelector('.timeline-container');
+                                if (timelineContainer) {
+                                    timelineContainer.style.paddingLeft = '1.2rem';
+                                }
+                                
+                                const timelineItems = clonedElement.querySelectorAll('.timeline-item');
+                                timelineItems.forEach(item => {
+                                    item.style.paddingLeft = '1rem';
+                                    item.style.marginBottom = '2rem';
+                                });
+                                
+                                // Reduce job description margins
+                                const jobDescriptions = clonedElement.querySelectorAll('.job-description');
+                                jobDescriptions.forEach(desc => {
+                                    desc.style.marginLeft = '8px';
+                                });
+                                
                                 // Force reflow to calculate dimensions
                                 void clonedElement.offsetHeight;
                                 
-                                console.log('=== OnClone: Cloned Element Ready (ATS-Friendly, No Word-Break) ===');
+                                console.log('=== OnClone: Cloned Element Ready (Intelligent Wrapping) ===');
                                 console.log('Cloned element dimensions:', {
                                     width: clonedElement.offsetWidth,
                                     height: clonedElement.offsetHeight,
