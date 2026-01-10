@@ -698,18 +698,20 @@
             </div>
         </div>
         <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px;">
-            <button id="printBtn" style="background: #10b981; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 180px; display: inline-block;">
-                🖨️ <span data-i18n="btnPrintPDF">Print PDF</span>
+            <button id="printBtn" style="background: #10b981; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 200px; display: inline-block;">
+                🖨️ <span data-i18n="btnPrintPDF">Εκτύπωση σε PDF</span>
             </button>
-            <button id="pdfmakeBtn" style="background: #8b5cf6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 180px; display: inline-block;">
-                ⭐ <span data-i18n="btnPdfmake">Vector PDF</span>
+            <button id="pdfmakeBtn" style="background: #8b5cf6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 200px; display: inline-block;">
+                ⭐ <span data-i18n="btnPdfmake">Vector PDF (Νέο!)</span>
             </button>
-            <button id="downloadBtn" data-i18n="btnDownloadPDF" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 180px; display: inline-block; visibility: visible; opacity: 1;">📥 Image PDF</button>
+            <button id="downloadBtn" style="background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: 600; transition: background-color 0.2s; min-width: 200px; display: inline-block; visibility: visible; opacity: 1;">
+                📥 <span data-i18n="btnDownloadPDF">Κατεβάστε το CV ως PDF</span>
+            </button>
         </div>
-        <p id="pdfMessage" style="margin-top: 10px; color: #64748b; font-size: 13px; line-height: 1.6;">
-            <span style="color: #10b981; font-weight: 600;">🖨️ Print:</span> Browser dialog → Save as PDF<br>
-            <span style="color: #8b5cf6; font-weight: 600;">⭐ Vector PDF:</span> <span data-i18n="pdfmakeMessage">Τέλεια ποιότητα, auto download (ΝΕΟΣ!)</span><br>
-            <span style="color: #3b82f6; font-weight: 600;">📥 Image PDF:</span> <span data-i18n="pdfOptimizedMessage">Fallback method</span>
+        <p id="pdfMessage" style="margin-top: 10px; color: #64748b; font-size: 13px; line-height: 1.8;">
+            <span style="color: #10b981; font-weight: 600;">🖨️ <span data-i18n="btnPrintPDF">Εκτύπωση σε PDF</span>:</span> <span data-i18n="printPdfMessage">Τέλεια ποιότητα, χωρίς κομμένες λέξεις</span><br>
+            <span style="color: #8b5cf6; font-weight: 600;">⭐ Vector PDF:</span> <span data-i18n="pdfmakeMessage">Τέλεια ποιότητα, αυτόματο download</span><br>
+            <span style="color: #3b82f6; font-weight: 600;">📥 <span data-i18n="btnDownloadPDFShort">Κατέβασμα</span>:</span> <span data-i18n="pdfOptimizedMessage">Εναλλακτική μέθοδος</span>
         </p>
     </div>
 
@@ -1430,8 +1432,8 @@
                                     header.style.width = '100%';
                                 });
                                 
-                                const jobTitles = clonedElement.querySelectorAll('.job-title');
-                                jobTitles.forEach(title => {
+                                const jobTitleElements = clonedElement.querySelectorAll('.job-title');
+                                jobTitleElements.forEach(title => {
                                     title.style.flex = '1';
                                     title.style.minWidth = '0';
                                     title.style.fontSize = '15px';
