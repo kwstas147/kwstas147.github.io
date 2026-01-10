@@ -395,10 +395,13 @@
                     document.documentElement.setAttribute('data-theme', savedTheme);
                 }
                 
-                // Apply language
-                const savedLang = localStorage.getItem('portfolio_language') || 'el';
+                // Apply language - respect stored preference
+                const savedLang = localStorage.getItem('portfolio_language');
                 if (savedLang === 'el' || savedLang === 'en') {
                     document.documentElement.setAttribute('lang', savedLang);
+                } else {
+                    // Default to 'el' only if no preference is stored
+                    document.documentElement.setAttribute('lang', 'el');
                 }
             } catch(e) {
                 // Fallback to defaults if localStorage fails
@@ -721,6 +724,13 @@
                 
                 // Set initial lang and button states after translations are loaded
                 const currentLang = window.languageManager.getStoredLanguage() || 'el';
+                // Ensure language is set correctly - force language update if needed
+                if (window.languageManager.currentLang !== currentLang) {
+                    window.languageManager.setLanguage(currentLang);
+                } else {
+                    // Even if language is already set, ensure content is updated
+                    window.languageManager.updateContent();
+                }
                 document.documentElement.setAttribute('lang', currentLang);
                 
                 // Set initial button states
@@ -729,8 +739,24 @@
                         btn.style.background = '#3b82f6';
                         btn.style.color = 'white';
                         btn.style.borderColor = '#3b82f6';
+                    } else {
+                        btn.style.background = 'rgba(243, 244, 246, 0.8)';
+                        btn.style.color = '#4b5563';
+                        btn.style.borderColor = '#3b82f6';
                     }
                 });
+                
+                // Ensure download button and message are updated
+                setTimeout(() => {
+                    const downloadBtn = document.getElementById('downloadBtn');
+                    const pdfMessage = document.getElementById('pdfMessage');
+                    if (downloadBtn && window.translations && window.translations[currentLang] && window.translations[currentLang].btnDownloadPDF) {
+                        downloadBtn.textContent = window.translations[currentLang].btnDownloadPDF;
+                    }
+                    if (pdfMessage && window.translations && window.translations[currentLang] && window.translations[currentLang].pdfOptimizedMessage) {
+                        pdfMessage.textContent = window.translations[currentLang].pdfOptimizedMessage;
+                    }
+                }, 200);
             } else {
                 // Retry if languageManager is not ready yet
                 setTimeout(setupLanguageManager, 100);
@@ -749,6 +775,17 @@
                 return;
             }
             
+            // Wait for language manager to be ready with translations
+            if (!window.languageManager || !window.languageManager.translationsLoaded || !window.languageManager.translations) {
+                setTimeout(setupDownloadButton, 100);
+                return;
+            }
+            
+            // Sync window.translations if not already synced
+            if (!window.translations && window.languageManager.translations) {
+                window.translations = window.languageManager.translations;
+            }
+            
             // Set initial button text if empty (fallback)
             if (!downloadBtn.textContent || downloadBtn.textContent.trim() === '') {
                 const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
@@ -762,28 +799,35 @@
                 downloadBtn.textContent = buttonText || (currentLang === 'el' ? '📥 Κατεβάστε το CV ως PDF' : '📥 Download CV as PDF');
             }
             
-            // Remove any existing listeners by cloning the button
-            const newBtn = downloadBtn.cloneNode(true);
-            downloadBtn.parentNode.replaceChild(newBtn, downloadBtn);
+            // Check if event listener already exists (prevent duplicate listeners)
+            if (downloadBtn.hasAttribute('data-pdf-listener-attached')) {
+                return; // Already set up
+            }
             
-            newBtn.addEventListener('click', function() {
+            // Mark as having listener attached
+            downloadBtn.setAttribute('data-pdf-listener-attached', 'true');
+            
+            downloadBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
                 const element = document.getElementById('pdf-content');
                 const btn = this;
             
-            // Get loading text based on current language
-            const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
-            let loadingText = null;
-            if (window.translations && window.translations[currentLang] && window.translations[currentLang].pdfGenerating) {
-                loadingText = window.translations[currentLang].pdfGenerating;
-            } else if (window.languageManager && window.languageManager.translations && window.languageManager.translations[currentLang]) {
-                loadingText = window.languageManager.translations[currentLang].pdfGenerating;
-            }
-            loadingText = loadingText || (currentLang === 'el' ? '⏳ Δημιουργία PDF...' : '⏳ Generating PDF...');
-            btn.textContent = loadingText;
-            btn.disabled = true;
-            
-            // Define PDF generation function
-            function generatePDF() {
+                // Get loading text based on current language
+                const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
+                let loadingText = null;
+                if (window.translations && window.translations[currentLang] && window.translations[currentLang].pdfGenerating) {
+                    loadingText = window.translations[currentLang].pdfGenerating;
+                } else if (window.languageManager && window.languageManager.translations && window.languageManager.translations[currentLang]) {
+                    loadingText = window.languageManager.translations[currentLang].pdfGenerating;
+                }
+                loadingText = loadingText || (currentLang === 'el' ? '⏳ Δημιουργία PDF...' : '⏳ Generating PDF...');
+                btn.textContent = loadingText;
+                btn.disabled = true;
+                
+                // Define PDF generation function
+                function generatePDF() {
                 // Validate element exists and has content
                 if (!element) {
                     console.error('PDF content element not found');

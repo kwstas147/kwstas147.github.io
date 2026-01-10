@@ -337,7 +337,7 @@ class LanguageManager {
         
         const langData = this.translations[this.currentLang];
         
-        // First, try direct key lookup (for flat structure like translations.js)
+        // First, try direct key lookup (for flat structure - keys at root level)
         if (key in langData) {
             const value = langData[key];
             if (typeof value === 'string' || typeof value === 'number') {
@@ -345,7 +345,7 @@ class LanguageManager {
             }
         }
         
-        // Then try nested structure (for JSON structure)
+        // Then try nested structure (for JSON structure with dot notation like cv.sections.softSkills)
         const keys = key.split('.');
         let value = langData;
         
@@ -353,6 +353,16 @@ class LanguageManager {
             if (value && typeof value === 'object' && k in value) {
                 value = value[k];
             } else {
+                // If not found in nested path, try cv.* fallback for CV-related keys
+                // This provides backward compatibility
+                if (keys.length === 1 && !key.includes('.') && langData.cv && typeof langData.cv === 'object') {
+                    if (key in langData.cv) {
+                        const cvValue = langData.cv[key];
+                        if (typeof cvValue === 'string' || typeof cvValue === 'number') {
+                            return String(cvValue);
+                        }
+                    }
+                }
                 return null;
             }
         }
