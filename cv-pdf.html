@@ -828,71 +828,71 @@
                 
                 // Define PDF generation function
                 function generatePDF() {
-                // Validate element exists and has content
-                if (!element) {
-                    console.error('PDF content element not found');
-                    btn.disabled = false;
-                    btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Στοιχείο δεν βρέθηκε' : '❌ Error: Element not found';
-                    return;
-                }
-                
-                // Scroll element into view to ensure it's rendered
-                element.scrollIntoView({ behavior: 'instant', block: 'start' });
-                
-                // Force layout recalculation and ensure element is visible
-                element.style.display = 'block';
-                element.style.visibility = 'visible';
-                element.style.opacity = '1';
-                element.style.position = 'relative';
-                element.style.zIndex = '1';
-                
-                // Force a reflow to ensure styles are applied
-                void element.offsetHeight;
-                
-                // Check if element has content - calculate full height including margins and padding
-                const computedStyle = window.getComputedStyle(element);
-                const paddingTop = parseInt(computedStyle.paddingTop) || 0;
-                const paddingBottom = parseInt(computedStyle.paddingBottom) || 0;
-                const marginTop = parseInt(computedStyle.marginTop) || 0;
-                const marginBottom = parseInt(computedStyle.marginBottom) || 0;
-                
-                const rawHeight = element.scrollHeight || element.offsetHeight || element.clientHeight;
-                // Add all margins/padding plus extra safety margin
-                const totalPadding = paddingTop + paddingBottom + marginTop + marginBottom;
-                const height = rawHeight > 0 ? rawHeight + totalPadding + 100 : 0; // Extra 100px for safety
-                
-                const rawWidth = element.scrollWidth || element.offsetWidth || element.clientWidth;
-                const width = rawWidth > 0 ? rawWidth : 794;
-                
-                if (height === 0 || width === 0) {
-                    console.error('PDF content element has no dimensions', { 
-                        height, 
+                    // Validate element exists and has content
+                    if (!element) {
+                        console.error('PDF content element not found');
+                        btn.disabled = false;
+                        btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Στοιχείο δεν βρέθηκε' : '❌ Error: Element not found';
+                        return;
+                    }
+                    
+                    // Scroll element into view to ensure it's rendered
+                    element.scrollIntoView({ behavior: 'instant', block: 'start' });
+                    
+                    // Force layout recalculation and ensure element is visible
+                    element.style.display = 'block';
+                    element.style.visibility = 'visible';
+                    element.style.opacity = '1';
+                    element.style.position = 'relative';
+                    element.style.zIndex = '1';
+                    
+                    // Force a reflow to ensure styles are applied
+                    void element.offsetHeight;
+                    
+                    // Check if element has content - calculate full height including margins and padding
+                    const computedStyle = window.getComputedStyle(element);
+                    const paddingTop = parseInt(computedStyle.paddingTop) || 0;
+                    const paddingBottom = parseInt(computedStyle.paddingBottom) || 0;
+                    const marginTop = parseInt(computedStyle.marginTop) || 0;
+                    const marginBottom = parseInt(computedStyle.marginBottom) || 0;
+                    
+                    const rawHeight = element.scrollHeight || element.offsetHeight || element.clientHeight;
+                    // Add all margins/padding plus extra safety margin
+                    const totalPadding = paddingTop + paddingBottom + marginTop + marginBottom;
+                    const height = rawHeight > 0 ? rawHeight + totalPadding + 100 : 0; // Extra 100px for safety
+                    
+                    const rawWidth = element.scrollWidth || element.offsetWidth || element.clientWidth;
+                    const width = rawWidth > 0 ? rawWidth : 794;
+                    
+                    if (height === 0 || width === 0) {
+                        console.error('PDF content element has no dimensions', { 
+                            height, 
+                            width, 
+                            scrollHeight: element.scrollHeight,
+                            offsetHeight: element.offsetHeight,
+                            innerHTML: element.innerHTML.substring(0, 100)
+                        });
+                        btn.disabled = false;
+                        btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Κενό περιεχόμενο' : '❌ Error: Empty content';
+                        return;
+                    }
+                    
+                    console.log('=== PDF Generation Started ===');
+                    console.log('Element dimensions:', { 
                         width, 
-                        scrollHeight: element.scrollHeight,
+                        height, 
+                        scrollHeight: element.scrollHeight, 
                         offsetHeight: element.offsetHeight,
-                        innerHTML: element.innerHTML.substring(0, 100)
+                        clientHeight: element.clientHeight,
+                        innerHTMLLength: element.innerHTML.length
                     });
-                    btn.disabled = false;
-                    btn.textContent = currentLang === 'el' ? '❌ Σφάλμα: Κενό περιεχόμενο' : '❌ Error: Empty content';
-                    return;
-                }
-                
-                console.log('=== PDF Generation Started ===');
-                console.log('Element dimensions:', { 
-                    width, 
-                    height, 
-                    scrollHeight: element.scrollHeight, 
-                    offsetHeight: element.offsetHeight,
-                    clientHeight: element.clientHeight,
-                    innerHTMLLength: element.innerHTML.length
-                });
-                console.log('Element computed styles:', {
-                    display: window.getComputedStyle(element).display,
-                    visibility: window.getComputedStyle(element).visibility,
-                    opacity: window.getComputedStyle(element).opacity
-                });
-                
-                const opt = {
+                    console.log('Element computed styles:', {
+                        display: window.getComputedStyle(element).display,
+                        visibility: window.getComputedStyle(element).visibility,
+                        opacity: window.getComputedStyle(element).opacity
+                    });
+                    
+                    const opt = {
                     margin: [10, 10, 10, 10],
                     filename: 'CV_Konstantinos_Lathyris.pdf',
                     image: { 
@@ -1067,10 +1067,10 @@
                         avoid: ['.timeline-item', '.job-entry', '.education-entry', '.tech-project-card', '.section', '.section-title']
                     }
                 };
-                
-                // Generate PDF with better error handling
-                html2pdf().set(opt).from(element).save().then(() => {
-                    console.log('=== PDF Generated Successfully ===');
+                    
+                    // Generate PDF with better error handling
+                    html2pdf().set(opt).from(element).save().then(function() {
+                        console.log('=== PDF Generated Successfully ===');
                     const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
                     let successText = null;
                     if (window.translations && window.translations[currentLang] && window.translations[currentLang].pdfSuccess) {
@@ -1094,7 +1094,7 @@
                         btn.textContent = buttonText || (currentLang === 'el' ? '📥 Κατεβάστε το CV ως PDF' : '📥 Download CV as PDF');
                         btn.disabled = false;
                     }, 2500);
-                }).catch(err => {
+                    }).catch(function(err) {
                     console.error('=== PDF Generation Failed ===');
                     console.error('Error details:', err);
                     if (err.stack) {
@@ -1134,8 +1134,8 @@
                         btn.textContent = buttonText || (currentLang === 'el' ? '📥 Κατεβάστε το CV ως PDF' : '📥 Download CV as PDF');
                         btn.disabled = false;
                     }, 3000);
-                });
-            }
+                    });
+                }
             
             // Wait for translations, fonts, and ensure element is ready
             const waitForReady = async () => {
@@ -1233,11 +1233,12 @@
             };
             
             // Start the wait process
-            waitForReady().catch(err => {
+            waitForReady().catch(function(err) {
                 console.error('Error in waitForReady:', err);
                 btn.disabled = false;
                 const currentLang = window.languageManager ? window.languageManager.getStoredLanguage() || 'el' : 'el';
                 btn.textContent = currentLang === 'el' ? '❌ Σφάλμα κατά την προετοιμασία' : '❌ Error during preparation';
+            });
             });
         }
         

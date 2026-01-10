@@ -468,6 +468,33 @@
         }
       }
     },
+    "design": {
+      "tag": "Σχεδιασμός",
+      "project1": {
+        "title": "Μηχανικό Εξάρτημα - Σχεδιασμός 1",
+        "description": "Σχεδιασμός μηχανικού εξαρτήματος με parametric modeling. Βελτιστοποίηση για λειτουργικότητα και αντοχή με χρήση AI-assisted tools."
+      },
+      "project2": {
+        "title": "Συνθετικό Σύστημα - Σχεδιασμός 2",
+        "description": "Σχεδιασμός συνθετικού συστήματος με πολλαπλά εξαρτήματα. Functional analysis και material optimization για καλύτερη απόδοση."
+      },
+      "project3": {
+        "title": "Εργαλείο & Ανταλλακτικό - Σχεδιασμός 3",
+        "description": "Σχεδιασμός λειτουργικού εργαλείου και ανταλλακτικού για καθημερινή χρήση. Focus στη δημιουργία functional parts με material efficiency."
+      },
+      "project4": {
+        "title": "Μηχανική Κατασκευή - Σχεδιασμός 4",
+        "description": "Προηγμένη μηχανική κατασκευή με detailed engineering analysis. Parametric design για ευελιξία και προσαρμογή στις ανάγκες."
+      },
+      "project5": {
+        "title": "Βελτιστοποιημένο Εξάρτημα - Σχεδιασμός 5",
+        "description": "Βελτιστοποιημένο εξάρτημα με AI-assisted optimization. Συνδυασμός αισθητικής και λειτουργικότητας για optimal performance."
+      }
+    },
+    "aiCAD": {
+      "title": "Σχεδιασμός CAD με Υποβοήθηση AI",
+      "description": "Χρησιμοποιώ AI-assisted design tools για optimization, parametric design και functional analysis. Η τεχνητή νοημοσύνη βοηθάει στον σχεδιασμό εξαρτημάτων που δεν είναι μόνο αισθητικά ελκυστικά αλλά και λειτουργικά αποτελεσματικά, με focus στη δημιουργία functional parts για καθημερινή χρήση."
+    },
     "placeholders": {
       "projects": "Projects θα προστεθούν σύντομα...",
       "description": "Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον."
