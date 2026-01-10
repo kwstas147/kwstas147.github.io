@@ -133,9 +133,9 @@
         #pdf-content {
             background: white;
             padding: 20px;
-            width: 794px;
-            min-width: 794px;
-            max-width: 794px;
+            width: 754px;
+            min-width: 754px;
+            max-width: 754px;
             margin: 0 auto;
             box-sizing: border-box;
             overflow: visible;
@@ -227,6 +227,9 @@
         .job-description li {
             margin-bottom: 5px;
             line-height: 1.6;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
         }
         .education-entry {
             margin-bottom: 15px;
@@ -298,6 +301,9 @@
         .summary {
             text-align: justify;
             line-height: 1.8;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
         }
         .about-grid {
             display: flex;
@@ -358,7 +364,7 @@
         /* Tech Project Cards Grid */
         .tech-projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin-bottom: 20px;
             width: 100%;
@@ -368,7 +374,7 @@
         }
         @media print {
             .tech-projects-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
                 page-break-inside: avoid;
             }
             .tech-project-card {
@@ -389,6 +395,9 @@
             overflow-wrap: break-word;
             word-break: break-word;
             overflow: hidden;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
         }
         .tech-project-card-icon {
             text-align: center;
@@ -404,6 +413,9 @@
             word-break: break-word;
             max-width: 100%;
             box-sizing: border-box;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
         }
         .tech-project-card p {
             font-size: 13px;
@@ -414,6 +426,9 @@
             word-break: break-word;
             max-width: 100%;
             box-sizing: border-box;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
         }
         /* Education border styling */
         .education-border {
@@ -911,7 +926,7 @@
                     const height = rawHeight > 0 ? rawHeight + totalPadding + 100 : 0; // Extra 100px for safety
                     
                     const rawWidth = element.scrollWidth || element.offsetWidth || element.clientWidth;
-                    const width = rawWidth > 0 ? rawWidth : 794;
+                    const width = rawWidth > 0 ? rawWidth : 754;
                     
                     if (height === 0 || width === 0) {
                         console.error('PDF content element has no dimensions', { 
@@ -942,14 +957,14 @@
                     });
                     
                     const opt = {
-                    margin: [10, 10, 10, 10],
+                    margin: [12, 12, 12, 12],
                     filename: 'CV_Konstantinos_Lathyris.pdf',
                     image: { 
                         type: 'jpeg', 
                         quality: 0.98 
                     },
                     html2canvas: { 
-                        scale: 1.5,
+                        scale: 1.2,
                         useCORS: true,
                         logging: true,
                         letterRendering: true,
@@ -978,9 +993,9 @@
                                 clonedElement.style.position = 'relative';
                                 
                                 // Ensure width is set but height is auto
-                                clonedElement.style.width = '794px';
-                                clonedElement.style.minWidth = '794px';
-                                clonedElement.style.maxWidth = '794px';
+                                clonedElement.style.width = '754px';
+                                clonedElement.style.minWidth = '754px';
+                                clonedElement.style.maxWidth = '754px';
                                 clonedElement.style.height = 'auto';
                                 clonedElement.style.minHeight = 'auto';
                                 clonedElement.style.maxHeight = 'none';
