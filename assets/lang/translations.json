@@ -197,7 +197,7 @@
       "skills": {
         "industrial": {
           "title": "Industrial",
-          "description": "Χειρισμός & Συντήρηση Βαρέων Μηχανημάτων, Διαχείριση Παραγωγής, Ηλεκτρολογικό Σχέδιο, PLC Programming, Automation Systems"
+          "description": "Χειρισμός & Συντήρηση Βαρέων Μηχανημάτων, Διαχείριση Παραγωγής, Ηλεκτρολογικό Σχέδιο, Automation Systems"
         },
         "digital": {
           "title": "Digital Design",
@@ -680,7 +680,7 @@
       "skills": {
         "industrial": {
           "title": "Industrial",
-          "description": "Heavy Machinery Operation & Maintenance, Production Management, Electrical Design, PLC Programming, Automation Systems"
+          "description": "Heavy Machinery Operation & Maintenance, Production Management, Electrical Design, Automation Systems"
         },
         "digital": {
           "title": "Digital Design",
