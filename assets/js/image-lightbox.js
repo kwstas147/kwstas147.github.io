@@ -25,19 +25,19 @@
     let navPrevBtn, navNextBtn;
 
     /**
-     * Collect all lightbox images from the page, grouped by project card
+     * Collect all lightbox images from the page, grouped by project gallery container
      */
     function collectImages() {
         const images = document.querySelectorAll('.lightbox-image');
         imageGalleryByProject.clear(); // Clear previous data
         
         images.forEach(img => {
-            // Find the parent project card, or use document.body as fallback
-            const projectCard = img.closest('.project-card') || document.body;
+            // Find the parent project gallery container, or use document.body as fallback
+            const projectContainer = img.closest('.project-gallery-container') || img.closest('.project-card') || document.body;
             
             // Initialize array for this project if it doesn't exist
-            if (!imageGalleryByProject.has(projectCard)) {
-                imageGalleryByProject.set(projectCard, []);
+            if (!imageGalleryByProject.has(projectContainer)) {
+                imageGalleryByProject.set(projectContainer, []);
             }
             
             // Add image to the project's array
@@ -49,7 +49,7 @@
                 alt: img.alt || ''
             };
             
-            imageGalleryByProject.get(projectCard).push(imageData);
+            imageGalleryByProject.get(projectContainer).push(imageData);
         });
         
         return imageGalleryByProject;
@@ -120,9 +120,9 @@
     function openLightbox(imageElement) {
         if (!lightbox || !lightboxImage || !imageElement) return;
         
-        // Find the project card for this image
-        const projectCard = imageElement.closest('.project-card') || document.body;
-        currentProject = projectCard;
+        // Find the project gallery container for this image
+        const projectContainer = imageElement.closest('.project-gallery-container') || imageElement.closest('.project-card') || document.body;
+        currentProject = projectContainer;
         
         // Get images for this project
         const projectImages = imageGalleryByProject.get(currentProject) || [];

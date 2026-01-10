@@ -34,38 +34,60 @@
         return timestamp.substring(0, 4);
     }
 
-    // Generate project card HTML
-    function generateProjectCard(imageBase, folder = '3d-printed parts') {
-        const year = getYearFromTimestamp(imageBase);
+    // Generate thumbnail HTML for a single image
+    function generateThumbnail(imageBase, folder = '3d-printed parts') {
         const imagePath = `assets/images/3d-printing/${folder}/${imageBase}`;
         const imageAlt = `3D Printed Part - ${imageBase}`;
 
         return `
-            <div class="bg-card rounded-lg p-6 project-card">
-                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
-                    <img 
-                        src="${imagePath}-400w.jpg" 
-                        srcset="${imagePath}-400w.jpg 400w,
-                                ${imagePath}-800w.jpg 800w,
-                                ${imagePath}-1200w.jpg 1200w"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        alt="${imageAlt}" 
-                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
-                        loading="lazy"
-                        width="800"
-                        height="450"
-                        data-fullsize="${imagePath}-1200w.jpg"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                    >
-                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
-                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
+            <div class="gallery-thumbnail bg-tertiary rounded overflow-hidden relative group cursor-pointer">
+                <img 
+                    src="${imagePath}-400w.jpg" 
+                    srcset="${imagePath}-400w.jpg 400w,
+                            ${imagePath}-800w.jpg 800w"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 200px"
+                    alt="${imageAlt}" 
+                    class="w-full h-full object-cover lazy-image lightbox-image hover:opacity-75 transition-opacity"
+                    loading="lazy"
+                    width="400"
+                    height="300"
+                    data-fullsize="${imagePath}-1200w.jpg"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                >
+                <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
+                    <i data-lucide="image" class="w-8 h-8 text-slate-500"></i>
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+                    <i data-lucide="zoom-in" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                </div>
+            </div>
+        `;
+    }
+
+    // Generate project gallery container with all thumbnails
+    function generateProjectGalleryContainer(imagesArray, projectTitle, folder = '3d-printed parts') {
+        const years = [...new Set(imagesArray.map(img => getYearFromTimestamp(img)))].sort().reverse();
+        const yearTags = years.map(year => `<span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">${year}</span>`).join('');
+        
+        let thumbnailsHTML = '';
+        imagesArray.forEach(imageBase => {
+            thumbnailsHTML += generateThumbnail(imageBase, folder);
+        });
+
+        return `
+            <div class="bg-card rounded-lg p-6 project-gallery-container">
+                <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-2">${projectTitle}</h3>
+                        <p class="text-gray-400 text-sm">${imagesArray.length} ${imagesArray.length === 1 ? 'εικόνα' : 'εικόνες'}</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">PLA</span>
+                        ${yearTags}
                     </div>
                 </div>
-                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.3dPrinting.cardTitle">3D Printed Part</h3>
-                <p class="text-gray-400 text-sm mb-4" data-i18n="pages.3dPrinting.cardDescription"></p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">PLA</span>
-                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">${year}</span>
+                <div class="project-gallery-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+                    ${thumbnailsHTML}
                 </div>
             </div>
         `;
@@ -76,14 +98,15 @@
         const gallery = document.getElementById('3d-printed-parts-gallery');
         if (!gallery) return;
 
-        let cardsHTML = '';
-        printedPartsImages.forEach(imageBase => {
-            cardsHTML += generateProjectCard(imageBase, '3d-printed parts');
-        });
+        const containerHTML = generateProjectGalleryContainer(
+            printedPartsImages, 
+            '3D Printed Parts Collection', 
+            '3d-printed parts'
+        );
 
-        gallery.innerHTML = cardsHTML;
+        gallery.innerHTML = containerHTML;
 
-        // Re-initialize Lucide icons for new cards
+        // Re-initialize Lucide icons for new thumbnails
         setTimeout(() => {
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
@@ -118,15 +141,16 @@
                 placeholder.style.display = 'none';
             }
             
-            // Generate cards for images
-            let cardsHTML = '';
-            printingProjectImages.forEach(imageBase => {
-                cardsHTML += generateProjectCard(imageBase, '3d-printing');
-            });
+            // Generate gallery container
+            const containerHTML = generateProjectGalleryContainer(
+                printingProjectImages, 
+                '3D Printing Project', 
+                '3d-printing'
+            );
             
-            gallery.innerHTML = cardsHTML;
+            gallery.innerHTML = containerHTML;
 
-            // Re-initialize Lucide icons for new cards
+            // Re-initialize Lucide icons for new thumbnails
             setTimeout(() => {
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
@@ -155,15 +179,16 @@
         
         if (!gallery) return;
 
-        // Generate cards for replica images
-        let cardsHTML = '';
-        replicaImages.forEach(imageBase => {
-            cardsHTML += generateProjectCard(imageBase, 'replica');
-        });
+        // Generate gallery container for replica images
+        const containerHTML = generateProjectGalleryContainer(
+            replicaImages, 
+            'Replica Project - Online Games Collection', 
+            'replica'
+        );
 
-        gallery.innerHTML = cardsHTML;
+        gallery.innerHTML = containerHTML;
 
-        // Re-initialize Lucide icons for new cards
+        // Re-initialize Lucide icons for new thumbnails
         setTimeout(() => {
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
