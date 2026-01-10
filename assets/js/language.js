@@ -72,7 +72,7 @@ class LanguageManager {
 
     getStoredLanguage() {
         try {
-            return localStorage.getItem('portfolio_language') || 'el';
+            return localStorage.getItem('portfolio_language') || 'en';
         } catch (e) {
             return 'el';
         }

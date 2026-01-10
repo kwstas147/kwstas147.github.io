@@ -1,0 +1,11 @@
+# Robots.txt for kwstas147.github.io
+# Professional Portfolio - Konstantinos Lathyris
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kwstas147.github.io/sitemap.xml
+
+# Allow all crawlers to index all pages
+# This helps with SEO for job searching

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -426,18 +426,15 @@
                     document.documentElement.setAttribute('data-theme', savedTheme);
                 }
                 
-                // Apply language - respect stored preference
-                const savedLang = localStorage.getItem('portfolio_language');
+                // Apply language - Default to English for international audience
+                const savedLang = localStorage.getItem('portfolio_language') || 'en';
                 if (savedLang === 'el' || savedLang === 'en') {
                     document.documentElement.setAttribute('lang', savedLang);
-                } else {
-                    // Default to 'el' only if no preference is stored
-                    document.documentElement.setAttribute('lang', 'el');
                 }
             } catch(e) {
                 // Fallback to defaults if localStorage fails
                 document.documentElement.setAttribute('data-theme', 'midnight');
-                document.documentElement.setAttribute('lang', 'el');
+                document.documentElement.setAttribute('lang', 'en');
             }
         })();
     </script>

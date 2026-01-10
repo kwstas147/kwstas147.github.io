@@ -319,8 +319,11 @@
     "hero": {
       "title": "Καλώς ήρθατε στο Portfolio μου",
       "name": "Κωνσταντίνος Λαθύρης",
-      "subtitle": "Χειριστής Ασφαλτικών Παρασκευαστηρίων | Χειριστής Μηχανημάτων Έργου",
-      "description": "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών."
+      "subtitle": "Industrial Operations Manager | IoT & Automation Specialist",
+      "description": "25+ χρόνια εμπειρίας που γεφυρώνουν τη βιομηχανική τεχνογνωσία με την ψηφιακή καινοτομία. Εξειδικευμένος στη διαχείριση παραγωγής, IoT, αυτοματισμό και βελτιστοποίηση διαδικασιών.",
+      "openToWork": "Ανοιχτός σε Ευκαιρίες",
+      "viewCV": "Δείτε το CV",
+      "contactMe": "Επικοινωνήστε"
     },
     "professional": {
       "summary": {
@@ -510,6 +513,14 @@
       "activity": "GitHub Activity",
       "activityDescription": "Οι συνεισφορές μου στο GitHub - ένα \"πράσινο\" προφίλ είναι η καλύτερη απόδειξη ότι γράφω κώδικα καθημερινά.",
       "viewProfile": "View Profile"
+    },
+    "contact": {
+      "title": "Ας Συνεργαστούμε",
+      "description": "Ενδιαφέρεστε για συνεργασία ή ευκαιρίες; Είμαι πάντα ανοιχτός σε συζητήσεις για βιομηχανικό αυτοματισμό, IoT projects ή νέες επαγγελματικές προκλήσεις.",
+      "emailMe": "Στείλτε Email",
+      "downloadCV": "Κατεβάστε το CV",
+      "location": "Λαμία, Ελλάδα",
+      "availability": "Ανοιχτός σε μετακόμιση / remote"
     },
     "pageTitleCV": "Curriculum Vitae",
     "btnBackHome": "Επιστροφή στην αρχική",
@@ -834,8 +845,11 @@
     "hero": {
       "title": "Welcome to My Portfolio",
       "name": "Konstantinos Lathyris",
-      "subtitle": "Asphalt Plant Operator | Heavy Equipment Operator",
-      "description": "Experienced technical professional with 25+ years of experience in asphalt plant operations and heavy equipment operation. Specialized in production management, equipment maintenance, and process optimization."
+      "subtitle": "Industrial Operations Manager | IoT & Automation Specialist",
+      "description": "25+ years bridging industrial expertise with digital innovation. Specialized in production management, IoT, automation, and process optimization.",
+      "openToWork": "Open to Opportunities",
+      "viewCV": "View CV",
+      "contactMe": "Contact Me"
     },
     "professional": {
       "summary": {
@@ -1025,6 +1039,14 @@
       "activity": "GitHub Activity",
       "activityDescription": "My GitHub contributions - a 'green' profile is the best proof that I write code daily.",
       "viewProfile": "View Profile"
+    },
+    "contact": {
+      "title": "Let's Work Together",
+      "description": "Interested in collaboration or opportunities? I'm always open to discussing industrial automation, IoT projects, or new career challenges.",
+      "emailMe": "Email Me",
+      "downloadCV": "Download CV",
+      "location": "Lamia, Greece",
+      "availability": "Open to relocation / remote"
     },
     "pageTitleCV": "Curriculum Vitae",
     "btnBackHome": "Back to Home",
