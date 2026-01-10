@@ -2,6 +2,7 @@
   "el": {
     "nav": {
       "home": "Αρχική",
+      "menu": "Μενού",
       "3dPrinting": "3D Printing",
       "design": "Σχεδιασμός",
       "programming": "Development",
@@ -485,6 +486,7 @@
   "en": {
     "nav": {
       "home": "Home",
+      "menu": "Menu",
       "3dPrinting": "3D Printing",
       "design": "Design",
       "programming": "Development",

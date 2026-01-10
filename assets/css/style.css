@@ -1859,3 +1859,227 @@ html[data-theme="clean-office"] .nav-link:hover {
     }
 }
 
+/* ============================================
+   MOBILE NAVIGATION MENU
+   ============================================ */
+
+/* Hamburger Menu Button (visible only on mobile) */
+#mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: all 0.3s ease-in-out;
+    width: 40px;
+    height: 40px;
+    border-radius: 0.375rem;
+}
+
+#mobile-menu-toggle:hover {
+    background-color: var(--bg-tertiary);
+    transform: scale(1.05);
+}
+
+#mobile-menu-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Desktop: Hide hamburger button */
+@media (min-width: 768px) {
+    #mobile-menu-toggle {
+        display: none !important;
+    }
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Menu Panel */
+.mobile-menu-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    max-width: 85vw;
+    background-color: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-overlay.active .mobile-menu-panel {
+    transform: translateX(0);
+}
+
+/* Mobile Menu Header */
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-menu-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Mobile Menu Close Button */
+#mobile-menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#mobile-menu-close:hover {
+    background-color: var(--bg-tertiary);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: rotate(90deg);
+}
+
+/* Mobile Navigation Links */
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    flex: 1;
+}
+
+.mobile-nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    border-left: 3px solid transparent;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mobile-nav-links a:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
+    padding-left: 1.75rem;
+}
+
+.mobile-nav-links a.active {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* Theme-specific adjustments for mobile menu */
+html[data-theme="clean-office"] .mobile-menu-overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="clean-office"] .mobile-menu-panel {
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+html[data-theme="clean-office"] .mobile-nav-links a.active {
+    background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* Desktop: Hide mobile menu overlay */
+@media (min-width: 768px) {
+    .mobile-menu-overlay {
+        display: none !important;
+    }
+    
+    .mobile-menu-panel {
+        display: none !important;
+    }
+}
+
+/* Prevent body scroll when menu is open */
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+/* Animation for menu items */
+.mobile-nav-links a {
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: slideInMenuItem 0.3s ease-out forwards;
+}
+
+.mobile-nav-links a:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.mobile-nav-links a:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.mobile-nav-links a:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.mobile-nav-links a:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.mobile-nav-links a:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+@keyframes slideInMenuItem {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Reset animations when menu closes */
+.mobile-menu-overlay:not(.active) .mobile-nav-links a {
+    animation: none;
+    opacity: 1;
+    transform: translateX(0);
+}
+

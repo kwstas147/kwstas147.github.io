@@ -53,6 +53,10 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-4">
+                    <!-- Hamburger Menu Button (mobile only) -->
+                    <button id="mobile-menu-toggle" class="md:hidden" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
                     <div class="theme-switcher">
                         <button data-theme="midnight" class="active" title="Midnight">🌙</button>
                         <button data-theme="clean-office" title="Clean Office">☀️</button>
@@ -65,6 +69,25 @@
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+        <div id="mobile-menu-panel" class="mobile-menu-panel">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-title" data-i18n="nav.menu">Menu</span>
+                <button id="mobile-menu-close" aria-label="Close mobile menu">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="index.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="index" data-i18n="nav.home"></a>
+                <a href="3d-printing.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="3d-printing" data-i18n="nav.3dPrinting">3D Printing</a>
+                <a href="design.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="design" data-i18n="nav.design"></a>
+                <a href="programming.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="programming" data-i18n="nav.programming">Development</a>
+                <a href="cv.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="cv" data-i18n="nav.cv"></a>
+            </nav>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="container mx-auto px-4 py-20 text-center">
