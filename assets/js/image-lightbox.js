@@ -253,11 +253,14 @@
         // Attach click handlers to all lightbox images
         const lightboxImages = document.querySelectorAll('.lightbox-image');
         lightboxImages.forEach((img) => {
-            img.addEventListener('click', function(e) {
-                e.stopPropagation();
-                // Open lightbox with the clicked image element
-                openLightbox(img);
-            });
+            if (!img.dataset.lightboxInitialized) {
+                img.dataset.lightboxInitialized = 'true';
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    // Open lightbox with the clicked image element
+                    openLightbox(img);
+                });
+            }
         });
 
         // Close button
@@ -412,6 +415,19 @@
     window.reinitLightbox = function() {
         collectImages();
         updateNavigationArrows();
+        
+        // Re-attach click handlers to all lightbox images (including new ones)
+        const lightboxImages = document.querySelectorAll('.lightbox-image');
+        lightboxImages.forEach((img) => {
+            // Check if already has listener by checking for a data attribute
+            if (!img.dataset.lightboxInitialized) {
+                img.dataset.lightboxInitialized = 'true';
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openLightbox(img);
+                });
+            }
+        });
     };
 
 })();

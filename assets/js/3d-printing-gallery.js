@@ -136,19 +136,18 @@
         gallery.innerHTML = '';
         gallery.appendChild(gridContainer);
 
-        // Re-initialize Lucide icons for new cards
-        setTimeout(() => {
+        // Re-initialize after DOM update - using requestAnimationFrame for proper timing
+        requestAnimationFrame(() => {
+            // Re-initialize Lucide icons for new cards
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
-        }, 100);
-
-        // Re-initialize lightbox for new images
-        setTimeout(() => {
+            
+            // Re-initialize lightbox for new images
             if (typeof window.reinitLightbox === 'function') {
                 window.reinitLightbox();
             }
-        }, 200);
+        });
     }
 
     // Check for 3D Printing Project images (from 3d-printing folder)
@@ -188,19 +187,18 @@
             gallery.innerHTML = '';
             gallery.appendChild(gridContainer);
 
-            // Re-initialize Lucide icons for new cards
-            setTimeout(() => {
+            // Re-initialize after DOM update - using requestAnimationFrame for proper timing
+            requestAnimationFrame(() => {
+                // Re-initialize Lucide icons for new cards
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
                 }
-            }, 100);
-
-            // Re-initialize lightbox for new images
-            setTimeout(() => {
+                
+                // Re-initialize lightbox for new images
                 if (typeof window.reinitLightbox === 'function') {
                     window.reinitLightbox();
                 }
-            }, 200);
+            });
         } else {
             // Show placeholder if no images exist
             if (placeholder) {
@@ -234,19 +232,18 @@
         gallery.innerHTML = '';
         gallery.appendChild(gridContainer);
 
-        // Re-initialize Lucide icons for new cards
-        setTimeout(() => {
+        // Re-initialize after DOM update - using requestAnimationFrame for proper timing
+        requestAnimationFrame(() => {
+            // Re-initialize Lucide icons for new cards
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
-        }, 100);
-
-        // Re-initialize lightbox for new images
-        setTimeout(() => {
+            
+            // Re-initialize lightbox for new images
             if (typeof window.reinitLightbox === 'function') {
                 window.reinitLightbox();
             }
-        }, 200);
+        });
     }
 
     // Initialize galleries when DOM is ready
