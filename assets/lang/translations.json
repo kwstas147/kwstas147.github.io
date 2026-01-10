@@ -503,7 +503,7 @@
     },
     "aiCAD": {
       "title": "Σχεδιασμός CAD με Υποβοήθηση AI",
-      "description": "Χρησιμοποιώ AI-assisted design tools για optimization, parametric design και functional analysis. Η τεχνητή νοημοσύνη βοηθάει στον σχεδιασμό εξαρτημάτων που δεν είναι μόνο αισθητικά ελκυστικά αλλά και λειτουργικά αποτελεσματικά, με focus στη δημιουργία functional parts για καθημερινή χρήση."
+      "description": "Μετά το eLearning στο ΕΚΠΑ με εισαγωγή σε βασική σχεδίαση στο Autodesk Inventor, ξεκίνησα το ταξίδι μου στον σχεδιασμό. Από τα πρώτα βήματα στο Inventor μέχρι σήμερα, η εξέλιξη έχει οδηγήσει στη χρήση AI-assisted design tools για optimization, parametric design και functional analysis. Η τεχνητή νοημοσύνη βοηθάει στον σχεδιασμό εξαρτημάτων που δεν είναι μόνο αισθητικά ελκυστικά αλλά και λειτουργικά αποτελεσματικά, με focus στη δημιουργία functional parts για καθημερινή χρήση."
     },
     "placeholders": {
       "projects": "Projects θα προστεθούν σύντομα...",
@@ -967,7 +967,7 @@
     },
     "aiCAD": {
       "title": "AI-Assisted CAD Design",
-      "description": "I use AI-assisted design tools for optimization, parametric design and functional analysis. Artificial intelligence helps in designing components that are not only aesthetically appealing but also functionally efficient, with focus on creating functional parts for everyday use."
+      "description": "After eLearning at NKUA with an introduction to basic design in Autodesk Inventor, I began my journey in design. From my first steps in Inventor to today, this evolution has led to the use of AI-assisted design tools for optimization, parametric design and functional analysis. Artificial intelligence helps in designing components that are not only aesthetically appealing but also functionally efficient, with focus on creating functional parts for everyday use."
     },
     "buttons": {
       "viewMore": "View More",
