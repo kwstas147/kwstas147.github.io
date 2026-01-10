@@ -94,6 +94,33 @@
                 word-wrap: break-word !important;
                 overflow-wrap: break-word !important;
             }
+            /* Tech project cards - comprehensive word wrapping */
+            .tech-project-card,
+            .tech-project-card *,
+            .tech-project-card p,
+            .tech-project-card h3 {
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+                word-break: break-word !important;
+                box-sizing: border-box !important;
+                max-width: 100% !important;
+            }
+            /* Contact info and sidebar */
+            .contact-info div,
+            .sidebar div,
+            .sidebar span {
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+                word-break: break-word !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            /* Grid container */
+            .tech-projects-grid {
+                box-sizing: border-box !important;
+                max-width: 100% !important;
+                overflow: hidden !important;
+            }
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'DejaVu Sans', sans-serif;
@@ -154,10 +181,16 @@
             margin-bottom: 20px;
             font-size: 14px;
             page-break-inside: avoid;
+            box-sizing: border-box;
+            max-width: 100%;
         }
         .contact-info div {
             flex: 1 1 auto;
             min-width: 200px;
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
         .job-entry {
             margin-bottom: 20px;
@@ -329,6 +362,9 @@
             gap: 15px;
             margin-bottom: 20px;
             width: 100%;
+            box-sizing: border-box;
+            max-width: 100%;
+            overflow: hidden;
         }
         @media print {
             .tech-projects-grid {
@@ -348,6 +384,11 @@
             display: flex;
             flex-direction: column;
             page-break-inside: avoid;
+            box-sizing: border-box;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            overflow: hidden;
         }
         .tech-project-card-icon {
             text-align: center;
@@ -359,12 +400,20 @@
             font-weight: bold;
             color: #1e293b;
             margin-bottom: 8px;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         .tech-project-card p {
             font-size: 13px;
             line-height: 1.6;
             color: #4b5563;
             flex-grow: 1;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         /* Education border styling */
         .education-border {
@@ -979,11 +1028,69 @@
                                     badge.style.border = '1px solid #000000';
                                 });
                                 
-                                // ATS-Friendly: Tech project cards - white background
+                                // ATS-Friendly: Tech project cards - white background and word wrapping
                                 const techCards = clonedElement.querySelectorAll('.tech-project-card');
                                 techCards.forEach(card => {
                                     card.style.backgroundColor = '#ffffff';
                                     card.style.border = '1px solid #000000';
+                                    card.style.boxSizing = 'border-box';
+                                    card.style.maxWidth = '100%';
+                                    card.style.overflowWrap = 'break-word';
+                                    card.style.wordBreak = 'break-word';
+                                    card.style.overflow = 'hidden';
+                                    
+                                    // Apply word wrapping to all children elements
+                                    const cardChildren = card.querySelectorAll('*');
+                                    cardChildren.forEach(child => {
+                                        child.style.wordWrap = 'break-word';
+                                        child.style.overflowWrap = 'break-word';
+                                        child.style.wordBreak = 'break-word';
+                                        child.style.boxSizing = 'border-box';
+                                        child.style.maxWidth = '100%';
+                                    });
+                                    
+                                    // Specifically target paragraphs and headings
+                                    const cardParagraphs = card.querySelectorAll('p');
+                                    cardParagraphs.forEach(p => {
+                                        p.style.overflowWrap = 'break-word';
+                                        p.style.wordBreak = 'break-word';
+                                        p.style.maxWidth = '100%';
+                                        p.style.boxSizing = 'border-box';
+                                    });
+                                    
+                                    const cardHeadings = card.querySelectorAll('h3');
+                                    cardHeadings.forEach(h3 => {
+                                        h3.style.overflowWrap = 'break-word';
+                                        h3.style.wordBreak = 'break-word';
+                                        h3.style.maxWidth = '100%';
+                                        h3.style.boxSizing = 'border-box';
+                                    });
+                                });
+                                
+                                // Word wrapping for tech-projects-grid container
+                                const techProjectsGrid = clonedElement.querySelectorAll('.tech-projects-grid');
+                                techProjectsGrid.forEach(grid => {
+                                    grid.style.boxSizing = 'border-box';
+                                    grid.style.maxWidth = '100%';
+                                    grid.style.overflow = 'hidden';
+                                });
+                                
+                                // Word wrapping for contact-info divs
+                                const contactInfoDivs = clonedElement.querySelectorAll('.contact-info div');
+                                contactInfoDivs.forEach(div => {
+                                    div.style.maxWidth = '100%';
+                                    div.style.boxSizing = 'border-box';
+                                    div.style.overflowWrap = 'break-word';
+                                    div.style.wordBreak = 'break-word';
+                                    div.style.wordWrap = 'break-word';
+                                    
+                                    // Apply to all children (spans, etc.)
+                                    const contactChildren = div.querySelectorAll('*');
+                                    contactChildren.forEach(child => {
+                                        child.style.overflowWrap = 'break-word';
+                                        child.style.wordBreak = 'break-word';
+                                        child.style.maxWidth = '100%';
+                                    });
                                 });
                                 
                                 // ATS-Friendly: Timeline elements - dark for visibility
@@ -1007,12 +1114,30 @@
                                     clonedSidebar.style.wordWrap = 'break-word';
                                     clonedSidebar.style.overflowWrap = 'break-word';
                                     clonedSidebar.style.wordBreak = 'break-word';
+                                    clonedSidebar.style.boxSizing = 'border-box';
+                                    clonedSidebar.style.maxWidth = '100%';
                                     // Apply to all children
                                     const sidebarChildren = clonedSidebar.querySelectorAll('*');
                                     sidebarChildren.forEach(child => {
                                         child.style.wordWrap = 'break-word';
                                         child.style.overflowWrap = 'break-word';
                                         child.style.wordBreak = 'break-word';
+                                        child.style.boxSizing = 'border-box';
+                                        child.style.maxWidth = '100%';
+                                    });
+                                    // Specifically target divs and spans in sidebar (for contact info)
+                                    const sidebarDivs = clonedSidebar.querySelectorAll('div');
+                                    sidebarDivs.forEach(div => {
+                                        div.style.maxWidth = '100%';
+                                        div.style.boxSizing = 'border-box';
+                                        div.style.overflowWrap = 'break-word';
+                                        div.style.wordBreak = 'break-word';
+                                    });
+                                    const sidebarSpans = clonedSidebar.querySelectorAll('span');
+                                    sidebarSpans.forEach(span => {
+                                        span.style.maxWidth = '100%';
+                                        span.style.overflowWrap = 'break-word';
+                                        span.style.wordBreak = 'break-word';
                                     });
                                 }
                                 
