@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-gallery-builder",
+  "version": "1.0.0",
+  "description": "Build script for generating gallery image lists",
+  "scripts": {
+    "build-gallery": "node build-gallery.js"
+  },
+  "keywords": ["gallery", "images", "build"],
+  "author": "",
+  "license": "ISC"
+}

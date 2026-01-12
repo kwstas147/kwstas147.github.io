@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": "3d-printed-parts",
+      "folder": "3d-printed parts",
+      "enabled": true,
+      "designProject": null
+    },
+    {
+      "id": "replica",
+      "folder": "replica",
+      "enabled": true,
+      "designProject": null
+    },
+    {
+      "id": "nkua-project",
+      "folder": "nkua-project",
+      "enabled": false,
+      "designProject": "design.project6"
+    },
+    {
+      "id": "ice-cream-machine",
+      "folder": "ice-cream-machine",
+      "enabled": false,
+      "designProject": "design.project7"
+    },
+    {
+      "id": "3d-printing",
+      "folder": "3d-printing",
+      "enabled": false,
+      "designProject": null
+    }
+  ]
+}

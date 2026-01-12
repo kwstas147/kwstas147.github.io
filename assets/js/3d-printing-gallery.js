@@ -1,25 +1,39 @@
 // 3D Printing Gallery - Dynamic Project Cards Generation
+// Images are loaded dynamically from gallery-images.json
 (function() {
     'use strict';
 
-    // 3D-Printed Parts images - all unique timestamps
-    const printedPartsImages = [
-        '120260110-232431', '120260110-232453', '20220307-184742', '20220307-184857', '20220307-185336',
-        '20220307-185743', '20220307-185801', '20220307-185810', '20220307-185843', '20220307-185934',
-        '20220307-185957', '20220307-190026', '20220307-190049', '20220307-190215', '20220307-190251',
-        '20220307-190316', '20220307-190415', '20220307-190431', '20220307-190451', '20220307-190510',
-        '20220307-190649', '20220307-190802', '20220307-190903', '20220307-190908', '20220307-191052',
-        '20220307-191104', '20220307-191112', '20220307-191255', '20220307-191349', '20220307-191422',
-        '20220307-191430', '20220307-191557', '20220307-193015', '20220307-193029', '20220307-193109',
-        '20220307-193126', '20220307-193132', '20220307-193149', '20220307-193156', '20220307-193343',
-        '20220307-193451', '20220307-193538', '20220307-193546', '20220307-194216', '20220307-194257',
-        '20220307-194308', '20220307-194444', '20220307-194954', '20260109-234443', '20260110-084049'
-    ];
+    // Gallery data loaded from JSON
+    let galleryData = null;
 
-    // Replica Project images - bomb thrower replica from online games (3 images)
-    const replicaImages = [
-        '20260110-144135', '20260110-144155', '20260110-144235'
-    ];
+    /**
+     * Load gallery images from JSON file
+     * @returns {Promise<Object>} Gallery data object
+     */
+    async function loadGalleryData() {
+        if (galleryData) {
+            return galleryData;
+        }
+
+        try {
+            const response = await fetch('assets/data/gallery-images.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            galleryData = await response.json();
+            return galleryData;
+        } catch (error) {
+            console.error('Error loading gallery data:', error);
+            // Fallback to empty data structure
+            return {
+                galleries: {
+                    '3d-printed parts': [],
+                    'replica': [],
+                    '3d-printing': []
+                }
+            };
+        }
+    }
 
     // Extract year from timestamp (YYYYMMDD format)
     function getYearFromTimestamp(timestamp) {
@@ -125,9 +139,19 @@
     }
 
     // Populate 3D-Printed Parts Gallery
-    function populatePrintedPartsGallery() {
+    async function populatePrintedPartsGallery() {
         const gallery = document.getElementById('3d-printed-parts-gallery');
         if (!gallery) return;
+
+        const data = await loadGalleryData();
+        // Support both new projects structure and legacy galleries
+        const printedPartsImages = data.projects?.['3d-printed-parts']?.images || 
+                                   data.galleries?.['3d-printed parts'] || [];
+
+        if (printedPartsImages.length === 0) {
+            gallery.innerHTML = '<p class="text-gray-400 text-center">No images found. Run <code>npm run build-gallery</code> to scan for images.</p>';
+            return;
+        }
 
         // Create grid container for project cards
         const gridContainer = document.createElement('div');
@@ -166,18 +190,17 @@
     }
 
     // Check for 3D Printing Project images (from 3d-printing folder)
-    function populate3DPrintingProjectGallery() {
+    async function populate3DPrintingProjectGallery() {
         const gallery = document.getElementById('3d-printing-project-gallery');
         const placeholder = document.getElementById('3d-printing-placeholder');
         const section = document.getElementById('3d-printing-project-section');
         
         if (!gallery) return;
 
-        // For now, show placeholder since folder doesn't exist
-        // In the future, this can be populated dynamically if images are added
-        // If images exist, you can uncomment and populate this array:
-        // const printingProjectImages = ['timestamp1', 'timestamp2', ...];
-        const printingProjectImages = [];
+        const data = await loadGalleryData();
+        // Support both new projects structure and legacy galleries
+        const printingProjectImages = data.projects?.['3d-printing']?.images || 
+                                     data.galleries?.['3d-printing'] || [];
         
         if (printingProjectImages.length > 0) {
             // Hide placeholder if images exist
@@ -225,10 +248,19 @@
     }
 
     // Populate Replica Gallery (bomb thrower replica from online games)
-    function populateReplicaGallery() {
+    async function populateReplicaGallery() {
         const gallery = document.getElementById('replica-gallery');
         
         if (!gallery) return;
+
+        const data = await loadGalleryData();
+        // Support both new projects structure and legacy galleries
+        const replicaImages = data.projects?.['replica']?.images || 
+                             data.galleries?.['replica'] || [];
+
+        if (replicaImages.length === 0) {
+            return; // Don't show anything if no images
+        }
 
         // Create grid container for project cards
         const gridContainer = document.createElement('div');
@@ -267,17 +299,19 @@
     }
 
     // Initialize galleries when DOM is ready
-    function init() {
+    async function init() {
+        const initGalleries = async () => {
+            await Promise.all([
+                populatePrintedPartsGallery(),
+                populate3DPrintingProjectGallery(),
+                populateReplicaGallery()
+            ]);
+        };
+
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                populatePrintedPartsGallery();
-                populate3DPrintingProjectGallery();
-                populateReplicaGallery();
-            });
+            document.addEventListener('DOMContentLoaded', initGalleries);
         } else {
-            populatePrintedPartsGallery();
-            populate3DPrintingProjectGallery();
-            populateReplicaGallery();
+            initGalleries();
         }
     }
 
