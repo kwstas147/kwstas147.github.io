@@ -234,7 +234,7 @@
           "driving": {
             "label": "Άδειες Οδήγησης",
             "types": "A, B, C, D",
-            "note": "(Πλήρης κάλυψη οχημάτων και μηχανημάτων)"
+            "note": "(Επαγγελματική άδεια οδήγησης)"
           },
           "machineOperator": {
             "label": "Άδεια Χειριστή Μηχανημάτων Έργου",
@@ -311,7 +311,7 @@
     "cvLangEnglishLevel": "Επίπεδο B2",
     "cvLicenses": "Άδειες Οδήγησης",
     "cvLicensesTypes": "A, B, C, D",
-    "cvLicensesNote": "(Πλήρης κάλυψη οχημάτων και μηχανημάτων)",
+    "cvLicensesNote": "(Επαγγελματική άδεια οδήγησης)",
     "cvMachineOperatorLicense": "Άδεια Χειριστή Μηχανημάτων Έργου",
     "cvMachineOperatorSpecialties": "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β",
     "heroTitle": "Καλώς ήρθατε στο Portfolio μου",
@@ -767,7 +767,7 @@
           "driving": {
             "label": "Driving Licenses",
             "types": "A, B, C, D",
-            "note": "(Full coverage for vehicles and machinery)"
+            "note": "(Professional driving license)"
           },
           "machineOperator": {
             "label": "Heavy Equipment Operator License",
@@ -844,7 +844,7 @@
     "cvLangEnglishLevel": "Level B2",
     "cvLicenses": "Driving Licenses",
     "cvLicensesTypes": "A, B, C, D",
-    "cvLicensesNote": "(Full coverage for vehicles and machinery)",
+    "cvLicensesNote": "(Professional driving license)",
     "cvMachineOperatorLicense": "Heavy Equipment Operator License",
     "cvMachineOperatorSpecialties": "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β",
     "hero": {

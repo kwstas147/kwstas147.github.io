@@ -169,7 +169,7 @@ const translations = {
         cvLangEnglishLevel: "Επίπεδο B2",
         cvLicenses: "Άδειες Οδήγησης",
         cvLicensesTypes: "A, B, C, D",
-        cvLicensesNote: "(Πλήρης κάλυψη οχημάτων και μηχανημάτων)",
+        cvLicensesNote: "(Επαγγελματική άδεια οδήγησης)",
         cvMachineOperatorLicense: "Άδεια Χειριστή Μηχανημάτων Έργου",
         cvMachineOperatorSpecialties: "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β",
         
@@ -539,7 +539,7 @@ const translations = {
         cvLangEnglishLevel: "Level B2",
         cvLicenses: "Driving Licenses",
         cvLicensesTypes: "A, B, C, D",
-        cvLicensesNote: "(Full coverage for vehicles and machinery)",
+        cvLicensesNote: "(Professional driving license)",
         cvMachineOperatorLicense: "Heavy Equipment Operator License",
         cvMachineOperatorSpecialties: "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β",
         
