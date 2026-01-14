@@ -1526,7 +1526,8 @@ button:hover [data-lucide],
 
 .project-card:hover,
 .category-card:hover {
-    transform: translateY(-5px) rotateX(2deg) rotateY(-2deg);
+    /* Keep a subtle lift on hover but remove 3D tilt */
+    transform: translateY(-5px);
 }
 
 /* For cards that will use JavaScript tilt effect */

@@ -6,12 +6,18 @@
 (function() {
     'use strict';
 
-    // Check if user prefers reduced motion or is on mobile
+    // Tilt effect is globally disabled because it was
+    // considered distracting / annoying in the UI.
+    // We keep this early return so the rest of the script
+    // never runs, but we don't have to touch the HTML.
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-    if (prefersReducedMotion || isMobile) {
-        return; // Skip on mobile and for users who prefer reduced motion
+    // Always return here to fully disable the effect everywhere.
+    // (The previous condition for reduced motion / mobile remains,
+    // but this unconditional return means no cards will tilt.)
+    if (true || prefersReducedMotion || isMobile) {
+        return;
     }
 
     class CardTilt {
