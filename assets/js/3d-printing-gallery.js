@@ -189,64 +189,6 @@
         });
     }
 
-    // Check for 3D Printing Project images (from 3d-printing folder)
-    async function populate3DPrintingProjectGallery() {
-        const gallery = document.getElementById('3d-printing-project-gallery');
-        const placeholder = document.getElementById('3d-printing-placeholder');
-        const section = document.getElementById('3d-printing-project-section');
-        
-        if (!gallery) return;
-
-        const data = await loadGalleryData();
-        // Support both new projects structure and legacy galleries
-        const printingProjectImages = data.projects?.['3d-printing']?.images || 
-                                     data.galleries?.['3d-printing'] || [];
-        
-        if (printingProjectImages.length > 0) {
-            // Hide placeholder if images exist
-            if (placeholder) {
-                placeholder.style.display = 'none';
-            }
-            
-            // Create grid container for project cards
-            const gridContainer = document.createElement('div');
-            gridContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
-            
-            // Generate project card with appropriate grid layout
-            const cardHTML = generateProjectCard(
-                printingProjectImages, 
-                '3D Printing Project',
-                'Custom 3D printing projects',
-                '3d-printing',
-                '3x2'
-            );
-            
-            gridContainer.innerHTML = cardHTML;
-            gallery.innerHTML = '';
-            gallery.appendChild(gridContainer);
-
-            // Re-initialize after DOM update - using requestAnimationFrame for proper timing
-            requestAnimationFrame(() => {
-                // Re-initialize Lucide icons for new cards
-                if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
-                }
-                
-                // Re-initialize lightbox for new images
-                if (typeof window.reinitLightbox === 'function') {
-                    window.reinitLightbox();
-                }
-            });
-        } else {
-            // Show placeholder if no images exist
-            if (placeholder) {
-                placeholder.style.display = 'block';
-            }
-            // Optionally hide the section entirely if you prefer:
-            // if (section) section.style.display = 'none';
-        }
-    }
-
     // Populate Replica Gallery (bomb thrower replica from online games)
     async function populateReplicaGallery() {
         const gallery = document.getElementById('replica-gallery');
@@ -303,7 +245,6 @@
         const initGalleries = async () => {
             await Promise.all([
                 populatePrintedPartsGallery(),
-                populate3DPrintingProjectGallery(),
                 populateReplicaGallery()
             ]);
         };
