@@ -507,7 +507,7 @@
       }
     },
     "aiCAD": {
-      "title": "Σχεδιασμός CAD με Υποβοήθηση AI",
+      "title": "Σχεδιασμός CAD",
       "description": "Μετά το eLearning στο ΕΚΠΑ με εισαγωγή σε βασική σχεδίαση στο Autodesk Inventor, ξεκίνησα το ταξίδι μου στον σχεδιασμό. Το Product Design & 3D Printing Specialization (2021) στο ΕΚΠΑ με έφερε σε άμεση επαφή με το Fusion 360 και τον πλήρη κύκλο του design workflow. Από τα πρώτα βήματα στο Inventor, η εξέλιξη έχει οδηγήσει σε προχωρημένες τεχνικές σχεδιασμού με parametric modeling, functional analysis και material optimization. Ο σχεδιασμός μηχανικών εξαρτημάτων και συστημάτων συνδυάζεται πλέον με τον πλήρη 3D printing workflow, με focus στη δημιουργία functional parts που βελτιώνουν την καθημερινή εργασία και προσφέρουν πρακτικές λύσεις."
     },
     "placeholders": {
@@ -976,7 +976,7 @@
       }
     },
     "aiCAD": {
-      "title": "AI-Assisted CAD Design",
+      "title": "CAD Design",
       "description": "After eLearning at NKUA with an introduction to basic design in Autodesk Inventor, I began my journey in design. The Product Design & 3D Printing Specialization (2021) at NKUA brought me into direct contact with Fusion 360 and the complete design workflow. From my first steps in Inventor, this evolution has led to advanced design techniques with parametric modeling, functional analysis and material optimization. Designing mechanical components and systems is now combined with the complete 3D printing workflow, with focus on creating functional parts that improve daily work and provide practical solutions."
     },
     "buttons": {
