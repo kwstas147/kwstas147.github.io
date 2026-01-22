@@ -474,6 +474,18 @@
           "pdfToMp3": {
             "title": "PDF to MP3 Converter",
             "description": "Python desktop εφαρμογή που μετατρέπει PDF αρχεία σε MP3 audio files, επιτρέποντας την ακουστική κατανάλωση περιεχομένου κατά τη διάρκεια άλλων δραστηριοτήτων όπως γυμναστική, τρέξιμο, ή καθημερινές εργασίες. Αναπτύχθηκε από ανάγκη και προσωπική ικανοποίηση για να βελτιώσει την αποδοτικότητα μάθησης και να αξιοποιήσει καλύτερα τον διαθέσιμο χρόνο. Ιδανική για continuous learning και multitasking."
+          },
+          "smartHomeDashboard": {
+            "title": "Κεντρικό Dashboard",
+            "description": "Ενοποιημένο dashboard Home Assistant για παρακολούθηση συσκευών, σκηνών και κατάστασης του smart home. Κεντρικό σημείο ελέγχου με οπτική επισκόπηση όλων των ενσωματώσεων, κατάστασης φωτισμού, κλιματισμού και συσκευών σε πραγματικό χρόνο."
+          },
+          "smartHomeAutomations": {
+            "title": "Αυτοματισμοί και Σκηνικά",
+            "description": "Ρουτίνες και automation flows για φωτισμό, θέρμανση και συσκευές. Ορισμός σκηνικών (scenes) και triggers με βάση ώρα, αισθητήρες ή χειροκίνητο πάτημα. Βελτιστοποίηση καθημερινής λειτουργίας μέσω YAML και visual editor του Home Assistant."
+          },
+          "smartHomeIntegrations": {
+            "title": "Ενσωματώσεις και Monitoring",
+            "description": "Ενσωματώσεις συσκευών IoT και παρακολούθηση ενεργείας ή κατάστασης. Διαχείριση integrations από διαφορετικούς vendors, energy monitoring και ιστορικό δεδομένων. Ιδανικό για επεκτασιμότητα και κεντρική διαχείριση ολόκληρου του ecosystem."
           }
         }
       }
@@ -1053,6 +1065,18 @@
           "pdfToMp3": {
             "title": "PDF to MP3 Converter",
             "description": "Python desktop application that converts PDF files to MP3 audio files, enabling audio consumption of content during other activities such as exercise, running, or daily tasks. Developed out of necessity and personal satisfaction to improve learning efficiency and better utilize available time. Ideal for continuous learning and multitasking."
+          },
+          "smartHomeDashboard": {
+            "title": "Central Dashboard",
+            "description": "Unified Home Assistant dashboard for monitoring devices, scenes, and smart home status. Central control point with visual overview of all integrations, lighting, climate, and device states in real time."
+          },
+          "smartHomeAutomations": {
+            "title": "Automations and Scenes",
+            "description": "Routines and automation flows for lighting, heating, and devices. Definition of scenes and triggers based on time, sensors, or manual input. Optimization of daily operation via Home Assistant YAML and visual editor."
+          },
+          "smartHomeIntegrations": {
+            "title": "Integrations and Monitoring",
+            "description": "IoT device integrations and energy or status monitoring. Management of integrations from multiple vendors, energy monitoring, and historical data. Ideal for extensibility and central management of the entire ecosystem."
           }
         }
       }

@@ -692,12 +692,82 @@ sensor:
             </h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Smart Home 1: Dashboard (κύρια οθόνη Home: Favorites, Areas, Summaries) -->
             <div class="bg-card rounded-lg p-6 project-card">
-                <div class="aspect-video bg-tertiary rounded mb-4 flex items-center justify-center">
-                    <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
+                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
+                    <img 
+                        src="assets/images/development/Smart Home/smarthome2.png" 
+                        alt="Κεντρικό dashboard Home Assistant για smart home" 
+                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
+                        loading="lazy"
+                        width="800"
+                        height="450"
+                        data-fullsize="assets/images/development/Smart Home/smarthome2.png"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    >
+                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
+                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.programming.projects.smartSetup.title">Smart Setup</h3>
-                <p class="text-gray-400 text-sm mb-4" data-i18n="placeholders.description">Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.</p>
+                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.programming.projects.smartHomeDashboard.title">Κεντρικό Dashboard</h3>
+                <p class="text-gray-400 text-sm mb-4" data-i18n="pages.programming.projects.smartHomeDashboard.description"></p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Home Assistant</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Dashboard</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">IoT</span>
+                </div>
+            </div>
+
+            <!-- Smart Home 2: Automations -->
+            <div class="bg-card rounded-lg p-6 project-card">
+                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
+                    <img 
+                        src="assets/images/development/Smart Home/smarthome1.png" 
+                        alt="Αυτοματισμοί και σκηνικά Home Assistant" 
+                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
+                        loading="lazy"
+                        width="800"
+                        height="450"
+                        data-fullsize="assets/images/development/Smart Home/smarthome1.png"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    >
+                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
+                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.programming.projects.smartHomeAutomations.title">Αυτοματισμοί και Σκηνικά</h3>
+                <p class="text-gray-400 text-sm mb-4" data-i18n="pages.programming.projects.smartHomeAutomations.description"></p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Home Assistant</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Automation</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">IoT</span>
+                </div>
+            </div>
+
+            <!-- Smart Home 3: Integrations (οθόνη Devices: πλέγμα συσκευών) -->
+            <div class="bg-card rounded-lg p-6 project-card">
+                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
+                    <img 
+                        src="assets/images/development/Smart Home/smarthome.png" 
+                        alt="Ενσωματώσεις και monitoring συσκευών IoT" 
+                        class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
+                        loading="lazy"
+                        width="800"
+                        height="450"
+                        data-fullsize="assets/images/development/Smart Home/smarthome.png"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    >
+                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center" style="display: none;">
+                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.programming.projects.smartHomeIntegrations.title">Ενσωματώσεις και Monitoring</h3>
+                <p class="text-gray-400 text-sm mb-4" data-i18n="pages.programming.projects.smartHomeIntegrations.description"></p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Home Assistant</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">IoT</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Monitoring</span>
+                </div>
             </div>
         </div>
     </section>
