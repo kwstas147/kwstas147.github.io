@@ -560,12 +560,78 @@ namespace MyApp
             </h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Solar Water Heater Temperature Monitoring Project -->
             <div class="bg-card rounded-lg p-6 project-card">
-                <div class="aspect-video bg-tertiary rounded mb-4 flex items-center justify-center">
-                    <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
+                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
+                    <!-- Image Gallery Grid (2x2) -->
+                    <div class="grid grid-cols-2 gap-1 w-full h-full">
+                        <div class="relative overflow-hidden">
+                            <img 
+                                src="assets/images/development/ESPHome/04-800w.jpg" 
+                                srcset="assets/images/development/ESPHome/04-400w.jpg 400w,
+                                        assets/images/development/ESPHome/04-800w.jpg 800w,
+                                        assets/images/development/ESPHome/04-1200w.jpg 1200w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="ESP32 Solar Water Heater Monitoring - Image 1" 
+                                class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
+                                loading="lazy"
+                                data-fullsize="assets/images/development/ESPHome/04-1200w.jpg"
+                                onerror="this.style.display='none';"
+                            >
+                        </div>
+                        <div class="relative overflow-hidden">
+                            <img 
+                                src="assets/images/development/ESPHome/20251120-110446-800w.jpg" 
+                                srcset="assets/images/development/ESPHome/20251120-110446-400w.jpg 400w,
+                                        assets/images/development/ESPHome/20251120-110446-800w.jpg 800w,
+                                        assets/images/development/ESPHome/20251120-110446-1200w.jpg 1200w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="ESP32 Solar Water Heater Monitoring - Image 2" 
+                                class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
+                                loading="lazy"
+                                data-fullsize="assets/images/development/ESPHome/20251120-110446-1200w.jpg"
+                                onerror="this.style.display='none';"
+                            >
+                        </div>
+                        <div class="relative overflow-hidden">
+                            <img 
+                                src="assets/images/development/ESPHome/20251120-110514-800w.jpg" 
+                                srcset="assets/images/development/ESPHome/20251120-110514-400w.jpg 400w,
+                                        assets/images/development/ESPHome/20251120-110514-800w.jpg 800w,
+                                        assets/images/development/ESPHome/20251120-110514-1200w.jpg 1200w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="ESP32 Solar Water Heater Monitoring - Image 3" 
+                                class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
+                                loading="lazy"
+                                data-fullsize="assets/images/development/ESPHome/20251120-110514-1200w.jpg"
+                                onerror="this.style.display='none';"
+                            >
+                        </div>
+                        <div class="relative overflow-hidden">
+                            <img 
+                                src="assets/images/development/ESPHome/s11-800w.jpg" 
+                                srcset="assets/images/development/ESPHome/s11-400w.jpg 400w,
+                                        assets/images/development/ESPHome/s11-800w.jpg 800w,
+                                        assets/images/development/ESPHome/s11-1200w.jpg 1200w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                alt="ESP32 Solar Water Heater Monitoring - Image 4" 
+                                class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
+                                loading="lazy"
+                                data-fullsize="assets/images/development/ESPHome/s11-1200w.jpg"
+                                onerror="this.style.display='none';"
+                            >
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.programming.projects.esp32Device.title">ESP32 Device</h3>
-                <p class="text-gray-400 text-sm mb-4" data-i18n="placeholders.description">Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.</p>
+                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.programming.projects.solarWaterHeater.title">Παρακολούθηση Θερμοκρασίας Ηλιακού Θερμοσίφωνα</h3>
+                <p class="text-gray-400 text-sm mb-4" data-i18n="pages.programming.projects.solarWaterHeater.description"></p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">ESP32</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">ESPHome</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">IoT</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Temperature Monitoring</span>
+                    <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Home Assistant</span>
+                </div>
             </div>
         </div>
         

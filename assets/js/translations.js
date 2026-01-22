@@ -321,6 +321,8 @@ const translations = {
         "pages.programming.projects.csharpApp.title": "C# Application",
         "pages.programming.projects.webApp.title": "Web Application",
         "pages.programming.projects.esp32Device.title": "ESP32 Device",
+        "pages.programming.projects.solarWaterHeater.title": "Παρακολούθηση Θερμοκρασίας Ηλιακού Θερμοσίφωνα",
+        "pages.programming.projects.solarWaterHeater.description": "Σύστημα παρακολούθησης θερμοκρασίας για ηλιακό θερμοσίφωνα με χρήση ESP32 και ESPHome. Το project επιτρέπει την πραγματική παρακολούθηση της θερμοκρασίας του νερού από απόσταση μέσω Home Assistant, με δυνατότητα ειδοποιήσεων και αυτοματισμών. Η υλοποίηση περιλαμβάνει αισθητήρες θερμοκρασίας DS18B20, wireless connectivity μέσω WiFi, και ενσωμάτωση με το Home Assistant για remote monitoring και energy efficiency optimization. Ιδανικό για smart home automation και παρακολούθηση ενεργειακής απόδοσης του ηλιακού συστήματος.",
         "pages.programming.projects.automation.title": "Automation",
         "pages.programming.projects.smartSetup.title": "Smart Setup",
         
@@ -712,6 +714,8 @@ const translations = {
         "pages.programming.projects.csharpApp.title": "C# Application",
         "pages.programming.projects.webApp.title": "Web Application",
         "pages.programming.projects.esp32Device.title": "ESP32 Device",
+        "pages.programming.projects.solarWaterHeater.title": "Solar Water Heater Temperature Monitoring",
+        "pages.programming.projects.solarWaterHeater.description": "Temperature monitoring system for solar water heater using ESP32 and ESPHome. The project enables real-time remote monitoring of water temperature through Home Assistant, with notification and automation capabilities. The implementation includes DS18B20 temperature sensors, WiFi wireless connectivity, and Home Assistant integration for remote monitoring and energy efficiency optimization. Ideal for smart home automation and monitoring the energy performance of the solar system.",
         "pages.programming.projects.automation.title": "Automation",
         "pages.programming.projects.smartSetup.title": "Smart Setup",
         
