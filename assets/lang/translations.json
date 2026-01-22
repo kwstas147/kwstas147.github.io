@@ -505,6 +505,10 @@
         "description": "Άσκηση από το πρόγραμμα Product Design & 3D Printing του ΕΚΠΑ. Σχεδιασμός μηχανικής τροχαλίας με τεχνικό σχέδιο, 3D μοντελοποίηση και animation. Η άσκηση καλύπτει ολόκληρο τον κύκλο σχεδιασμού από το conceptual design μέχρι την προσομοίωση και οπτικοποίηση, δείχνοντας την εφαρμογή σύγχρονων μεθόδων CAD design και engineering analysis.",
         "videoNotSupported": "Το βίντεο δεν υποστηρίζεται στον browser σας. Παρακαλώ δοκιμάστε άλλο browser ή κατεβάστε το αρχείο."
       },
+      "project7": {
+        "title": "Σχεδιασμός & Κατασκευή Γραναζιών Παγωτομηχανής",
+        "description": "Σχεδιασμός και μηχανική ανάλυση γραναζιών για παγωτομηχανή με Fusion 360. Parametric design για ακριβή engagement και smooth operation. Εστίαση στη functional design και optimization των gear ratios για optimal performance."
+      },
       "project8": {
         "title": "ESP32-C3 Smart Button",
         "description": "Φορητό smart κουμπί βασισμένο σε ESP32-C3, τροφοδοτούμενο από μπαταρία CR2032 3V. Με κάθε πάτημα ξυπνά, συνδέεται στο WiFi, στέλνει webhook στο Home Assistant—εφαρμογή: toggle ομάδας φωτισμού—και επιστρέφει σε λειτουργία ύπνου μέχρι την επόμενη χρήση."
@@ -977,6 +981,10 @@
         "title": "Product Design & 3D Printing - NKUA",
         "description": "Exercise from the NKUA Product Design & 3D Printing program. Mechanical pulley design with technical drawing, 3D modeling and animation. The exercise covers the complete design cycle from conceptual design to simulation and visualization, demonstrating the application of modern CAD design methods and engineering analysis.",
         "videoNotSupported": "Video is not supported in your browser. Please try another browser or download the file."
+      },
+      "project7": {
+        "title": "Ice Cream Machine Gear Design & Construction",
+        "description": "Design and engineering analysis of gears for ice cream machine using Fusion 360. Parametric design for precise engagement and smooth operation. Focus on functional design and optimization of gear ratios for optimal performance."
       },
       "project8": {
         "title": "ESP32-C3 Smart Button",
