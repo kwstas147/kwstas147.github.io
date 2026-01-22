@@ -285,6 +285,8 @@ const translations = {
         "design.project6.videoNotSupported": "Το πρόγραμμα περιήγησής σας δεν υποστηρίζει το στοιχείο βίντεο.",
         "design.project7.title": "Σχεδιασμός & Κατασκευή Γραναζιών Παγωτομηχανής",
         "design.project7.description": "Σχεδιασμός και μηχανική ανάλυση γραναζιών για παγωτομηχανή με Fusion 360. Parametric design για ακριβή engagement και smooth operation. Εστίαση στη functional design και optimization των gear ratios για optimal performance.",
+        "design.project8.title": "ESP32-C3 Smart Button",
+        "design.project8.description": "Φορητό smart κουμπί βασισμένο σε ESP32-C3, τροφοδοτούμενο από μπαταρία CR2032 3V. Με κάθε πάτημα ξυπνά, συνδέεται στο WiFi, στέλνει webhook στο Home Assistant—εφαρμογή: toggle ομάδας φωτισμού—και επιστρέφει σε λειτουργία ύπνου μέχρι την επόμενη χρήση.",
         
         // GitHub
         "github.viewProfile": "View Profile",
@@ -322,7 +324,7 @@ const translations = {
         "pages.programming.projects.webApp.title": "Web Application",
         "pages.programming.projects.esp32Device.title": "ESP32 Device",
         "pages.programming.projects.solarWaterHeater.title": "Παρακολούθηση Θερμοκρασίας Ηλιακού Θερμοσίφωνα",
-        "pages.programming.projects.solarWaterHeater.description": "Σύστημα παρακολούθησης θερμοκρασίας για ηλιακό θερμοσίφωνα με χρήση ESP32 και ESPHome. Το project επιτρέπει την πραγματική παρακολούθηση της θερμοκρασίας του νερού από απόσταση μέσω Home Assistant, με δυνατότητα ειδοποιήσεων και αυτοματισμών. Η υλοποίηση περιλαμβάνει αισθητήρες θερμοκρασίας DS18B20, wireless connectivity μέσω WiFi, και ενσωμάτωση με το Home Assistant για remote monitoring και energy efficiency optimization. Ιδανικό για smart home automation και παρακολούθηση ενεργειακής απόδοσης του ηλιακού συστήματος.",
+        "pages.programming.projects.solarWaterHeater.description": "Σύστημα παρακολούθησης θερμοκρασίας για ηλιακό θερμοσίφωνα με χρήση ESP32 και ESPHome, βελτιστοποιημένο για αυτόνομη λειτουργία με εξαιρετικά χαμηλή κατανάλωση ενέργειας. Το σύστημα τροφοδοτείται από μπαταρία που φορτίζεται αυτόματα από μικρό φωτοβολταϊκό πάνελ, επιτρέποντας εγκατάσταση σε απομακρυσμένες ή δυσπρόσιτες τοποθεσίες χωρίς πρόσβαση σε ηλεκτρικό δίκτυο. Για τη μεγιστοποίηση της διάρκειας ζωής της μπαταρίας, ο μικροελεγκτής λειτουργεί σε λειτουργία deep sleep, ξυπνώντας περιοδικά για να συλλέξει δεδομένα από τους αισθητήρες θερμοκρασίας DS18B20, να αποστείλει τα δεδομένα μέσω WiFi στο Home Assistant, και να επιστρέψει άμεσα σε κατάσταση ύπνου. Η υλοποίηση επιτρέπει την πραγματική παρακολούθηση της θερμοκρασίας του νερού από απόσταση, με δυνατότητα ειδοποιήσεων και αυτοματισμών. Ιδανικό για smart home automation, παρακολούθηση ενεργειακής απόδοσης του ηλιακού συστήματος, και IoT applications που απαιτούν μακροχρόνια αυτόνομη λειτουργία.",
         "pages.programming.projects.automation.title": "Automation",
         "pages.programming.projects.smartSetup.title": "Smart Setup",
         
@@ -657,6 +659,8 @@ const translations = {
         "design.project6.videoNotSupported": "Your browser does not support the video element.",
         "design.project7.title": "Ice Cream Machine Gear Design & Construction",
         "design.project7.description": "Design and engineering analysis of gears for ice cream machine using Fusion 360. Parametric design for precise engagement and smooth operation. Focus on functional design and optimization of gear ratios for optimal performance.",
+        "design.project8.title": "ESP32-C3 Smart Button",
+        "design.project8.description": "Portable smart button based on ESP32-C3, powered by a CR2032 3V coin cell. On each press it wakes up, connects to WiFi, sends a webhook to Home Assistant (use case: toggle a lighting group), then returns to sleep until the next use.",
         
         // GitHub
         "github.viewProfile": "View Profile",
@@ -715,7 +719,7 @@ const translations = {
         "pages.programming.projects.webApp.title": "Web Application",
         "pages.programming.projects.esp32Device.title": "ESP32 Device",
         "pages.programming.projects.solarWaterHeater.title": "Solar Water Heater Temperature Monitoring",
-        "pages.programming.projects.solarWaterHeater.description": "Temperature monitoring system for solar water heater using ESP32 and ESPHome. The project enables real-time remote monitoring of water temperature through Home Assistant, with notification and automation capabilities. The implementation includes DS18B20 temperature sensors, WiFi wireless connectivity, and Home Assistant integration for remote monitoring and energy efficiency optimization. Ideal for smart home automation and monitoring the energy performance of the solar system.",
+        "pages.programming.projects.solarWaterHeater.description": "Temperature monitoring system for solar water heater using ESP32 and ESPHome, optimized for autonomous operation with extremely low power consumption. The system is powered by a battery that automatically charges from a small photovoltaic panel, enabling installation in remote or inaccessible locations without access to electrical grid. To maximize battery life, the microcontroller operates in deep sleep mode, periodically waking up to collect data from DS18B20 temperature sensors, transmit the data via WiFi to Home Assistant, and immediately return to sleep state. The implementation enables real-time remote monitoring of water temperature, with notification and automation capabilities. Ideal for smart home automation, monitoring the energy performance of the solar system, and IoT applications requiring long-term autonomous operation.",
         "pages.programming.projects.automation.title": "Automation",
         "pages.programming.projects.smartSetup.title": "Smart Setup",
         
