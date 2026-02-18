@@ -78,7 +78,7 @@
                         class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
                         loading="lazy"
                         data-fullsize="${imagePath}-1200w.jpg"
-                        onerror="this.style.display='none';"
+                        onerror="this.style.display='none'; this.parentElement.style.display='none';"
                     >
                 </div>
             `;

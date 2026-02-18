@@ -54,6 +54,7 @@
                     class="w-full h-auto rounded cursor-pointer hover:opacity-90 transition-opacity lightbox-image"
                     loading="lazy"
                     data-fullsize="${imagePath}-1200w.jpg"
+                    onerror="this.style.display='none'; if(this.parentElement.classList.contains('grid')) this.style.visibility='hidden';"
                 >
             `;
         }
