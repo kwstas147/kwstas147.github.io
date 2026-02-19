@@ -314,8 +314,6 @@
     "cvLicensesNote": "(Επαγγελματική άδεια οδήγησης)",
     "cvMachineOperatorLicense": "Άδεια Χειριστή Μηχανημάτων Έργου",
     "cvMachineOperatorSpecialties": "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β",
-    "heroTitle": "Καλώς ήρθατε στο Portfolio μου",
-    "heroTitle": "Welcome to My Portfolio",
     "hero": {
       "title": "Καλώς ήρθατε στο Portfolio μου",
       "name": "Κωνσταντίνος Λαθύρης",
@@ -466,6 +464,10 @@
           "myInventory": {
             "title": "MyInventory",
             "description": "Μια Flutter mobile εφαρμογή για στοιχειώδη διαχείριση αποθήκης, που αναπτύχθηκε από την ανάγκη διαχείρισης αποθήκης στην εργασία. Η εφαρμογή προσφέρει πλήρη λύση διαχείρισης αποθηκών με υποστήριξη πολλαπλών αποθηκών, διαχείριση προϊόντων, μεταφορές αποθεμάτων μεταξύ αποθηκών, ειδοποιήσεις χαμηλού αποθέματος, backup & restore λειτουργικότητα, και AI Assistant με ενσωμάτωση Google Gemini API. Ιδανική για οποιονδήποτε χρειάζεται αποτελεσματική και απλή διαχείριση αποθήκης."
+          },
+          "fuelTracker": {
+            "title": "Fuel Operation Tracker",
+            "description": "Το Fuel Operation Tracker είναι μια ολοκληρωμένη λύση για την παρακολούθηση καυσίμων και τη διαχείριση στόλου μηχανημάτων/οχημάτων. Με απόλυτη προσήλωση στην ιδιωτικότητα, η εφαρμογή αποθηκεύει όλα τα δεδομένα τοπικά και κρυπτογραφημένα, προσφέροντας παράλληλα προηγμένες δυνατότητες όπως OCR για αυτόματη αναγνώριση κειμένου, βιομετρική ασφάλεια και εξαγωγή αναλυτικών αναφορών σε μορφή Excel και PDF."
           },
           "countdownTimer": {
             "title": "Countdown Timer",
@@ -1057,6 +1059,10 @@
           "myInventory": {
             "title": "MyInventory",
             "description": "A Flutter mobile application for basic warehouse management, developed from the need for warehouse management at work. The application provides a complete warehouse management solution with multi-warehouse support, product management, stock transfers between warehouses, low stock alerts, backup & restore functionality, and AI Assistant with Google Gemini API integration. Ideal for anyone who needs effective and simple warehouse management."
+          },
+          "fuelTracker": {
+            "title": "Fuel Operation Tracker",
+            "description": "Fuel Operation Tracker is a comprehensive solution for fuel monitoring and machinery/vehicle fleet management. With a strict focus on privacy, the app stores all data locally and encrypted, while offering advanced features such as OCR for automatic text recognition, biometric security, and detailed report exports in Excel and PDF formats."
           },
           "countdownTimer": {
             "title": "Countdown Timer",
