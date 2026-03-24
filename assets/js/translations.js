@@ -20,10 +20,10 @@ const translations = {
         // Home page
         heroTitle: "Καλώς ήρθατε στο Portfolio μου",
         heroName: "Κωνσταντίνος Λαθύρης",
-        "hero.subtitle": "Χειριστής Ασφαλτικών Παρασκευαστηρίων | Χειριστής Μηχανημάτων Έργου",
-        "hero.description": "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών.",
-        heroSubtitle: "Χειριστής Ασφαλτικών Παρασκευαστηρίων | Χειριστής Μηχανημάτων Έργου",
-        heroDescription: "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών.",
+        "hero.subtitle": "Industrial Operations Manager | IoT & Automation Enthusiast",
+        "hero.description": "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία βιομηχανικών μονάδων και χειρισμό βαρέων μηχανημάτων. Εξειδικευμένος στον αυτοματισμό, τη συντήρηση εξοπλισμού και τη βελτιστοποίηση διαδικασιών μέσω IoT.",
+        heroSubtitle: "Industrial Operations Manager | IoT & Automation Enthusiast",
+        heroDescription: "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία βιομηχανικών μονάδων και χειρισμό βαρέων μηχανημάτων. Εξειδικευμένος στον αυτοματισμό, τη συντήρηση εξοπλισμού και τη βελτιστοποίηση διαδικασιών μέσω IoT.",
         aboutTitle: "Σχετικά με εμένα",
         aboutText: "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων. Διαθέτω ένα μοναδικό προφίλ που συνδυάζει hands-on γνώση βαρέων μηχανημάτων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD).",
         aboutDevSkills: "Τεχνολογίες Ανάπτυξης",
@@ -365,6 +365,11 @@ const translations = {
         
         // Placeholders
         "placeholders.description": "Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.",
+
+        // CTA Section
+        "cta.title": "Ενδιαφέρεστε για συνεργασία;",
+        "cta.description": "Είτε έχετε ένα project στο μυαλό σας είτε απλά θέλετε να πείτε ένα γεια, είμαι πάντα ανοιχτός σε νέες ιδέες και καινοτομίες.",
+        "cta.button": "Επικοινωνήστε μαζί μου",
         
         // AI Design (Greek)
         "aiDesign.title": "AI-Assisted Design & Optimization",
@@ -405,11 +410,6 @@ const translations = {
         aboutDevSkillsAI: "Application development with artificial intelligence",
         aboutPersonalProjects: "Personal Projects",
         aboutPersonalProjectsDesc: "I develop multiple projects in my free time, exploring new technologies and solutions. Each project is an opportunity for learning and experimentation with modern platforms and frameworks.",
-        cvAboutTitle: "About Me",
-        cvAboutDevSkills: "Development Technologies",
-        cvAboutDevSkillsMobileTitle: "Mobile Development",
-        cvAboutDevSkillsMobile: "Cross-platform development with Flutter/Dart, React Native, and native Android with Kotlin",
-        cvAboutDevSkillsToolsTitle: "Development Tools",
         cvAboutDevSkillsTools: "VS Code, Cursor (AI-powered IDE), Android Studio",
         cvAboutDevSkillsAITitle: "AI-Assisted Development",
         cvAboutDevSkillsAI: "Using artificial intelligence for efficient development workflows",
@@ -746,7 +746,12 @@ const translations = {
         "pages.3dPrinting.imageCount.plural": "images",
         
         // Placeholders
-        "placeholders.description": "This section contains projects that will be added in the future."
+        "placeholders.description": "This section contains projects that will be added in the future.",
+        
+        // CTA Section
+        "cta.title": "Interested in working together?",
+        "cta.description": "Whether you have a project in mind or just want to say hi, I'm always open to discussing new opportunities and innovations.",
+        "cta.button": "Get In Touch"
     }
 };
 
