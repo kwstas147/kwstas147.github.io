@@ -39,7 +39,22 @@
       gtag('config', 'G-Z3D154BR9R');
     </script>
     <title data-i18n="heroTitle"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="assets/css/style.css?v=3">
     <script>
@@ -129,9 +144,9 @@
                 </span>
             </div>
             
-            <h1 class="text-4xl md:text-6xl font-bold mb-3 fade-in hero-text" data-i18n="hero.name"></h1>
-            <p class="text-xl md:text-2xl text-blue-400 mb-4 fade-in hero-text" data-i18n="hero.subtitle"></p>
-            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto fade-in hero-text mb-8" data-i18n="hero.description"></p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-3 reveal-on-scroll hero-text" data-i18n="hero.name"></h1>
+            <p class="text-xl md:text-2xl text-blue-400 mb-4 reveal-on-scroll hero-text" data-i18n="hero.subtitle" style="transition-delay: 100ms;"></p>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto reveal-on-scroll hero-text mb-8" data-i18n="hero.description" style="transition-delay: 200ms;"></p>
             
             <!-- CTA Buttons -->
             <div class="flex flex-wrap justify-center gap-4 mb-8 fade-in">
@@ -150,8 +165,8 @@
             </div>
             
             <!-- Professional Summary Section -->
-            <div class="max-w-4xl mx-auto mt-16 relative z-20">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-400 fade-in hero-text" data-i18n="professional.summary.title"></h2>
+            <div class="max-w-4xl mx-auto mt-16 relative z-20 reveal-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gradient" data-i18n="professional.summary.title"></h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                     <div class="flex items-start gap-4 relative z-20 hero-text">
                         <i data-lucide="factory" class="w-8 h-8 text-blue-400 flex-shrink-0 mt-1"></i>
@@ -186,10 +201,34 @@
         </div>
     </section>
 
+            <!-- Key Achievements Section -->
+            <div class="max-w-5xl mx-auto mt-20 reveal-on-scroll">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-gradient mb-2">25+</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500" data-i18n="achievements.years">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-gradient mb-2">100+</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500" data-i18n="achievements.projects">Projects Delivered</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-gradient mb-2">15+</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500" data-i18n="achievements.tech">Tech Stack Skills</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-gradient mb-2">∞</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500" data-i18n="achievements.innovation">Passion for Innovation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Professional Timeline Section -->
-    <section class="container mx-auto px-4 py-12">
+    <section class="container mx-auto px-4 py-12 reveal-on-scroll">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-400" data-i18n="professional.timeline.title"></h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gradient" data-i18n="professional.timeline.title"></h2>
             <div class="relative">
                 <!-- Timeline Line -->
                 <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-400 opacity-30 hidden md:block"></div>
@@ -201,9 +240,9 @@
                         <div class="flex-shrink-0 w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center z-10">
                             <i data-lucide="briefcase" class="w-8 h-8 text-white"></i>
                         </div>
-                        <div class="flex-1 bg-card rounded-lg p-6">
+                        <div class="flex-1 bg-card glass-panel rounded-lg p-6">
                             <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
-                                <h3 class="text-xl font-bold text-white" data-i18n="professional.timeline.job1.title"></h3>
+                                <h3 class="text-xl font-bold text-white uppercase tracking-wider" data-i18n="professional.timeline.job1.title"></h3>
                                 <span class="text-sm text-blue-400 font-semibold" data-i18n="professional.timeline.job1.period"></span>
                             </div>
                             <p class="text-blue-400 mb-3 font-semibold" data-i18n="professional.timeline.job1.company"></p>
@@ -212,13 +251,13 @@
                     </div>
 
                     <!-- Previous Position 1 -->
-                    <div class="relative flex items-start gap-6">
+                    <div class="relative flex items-start gap-6 reveal-on-scroll">
                         <div class="flex-shrink-0 w-16 h-16 bg-card border-2 border-blue-400 rounded-full flex items-center justify-center z-10">
                             <i data-lucide="wrench" class="w-8 h-8 text-blue-400"></i>
                         </div>
-                        <div class="flex-1 bg-card rounded-lg p-6">
+                        <div class="flex-1 bg-card glass-panel rounded-lg p-6">
                             <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
-                                <h3 class="text-xl font-bold text-white" data-i18n="professional.timeline.job2.title"></h3>
+                                <h3 class="text-xl font-bold text-white uppercase tracking-wider" data-i18n="professional.timeline.job2.title"></h3>
                                 <span class="text-sm text-blue-400 font-semibold" data-i18n="professional.timeline.job2.period"></span>
                             </div>
                             <p class="text-blue-400 mb-3 font-semibold" data-i18n="professional.timeline.job2.company"></p>
@@ -227,13 +266,13 @@
                     </div>
 
                     <!-- Previous Position 2 -->
-                    <div class="relative flex items-start gap-6">
+                    <div class="relative flex items-start gap-6 reveal-on-scroll">
                         <div class="flex-shrink-0 w-16 h-16 bg-card border-2 border-blue-400 rounded-full flex items-center justify-center z-10">
                             <i data-lucide="hammer" class="w-8 h-8 text-blue-400"></i>
                         </div>
-                        <div class="flex-1 bg-card rounded-lg p-6">
+                        <div class="flex-1 bg-card glass-panel rounded-lg p-6">
                             <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
-                                <h3 class="text-xl font-bold text-white" data-i18n="professional.timeline.job3.title"></h3>
+                                <h3 class="text-xl font-bold text-white uppercase tracking-wider" data-i18n="professional.timeline.job3.title"></h3>
                                 <span class="text-sm text-blue-400 font-semibold" data-i18n="professional.timeline.job3.period"></span>
                             </div>
                             <p class="text-blue-400 mb-3 font-semibold" data-i18n="professional.timeline.job3.company"></p>
@@ -261,10 +300,10 @@
     </section>
 
     <!-- CV Section - First Priority -->
-    <section class="container mx-auto px-4 py-16">
+    <section class="container mx-auto px-4 py-16 reveal-on-scroll">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-400" data-i18n="cvSection.title"></h2>
-            <a href="cv.html" class="category-card bg-card rounded-lg p-8 text-center hover:scale-105 transition-all duration-300 block">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-gradient" data-i18n="cvSection.title"></h2>
+            <a href="cv.html" class="category-card bg-card glass-panel rounded-lg p-8 text-center hover:scale-105 transition-all duration-300 block">
                 <div class="flex justify-center mb-4">
                     <i data-lucide="file-text" class="w-16 h-16 text-blue-400"></i>
                 </div>
@@ -279,14 +318,14 @@
     </section>
 
     <!-- Soft Skills & Hobbies Section -->
-    <section class="container mx-auto px-4 py-16">
+    <section class="container mx-auto px-4 py-16 reveal-on-scroll">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-blue-400" data-i18n="softSkills.title"></h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-gradient" data-i18n="softSkills.title"></h2>
             <p class="text-lg text-gray-400 text-center mb-12 max-w-3xl mx-auto" data-i18n="softSkills.subtitle"></p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal-on-scroll">
                 <!-- Programming -->
-                <div class="bg-card rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                <div class="bg-card glass-panel rounded-lg p-6 hover:scale-105 transition-all duration-300">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="flex-shrink-0">
                             <i data-lucide="code" class="w-10 h-10 text-blue-400"></i>
@@ -308,7 +347,7 @@
                 </div>
 
                 <!-- Design & 3D Printing -->
-                <div class="bg-card rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                <div class="bg-card glass-panel rounded-lg p-6 hover:scale-105 transition-all duration-300">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="flex-shrink-0">
                             <i data-lucide="printer" class="w-10 h-10 text-blue-400"></i>
@@ -336,7 +375,7 @@
                 </div>
 
                 <!-- Smart Home -->
-                <div class="bg-card rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                <div class="bg-card glass-panel rounded-lg p-6 hover:scale-105 transition-all duration-300">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="flex-shrink-0">
                             <i data-lucide="home" class="w-10 h-10 text-blue-400"></i>
@@ -354,7 +393,7 @@
                 </div>
 
                 <!-- AI & Innovation -->
-                <div class="bg-card rounded-lg p-6 hover:scale-105 transition-all duration-300">
+                <div class="bg-card glass-panel rounded-lg p-6 hover:scale-105 transition-all duration-300">
                     <div class="flex items-start gap-4 mb-4">
                         <div class="flex-shrink-0">
                             <i data-lucide="sparkles" class="w-10 h-10 text-blue-400"></i>
@@ -375,11 +414,11 @@
     </section>
 
     <!-- Project Categories Section -->
-    <section class="container mx-auto px-4 py-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-400" data-i18n="projectCategories.title">Projects & Creations</h2>
+    <section class="container mx-auto px-4 py-16 reveal-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-gradient" data-i18n="projectCategories.title">Projects & Creations</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <!-- 3D Printing -->
-            <a href="3d-printing.html" class="category-card bg-card rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
+            <a href="3d-printing.html" class="category-card bg-card glass-panel rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
                 <div class="flex justify-center mb-4">
                     <i data-lucide="printer" class="w-12 h-12 text-blue-400"></i>
                 </div>
@@ -388,7 +427,7 @@
             </a>
 
             <!-- Design -->
-            <a href="design.html" class="category-card bg-card rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
+            <a href="design.html" class="category-card bg-card glass-panel rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
                 <div class="flex justify-center mb-4">
                     <i data-lucide="box-select" class="w-12 h-12 text-blue-400"></i>
                 </div>
@@ -397,7 +436,7 @@
             </a>
 
             <!-- Development Hub -->
-            <a href="programming.html" class="category-card bg-card rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
+            <a href="programming.html" class="category-card bg-card glass-panel rounded-lg p-8 text-center hover:scale-105 transition-all duration-300">
                 <div class="flex justify-center mb-4">
                     <i data-lucide="code" class="w-12 h-12 text-blue-400"></i>
                 </div>
@@ -451,8 +490,8 @@
     </section>
 
     <!-- Mid-page CTA Section -->
-    <section class="container mx-auto px-4">
-        <div class="mid-page-cta">
+    <section class="container mx-auto px-4 reveal-on-scroll">
+        <div class="mid-page-cta glass-panel">
             <h3 class="text-2xl md:text-3xl font-bold text-white mb-4" data-i18n="cta.title">Interested in working together?</h3>
             <p class="text-gray-300 mb-8 max-w-2xl mx-auto" data-i18n="cta.description">Whether you have a project in mind or just want to say hi, I'm always open to discussing new opportunities and innovations.</p>
             <a href="mailto:kwstas147@gmail.com" class="inline-flex items-center gap-2 px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg">
@@ -462,10 +501,9 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container mx-auto px-4 py-16">
+    <section id="contact" class="container mx-auto px-4 py-16 reveal-on-scroll">
         <div class="max-w-4xl mx-auto">
-            <div class="bg-card rounded-lg p-8 md:p-12 text-center border border-theme">
+            <div class="bg-card glass-panel rounded-lg p-8 md:p-12 text-center border border-theme">
                 <div class="flex justify-center mb-6">
                     <div class="w-16 h-16 bg-blue-400/20 rounded-full flex items-center justify-center">
                         <i data-lucide="mail" class="w-8 h-8 text-blue-400"></i>
@@ -641,6 +679,26 @@
         });
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <!-- Scroll Reveal Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            revealElements.forEach(el => observer.observe(el));
         });
     </script>
 </body>

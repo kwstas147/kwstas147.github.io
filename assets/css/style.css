@@ -1,5 +1,70 @@
 /* Custom styles for portfolio with theme support */
 
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-blur: 16px;
+}
+
+html[data-theme="midnight"] {
+    --bg-primary: #020617; /* Slate-950 for deeper depth */
+    --bg-secondary: #0f172a; /* Slate-900 */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --card-bg: rgba(15, 23, 42, 0.8);
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Base Utility for Inter Font */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, .font-display {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Premium Text Gradients */
+.text-gradient {
+    background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+/* Scroll Reveal Classes */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Advanced Glassmorphism */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+header {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(var(--glass-blur)) saturate(180%) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+}
+
 /* Hero Section with Background Image */
 .hero-section {
     position: relative;
@@ -1717,9 +1782,7 @@ footer svg:hover {
 }
 
 /* 13. CUSTOM CURSOR GLOW (DISABLED - using default cursor) */
-.cursor-glow-area {
-    /* cursor: none; - DISABLED */
-}
+/* Optimization: Removed disabled effect classes */
 
 .cursor-glow {
     /* DISABLED - Custom cursor effect disabled */
@@ -1727,9 +1790,7 @@ footer svg:hover {
     visibility: hidden !important;
 }
 
-.cursor-glow.active {
-    /* DISABLED */
-}
+/* cursor-glow.active removed as disabled */
 
 /* 14. TOOLTIP STYLES (will be enhanced with JS) */
 .tooltip {
@@ -1823,9 +1884,10 @@ html[data-theme="clean-office"] .nav-link:hover {
 }
 
 /* 18. DISABLE EFFECTS FOR ELEMENTS THAT SHOULDN'T HAVE THEM */
+/* Removed empty rulesets for cleaner code */
 .magnetic-disabled,
 .tilt-disabled {
-    /* Explicitly disable effects */
+    pointer-events: auto;
 }
 
 /* 19. PERFORMANCE OPTIMIZATIONS */
