@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
 """
-Script για αυτόματη βελτιστοποίηση εικόνων για Fusion360 Gallery
-
-Χρήση:
-    python optimize_images.py input-folder output-folder
-
-Παράδειγμα:
-    python optimize_images.py C:\Documents\fusion360 assets\images\fusion360
+Script για αυτόματη βελτιστοποίηση εικόνων για Μετατροπη!.
+Υποστηρίζει αυτόματη ανίχνευση φακέλου και καθαρισμό ονομάτων αρχείων.
 """
 
 import os
@@ -14,123 +9,122 @@ import sys
 from PIL import Image
 
 def optimize_image(input_path, output_base_name, output_dir):
-    """Βελτιστοποιεί μια εικόνα σε 3 μεγέθη"""
+    """Βελτιστοποιεί μια εικόνα σε 3 μεγέθη (400w, 800w, 1200w)"""
     try:
-        # Άνοιγμα αρχικής εικόνας
         img = Image.open(input_path)
         
-        # Μετατροπή σε RGB αν είναι RGBA (για JPEG)
+        # Μετατροπή σε RGB αν είναι RGBA/Transparent για συμβατότητα με JPEG
         if img.mode in ('RGBA', 'LA', 'P'):
             background = Image.new('RGB', img.size, (255, 255, 255))
             if img.mode == 'P':
                 img = img.convert('RGBA')
-            background.paste(img, mask=img.split()[-1] if img.mode == 'RGBA' else None)
+            mask = img.split()[-1] if img.mode == 'RGBA' else None
+            background.paste(img, mask=mask)
             img = background
         
         # Μεγέθη για responsive images
-        sizes = [
-            (400, '400w'),
-            (800, '800w'),
-            (1200, '1200w')
-        ]
-        
-        results = []
+        sizes = [(400, '400w'), (800, '800w'), (1200, '1200w')]
         
         for width, suffix in sizes:
-            # Calculate height maintaining aspect ratio
+            # Διατήρηση aspect ratio
             aspect_ratio = img.height / img.width
             height = int(width * aspect_ratio)
             
-            # Resize με high-quality resampling
+            # Resize με υψηλή ποιότητα
             resized = img.resize((width, height), Image.Resampling.LANCZOS)
             
-            # Output filename
             output_name = f"{output_base_name}-{suffix}.jpg"
-            output_path = os.path.join(output_dir, output_name)
+            target_path = os.path.join(output_dir, output_name)
             
-            # Save με optimization
+            # Αποθήκευση με βελτιστοποίηση
             resized.save(
-                output_path,
+                target_path,
                 'JPEG',
                 quality=85,
                 optimize=True,
                 progressive=True
             )
             
-            # Get file size
-            file_size = os.path.getsize(output_path)
-            file_size_kb = file_size / 1024
+            file_size_kb = os.path.getsize(target_path) / 1024
+            print(f"  ✓ Δημιουργήθηκε: {output_name} ({file_size_kb:.1f} KB)")
             
-            results.append({
-                'name': output_name,
-                'size_kb': file_size_kb,
-                'dimensions': f"{width}x{height}"
-            })
-            
-            print(f"  ✓ Created {output_name} ({width}x{height}, {file_size_kb:.1f} KB)")
-        
-        return results
-        
+        return True
     except Exception as e:
-        print(f"  ✗ Error processing {input_path}: {str(e)}")
-        return None
+        print(f"  ✗ Σφάλμα στην επεξεργασία του αρχείου {input_path}: {e}")
+        return False
 
 def main():
-    if len(sys.argv) < 3:
-        print("Χρήση: python optimize_images.py <input-folder> <output-folder>")
-        print("\nΠαράδειγμα:")
-        print("  python optimize_images.py C:\\Documents\\fusion360 assets\\images\\fusion360")
-        sys.exit(1)
+    # Εύρεση του φακέλου στον οποίο είναι αποθηκευμένο το script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     
-    input_folder = sys.argv[1]
-    output_folder = sys.argv[2]
+    print("========================================")
+    print("    Image Optimizer Tool")
+    print("========================================\n")
+
+    # 1. Λήψη φακέλου εισόδου
+    print("Βήμα 1: Φάκελος με τις αρχικές εικόνες")
+    user_input = input(f"[Πατήστε ENTER για: {script_dir}]: ").strip()
     
-    # Create output folder if it doesn't exist
+    # Καθαρισμός εισαγωγικών (σε περίπτωση copy-path από Windows)
+    user_input = user_input.replace('"', '').replace("'", "")
+    
+    input_folder = user_input if user_input else script_dir
+
+    if not os.path.exists(input_folder):
+        print(f"\n[ERROR] Η διαδρομή δεν βρέθηκε: {input_folder}")
+        input("\nΠιέστε ENTER για έξοδο...")
+        return
+
+    # 2. Λήψη φακέλου εξόδου
+    print("\nΒήμα 2: Φάκελος αποθήκευσης")
+    default_output = os.path.join(input_folder, "optimized_assets")
+    user_output = input(f"[Πατήστε ENTER για: {default_output}]: ").strip()
+    user_output = user_output.replace('"', '').replace("'", "")
+    
+    output_folder = user_output if user_output else default_output
+
+    # Δημιουργία φακέλου εξόδου αν δεν υπάρχει
     os.makedirs(output_folder, exist_ok=True)
-    
-    # Supported image formats
-    supported_formats = ('.jpg', '.jpeg', '.png', '.bmp', '.tiff', '.tif')
-    
-    # Find all images in input folder
-    image_files = [
-        f for f in os.listdir(input_folder)
-        if f.lower().endswith(supported_formats)
-    ]
-    
+
+    # Αναζήτηση υποστηριζόμενων αρχείων
+    supported_formats = ('.jpg', '.jpeg', '.png', '.bmp', '.tiff', '.webp')
+    image_files = [f for f in os.listdir(input_folder) if f.lower().endswith(supported_formats)]
+
     if not image_files:
-        print(f"Δεν βρέθηκαν εικόνες στο {input_folder}")
-        sys.exit(1)
-    
-    print(f"Βρέθηκαν {len(image_files)} εικόνες για επεξεργασία...\n")
-    
-    # Process each image
-    for image_file in image_files:
-        input_path = os.path.join(input_folder, image_file)
+        print(f"\n[!] Δεν βρέθηκαν εικόνες στον φάκελο: {input_folder}")
+        input("\nΠιέστε ENTER για έξοδο...")
+        return
+
+    print(f"\n[OK] Βρέθηκαν {len(image_files)} εικόνες. Έναρξη εργασίας...\n")
+
+    processed_count = 0
+    for file_name in image_files:
+        input_path = os.path.join(input_folder, file_name)
         
-        # Create base name (without extension)
-        base_name = os.path.splitext(image_file)[0]
-        # Clean name (remove spaces, special chars)
-        base_name = base_name.lower().replace(' ', '-').replace('_', '-')
-        # Keep only alphanumeric and hyphens
+        # Καθαρισμός ονόματος (SEO friendly)
+        base_name = os.path.splitext(file_name)[0].lower().replace(' ', '-').replace('_', '-')
         base_name = ''.join(c for c in base_name if c.isalnum() or c == '-')
         
-        print(f"Επεξεργασία: {image_file} → {base_name}")
-        
-        results = optimize_image(input_path, base_name, output_folder)
-        
-        if results:
-            total_size = sum(r['size_kb'] for r in results)
-            print(f"  Σύνολο: {total_size:.1f} KB\n")
+        print(f"Επεξεργασία: {file_name}")
+        if optimize_image(input_path, base_name, output_folder):
+            processed_count += 1
+            print("-" * 30)
+
+    print("\n========================================")
+    print(f"ΟΛΟΚΛΗΡΩΘΗΚΕ ΕΠΙΤΥΧΩΣ!")
+    print(f"Επεξεργάστηκαν: {processed_count} αρχεία.")
+    print(f"Τοποθεσία: {output_folder}")
+    print("========================================")
     
-    print("Ολοκληρώθηκε!")
+    input("\nΠιέστε ENTER για να κλείσετε το παράθυρο...")
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n\nΕπανέλεγχος από τον χρήστη.")
+        print("\n\nΗ διαδικασία διακόπηκε από τον χρήστη.")
         sys.exit(0)
-    except ImportError:
-        print("\nΛείπει το Pillow library.")
-        print("Εγκαταστήστε το με: pip install Pillow")
+    except Exception as e:
+        print(f"\nΚρίσιμο σφάλμα: {e}")
+        input("\nΠιέστε ENTER για έξοδο...")
         sys.exit(1)
