@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy - Konstantinos Lathyris Portfolio. Information about cookies, Google Analytics, and data collection practices.">
+    <meta name="keywords" content="Privacy Policy, Cookies, GDPR, Google Analytics">
+    <meta name="author" content="Konstantinos Lathyris">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Privacy Policy - Konstantinos Lathyris">
+    <meta property="og:description" content="Privacy Policy and Cookie Usage Information">
+    <meta property="og:url" content="https://kwstas147.github.io/privacy.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" onerror="this.onerror=null; this.href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>';">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" onerror="this.onerror=null; this.href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>';">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kwstas147.github.io/privacy.html">
+    
+    <!-- Google tag (gtag.js) — Consent Mode v2 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3D154BR9R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      // GDPR: Απόρριψη analytics cookies μέχρι τη συναίνεση χρήστη
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-Z3D154BR9R');
+    </script>
+    <title id="privacy-page-title">Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        // Critical: Apply theme and language before rendering to prevent flash
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('portfolio_theme') || 'midnight';
+                if (savedTheme === 'clean-office' || savedTheme === 'midnight') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+                const savedLang = localStorage.getItem('portfolio_language') || 'en';
+                if (savedLang === 'el' || savedLang === 'en') {
+                    document.documentElement.setAttribute('lang', savedLang);
+                }
+            } catch(e) {
+                document.documentElement.setAttribute('data-theme', 'midnight');
+                document.documentElement.setAttribute('lang', 'en');
+            }
+        })();
+    </script>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-nav border-b border-theme sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="index" data-i18n="nav.home"></a>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="3d-printing.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="3d-printing" data-i18n="nav.3dPrinting"></a>
+                        <a href="design.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="design" data-i18n="nav.design"></a>
+                        <a href="programming.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="programming" data-i18n="nav.programming"></a>
+                        <a href="cv.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="cv" data-i18n="nav.cv"></a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="mobile-menu-toggle" class="md:hidden" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                    <div class="theme-switcher">
+                        <button data-theme="midnight" class="active" title="Midnight">🌙</button>
+                        <button data-theme="clean-office" title="Clean Office">☀️</button>
+                    </div>
+                    <div class="lang-switcher">
+                        <button data-lang="el" class="active">EL</button>
+                        <button data-lang="en">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+        <div id="mobile-menu-panel" class="mobile-menu-panel">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-title" data-i18n="nav.menu">Menu</span>
+                <button id="mobile-menu-close" aria-label="Close mobile menu">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="index.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="index" data-i18n="nav.home"></a>
+                <a href="3d-printing.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="3d-printing" data-i18n="nav.3dPrinting"></a>
+                <a href="design.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="design" data-i18n="nav.design"></a>
+                <a href="programming.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="programming" data-i18n="nav.programming"></a>
+                <a href="cv.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="cv" data-i18n="nav.cv"></a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Content -->
+    <section class="container mx-auto px-4 py-20">
+        <div class="max-w-3xl mx-auto">
+            <div class="flex justify-center mb-6">
+                <i data-lucide="shield-check" class="w-16 h-16 text-blue-400"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center fade-in" id="privacy-title">Πολιτική Απορρήτου</h1>
+            <p class="text-gray-400 text-center mb-12" id="privacy-last-updated">Τελευταία ενημέρωση: Απρίλιος 2026</p>
+
+            <!-- Section 1: Introduction -->
+            <div class="bg-card rounded-lg p-8 mb-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-400 flex items-center gap-3">
+                    <i data-lucide="info" class="w-6 h-6"></i>
+                    <span id="privacy-intro-title">Εισαγωγή</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed" id="privacy-intro-text">
+                    Ο ιστότοπος <strong>kwstas147.github.io</strong> σέβεται το απόρρητό σας. Αυτή η πολιτική εξηγεί ποια δεδομένα συλλέγουμε, πώς τα χρησιμοποιούμε και τα δικαιώματά σας σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR) της Ευρωπαϊκής Ένωσης.
+                </p>
+            </div>
+
+            <!-- Section 2: Cookies Used -->
+            <div class="bg-card rounded-lg p-8 mb-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-400 flex items-center gap-3">
+                    <i data-lucide="cookie" class="w-6 h-6"></i>
+                    <span id="privacy-cookies-title">Cookies που χρησιμοποιούμε</span>
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-tertiary rounded-lg p-4">
+                        <h3 class="font-bold text-white mb-2" id="privacy-essential-title">🔒 Απαραίτητα Cookies (localStorage)</h3>
+                        <p class="text-gray-300 text-sm mb-2" id="privacy-essential-text">
+                            Αυτά τα cookies είναι απολύτως απαραίτητα για τη λειτουργία του ιστότοπου. Δεν συλλέγουν προσωπικά δεδομένα.
+                        </p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left">
+                                <thead>
+                                    <tr class="border-b border-theme">
+                                        <th class="py-2 text-blue-400" id="privacy-table-name">Όνομα</th>
+                                        <th class="py-2 text-blue-400" id="privacy-table-purpose">Σκοπός</th>
+                                        <th class="py-2 text-blue-400" id="privacy-table-duration">Διάρκεια</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-300">
+                                    <tr class="border-b border-theme">
+                                        <td class="py-2"><code>portfolio_theme</code></td>
+                                        <td class="py-2" id="privacy-cookie-theme">Αποθήκευση θέματος (Dark/Light)</td>
+                                        <td class="py-2" id="privacy-cookie-persistent">Μόνιμο</td>
+                                    </tr>
+                                    <tr class="border-b border-theme">
+                                        <td class="py-2"><code>portfolio_language</code></td>
+                                        <td class="py-2" id="privacy-cookie-lang">Αποθήκευση γλώσσας (EL/EN)</td>
+                                        <td class="py-2" id="privacy-cookie-persistent2">Μόνιμο</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2"><code>cookie_consent</code></td>
+                                        <td class="py-2" id="privacy-cookie-consent">Αποθήκευση συναίνεσης cookies</td>
+                                        <td class="py-2" id="privacy-cookie-6months">6 μήνες</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="bg-tertiary rounded-lg p-4">
+                        <h3 class="font-bold text-white mb-2" id="privacy-analytics-title">📊 Cookies Ανάλυσης (Google Analytics)</h3>
+                        <p class="text-gray-300 text-sm mb-2" id="privacy-analytics-text">
+                            Χρησιμοποιούμε το Google Analytics (GA4) για να κατανοήσουμε πώς οι χρήστες αλληλεπιδρούν με τον ιστότοπό μας. Αυτά τα cookies ενεργοποιούνται <strong>μόνο μετά τη ρητή συναίνεσή σας</strong>.
+                        </p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left">
+                                <thead>
+                                    <tr class="border-b border-theme">
+                                        <th class="py-2 text-blue-400" id="privacy-table-name2">Όνομα</th>
+                                        <th class="py-2 text-blue-400" id="privacy-table-purpose2">Σκοπός</th>
+                                        <th class="py-2 text-blue-400" id="privacy-table-duration2">Διάρκεια</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-300">
+                                    <tr class="border-b border-theme">
+                                        <td class="py-2"><code>_ga</code></td>
+                                        <td class="py-2" id="privacy-ga-cookie">Αναγνώριση μοναδικών επισκεπτών</td>
+                                        <td class="py-2">2 χρόνια</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2"><code>_ga_*</code></td>
+                                        <td class="py-2" id="privacy-ga-session">Αποθήκευση κατάστασης session</td>
+                                        <td class="py-2">2 χρόνια</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Data Collected -->
+            <div class="bg-card rounded-lg p-8 mb-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-400 flex items-center gap-3">
+                    <i data-lucide="database" class="w-6 h-6"></i>
+                    <span id="privacy-data-title">Τι δεδομένα συλλέγονται</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed mb-4" id="privacy-data-text">
+                    Όταν αποδεχθείτε τα analytics cookies, το Google Analytics συλλέγει:
+                </p>
+                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                    <li id="privacy-data-item1">Σελίδες που επισκεφτήκατε</li>
+                    <li id="privacy-data-item2">Χρόνος παραμονής στη σελίδα</li>
+                    <li id="privacy-data-item3">Τύπος συσκευής και browser</li>
+                    <li id="privacy-data-item4">Γεωγραφική τοποθεσία (πόλη/χώρα, χωρίς ακριβή τοποθεσία)</li>
+                    <li id="privacy-data-item5">Πηγή επισκεψιμότητας (από πού ήρθατε)</li>
+                </ul>
+                <div class="mt-4 bg-tertiary rounded-lg p-4">
+                    <p class="text-gray-400 text-sm flex items-start gap-2" id="privacy-no-pii">
+                        <i data-lucide="shield" class="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"></i>
+                        <span><strong>Δεν συλλέγουμε</strong> προσωπικά αναγνωρίσιμα στοιχεία (ονόματα, email, διευθύνσεις IP). Η ανωνυμοποίηση IP είναι ενεργοποιημένη στο Google Analytics.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 4: Your Rights -->
+            <div class="bg-card rounded-lg p-8 mb-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-400 flex items-center gap-3">
+                    <i data-lucide="user-check" class="w-6 h-6"></i>
+                    <span id="privacy-rights-title">Τα δικαιώματά σας</span>
+                </h2>
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"></i>
+                        <p class="text-gray-300" id="privacy-right1">Μπορείτε να <strong>απορρίψετε</strong> τα analytics cookies κατά την πρώτη επίσκεψή σας.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"></i>
+                        <p class="text-gray-300" id="privacy-right2">Μπορείτε να <strong>αλλάξετε</strong> τη συναίνεσή σας ανά πάσα στιγμή μέσω του link «Διαχείριση Cookies» στο κάτω μέρος κάθε σελίδας.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"></i>
+                        <p class="text-gray-300" id="privacy-right3">Μπορείτε να <strong>διαγράψετε</strong> τα cookies ανά πάσα στιγμή μέσω των ρυθμίσεων του browser σας.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"></i>
+                        <p class="text-gray-300" id="privacy-right4">Η συναίνεσή σας λήγει αυτόματα μετά από <strong>6 μήνες</strong> και ζητείται εκ νέου.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Contact -->
+            <div class="bg-card rounded-lg p-8 mb-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-400 flex items-center gap-3">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                    <span id="privacy-contact-title">Επικοινωνία</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed" id="privacy-contact-text">
+                    Για ερωτήσεις σχετικά με την πολιτική απορρήτου ή τα δεδομένα σας, επικοινωνήστε μαζί μας:
+                </p>
+                <div class="mt-4 flex items-center gap-3">
+                    <i data-lucide="mail" class="w-5 h-5 text-blue-400 flex-shrink-0"></i>
+                    <a href="mailto:lathyris.kon@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">lathyris.kon@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="container mx-auto px-4 py-8 text-center">
+        <a href="index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition-colors" data-i18n="buttons.backHome">Επιστροφή στην αρχική</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-footer border-t border-theme mt-20">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4">
+                <span class="text-xs text-gray-500 hidden md:inline" data-i18n="footerFollow"></span>
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/306974030956" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-400 transition-colors" title="WhatsApp" aria-label="WhatsApp"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    <a href="mailto:lathyris.kon@gmail.com" class="text-gray-500 hover:text-blue-400 transition-colors" title="Email" aria-label="Email"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+                    <a href="https://linkedin.com/in/konstantinos-lathyris-5b98931b0" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-400 transition-colors" title="LinkedIn" aria-label="LinkedIn"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    <a href="https://github.com/kwstas147" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-400 transition-colors" title="GitHub" aria-label="GitHub"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                </div>
+            </div>
+            <div class="flex justify-center items-center pt-4 border-t border-theme">
+                <p class="text-gray-400 text-sm" data-i18n="footerText"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/translations.js?v=2"></script>
+    <script src="assets/js/language.js?v=2"></script>
+    <script src="assets/js/theme.js?v=1"></script>
+    <script src="assets/js/navigation.js?v=1"></script>
+    <!-- Enhanced Hover Effects -->
+    <script src="assets/js/ripple-effect.js?v=1"></script>
+    <script src="assets/js/magnetic-hover.js?v=1"></script>
+    <script src="assets/js/cursor-glow.js?v=1"></script>
+    <script src="assets/js/card-tilt.js?v=1"></script>
+    <script src="assets/js/tooltip.js?v=1"></script>
+    <script src="assets/js/scroll-progress.js?v=1"></script>
+    <script>
+        lucide.createIcons();
+
+        // Privacy page localization
+        const privacyTranslations = {
+            el: {
+                pageTitle: 'Πολιτική Απορρήτου',
+                lastUpdated: 'Τελευταία ενημέρωση: Απρίλιος 2026',
+                introTitle: 'Εισαγωγή',
+                introText: 'Ο ιστότοπος <strong>kwstas147.github.io</strong> σέβεται το απόρρητό σας. Αυτή η πολιτική εξηγεί ποια δεδομένα συλλέγουμε, πώς τα χρησιμοποιούμε και τα δικαιώματά σας σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR) της Ευρωπαϊκής Ένωσης.',
+                cookiesTitle: 'Cookies που χρησιμοποιούμε',
+                essentialTitle: '🔒 Απαραίτητα Cookies (localStorage)',
+                essentialText: 'Αυτά τα cookies είναι απολύτως απαραίτητα για τη λειτουργία του ιστότοπου. Δεν συλλέγουν προσωπικά δεδομένα.',
+                tableName: 'Όνομα',
+                tablePurpose: 'Σκοπός',
+                tableDuration: 'Διάρκεια',
+                cookieTheme: 'Αποθήκευση θέματος (Dark/Light)',
+                cookieLang: 'Αποθήκευση γλώσσας (EL/EN)',
+                cookieConsent: 'Αποθήκευση συναίνεσης cookies',
+                cookiePersistent: 'Μόνιμο',
+                cookie6months: '6 μήνες',
+                analyticsTitle: '📊 Cookies Ανάλυσης (Google Analytics)',
+                analyticsText: 'Χρησιμοποιούμε το Google Analytics (GA4) για να κατανοήσουμε πώς οι χρήστες αλληλεπιδρούν με τον ιστότοπό μας. Αυτά τα cookies ενεργοποιούνται <strong>μόνο μετά τη ρητή συναίνεσή σας</strong>.',
+                gaCookie: 'Αναγνώριση μοναδικών επισκεπτών',
+                gaSession: 'Αποθήκευση κατάστασης session',
+                dataTitle: 'Τι δεδομένα συλλέγονται',
+                dataText: 'Όταν αποδεχθείτε τα analytics cookies, το Google Analytics συλλέγει:',
+                dataItem1: 'Σελίδες που επισκεφτήκατε',
+                dataItem2: 'Χρόνος παραμονής στη σελίδα',
+                dataItem3: 'Τύπος συσκευής και browser',
+                dataItem4: 'Γεωγραφική τοποθεσία (πόλη/χώρα, χωρίς ακριβή τοποθεσία)',
+                dataItem5: 'Πηγή επισκεψιμότητας (από πού ήρθατε)',
+                noPii: '<strong>Δεν συλλέγουμε</strong> προσωπικά αναγνωρίσιμα στοιχεία (ονόματα, email, διευθύνσεις IP). Η ανωνυμοποίηση IP είναι ενεργοποιημένη στο Google Analytics.',
+                rightsTitle: 'Τα δικαιώματά σας',
+                right1: 'Μπορείτε να <strong>απορρίψετε</strong> τα analytics cookies κατά την πρώτη επίσκεψή σας.',
+                right2: 'Μπορείτε να <strong>αλλάξετε</strong> τη συναίνεσή σας ανά πάσα στιγμή μέσω του link «Διαχείριση Cookies» στο κάτω μέρος κάθε σελίδας.',
+                right3: 'Μπορείτε να <strong>διαγράψετε</strong> τα cookies ανά πάσα στιγμή μέσω των ρυθμίσεων του browser σας.',
+                right4: 'Η συναίνεσή σας λήγει αυτόματα μετά από <strong>6 μήνες</strong> και ζητείται εκ νέου.',
+                contactTitle: 'Επικοινωνία',
+                contactText: 'Για ερωτήσεις σχετικά με την πολιτική απορρήτου ή τα δεδομένα σας, επικοινωνήστε μαζί μας:'
+            },
+            en: {
+                pageTitle: 'Privacy Policy',
+                lastUpdated: 'Last updated: April 2026',
+                introTitle: 'Introduction',
+                introText: 'The website <strong>kwstas147.github.io</strong> respects your privacy. This policy explains what data we collect, how we use it, and your rights under the European Union\'s General Data Protection Regulation (GDPR).',
+                cookiesTitle: 'Cookies We Use',
+                essentialTitle: '🔒 Essential Cookies (localStorage)',
+                essentialText: 'These cookies are strictly necessary for the website to function. They do not collect personal data.',
+                tableName: 'Name',
+                tablePurpose: 'Purpose',
+                tableDuration: 'Duration',
+                cookieTheme: 'Theme preference (Dark/Light)',
+                cookieLang: 'Language preference (EL/EN)',
+                cookieConsent: 'Cookie consent preference',
+                cookiePersistent: 'Persistent',
+                cookie6months: '6 months',
+                analyticsTitle: '📊 Analytics Cookies (Google Analytics)',
+                analyticsText: 'We use Google Analytics (GA4) to understand how users interact with our website. These cookies are activated <strong>only after your explicit consent</strong>.',
+                gaCookie: 'Identify unique visitors',
+                gaSession: 'Store session state',
+                dataTitle: 'What Data Is Collected',
+                dataText: 'When you accept analytics cookies, Google Analytics collects:',
+                dataItem1: 'Pages you visited',
+                dataItem2: 'Time spent on page',
+                dataItem3: 'Device type and browser',
+                dataItem4: 'Geographic location (city/country, no exact location)',
+                dataItem5: 'Traffic source (where you came from)',
+                noPii: 'We <strong>do not collect</strong> personally identifiable information (names, email, IP addresses). IP anonymization is enabled in Google Analytics.',
+                rightsTitle: 'Your Rights',
+                right1: 'You can <strong>reject</strong> analytics cookies on your first visit.',
+                right2: 'You can <strong>change</strong> your consent at any time via the "Manage Cookies" link at the bottom of every page.',
+                right3: 'You can <strong>delete</strong> cookies at any time through your browser settings.',
+                right4: 'Your consent automatically expires after <strong>6 months</strong> and you will be asked again.',
+                contactTitle: 'Contact',
+                contactText: 'For questions about the privacy policy or your data, contact us:'
+            }
+        };
+
+        function applyPrivacyTranslations() {
+            const lang = document.documentElement.getAttribute('lang') || 'en';
+            const t = privacyTranslations[lang] || privacyTranslations.en;
+
+            const mappings = {
+                'privacy-page-title': {prop: 'textContent', key: 'pageTitle'},
+                'privacy-title': {prop: 'textContent', key: 'pageTitle'},
+                'privacy-last-updated': {prop: 'textContent', key: 'lastUpdated'},
+                'privacy-intro-title': {prop: 'textContent', key: 'introTitle'},
+                'privacy-intro-text': {prop: 'innerHTML', key: 'introText'},
+                'privacy-cookies-title': {prop: 'textContent', key: 'cookiesTitle'},
+                'privacy-essential-title': {prop: 'textContent', key: 'essentialTitle'},
+                'privacy-essential-text': {prop: 'innerHTML', key: 'essentialText'},
+                'privacy-table-name': {prop: 'textContent', key: 'tableName'},
+                'privacy-table-purpose': {prop: 'textContent', key: 'tablePurpose'},
+                'privacy-table-duration': {prop: 'textContent', key: 'tableDuration'},
+                'privacy-table-name2': {prop: 'textContent', key: 'tableName'},
+                'privacy-table-purpose2': {prop: 'textContent', key: 'tablePurpose'},
+                'privacy-table-duration2': {prop: 'textContent', key: 'tableDuration'},
+                'privacy-cookie-theme': {prop: 'textContent', key: 'cookieTheme'},
+                'privacy-cookie-lang': {prop: 'textContent', key: 'cookieLang'},
+                'privacy-cookie-consent': {prop: 'textContent', key: 'cookieConsent'},
+                'privacy-cookie-persistent': {prop: 'textContent', key: 'cookiePersistent'},
+                'privacy-cookie-persistent2': {prop: 'textContent', key: 'cookiePersistent'},
+                'privacy-cookie-6months': {prop: 'textContent', key: 'cookie6months'},
+                'privacy-analytics-title': {prop: 'textContent', key: 'analyticsTitle'},
+                'privacy-analytics-text': {prop: 'innerHTML', key: 'analyticsText'},
+                'privacy-ga-cookie': {prop: 'textContent', key: 'gaCookie'},
+                'privacy-ga-session': {prop: 'textContent', key: 'gaSession'},
+                'privacy-data-title': {prop: 'textContent', key: 'dataTitle'},
+                'privacy-data-text': {prop: 'innerHTML', key: 'dataText'},
+                'privacy-data-item1': {prop: 'textContent', key: 'dataItem1'},
+                'privacy-data-item2': {prop: 'textContent', key: 'dataItem2'},
+                'privacy-data-item3': {prop: 'textContent', key: 'dataItem3'},
+                'privacy-data-item4': {prop: 'textContent', key: 'dataItem4'},
+                'privacy-data-item5': {prop: 'textContent', key: 'dataItem5'},
+                'privacy-no-pii': {prop: 'innerHTML', key: 'noPii'},
+                'privacy-rights-title': {prop: 'textContent', key: 'rightsTitle'},
+                'privacy-right1': {prop: 'innerHTML', key: 'right1'},
+                'privacy-right2': {prop: 'innerHTML', key: 'right2'},
+                'privacy-right3': {prop: 'innerHTML', key: 'right3'},
+                'privacy-right4': {prop: 'innerHTML', key: 'right4'},
+                'privacy-contact-title': {prop: 'textContent', key: 'contactTitle'},
+                'privacy-contact-text': {prop: 'innerHTML', key: 'contactText'}
+            };
+
+            for (const [id, config] of Object.entries(mappings)) {
+                const el = document.getElementById(id);
+                if (el) {
+                    el[config.prop] = t[config.key];
+                }
+            }
+        }
+
+        // Εφαρμογή μεταφράσεων αρχικά
+        applyPrivacyTranslations();
+
+        // Ακρόαση αλλαγών γλώσσας
+        document.addEventListener('languageChanged', applyPrivacyTranslations);
+    </script>
+    <!-- Cookie Consent — GDPR -->
+    <script src="assets/js/cookie-consent.js?v=1"></script>
+</body>
+</html>
