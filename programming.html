@@ -450,6 +450,28 @@
                 </div>
                 <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.programming.projects.fuelTracker.title">Fuel Operation Tracker</h3>
                 <p class="text-gray-400 text-sm mb-4" data-i18n="pages.programming.projects.fuelTracker.description"></p>
+                
+                <!-- Play Store Download Section -->
+                <div class="download-section mb-6 flex flex-col sm:flex-row items-center gap-6 p-4 rounded-xl glass-panel">
+                    <div class="flex-1 text-center sm:text-left">
+                        <a href="https://play.google.com/store/apps/details?id=com.enterprise.fuel_operation_tracker" 
+                           target="_blank" 
+                           class="download-btn inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-white transition-all transform hover:scale-105 active:scale-95"
+                           onclick="HapticFeedback.selectionClick()">
+                            <i data-lucide="play" class="w-6 h-6 fill-current"></i>
+                            <span data-i18n="btnDownloadNow">Download Now</span>
+                        </a>
+                    </div>
+                    <div class="qr-container flex flex-col items-center gap-2">
+                        <div class="qr-code-wrapper p-2 bg-white rounded-lg shadow-xl">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://play.google.com/store/apps/details?id=com.enterprise.fuel_operation_tracker" 
+                                 alt="Play Store QR Code" 
+                                 class="w-24 h-24">
+                        </div>
+                        <span class="text-[10px] text-gray-400 uppercase tracking-widest font-bold" data-i18n="scanToDownload">Scan to Download</span>
+                    </div>
+                </div>
+
                 <div class="flex flex-wrap gap-2">
                     <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Flutter</span>
                     <span class="px-2 py-1 bg-tertiary text-xs text-gray-300 rounded">Dart</span>
