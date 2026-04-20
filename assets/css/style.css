@@ -2479,3 +2479,78 @@ html[data-theme="clean-office"] .cookie-consent-btn-reject:hover {
         padding: 0.75rem 1rem;
     }
 }
+
+/* --- Fuel Operation Tracker Download Section --- */
+.download-section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.download-section:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #007AFF 0%, #0056B3 100%);
+    box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.download-btn:hover::after {
+    left: 100%;
+}
+
+.qr-code-wrapper {
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.qr-container:hover .qr-code-wrapper {
+    transform: scale(1.05);
+}
+
+.qr-container span {
+    color: #94a3b8;
+    letter-spacing: 0.15em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Theme Awareness for Clean Office */
+html[data-theme="clean-office"] .download-section {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="clean-office"] .download-section:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="clean-office"] .qr-container span {
+    color: #64748b;
+    text-shadow: none;
+}

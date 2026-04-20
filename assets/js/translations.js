@@ -86,9 +86,6 @@ const translations = {
         pageTitleCSharp: "C# Windows Applications",
         pageTitleESP32: "ESP32 Smart Devices",
         
-        // Placeholder content
-        placeholderProjects: "Projects θα προστεθούν σύντομα...",
-        placeholderDescription: "Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.",
         
         // GitHub Activity
         githubActivity: "GitHub Activity",
@@ -314,6 +311,8 @@ const translations = {
         // Programming Projects
         "pages.programming.projects.myInventory.title": "MyInventory",
         "pages.programming.projects.myInventory.description": "Μια Flutter mobile εφαρμογή για στοιχειώδη διαχείριση αποθήκης, που αναπτύχθηκε από την ανάγκη διαχείρισης αποθήκης στην εργασία. Η εφαρμογή προσφέρει πλήρη λύση διαχείρισης αποθηκών με υποστήριξη πολλαπλών αποθηκών, διαχείριση προϊόντων, μεταφορές αποθεμάτων μεταξύ αποθηκών, ειδοποιήσεις χαμηλού αποθέματος, backup & restore λειτουργικότητα, και AI Assistant με ενσωμάτωση Google Gemini API. Ιδανική για οποιονδήποτε χρειάζεται αποτελεσματική και απλή διαχείριση αποθήκης.",
+        "pages.programming.projects.fuelTracker.title": "Fuel Operation Tracker",
+        "pages.programming.projects.fuelTracker.description": "Μια ολοκληρωμένη λύση διαχείρισης και παρακολούθησης καυσίμων για επιχειρήσεις. Η εφαρμογή επιτρέπει την καταγραφή αποδείξεων, την παρακολούθηση αποθέματος σε πραγματικό χρόνο και τη δημιουργία λεπτομερών αναφορών, όλα μέσα σε ένα premium Cupertino περιβάλλον.",
         "pages.programming.projects.mailExtractor.title": "MailExtractor",
         "pages.programming.projects.mailExtractor.description": "Windows εφαρμογή για εξαγωγή δεδομένων από Gmail. Ο χρήστης κατεβάζει αρχείο .mbox από το Google Takeout (takeout.google.com), το αποσυμπιέζει μέσα από την εφαρμογή, το επιλέγει και η εφαρμογή εξάγει αυτόματα ονόματα, email addresses και τηλεφωνικούς αριθμούς σε Excel. Διαθέτει δωρεάν χρήση αρχικά, ενώ μετά απαιτεί machine-specific key που αντιστοιχεί στο συγκεκριμένο μηχάνημα που τρέχει η εφαρμογή.",
         "pages.programming.projects.countdownTimer.title": "Countdown Timer",
@@ -344,7 +343,6 @@ const translations = {
         "pages.3dPrinting.collection2.description": "Προσωπικό project 3D printing με focus σε functional design και material optimization. Χρήση CAD tools και AI-assisted design για τη δημιουργία custom components.",
         "pages.3dPrinting.cardTitle": "3D Printed Part",
         "pages.3dPrinting.cardDescription": "Λειτουργικό ανταλλακτικό/εργαλείο εκτυπωμένο με additive manufacturing, βελτιστοποιημένο για functionality και durability.",
-        "pages.3dPrinting.placeholder": "Οι εικόνες για αυτό το project θα προστεθούν σύντομα.",
         "pages.3dPrinting.replica.title": "Replica Project - Online Games Collection",
         "pages.3dPrinting.replica.description": "Αυτό το project δημιουργήθηκε από το αίτημα των παιδιών μου για μια ρεπλίκα αντικειμένου από τα online games που παίζουν. Η ρεπλίκα του βομβιδοβόλου είναι σχεδιασμένη με προσοχή στις λεπτομέρειες και εκτυπωμένη με ακρίβεια για να είναι όσο το δυνατόν πιο πιστή στο πρωτότυπο. Αυτό το project συνδυάζει την αγάπη για τα βιντεοπαιχνίδια με τις τεχνικές δεξιότητες του 3D printing και CAD design.",
         
@@ -369,8 +367,6 @@ const translations = {
         "aiDev.benefits.learning": "Continuous learning & improvement",
         "aiDev.note": "Όλα τα projects σε αυτή τη σελίδα έχουν αναπτυχθεί με τη βοήθεια τεχνητής νοημοσύνης, αποδεικνύοντας πώς η AI μπορεί να ενισχύσει την παραγωγικότητα και την καινοτομία στον προγραμματισμό.",
         
-        // Placeholders
-        "placeholders.description": "Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.",
 
         // CTA Section
         "cta.title": "Ενδιαφέρεστε για συνεργασία;",
@@ -379,7 +375,27 @@ const translations = {
         
         // AI Design (Greek)
         "aiDesign.title": "AI-Assisted Design & Optimization",
-        "aiDesign.description": "Τα CAD designs μου και οι 3D εκτυπώσεις χρησιμοποιούν AI-assisted tools για optimization, material efficiency και functional design. Η τεχνητή νοημοσύνη βοηθάει στον σχεδιασμό λειτουργικών ανταλλακτικών και εργαλείων που βελτιώνουν την καθημερινή εργασία."
+        "aiDesign.description": "Τα CAD designs μου και οι 3D εκτυπώσεις χρησιμοποιούν AI-assisted tools για optimization, material efficiency και functional design. Η τεχνητή νοημοσύνη βοηθάει στον σχεδιασμό λειτουργικών ανταλλακτικών και εργαλείων που βελτιώνουν την καθημερινή εργασία.",
+
+        // Design Page (Greek)
+        "pages.design.title": "Σχεδιασμός CAD",
+        "pages.design.description": "Τρισδιάστατα μοντέλα και μηχανολογικά σχέδια, βελτιστοποιημένα για λειτουργικότητα και παραγωγή.",
+        "aiCAD.title": "AI-Assisted CAD Design",
+        "aiCAD.description": "Τα σχέδιά μου χρησιμοποιούν AI-assisted tools για βελτιστοποίηση υλικών και λειτουργικότητας των εξαρτημάτων.",
+        "design.tag": "Σχεδιασμός",
+        "design.project6.title": "Άσκηση ΕΚΠΑ - Σχεδιασμός Τροχαλίας",
+        "design.project6.description": "Πλήρης σχεδιασμός καιStoryboard τροχαλίας για το πρόγραμμα eLearning του ΕΚΠΑ (2024-2025).",
+        "design.project6.videoNotSupported": "Το πρόγραμμα περιήγησής σας δεν υποστηρίζει την αναπαραγωγή βίντεο.",
+        "design.project1.title": "Mechanical Part Design",
+        "design.project1.description": "Σχεδιασμός μηχανολογικού εξαρτήματος στο Fusion 360.",
+        "design.project2.title": "Parametric Component",
+        "design.project2.description": "Παραμετρικός σχεδιασμός για προσαρμόσιμα εξαρτήματα.",
+        "design.project3.title": "Functional Prototype",
+        "design.project3.description": "Λειτουργικό πρωτότυπο για βιομηχανική χρήση.",
+        "design.project4.title": "Spare Part Optimization",
+        "design.project4.description": "Βελτιστοποίηση ανταλλακτικού για 3D εκτύπωση.",
+        "design.project5.title": "Technical Assembly",
+        "design.project5.description": "Συναρμολόγηση σύνθετων μηχανικών μερών."
     },
     en: {
         // Navigation
@@ -462,9 +478,6 @@ const translations = {
         pageTitleCSharp: "C# Windows Applications",
         pageTitleESP32: "ESP32 Smart Devices",
         
-        // Placeholder content
-        placeholderProjects: "Projects will be added soon...",
-        placeholderDescription: "This section contains projects that will be added in the future.",
         
         // GitHub Activity
         githubActivity: "GitHub Activity",
@@ -715,6 +728,8 @@ const translations = {
         // Programming Projects
         "pages.programming.projects.myInventory.title": "MyInventory",
         "pages.programming.projects.myInventory.description": "A Flutter mobile application for basic warehouse management, developed from the need for warehouse management at work. The application offers a complete warehouse management solution with support for multiple warehouses, product management, stock transfers between warehouses, low stock notifications, backup & restore functionality, and AI Assistant with Google Gemini API integration. Ideal for anyone who needs effective and simple warehouse management.",
+        "pages.programming.projects.fuelTracker.title": "Fuel Operation Tracker",
+        "pages.programming.projects.fuelTracker.description": "A comprehensive fuel management and tracking solution for businesses. The application enables receipt logging, real-time inventory monitoring, and detailed report generation, all within a premium Cupertino interface.",
         "pages.programming.projects.mailExtractor.title": "MailExtractor",
         "pages.programming.projects.mailExtractor.description": "Windows application for extracting data from Gmail. The user downloads a .mbox file from Google Takeout (takeout.google.com), extracts it within the application, selects it and the application automatically extracts names, email addresses and phone numbers to Excel. It has free use initially, while later it requires a machine-specific key that corresponds to the specific machine running the application.",
         "pages.programming.projects.countdownTimer.title": "Countdown Timer",
@@ -745,7 +760,6 @@ const translations = {
         "pages.3dPrinting.collection2.description": "Personal 3D printing project focusing on functional design and material optimization. Using CAD tools and AI-assisted design to create custom components.",
         "pages.3dPrinting.cardTitle": "3D Printed Part",
         "pages.3dPrinting.cardDescription": "Functional spare part/tool printed using additive manufacturing, optimized for functionality and durability.",
-        "pages.3dPrinting.placeholder": "Images for this project will be added soon.",
         "pages.3dPrinting.replica.title": "Replica Project - Online Games Collection",
         "pages.3dPrinting.replica.description": "This project was created from my children's request for a replica of an object from the online games they play. The bomb thrower replica is carefully designed with attention to detail and printed with precision to be as faithful to the original as possible. This project combines the love for video games with the technical skills of 3D printing and CAD design.",
         
@@ -757,13 +771,31 @@ const translations = {
         "pages.3dPrinting.imageCount.singular": "image",
         "pages.3dPrinting.imageCount.plural": "images",
         
-        // Placeholders
-        "placeholders.description": "This section contains projects that will be added in the future.",
         
         // CTA Section
         "cta.title": "Interested in working together?",
         "cta.description": "Whether you have a project in mind or just want to say hi, I'm always open to discussing new opportunities and innovations.",
-        "cta.button": "Get In Touch"
+        "cta.button": "Get In Touch",
+
+        // Design Page (English)
+        "pages.design.title": "CAD Design",
+        "pages.design.description": "3D models and mechanical drawings, optimized for functionality and production.",
+        "aiCAD.title": "AI-Assisted CAD Design",
+        "aiCAD.description": "My designs leverage AI-assisted tools for material and functional optimization of components.",
+        "design.tag": "Design",
+        "design.project6.title": "NKUA Exercise - Pulley Design",
+        "design.project6.description": "Complete pulley design and storyboard for the NKUA eLearning program (2024-2025).",
+        "design.project6.videoNotSupported": "Your browser does not support video playback.",
+        "design.project1.title": "Mechanical Part Design",
+        "design.project1.description": "Mechanical part design in Fusion 360.",
+        "design.project2.title": "Parametric Component",
+        "design.project2.description": "Parametric design for adaptable components.",
+        "design.project3.title": "Functional Prototype",
+        "design.project3.description": "Functional prototype for industrial use.",
+        "design.project4.title": "Spare Part Optimization",
+        "design.project4.description": "Optimization of spare parts for 3D printing.",
+        "design.project5.title": "Technical Assembly",
+        "design.project5.description": "Assembly of complex mechanical parts."
     }
 };
 

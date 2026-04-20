@@ -564,37 +564,38 @@
                 </div>
             </div>
             
-            <!-- Placeholder for future projects -->
-            <div class="bg-card rounded-lg p-6 project-card">
-                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
-                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center">
-                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.programming.projects.csharpApp.title">C# Application</h3>
-                <p class="text-gray-400 text-sm mb-4" data-i18n="placeholders.description">Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.</p>
-            </div>
+
         </div>
         
         <!-- C# Code Example -->
         <div class="mt-8">
             <h3 class="text-xl font-bold mb-4 text-gray-300" data-i18n="pages.programming.codeExample">Code Example</h3>
-            <pre><code class="language-csharp">using System;
-using System.Windows.Forms;
+            <pre><code class="language-csharp">using MimeKit;
+using ClosedXML.Excel;
+using System.IO;
 
-namespace MyApp
+public class MailDataExtractor 
 {
-    public partial class MainForm : Form
+    public void ProcessMbox(string inputPath, string outputPath) 
     {
-        public MainForm()
-        {
-            InitializeComponent();
-        }
+        // Open Mbox file for parsing
+        using var stream = File.OpenRead(inputPath);
+        var parser = new MboxParser(stream);
+        
+        using var workbook = new XLWorkbook();
+        var ws = workbook.Worksheets.Add("Extracted Data");
+        int row = 1;
 
-        private void ButtonClick(object sender, EventArgs e)
+        foreach (var message in parser.Iterate()) 
         {
-            MessageBox.Show("Hello from C#!");
+            // Extract data from each email message
+            ws.Cell(row, 1).Value = message.From.Name;
+            ws.Cell(row, 2).Value = message.From.Address;
+            ws.Cell(row, 3).Value = message.Subject;
+            row++;
         }
+        
+        workbook.SaveAs(outputPath);
     }
 }</code></pre>
         </div>
@@ -715,26 +716,7 @@ namespace MyApp
         </div>
     </section>
 
-    <!-- Web Apps Section -->
-    <section class="container mx-auto px-4 py-12">
-        <div class="mb-8">
-            <h2 class="text-3xl font-bold mb-4 text-blue-400 flex items-center gap-3">
-                <i data-lucide="globe" class="w-8 h-8"></i>
-                <span data-i18n="pages.programming.sections.webApps">Web Apps</span>
-            </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-card rounded-lg p-6 project-card">
-                <div class="aspect-video bg-tertiary rounded mb-4 overflow-hidden relative">
-                    <div class="absolute inset-0 bg-tertiary rounded flex items-center justify-center">
-                        <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.programming.projects.webApp.title">Web Application</h3>
-                <p class="text-gray-400 text-sm mb-4" data-i18n="placeholders.description">Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.</p>
-            </div>
-        </div>
-    </section>
+
 
     <!-- ESPHome/ESP32 Section -->
     <section class="container mx-auto px-4 py-12">
@@ -849,24 +831,7 @@ sensor:
         </div>
     </section>
 
-    <!-- Home Assistant Automations Section -->
-    <section class="container mx-auto px-4 py-12">
-        <div class="mb-8">
-            <h2 class="text-3xl font-bold mb-4 text-blue-400 flex items-center gap-3">
-                <i data-lucide="home" class="w-8 h-8"></i>
-                <span data-i18n="pages.programming.sections.homeAssistant">Home Assistant Automations</span>
-            </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-card rounded-lg p-6 project-card">
-                <div class="aspect-video bg-tertiary rounded mb-4 flex items-center justify-center">
-                    <i data-lucide="image" class="w-12 h-12 text-slate-500"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 text-blue-400" data-i18n="pages.programming.projects.automation.title">Automation</h3>
-                <p class="text-gray-400 text-sm mb-4" data-i18n="placeholders.description">Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον.</p>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Smart Home Setups Section -->
     <section class="container mx-auto px-4 py-12">
