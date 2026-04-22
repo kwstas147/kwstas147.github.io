@@ -331,8 +331,8 @@ html[data-theme="clean-office"] {
 }
 
 .blob-1 {
-    top: -10%;
-    left: -10%;
+    top: -5%;
+    left: -5%;
     width: 60vw;
     height: 60vw;
     background: var(--blob-1-color);
@@ -426,6 +426,31 @@ html:not([data-theme]) {
 
 .bg-nav {
     background-color: var(--bg-secondary) !important;
+}
+
+/* Clean Office: ημιδιαφανή backgrounds για glassmorphism εφέ */
+html[data-theme="clean-office"] .bg-nav {
+    background-color: rgba(249, 250, 251, 0.70) !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+html[data-theme="clean-office"] .bg-card {
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+html[data-theme="clean-office"] .bg-tertiary {
+    background-color: rgba(243, 244, 246, 0.60) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+html[data-theme="clean-office"] .bg-footer {
+    background-color: rgba(249, 250, 251, 0.70) !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
 .bg-footer {
