@@ -278,6 +278,11 @@ html:not([data-theme]) {
     --accent-hover: #60a5fa;
     --card-bg: #1e293b;
     --card-hover-shadow: rgba(59, 130, 246, 0.15);
+    
+    /* Ambient Blobs for Midnight */
+    --blob-1-color: rgba(59, 130, 246, 0.08);
+    --blob-2-color: rgba(16, 185, 129, 0.06);
+    --blob-3-color: rgba(139, 92, 246, 0.05);
 }
 
 /* Clean Office Theme (Light) */
@@ -293,6 +298,77 @@ html[data-theme="clean-office"] {
     --accent-hover: #1d4ed8;
     --card-bg: #ffffff;
     --card-hover-shadow: rgba(0, 0, 0, 0.1);
+
+    /* Ambient Blobs for Clean Office */
+    --blob-1-color: rgba(59, 130, 246, 0.12);
+    --blob-2-color: rgba(16, 185, 129, 0.10);
+    --blob-3-color: rgba(139, 92, 246, 0.08);
+}
+
+/* ============================================
+   AMBIENT BACKGROUND (Animated Mesh Gradient)
+   ============================================ */
+
+.ambient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    filter: blur(100px);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: blob-bounce 25s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    will-change: transform;
+}
+
+.blob-1 {
+    top: -10%;
+    left: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: var(--blob-1-color);
+    animation-delay: 0s;
+}
+
+.blob-2 {
+    bottom: -20%;
+    right: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: var(--blob-2-color);
+    animation-delay: -5s;
+}
+
+.blob-3 {
+    top: 30%;
+    left: 50%;
+    width: 40vw;
+    height: 40vw;
+    background: var(--blob-3-color);
+    animation-delay: -10s;
+}
+
+@keyframes blob-bounce {
+    0%   { transform: translate(0, 0) scale(1); }
+    33%  { transform: translate(10vw, 5vh) scale(1.1); }
+    66%  { transform: translate(-5vw, 15vh) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .blob {
+        animation: none;
+    }
 }
 
 /* ============================================
