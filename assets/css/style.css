@@ -315,7 +315,7 @@ html[data-theme="clean-office"] {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
+    z-index: 0;
     overflow: hidden;
     pointer-events: none;
 }
@@ -397,9 +397,15 @@ html[data-theme="clean-office"] {
 /* ============================================
    APPLY THEME COLORS
    ============================================ */
-body {
+html {
     background-color: var(--bg-primary);
+}
+
+body {
+    background-color: transparent;
     color: var(--text-primary);
+    position: relative;
+    z-index: 1;
 }
 
 .theme-midnight,
