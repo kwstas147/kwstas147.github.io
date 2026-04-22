@@ -300,9 +300,9 @@ html[data-theme="clean-office"] {
     --card-hover-shadow: rgba(0, 0, 0, 0.1);
 
     /* Ambient Blobs for Clean Office */
-    --blob-1-color: rgba(59, 130, 246, 0.12);
-    --blob-2-color: rgba(16, 185, 129, 0.10);
-    --blob-3-color: rgba(139, 92, 246, 0.08);
+    --blob-1-color: rgba(59, 130, 246, 0.30);
+    --blob-2-color: rgba(16, 185, 129, 0.25);
+    --blob-3-color: rgba(139, 92, 246, 0.18);
 }
 
 /* ============================================
