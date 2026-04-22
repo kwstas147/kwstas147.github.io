@@ -295,7 +295,32 @@ html[data-theme="clean-office"] {
     --card-hover-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* Apply theme colors */
+/* ============================================
+   GLOBAL DESIGN SYSTEM OVERRIDES (MODERNIZATION)
+   ============================================ */
+
+/* Larger corner radii for a more modern Elite Cupertino aesthetic */
+.rounded-sm { border-radius: 0.5rem !important; }   /* 8px */
+.rounded { border-radius: 1rem !important; }      /* 16px */
+.rounded-md { border-radius: 1.25rem !important; } /* 20px */
+.rounded-lg { border-radius: 1.5rem !important; }  /* 24px */
+.rounded-xl { border-radius: 2rem !important; }    /* 32px */
+.rounded-2xl { border-radius: 2.5rem !important; } /* 40px */
+.rounded-3xl { border-radius: 3.5rem !important; } /* 56px */
+
+/* Apply consistency to cards and containers */
+.project-card, 
+.category-card, 
+.tech-project-card, 
+.glass-panel,
+.bg-card,
+.bg-tertiary {
+    border-radius: 1.5rem; /* Default for major containers */
+}
+
+/* ============================================
+   APPLY THEME COLORS
+   ============================================ */
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
@@ -1452,7 +1477,7 @@ html[data-theme="clean-office"] .tech-project-card:hover {
 
 .category-card:hover::before,
 .project-card:hover::before {
-    opacity: 0.8;
+    opacity: 0.6; /* Reduced from 0.8 for better contrast */
 }
 
 .category-card:hover,
@@ -1468,9 +1493,28 @@ html[data-theme="clean-office"] .tech-project-card:hover {
 html[data-theme="clean-office"] .category-card:hover,
 html[data-theme="clean-office"] .project-card:hover {
     box-shadow: 
-        0 0 15px rgba(37, 99, 235, 0.3),
-        0 0 30px rgba(37, 99, 235, 0.15),
+        0 0 15px rgba(37, 99, 235, 0.2),
+        0 0 30px rgba(37, 99, 235, 0.1),
         0 10px 25px var(--card-hover-shadow);
+}
+
+/* Explicit text contrast for cards on hover */
+.project-card:hover h3,
+.category-card:hover h2,
+.tech-project-card:hover h2,
+.tech-project-card:hover h3 {
+    color: var(--accent-color) !important;
+    transition: color 0.3s ease;
+}
+
+html[data-theme="midnight"] .project-card:hover p,
+html[data-theme="midnight"] .category-card:hover p {
+    color: #ffffff !important;
+}
+
+html[data-theme="clean-office"] .project-card:hover p,
+html[data-theme="clean-office"] .category-card:hover p {
+    color: var(--text-primary) !important;
 }
 
 /* Enhanced button glow */
@@ -1511,7 +1555,7 @@ a.bg-blue-600 {
 .bg-tertiary:hover {
     background: linear-gradient(135deg, 
         var(--bg-tertiary) 0%, 
-        var(--card-bg) 50%, 
+        var(--bg-secondary) 50%, 
         var(--bg-tertiary) 100%);
     background-size: 200% 200%;
     animation: gradientSlide 3s ease infinite;
@@ -1658,9 +1702,8 @@ h1:hover,
 h2:hover,
 h3:hover {
     text-shadow: 
-        0 0 10px rgba(59, 130, 246, 0.5),
-        0 0 20px rgba(59, 130, 246, 0.3),
-        0 0 30px rgba(59, 130, 246, 0.2);
+        0 0 8px var(--accent-color),
+        0 0 15px rgba(59, 130, 246, 0.2);
 }
 
 .category-card h2:hover,
