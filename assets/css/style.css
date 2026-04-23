@@ -137,18 +137,18 @@ header {
 html[data-theme="clean-office"] .hero-overlay {
     background: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0.88) 0%,
-        rgba(249, 250, 251, 0.75) 25%,
-        rgba(243, 244, 246, 0.65) 45%,
-        rgba(249, 250, 251, 0.70) 60%,
-        rgba(255, 255, 255, 0.75) 75%,
-        rgba(255, 255, 255, 0.80) 90%,
-        rgba(255, 255, 255, 0.85) 100%
+        rgba(241, 245, 249, 0.88) 0%,
+        rgba(226, 232, 240, 0.75) 25%,
+        rgba(203, 213, 225, 0.65) 45%,
+        rgba(226, 232, 240, 0.70) 60%,
+        rgba(241, 245, 249, 0.75) 75%,
+        rgba(241, 245, 249, 0.80) 90%,
+        rgba(241, 245, 249, 0.85) 100%
     );
 }
 
 html[data-theme="clean-office"] .hero-background {
-    filter: brightness(0.9) contrast(1.05);
+    filter: brightness(0.8) contrast(1.05);
 }
 
 /* Hero text styling for better contrast */
@@ -159,7 +159,7 @@ html[data-theme="clean-office"] .hero-background {
 }
 
 html[data-theme="clean-office"] .hero-text {
-    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.9), 0 4px 20px rgba(255, 255, 255, 0.6);
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
 }
 
 /* Enhanced blue accent for hero subtitle */
@@ -169,7 +169,7 @@ html[data-theme="clean-office"] .hero-text {
 }
 
 html[data-theme="clean-office"] .hero-section .text-blue-400 {
-    text-shadow: 0 2px 12px rgba(37, 99, 235, 0.4), 0 4px 20px rgba(255, 255, 255, 0.7);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 /* Enhanced card styling within hero section for better readability */
@@ -181,9 +181,9 @@ html[data-theme="clean-office"] .hero-section .text-blue-400 {
 }
 
 html[data-theme="clean-office"] .hero-section .bg-card {
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(37, 99, 235, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* Remove background boxes from Professional Summary items in hero section */
@@ -287,22 +287,22 @@ html:not([data-theme]) {
 
 /* Clean Office Theme (Light) */
 html[data-theme="clean-office"] {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f9fafb;
-    --bg-tertiary: #f3f4f6;
-    --text-primary: #111827;
-    --text-secondary: #4b5563;
-    --text-tertiary: #6b7280;
-    --border-color: #e5e7eb;
+    --bg-primary: #f1f5f9;
+    --bg-secondary: #e2e8f0;
+    --bg-tertiary: #cbd5e1;
+    --text-primary: #020617;
+    --text-secondary: #1e293b;
+    --text-tertiary: #334155;
+    --border-color: #cbd5e1;
     --accent-color: #2563eb;
     --accent-hover: #1d4ed8;
     --card-bg: #ffffff;
-    --card-hover-shadow: rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: rgba(0, 0, 0, 0.12);
 
     /* Ambient Blobs for Clean Office */
-    --blob-1-color: rgba(59, 130, 246, 0.30);
-    --blob-2-color: rgba(16, 185, 129, 0.25);
-    --blob-3-color: rgba(139, 92, 246, 0.18);
+    --blob-1-color: rgba(37, 99, 235, 0.25);
+    --blob-2-color: rgba(5, 150, 105, 0.20);
+    --blob-3-color: rgba(124, 58, 237, 0.15);
 }
 
 /* ============================================
@@ -430,25 +430,25 @@ html:not([data-theme]) {
 
 /* Clean Office: ημιδιαφανή backgrounds για glassmorphism εφέ */
 html[data-theme="clean-office"] .bg-nav {
-    background-color: rgba(249, 250, 251, 0.70) !important;
+    background-color: rgba(241, 245, 249, 0.85) !important;
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
 html[data-theme="clean-office"] .bg-card {
-    background-color: rgba(255, 255, 255, 0.65) !important;
+    background-color: rgba(255, 255, 255, 0.85) !important;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 html[data-theme="clean-office"] .bg-tertiary {
-    background-color: rgba(243, 244, 246, 0.60) !important;
+    background-color: rgba(226, 232, 240, 0.70) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
 
 html[data-theme="clean-office"] .bg-footer {
-    background-color: rgba(249, 250, 251, 0.70) !important;
+    background-color: rgba(241, 245, 249, 0.85) !important;
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
@@ -553,8 +553,8 @@ html:not([data-theme]) .lang-switcher [data-lang="en"] {
 
 html[data-theme="clean-office"] .lang-switcher [data-lang="el"],
 html[data-theme="clean-office"] .lang-switcher [data-lang="en"] {
-    background-color: rgba(243, 244, 246, 0.8);
-    color: #4b5563;
+    background-color: rgba(226, 232, 240, 0.8);
+    color: #1e293b;
 }
 
 .lang-switcher [data-lang].active {
@@ -593,8 +593,8 @@ html:not([data-theme]) .theme-switcher [data-theme] {
 }
 
 html[data-theme="clean-office"] .theme-switcher [data-theme] {
-    background-color: rgba(243, 244, 246, 0.8);
-    color: #4b5563;
+    background-color: rgba(226, 232, 240, 0.8);
+    color: #1e293b;
 }
 
 .theme-switcher [data-theme].active {
