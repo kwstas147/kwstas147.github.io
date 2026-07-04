@@ -344,6 +344,8 @@ const translations = {
         "pages.programming.projects.duplicateFinder.description": "Αξιόπιστο Desktop εργαλείο (Windows) για την εκκαθάριση αποθηκευτικών χώρων και την εύρεση διπλότυπων αρχείων. Σε αντίθεση με κοινά προγράμματα, χρησιμοποιεί τον κρυπτογραφικό αλγόριθμο SHA-256 (hashing) συγκρίνοντας το πραγματικό περιεχόμενο των αρχείων, εγγυώμενο 100% ακρίβεια. Αναπτύχθηκε σε Python με το PySide6 (Qt) για ένα ταχύτατο γραφικό περιβάλλον και διανέμεται ως αυτόνομος installer.",
         "btnDownloadApk": "Λήψη APK",
         "btnDownloadInstaller": "Λήψη Installer",
+        "btnUnavailable": "Προσωρινά Μη Διαθέσιμο",
+        "apkRedistributionWarning": "Απαγορεύεται ρητά η αναδιανομή των αρχείων εγκατάστασης από τρίτους.",
         
         // 3D Printing Page
         "pages.3dPrinting.title": "3D Printing Creations",
@@ -773,6 +775,8 @@ const translations = {
         "pages.programming.projects.duplicateFinder.description": "A reliable Desktop utility (Windows) for storage cleanup and duplicate file detection. Unlike common programs, it employs the SHA-256 cryptographic algorithm (hashing) to compare actual file contents, guaranteeing 100% accuracy. Developed in Python using PySide6 (Qt) for a blazing-fast graphical interface, and distributed as a standalone Windows installer.",
         "btnDownloadApk": "Download APK",
         "btnDownloadInstaller": "Download Installer",
+        "btnUnavailable": "Temporarily Unavailable",
+        "apkRedistributionWarning": "Redistribution of the installation files by third parties is strictly prohibited.",
         
         // 3D Printing Page
         "pages.3dPrinting.title": "3D Printing Creations",

@@ -80,6 +80,10 @@
                         <a href="design.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="design" data-i18n="nav.design">Σχεδιασμός</a>
                         <a href="programming.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="programming" data-i18n="nav.programming">Development</a>
                         <a href="cv.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="cv" data-i18n="nav.cv">Βιογραφικό</a>
+                        <p class="text-[10px] text-gray-400 mt-2 flex items-center justify-center sm:justify-start gap-1">
+                            <i data-lucide="shield-alert" class="w-3 h-3 text-red-400"></i>
+                            <span data-i18n="apkRedistributionWarning">Απαγορεύεται ρητά η αναδιανομή από τρίτους.</span>
+                        </p>
                     </div>
                 </div>
                 <div class="flex items-center gap-4">
@@ -94,6 +98,10 @@
                     <div class="lang-switcher">
                         <button data-lang="el" class="active">EL</button>
                         <button data-lang="en">EN</button>
+                        <p class="text-[10px] text-gray-400 mt-2 flex items-center justify-center sm:justify-start gap-1">
+                            <i data-lucide="shield-alert" class="w-3 h-3 text-red-400"></i>
+                            <span data-i18n="apkRedistributionWarning">Απαγορεύεται ρητά η αναδιανομή από τρίτους.</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -248,12 +256,16 @@
                 <!-- APK Download Section -->
                 <div class="download-section mb-6 flex flex-col sm:flex-row items-center gap-6 p-4 rounded-xl glass-panel">
                     <div class="flex-1 text-center sm:text-left">
-                        <a href="assets/downloads/myinventory/myinventory.apk" 
-                           download
+                        <a href="assets/downloads/myinventory/app-arm64-v8a-release.apk" 
+                           download="MyInventory.apk"
                            class="download-btn inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-white transition-all transform hover:scale-105 active:scale-95">
                             <i data-lucide="download" class="w-6 h-6"></i>
                             <span data-i18n="btnDownloadApk">Download APK</span>
                         </a>
+                        <p class="text-[10px] text-gray-400 mt-2 flex items-center justify-center sm:justify-start gap-1">
+                            <i data-lucide="shield-alert" class="w-3 h-3 text-red-400"></i>
+                            <span data-i18n="apkRedistributionWarning">Απαγορεύεται ρητά η αναδιανομή από τρίτους.</span>
+                        </p>
                     </div>
                 </div>
 
@@ -611,12 +623,15 @@
                 <!-- APK Download Section -->
                 <div class="download-section mb-6 flex flex-col sm:flex-row items-center gap-6 p-4 rounded-xl glass-panel">
                     <div class="flex-1 text-center sm:text-left">
-                        <a href="assets/downloads/easyslot/easyslot.apk" 
-                           download
-                           class="download-btn inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-white transition-all transform hover:scale-105 active:scale-95">
-                            <i data-lucide="download" class="w-6 h-6"></i>
-                            <span data-i18n="btnDownloadApk">Download APK</span>
-                        </a>
+                        <button disabled
+                           class="download-btn inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-gray-400 bg-gray-700 cursor-not-allowed opacity-50">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                            <span data-i18n="btnUnavailable">Προσωρινά Μη Διαθέσιμο</span>
+                        </button>
+                        <p class="text-[10px] text-gray-400 mt-2 flex items-center justify-center sm:justify-start gap-1">
+                            <i data-lucide="shield-alert" class="w-3 h-3 text-red-400"></i>
+                            <span data-i18n="apkRedistributionWarning">Απαγορεύεται ρητά η αναδιανομή από τρίτους.</span>
+                        </p>
                     </div>
                 </div>
 
@@ -697,12 +712,16 @@
                 <!-- APK Download Section -->
                 <div class="download-section mb-6 flex flex-col sm:flex-row items-center gap-6 p-4 rounded-xl glass-panel">
                     <div class="flex-1 text-center sm:text-left">
-                        <a href="assets/downloads/myplan/myplan.apk" 
-                           download
+                        <a href="assets/downloads/myplan/app-arm64-v8a-release.apk" 
+                           download="MyPlan.apk"
                            class="download-btn inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-white transition-all transform hover:scale-105 active:scale-95">
                             <i data-lucide="download" class="w-6 h-6"></i>
                             <span data-i18n="btnDownloadApk">Download APK</span>
                         </a>
+                        <p class="text-[10px] text-gray-400 mt-2 flex items-center justify-center sm:justify-start gap-1">
+                            <i data-lucide="shield-alert" class="w-3 h-3 text-red-400"></i>
+                            <span data-i18n="apkRedistributionWarning">Απαγορεύεται ρητά η αναδιανομή από τρίτους.</span>
+                        </p>
                     </div>
                 </div>
 
@@ -796,12 +815,16 @@
                 <!-- APK Download Section -->
                 <div class="download-section mb-6 flex flex-col sm:flex-row items-center gap-6 p-4 rounded-xl glass-panel">
                     <div class="flex-1 text-center sm:text-left">
-                        <a href="assets/downloads/synapses/synapses.apk" 
-                           download
+                        <a href="assets/downloads/synapses/app-arm64-v8a-release.apk" 
+                           download="Synapses.apk"
                            class="download-btn inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-white transition-all transform hover:scale-105 active:scale-95">
                             <i data-lucide="download" class="w-6 h-6"></i>
                             <span data-i18n="btnDownloadApk">Download APK</span>
                         </a>
+                        <p class="text-[10px] text-gray-400 mt-2 flex items-center justify-center sm:justify-start gap-1">
+                            <i data-lucide="shield-alert" class="w-3 h-3 text-red-400"></i>
+                            <span data-i18n="apkRedistributionWarning">Απαγορεύεται ρητά η αναδιανομή από τρίτους.</span>
+                        </p>
                     </div>
                 </div>
 
@@ -966,12 +989,15 @@
                 <!-- APK Download Section -->
                 <div class="download-section mb-6 flex flex-col sm:flex-row items-center gap-6 p-4 rounded-xl glass-panel">
                     <div class="flex-1 text-center sm:text-left">
-                        <a href="assets/downloads/synthesis/synthesis.apk" 
-                           download
-                           class="download-btn inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-white transition-all transform hover:scale-105 active:scale-95">
-                            <i data-lucide="download" class="w-6 h-6"></i>
-                            <span data-i18n="btnDownloadApk">Download APK</span>
-                        </a>
+                        <button disabled
+                           class="download-btn inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-gray-400 bg-gray-700 cursor-not-allowed opacity-50">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                            <span data-i18n="btnUnavailable">Προσωρινά Μη Διαθέσιμο</span>
+                        </button>
+                        <p class="text-[10px] text-gray-400 mt-2 flex items-center justify-center sm:justify-start gap-1">
+                            <i data-lucide="shield-alert" class="w-3 h-3 text-red-400"></i>
+                            <span data-i18n="apkRedistributionWarning">Απαγορεύεται ρητά η αναδιανομή από τρίτους.</span>
+                        </p>
                     </div>
                 </div>
 
@@ -1230,12 +1256,15 @@ public class MailDataExtractor
                 <!-- Installer Download Section -->
                 <div class="download-section mb-6 flex flex-col sm:flex-row items-center gap-6 p-4 rounded-xl glass-panel">
                     <div class="flex-1 text-center sm:text-left">
-                        <a href="assets/downloads/duplicatefinder/DuplicateFinderSetup.exe" 
-                           download
-                           class="download-btn inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-white transition-all transform hover:scale-105 active:scale-95">
-                            <i data-lucide="download" class="w-6 h-6"></i>
-                            <span data-i18n="btnDownloadInstaller">Download Installer</span>
-                        </a>
+                        <button disabled
+                           class="download-btn inline-flex items-center gap-3 px-6 py-3 rounded-full font-bold text-gray-400 bg-gray-700 cursor-not-allowed opacity-50">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                            <span data-i18n="btnUnavailable">Προσωρινά Μη Διαθέσιμο</span>
+                        </button>
+                        <p class="text-[10px] text-gray-400 mt-2 flex items-center justify-center sm:justify-start gap-1">
+                            <i data-lucide="shield-alert" class="w-3 h-3 text-red-400"></i>
+                            <span data-i18n="apkRedistributionWarning">Απαγορεύεται ρητά η αναδιανομή από τρίτους.</span>
+                        </p>
                     </div>
                 </div>
 
