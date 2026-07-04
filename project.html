@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Konstantinos</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom config -->
+    <script src="assets/js/tailwind-config.js"></script>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 0.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        .lightbox.active img {
+            transform: scale(1);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans antialiased min-h-screen flex flex-col pt-20">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 hover:from-blue-300 hover:to-emerald-300 transition-all duration-300">
+                Kwstas<span class="text-white">147</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium" data-i18n="nav.home">
+                    <i data-lucide="home" class="w-4 h-4"></i>Home
+                </a>
+                <a href="3d-printing.html" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium" data-i18n="nav.printing">
+                    <i data-lucide="printer" class="w-4 h-4"></i>3D Printing
+                </a>
+                <a href="programming.html" class="text-blue-400 transition-colors flex items-center gap-2 font-medium" data-i18n="nav.programming">
+                    <i data-lucide="code-2" class="w-4 h-4"></i>Programming
+                </a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <!-- Language Toggle -->
+                <button id="langToggle" class="px-3 py-1 rounded-full bg-gray-800 text-gray-300 hover:text-white hover:bg-gray-700 transition-all text-sm font-semibold flex items-center gap-2 border border-gray-700">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    <span id="currentLang">EN</span>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-300 hover:text-white focus:outline-none" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-gray-800/95 backdrop-blur-xl border-t border-gray-700 absolute w-full" id="mobile-menu">
+            <div class="px-4 py-4 space-y-4">
+                <a href="index.html" class="block text-gray-300 hover:text-white transition-colors font-medium flex items-center gap-3" data-i18n="nav.home">
+                    <i data-lucide="home" class="w-5 h-5 text-gray-400"></i>Home
+                </a>
+                <a href="3d-printing.html" class="block text-gray-300 hover:text-white transition-colors font-medium flex items-center gap-3" data-i18n="nav.printing">
+                    <i data-lucide="printer" class="w-5 h-5 text-gray-400"></i>3D Printing
+                </a>
+                <a href="programming.html" class="block text-blue-400 transition-colors font-medium flex items-center gap-3" data-i18n="nav.programming">
+                    <i data-lucide="code-2" class="w-5 h-5 text-blue-400"></i>Programming
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-4 py-8 max-w-5xl">
+        <!-- Back button -->
+        <a href="programming.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 group">
+            <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i>
+            <span data-i18n="nav.backToProgramming">Επιστροφή</span>
+        </a>
+
+        <!-- Content Container -->
+        <div id="project-container" class="hidden">
+            <!-- Header Section -->
+            <div class="flex flex-col md:flex-row gap-8 items-start mb-12">
+                <!-- Icon -->
+                <div class="w-32 h-32 md:w-48 md:h-48 bg-card rounded-3xl p-4 flex-shrink-0 shadow-2xl shadow-blue-500/10 border border-gray-800 flex items-center justify-center overflow-hidden">
+                    <img id="project-icon" src="" alt="Project Icon" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i data-lucide="app-window" class="w-16 h-16 text-slate-500 opacity-40 hidden" id="fallback-icon"></i>
+                </div>
+
+                <!-- Info & Download -->
+                <div class="flex-1 w-full">
+                    <h1 id="project-title" class="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                        <!-- Dynamic Title -->
+                    </h1>
+                    
+                    <div id="project-tags" class="flex flex-wrap gap-2 mb-6">
+                        <!-- Dynamic Tags -->
+                    </div>
+
+                    <!-- Download Section -->
+                    <div class="bg-card/50 border border-gray-800 rounded-2xl p-6 backdrop-blur-sm max-w-xl">
+                        <div id="download-available" class="hidden">
+                            <a id="download-link" href="#" download class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/25">
+                                <i data-lucide="download" class="w-6 h-6"></i>
+                                <span id="download-text" data-i18n="btnDownloadApk">Λήψη APK</span>
+                            </a>
+                        </div>
+                        
+                        <div id="download-unavailable" class="hidden">
+                            <button disabled class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-gray-400 bg-gray-800 border border-gray-700 cursor-not-allowed opacity-75">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                                <span data-i18n="btnUnavailable">Προσωρινά Μη Διαθέσιμο</span>
+                            </button>
+                        </div>
+                        
+                        <p class="text-[11px] text-gray-400 mt-4 flex items-center gap-2">
+                            <i data-lucide="shield-alert" class="w-4 h-4 text-red-400 flex-shrink-0"></i>
+                            <span data-i18n="apkRedistributionWarning">Απαγορεύεται ρητά η αναδιανομή από τρίτους.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="prose prose-invert prose-blue max-w-none mb-16 bg-card border border-gray-800 rounded-3xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-gray-100">
+                    <i data-lucide="info" class="w-6 h-6 text-blue-400"></i>
+                    <span data-i18n="nav.aboutProject">Σχετικά με την εφαρμογή</span>
+                </h2>
+                <p id="project-description" class="text-gray-300 leading-relaxed text-lg whitespace-pre-line">
+                    <!-- Dynamic Description -->
+                </p>
+            </div>
+
+            <!-- Screenshots -->
+            <div id="screenshots-section" class="hidden mb-16">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-100">
+                    <i data-lucide="image" class="w-6 h-6 text-purple-400"></i>
+                    <span data-i18n="nav.screenshots">Στιγμιότυπα (Screenshots)</span>
+                </h2>
+                
+                <div class="bg-card border border-gray-800 rounded-3xl p-4 md:p-8 shadow-xl overflow-hidden">
+                    <div id="screenshots-container" class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full gap-4 pb-4">
+                        <!-- Dynamic Screenshots -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Error State -->
+        <div id="error-state" class="hidden flex-col items-center justify-center py-20 text-center">
+            <i data-lucide="alert-circle" class="w-16 h-16 text-red-400 mb-4"></i>
+            <h2 class="text-2xl font-bold mb-2">Project not found</h2>
+            <p class="text-gray-400 mb-6">The requested project could not be found or does not exist.</p>
+            <a href="programming.html" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-full font-bold transition-colors">Go Back</a>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <i data-lucide="x" class="lightbox-close w-10 h-10"></i>
+        <img id="lightbox-img" src="" alt="Full size image">
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-auto">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col items-center justify-center gap-4">
+                <div class="flex gap-6">
+                    <a href="https://github.com/Kwstas147" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm text-center font-medium">
+                    © 2026 Konstantinos. <span data-i18n="footer.rights">All rights reserved.</span><br>
+                    <span class="text-xs mt-1 block opacity-75">Built with modern web technologies</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/projects_data.js"></script>
+    
+    <script>
+        lucide.createIcons();
+
+        // Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Initialize Project Page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+            
+            const container = document.getElementById('project-container');
+            const errorState = document.getElementById('error-state');
+            
+            if (!projectId || !projectsData[projectId]) {
+                errorState.classList.remove('hidden');
+                return;
+            }
+            
+            container.classList.remove('hidden');
+            const project = projectsData[projectId];
+            
+            // Populate Basic Info
+            document.getElementById('project-icon').src = project.icon;
+            
+            // Handle i18n
+            const titleEl = document.getElementById('project-title');
+            titleEl.setAttribute('data-i18n', project.titleKey);
+            
+            const descEl = document.getElementById('project-description');
+            descEl.setAttribute('data-i18n', project.descKey);
+            
+            // Populate Tags
+            const tagsContainer = document.getElementById('project-tags');
+            project.tags.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'px-3 py-1 bg-gray-800 border border-gray-700 text-sm text-gray-300 rounded-full font-medium';
+                span.textContent = tag;
+                tagsContainer.appendChild(span);
+            });
+            
+            // Handle Download
+            if (project.downloadAvailable) {
+                document.getElementById('download-available').classList.remove('hidden');
+                const link = document.getElementById('download-link');
+                link.href = project.downloadLink;
+                link.setAttribute('download', project.downloadFilename);
+                
+                const text = document.getElementById('download-text');
+                if (project.downloadType === 'installer') {
+                    text.setAttribute('data-i18n', 'btnDownloadInstaller');
+                } else {
+                    text.setAttribute('data-i18n', 'btnDownloadApk');
+                }
+            } else {
+                document.getElementById('download-unavailable').classList.remove('hidden');
+            }
+            
+            // Handle Screenshots
+            if (project.screenshots && project.screenshots.length > 0) {
+                document.getElementById('screenshots-section').classList.remove('hidden');
+                const screensContainer = document.getElementById('screenshots-container');
+                
+                project.screenshots.forEach((prefix, index) => {
+                    const div = document.createElement('div');
+                    // Add width based on mobile vs desktop. Here we use 80% width on mobile, 33% on desktop
+                    div.className = 'relative min-w-[80%] md:min-w-[33.33%] h-[300px] md:h-[400px] snap-start flex-shrink-0 rounded-xl overflow-hidden';
+                    
+                    const fullUrl = prefix + '-1200w.jpg';
+                    const imgUrl = prefix + '-800w.jpg';
+                    const imgUrl400 = prefix + '-400w.jpg';
+                    
+                    // Note: Fuel Tracker has custom converted naming, checking if prefix contains "converted"
+                    const isDirectFile = prefix.endsWith('.png') || prefix.endsWith('.jpg') || !prefix.includes('optimized_assets');
+                    
+                    const img = document.createElement('img');
+                    if (isDirectFile) {
+                        img.src = prefix + '.jpg'; // simplified fallback
+                        img.setAttribute('data-fullsize', prefix + '.jpg');
+                    } else {
+                        img.src = imgUrl;
+                        img.srcset = `${imgUrl400} 400w, ${imgUrl} 800w, ${fullUrl} 1200w`;
+                        img.sizes = '(max-width: 768px) 80vw, 33vw';
+                        img.setAttribute('data-fullsize', fullUrl);
+                    }
+                    
+                    img.alt = `Screenshot ${index + 1}`;
+                    img.className = 'w-full h-full object-contain md:object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity bg-black/20';
+                    img.loading = 'lazy';
+                    img.onerror = function() { this.style.display='none'; };
+                    
+                    div.appendChild(img);
+                    screensContainer.appendChild(div);
+                });
+            }
+
+            // Force translation update for newly added elements
+            if (typeof updateTranslations === 'function') {
+                updateTranslations(currentLang);
+            }
+            
+            // Setup Lightbox for newly added images
+            setupLightbox();
+        });
+        
+        // Lightbox Logic
+        function setupLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.lightbox-close');
+
+            document.querySelectorAll('.lightbox-image').forEach(img => {
+                img.addEventListener('click', (e) => {
+                    const fullsizeUrl = img.getAttribute('data-fullsize') || img.src;
+                    lightboxImg.src = fullsizeUrl;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            });
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('active');
+                setTimeout(() => {
+                    lightboxImg.src = '';
+                }, 300);
+                document.body.style.overflow = '';
+            };
+
+            closeBtn.addEventListener('click', closeLightbox);
+            
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
