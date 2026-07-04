@@ -568,7 +568,12 @@
         "pages.programming.projects.duplicateFinder.title": "DuplicateFinder",
         "pages.programming.projects.duplicateFinder.description": "Desktop εφαρμογή για ανίχνευση και διαχείριση διπλότυπων αρχείων. Χρησιμοποιεί SHA-256 hashing για ακριβή σύγκριση περιεχομένου αρχείων, με γραφικό περιβάλλον Qt (PySide6) και δυνατότητα εκτέλεσης ως standalone Windows εφαρμογή (.exe) μέσω PyInstaller.",
         "btnDownloadApk": "Λήψη APK",
-        "btnDownloadInstaller": "Λήψη Installer"
+        "btnDownloadInstaller": "Λήψη Installer",
+        "apkRedistributionWarning": "Απαγορεύεται ρητά η αναδιανομή από τρίτους.",
+        "btnUnavailable": "Προσωρινά μη διαθέσιμο",
+        "nav.aboutProject": "Σχετικά με την εφαρμογή",
+        "nav.backToProgramming": "Επιστροφή",
+        "nav.screenshots": "Στιγμιότυπα (Screenshots)"
     },
     "en": {
         "nav": {
@@ -1139,6 +1144,11 @@
         "pages.programming.projects.duplicateFinder.title": "DuplicateFinder",
         "pages.programming.projects.duplicateFinder.description": "Desktop application for detecting and managing duplicate files. Uses SHA-256 hashing for accurate file content comparison, with a Qt GUI (PySide6) and the ability to run as a standalone Windows application (.exe) via PyInstaller.",
         "btnDownloadApk": "Download APK",
-        "btnDownloadInstaller": "Download Installer"
+        "btnDownloadInstaller": "Download Installer",
+        "apkRedistributionWarning": "Redistribution by third parties is strictly prohibited.",
+        "btnUnavailable": "Temporarily unavailable",
+        "nav.aboutProject": "About the application",
+        "nav.backToProgramming": "Go Back",
+        "nav.screenshots": "Screenshots"
     }
 }
