@@ -1,1112 +1,1144 @@
 {
-  "el": {
-    "nav": {
-      "home": "Αρχική",
-      "menu": "Μενού",
-      "3dPrinting": "3D Εκτύπωση",
-      "design": "Σχεδιασμός",
-      "programming": "Κέντρο Ανάπτυξης",
-      "cv": "Βιογραφικό"
-    },
-    "cv": {
-      "header": {
-        "name": "Κωνσταντίνος Λαθύρης",
-        "title": "Industrial Operations Manager | IoT & Digital Tech Specialist",
-        "btnDownload": "Κατεβάστε το CV"
-      },
-      "sections": {
-        "summary": "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ",
-        "experience": "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ",
-        "education": "ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ",
-        "techProjects": "Τεχνολογικά Project & Καινοτομία",
-        "skills": "ΤΕΧΝΙΚΕΣ & ΨΗΦΙΑΚΕΣ ΔΕΞΙΟΤΗΤΕΣ",
-        "softSkills": "SOFT SKILLS",
-        "hobbies": "HOBBIES",
-        "contact": "ΕΠΙΚΟΙΝΩΝΙΑ",
-        "languages": "ΓΛΩΣΣΕΣ & ΑΔΕΙΕΣ"
-      },
-      "summaryText": "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών. Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την \"hands-on\" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD).",
-      "summaryText2": "Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού (Automation). Επιπλέον, διαχειρίζομαι self-hosted infrastructure με Proxmox και Docker containers για data logging και predictive maintenance. Τα προσωπικά μου projects (programming, design, 3D printing, smart home) αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
-      "about": {
-        "title": "Σχετικά με εμένα",
-        "devSkills": "Τεχνολογίες Ανάπτυξης",
-        "devSkillsMobileTitle": "Mobile Development",
-        "devSkillsMobile": "Cross-platform development με Flutter/Dart, React Native, και native Android με Kotlin",
-        "devSkillsToolsTitle": "Development Tools",
-        "devSkillsTools": "VS Code, Cursor (AI-powered IDE), Android Studio",
-        "devSkillsAITitle": "AI-Assisted Development",
-        "devSkillsAI": "Χρήση τεχνητής νοημοσύνης για efficient development workflows",
-        "personalProjects": "Προσωπικά Projects",
-        "personalProjectsDesc": "Αναπτύσσω πολλαπλά projects στον ελεύθερο χρόνο μου, εξερευνώντας νέες τεχνολογίες και λύσεις. Κάθε project είναι μια ευκαιρία για μάθηση και πειραματισμό με σύγχρονες πλατφόρμες και frameworks."
-      },
-      "experience": [
-        {
-          "title": "Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου",
-          "company": "ΤΕΡΝΑ Α.Ε.",
-          "period": "04/2022 – Σήμερα",
-          "description": [
-            "Άμεση λειτουργία, επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.",
-            "Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.",
-            "Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.",
-            "Data Analysis και παρακολούθηση παραμέτρων παραγωγής για βελτιστοποίηση διαδικασιών."
-          ]
+    "el": {
+        "nav": {
+            "home": "Αρχική",
+            "menu": "Μενού",
+            "3dPrinting": "3D Εκτύπωση",
+            "design": "Σχεδιασμός",
+            "programming": "Κέντρο Ανάπτυξης",
+            "cv": "Βιογραφικό"
         },
-        {
-          "title": "Χειριστής Μηχανημάτων Έργου",
-          "company": "Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)",
-          "period": "12/2021 – 03/2022",
-          "description": [
-            "Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο."
-          ]
+        "cv": {
+            "header": {
+                "name": "Κωνσταντίνος Λαθύρης",
+                "title": "Industrial Operations Manager | IoT & Digital Tech Specialist",
+                "btnDownload": "Κατεβάστε το CV"
+            },
+            "sections": {
+                "summary": "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ",
+                "experience": "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ",
+                "education": "ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ",
+                "techProjects": "Τεχνολογικά Project & Καινοτομία",
+                "skills": "ΤΕΧΝΙΚΕΣ & ΨΗΦΙΑΚΕΣ ΔΕΞΙΟΤΗΤΕΣ",
+                "softSkills": "SOFT SKILLS",
+                "hobbies": "HOBBIES",
+                "contact": "ΕΠΙΚΟΙΝΩΝΙΑ",
+                "languages": "ΓΛΩΣΣΕΣ & ΑΔΕΙΕΣ"
+            },
+            "summaryText": "Έμπειρο τεχνικό στέλεχος με 25+ έτη εμπειρίας στη λειτουργία ασφαλτικών παρασκευαστηρίων και χειρισμό βαρέων μηχανημάτων έργου. Εξειδικευμένος στη διαχείριση παραγωγής, συντήρηση εξοπλισμού και βελτιστοποίηση διαδικασιών. Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την \"hands-on\" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD).",
+            "summaryText2": "Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού (Automation). Επιπλέον, διαχειρίζομαι self-hosted infrastructure με Proxmox και Docker containers για data logging και predictive maintenance. Τα προσωπικά μου projects (programming, design, 3D printing, smart home) αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
+            "about": {
+                "title": "Σχετικά με εμένα",
+                "devSkills": "Τεχνολογίες Ανάπτυξης",
+                "devSkillsMobileTitle": "Mobile Development",
+                "devSkillsMobile": "Cross-platform development με Flutter/Dart, React Native, και native Android με Kotlin",
+                "devSkillsToolsTitle": "Development Tools",
+                "devSkillsTools": "VS Code, Cursor (AI-powered IDE), Android Studio",
+                "devSkillsAITitle": "AI-Assisted Development",
+                "devSkillsAI": "Χρήση τεχνητής νοημοσύνης για efficient development workflows",
+                "personalProjects": "Προσωπικά Projects",
+                "personalProjectsDesc": "Αναπτύσσω πολλαπλά projects στον ελεύθερο χρόνο μου, εξερευνώντας νέες τεχνολογίες και λύσεις. Κάθε project είναι μια ευκαιρία για μάθηση και πειραματισμό με σύγχρονες πλατφόρμες και frameworks."
+            },
+            "experience": [
+                {
+                    "title": "Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου",
+                    "company": "ΤΕΡΝΑ Α.Ε.",
+                    "period": "04/2022 – Σήμερα",
+                    "description": [
+                        "Άμεση λειτουργία, επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.",
+                        "Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.",
+                        "Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.",
+                        "Data Analysis και παρακολούθηση παραμέτρων παραγωγής για βελτιστοποίηση διαδικασιών."
+                    ]
+                },
+                {
+                    "title": "Χειριστής Μηχανημάτων Έργου",
+                    "company": "Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)",
+                    "period": "12/2021 – 03/2022",
+                    "description": [
+                        "Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο."
+                    ]
+                },
+                {
+                    "title": "Υπεύθυνος Παραγωγής & Χειριστής Λατομικού Συγκροτήματος",
+                    "company": "ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.",
+                    "period": "09/2019 – 12/2022",
+                    "description": [
+                        "Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών."
+                    ]
+                },
+                {
+                    "title": "Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας & Διαχείρισης",
+                    "company": "ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ",
+                    "period": "06/2000 – 08/2019",
+                    "description": [
+                        "19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος.",
+                        "Διοικητικές Ικανότητες: Διαχείριση ανθρώπινου δυναμικού, προμηθειών, logistics και έκδοση παραστατικών."
+                    ]
+                },
+                {
+                    "title": "Τεχνικός Ψυκτικών Εφαρμογών & Κατασκευών Inox",
+                    "company": "Ζυγούρης Κ.",
+                    "period": "01/2000 – 05/2000",
+                    "description": [
+                        "Κατασκευή επαγγελματικού εξοπλισμού και εγκατάσταση ψυκτικών συστημάτων."
+                    ]
+                },
+                {
+                    "title": "Βοηθός Ηλεκτρολόγου Εσωτερικών Εγκαταστάσεων",
+                    "company": "Τσάκας Ι.",
+                    "period": "02/1997 – 04/1998",
+                    "description": []
+                }
+            ],
+            "education": [
+                {
+                    "title": "Τεχνικός Εσωτερικών Ηλεκτρικών Εγκαταστάσεων",
+                    "institution": "ΙΕΚ ΟΜΗΡΟΣ",
+                    "period": "2024 – 2025 (Σε αναζήτηση πρακτικής εργασίας για την ολοκλήρωση)"
+                },
+                {
+                    "title": "Προηγμένες Τεχνολογίες Δικτύων & Προγραμματισμός",
+                    "institution": "E-Learning Εθνικό & Καποδιστριακό Πανεπιστήμιο Αθηνών (ΕΚΠΑ)",
+                    "badges": [
+                        "Advanced Network Technologies (2024-2025)",
+                        "Programming with Python (2023)",
+                        "Product Design & 3D Printing Specialization (2021)"
+                    ]
+                },
+                {
+                    "title": "Βασική Τεχνική Εκπαίδευση",
+                    "institution": "Ηλεκτρολόγος Εσωτερικών Εγκαταστάσεων",
+                    "location": "2ο ΤΕΛ Λαμίας",
+                    "certification": "Δίπλωμα & Πιστοποίηση Χειριστή Μηχανημάτων Έργου (1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β)"
+                }
+            ],
+            "techProjects": {
+                "subtitle": "Προσωπικά Project & Έρευνα (R&D)",
+                "projects": [
+                    {
+                        "title": "Smart Home Ecosystem",
+                        "description": "Σχεδιασμός και υλοποίηση κεντρικού συστήματος αυτοματισμού με Home Assistant και ESPHome. Ανάπτυξη custom αισθητήρων (ESP32) για την παρακολούθηση κρίσιμων παραμέτρων περιβάλλοντος."
+                    },
+                    {
+                        "title": "Additive Manufacturing (3D Printing)",
+                        "description": "Σχεδιασμός εξαρτημάτων με CAD tools και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία."
+                    },
+                    {
+                        "title": "Software Development",
+                        "description": "Ανάπτυξη εφαρμογών σε Python για την αυτοματοποίηση υπολογισμών και τη διαχείριση δεδομένων, εφαρμόζοντας τις γνώσεις από τα προγράμματα του ΕΚΠΑ.",
+                        "aiDev": "AI-Assisted Development: Χρήση τεχνητής νοημοσύνης για efficient code generation, debugging, και application development workflows.",
+                        "homelab": "Self-hosted infrastructure: Proxmox home lab με Tailscale VPN, Debian Docker stack (N8N, Nextcloud, Portainer, WordPress, pgAdmin, Flame, PostgreSQL)."
+                    }
+                ],
+                "viewProjects": "Δείτε τα Projects μου"
+            },
+            "skills": {
+                "industrial": {
+                    "title": "Industrial",
+                    "description": "Χειρισμός & Συντήρηση Βαρέων Μηχανημάτων, Διαχείριση Παραγωγής, Ηλεκτρολογικό Σχέδιο, Automation Systems"
+                },
+                "digital": {
+                    "title": "Digital Design",
+                    "description": "CAD Design, 3D Printing (Slicing & Optimization)"
+                },
+                "programming": {
+                    "title": "Programming & IoT",
+                    "description": "Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks, Data Analysis"
+                },
+                "mobile": {
+                    "title": "Mobile Development",
+                    "description": "Cross-platform mobile app development (Flutter/Dart, React Native, Kotlin)"
+                },
+                "devTools": {
+                    "title": "Development Tools",
+                    "description": "VS Code, Cursor (AI-powered IDE), Android Studio. AI-assisted development workflows"
+                },
+                "soft": {
+                    "title": "Soft Skills",
+                    "description": "Ηγεσία ομάδων, Στρατηγικός σχεδιασμός προμηθειών, Διαχείριση κρίσεων σε τεχνικά έργα, Predictive Maintenance"
+                }
+            },
+            "softSkills": {
+                "title": "Soft Skills & Hobbies",
+                "subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
+                "leadership": {
+                    "title": "Ηγεσία Ομάδων",
+                    "description": "Διαχείριση ανθρώπινου δυναμικού και συντονισμός ομάδων σε απαιτητικά τεχνικά έργα. Εμπειρία στη διαχείριση παραγωγής και επίβλεψη λειτουργιών."
+                },
+                "strategic": {
+                    "title": "Στρατηγικός Σχεδιασμός",
+                    "description": "Στρατηγικός σχεδιασμός προμηθειών, logistics και διαχείριση πόρων. Εφαρμογή σύγχρονων τεχνικών διαχείρισης για βελτιστοποίηση διαδικασιών."
+                },
+                "crisis": {
+                    "title": "Διαχείριση Κρίσεων",
+                    "description": "Διαχείριση κρίσεων σε τεχνικά έργα και λειτουργίες παραγωγής. Άμεση ανταπόκριση σε προκλήσεις και επίλυση προβλημάτων υπό πίεση."
+                },
+                "predictive": {
+                    "title": "Predictive Maintenance",
+                    "description": "Προληπτική συντήρηση εξοπλισμού με data analysis και παρακολούθηση παραμέτρων. Χρήση IoT και automation για βελτιστοποίηση διαδικασιών συντήρησης."
+                },
+                "programming": {
+                    "title": "Programming & Development",
+                    "description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE, GitHub Copilot) για efficient code generation και debugging."
+                },
+                "design": {
+                    "title": "Design & 3D Printing",
+                    "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
+                },
+                "smartHome": {
+                    "title": "Smart Home Automation",
+                    "description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management και predictive maintenance."
+                },
+                "ai": {
+                    "title": "AI-Assisted Innovation",
+                    "description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
+                }
+            },
+            "hobbies": {
+                "subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
+                "programming": {
+                    "title": "Programming & Development",
+                    "description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE, GitHub Copilot) για efficient code generation και debugging."
+                },
+                "design": {
+                    "title": "Design & 3D Printing",
+                    "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Optimization, material efficiency και functional parts."
+                },
+                "smartHome": {
+                    "title": "Smart Home Automation",
+                    "description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management και predictive maintenance."
+                },
+                "ai": {
+                    "title": "AI-Assisted Innovation",
+                    "description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
+                }
+            },
+            "contact": {
+                "location": "Λαμία, Ελλάδα",
+                "phone": "(+30) 6974030956",
+                "email": "lathyris.kon@gmail.com",
+                "linkedin": "Konstantinos Lathyris",
+                "portfolio": "kwstas147.github.io"
+            },
+            "languages": {
+                "greek": {
+                    "label": "Ελληνικά",
+                    "level": "Μητρική"
+                },
+                "english": {
+                    "label": "Αγγλικά",
+                    "level": "Επίπεδο B2"
+                },
+                "licenses": {
+                    "driving": {
+                        "label": "Άδειες Οδήγησης",
+                        "types": "A, B, C, D",
+                        "note": "(Επαγγελματική άδεια οδήγησης)"
+                    },
+                    "machineOperator": {
+                        "label": "Άδεια Χειριστή Μηχανημάτων Έργου",
+                        "specialties": "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β"
+                    }
+                }
+            }
         },
-        {
-          "title": "Υπεύθυνος Παραγωγής & Χειριστής Λατομικού Συγκροτήματος",
-          "company": "ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.",
-          "period": "09/2019 – 12/2022",
-          "description": [
-            "Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών."
-          ]
+        "btnDownloadPDF": "Κατεβάστε το CV ως PDF",
+        "btnDownloadPDFShort": "Κατέβασμα",
+        "btnPrintPDF": "Εκτύπωση σε PDF",
+        "btnPdfmake": "Vector PDF (Νέο!)",
+        "printPdfMessage": "Επιλέξτε 'Save as PDF' στο παράθυρο εκτύπωσης για τέλεια ποιότητα",
+        "pdfmakeMessage": "Τέλεια ποιότητα, αυτόματο download",
+        "pdfOptimizedMessage": "Εναλλακτική μέθοδος",
+        "pdfGenerating": "⏳ Δημιουργία PDF...",
+        "pdfSuccess": "✅ PDF Κατέβηκε!",
+        "pdfError": "❌ Σφάλμα - Δοκιμάστε ξανά",
+        "cvName": "Κωνσταντίνος Λαθύρης",
+        "cvTitle": "Industrial Operations Manager | IoT & Digital Tech Enthusiast",
+        "cvSectionSummary": "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ",
+        "cvSummaryText": "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων (Ασφαλτικά Παρασκευαστήρια). Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την \"hands-on\" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD). Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού.",
+        "cvSummaryHomelab": "Επιπλέον, διαχειρίζομαι self-hosted infrastructure με Proxmox και Docker containers.",
+        "cvSectionContact": "ΕΠΙΚΟΙΝΩΝΙΑ",
+        "cvLocation": "Λαμία, Ελλάδα",
+        "cvPhone": "(+30) 6974030956",
+        "cvEmail": "lathyris.kon@gmail.com",
+        "cvLinkedIn": "Konstantinos Lathyris",
+        "cvPortfolio": "kwstas147.github.io",
+        "cvSectionExperience": "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ",
+        "cvJob1Title": "Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου",
+        "cvJob1Company": "ΤΕΡΝΑ Α.Ε.",
+        "cvJob1Period": "04/2022 – Σήμερα",
+        "cvJob1Desc1": "Άμεση λειτουργία, επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.",
+        "cvJob1Desc2": "Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.",
+        "cvJob1Desc3": "Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.",
+        "cvJob2Title": "Χειριστής Μηχανημάτων Έργου",
+        "cvJob2Company": "Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)",
+        "cvJob2Period": "12/2021 – 03/2022",
+        "cvJob2Desc1": "Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο.",
+        "cvJob3Title": "Υπεύθυνος Παραγωγής & Χειριστής Λατομικού Συγκροτήματος",
+        "cvJob3Company": "ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.",
+        "cvJob3Period": "09/2019 – 12/2022",
+        "cvJob3Desc1": "Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών.",
+        "cvJob4Title": "Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας & Διαχείρισης",
+        "cvJob4Company": "ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ",
+        "cvJob4Period": "06/2000 – 08/2019",
+        "cvJob4Desc1": "19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος.",
+        "cvJob4Desc2": "Διοικητικές Ικανότητες: Διαχείριση ανθρώπινου δυναμικού, προμηθειών, logistics και έκδοση παραστατικών.",
+        "cvJob5Title": "Τεχνικός Ψυκτικών Εφαρμογών & Κατασκευών Inox",
+        "cvJob5Company": "Ζυγούρης Κ.",
+        "cvJob5Period": "01/2000 – 05/2000",
+        "cvJob5Desc1": "Κατασκευή επαγγελματικού εξοπλισμού και εγκατάσταση ψυκτικών συστημάτων.",
+        "cvJob6Title": "Βοηθός Ηλεκτρολόγου Εσωτερικών Εγκαταστάσεων",
+        "cvJob6Company": "Τσάκας Ι.",
+        "cvJob6Period": "02/1997 – 04/1998",
+        "cvSectionEducation": "ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ",
+        "cvEdu1Title": "Τεχνικός Εσωτερικών Ηλεκτρικών Εγκαταστάσεων",
+        "cvEdu1Institution": "ΙΕΚ ΟΜΗΡΟΣ",
+        "cvEdu1Period": "2024 – 2025 (Σε αναζήτηση πρακτικής εργασίας για την ολοκλήρωση)",
+        "cvEdu2Title": "Προηγμένες Τεχνολογίες Δικτύων & Προγραμματισμός",
+        "cvEdu2Institution": "E-Learning Εθνικό & Καποδιστριακό Πανεπιστήμιο Αθηνών (ΕΚΠΑ)",
+        "cvEdu2Badge1": "Advanced Network Technologies (2024-2025)",
+        "cvEdu2Badge2": "Programming with Python (2023)",
+        "cvEdu2Badge3": "Product Design & 3D Printing Specialization (2021)",
+        "cvEdu3Title": "Βασική Τεχνική Εκπαίδευση",
+        "cvEdu3Institution": "Ηλεκτρολόγος Εσωτερικών Εγκαταστάσεων",
+        "cvEdu3Location": "2ο ΤΕΛ Λαμίας",
+        "cvEdu3Cert": "Δίπλωμα & Πιστοποίηση Χειριστή Μηχανημάτων Έργου (1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β)",
+        "cvSectionLanguages": "ΓΛΩΣΣΕΣ & ΑΔΕΙΕΣ",
+        "cvLangGreek": "Ελληνικά",
+        "cvLangGreekLevel": "Μητρική",
+        "cvLangEnglish": "Αγγλικά",
+        "cvLangEnglishLevel": "Επίπεδο B2",
+        "cvLicenses": "Άδειες Οδήγησης",
+        "cvLicensesTypes": "A, B, C, D",
+        "cvLicensesNote": "(Επαγγελματική άδεια οδήγησης)",
+        "cvMachineOperatorLicense": "Άδεια Χειριστή Μηχανημάτων Έργου",
+        "cvMachineOperatorSpecialties": "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β",
+        "hero": {
+            "title": "Καλώς ήρθατε στο Portfolio μου",
+            "name": "Κωνσταντίνος Λαθύρης",
+            "subtitle": "Industrial Operations Manager | IoT & Automation Enthusiast",
+            "description": "Πολυετής εμπειρία στη λειτουργία και συντήρηση ασφαλτικών συγκροτημάτων σε βιομηχανικές και λατομικές εγκαταστάσεις, καθώς και σε χειρισμό μηχανημάτων έργου. Παράλληλα, αξιοποιώ το ενδιαφέρον μου για IoT, αυτοματισμό και ψηφιακή καινοτομία στην καθημερινή μου εργασία.",
+            "openToWork": "Ανοιχτός σε Ευκαιρίες",
+            "viewCV": "Δείτε το CV",
+            "contactMe": "Επικοινωνήστε"
         },
-        {
-          "title": "Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας & Διαχείρισης",
-          "company": "ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ",
-          "period": "06/2000 – 08/2019",
-          "description": [
-            "19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος.",
-            "Διοικητικές Ικανότητες: Διαχείριση ανθρώπινου δυναμικού, προμηθειών, logistics και έκδοση παραστατικών."
-          ]
+        "professional": {
+            "summary": {
+                "title": "Επαγγελματική Σύνοψη",
+                "asphalt": {
+                    "title": "Ασφαλτικά Παρασκευαστήρια",
+                    "description": "25+ έτη εμπειρίας στη λειτουργία, επίβλεψη και συντήρηση ασφαλτικών παρασκευαστηρίων. Άμεση ευθύνη για την παραγωγή, ποιότητα και ασφάλεια λειτουργίας."
+                },
+                "machinery": {
+                    "title": "Μηχανήματα Έργου",
+                    "description": "Εξειδικευμένος χειριστής βαρέων μηχανημάτων έργου με πιστοποίηση σε πολλαπλές ειδικότητες. Εμπειρία σε απαιτητικά τεχνικά έργα υποδομής."
+                },
+                "maintenance": {
+                    "title": "Συντήρηση & Διαχείριση",
+                    "description": "Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού και ηλεκτρολογικού εξοπλισμού. Διαχείριση ανθρώπινου δυναμικού και logistics."
+                },
+                "optimization": {
+                    "title": "Βελτιστοποίηση",
+                    "description": "Data analysis και παρακολούθηση παραμέτρων παραγωγής για βελτιστοποίηση διαδικασιών. Εφαρμογή σύγχρονων τεχνικών διαχείρισης."
+                }
+            },
+            "timeline": {
+                "title": "Επαγγελματική Διαδρομή",
+                "job1": {
+                    "title": "Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου",
+                    "company": "ΤΕΡΝΑ Α.Ε.",
+                    "period": "04/2022 – Σήμερα",
+                    "description": "Άμεση λειτουργία και επίβλεψη ασφαλτικού παρασκευαστηρίου. Προληπτική συντήρηση εξοπλισμού. Χειρισμός εξειδικευμένων μηχανημάτων σε τεχνικά έργα."
+                },
+                "job2": {
+                    "title": "Χειριστής Μηχανημάτων Έργου",
+                    "company": "Περιφέρεια Στερεάς Ελλάδας",
+                    "period": "12/2021 – 03/2022",
+                    "description": "Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο."
+                },
+                "job3": {
+                    "title": "Υπεύθυνος Παραγωγής & Χειριστής Λατομικού",
+                    "company": "ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.",
+                    "period": "09/2019 – 12/2022",
+                    "description": "Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών."
+                },
+                "job4": {
+                    "title": "Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας",
+                    "company": "ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ",
+                    "period": "06/2000 – 08/2019",
+                    "description": "19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος. Διαχείριση ανθρώπινου δυναμικού, προμηθειών και logistics."
+                }
+            }
         },
-        {
-          "title": "Τεχνικός Ψυκτικών Εφαρμογών & Κατασκευών Inox",
-          "company": "Ζυγούρης Κ.",
-          "period": "01/2000 – 05/2000",
-          "description": [
-            "Κατασκευή επαγγελματικού εξοπλισμού και εγκατάσταση ψυκτικών συστημάτων."
-          ]
+        "cvSection": {
+            "title": "Πλήρες Επαγγελματικό Βιογραφικό",
+            "cardTitle": "Curriculum Vitae",
+            "cardDescription": "25+ έτη επαγγελματικής εμπειρίας σε ασφαλτικά παρασκευαστήρια και μηχανήματα έργου. Πλήρες βιογραφικό με λεπτομερείς πληροφορίες.",
+            "viewFull": "Δείτε το πλήρες CV"
         },
-        {
-          "title": "Βοηθός Ηλεκτρολόγου Εσωτερικών Εγκαταστάσεων",
-          "company": "Τσάκας Ι.",
-          "period": "02/1997 – 04/1998",
-          "description": []
-        }
-      ],
-      "education": [
-        {
-          "title": "Τεχνικός Εσωτερικών Ηλεκτρικών Εγκαταστάσεων",
-          "institution": "ΙΕΚ ΟΜΗΡΟΣ",
-          "period": "2024 – 2025 (Σε αναζήτηση πρακτικής εργασίας για την ολοκλήρωση)"
+        "softSkills": {
+            "title": "Soft Skills & Hobbies",
+            "subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
+            "programming": {
+                "title": "Programming & Development",
+                "description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE) για efficient code generation και debugging."
+            },
+            "design": {
+                "title": "Design & 3D Printing",
+                "description": "Σχεδίαση εξαρτημάτων με CAD tools και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization και functional parts."
+            },
+            "smartHome": {
+                "title": "Smart Home Automation",
+                "description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management."
+            },
+            "ai": {
+                "title": "AI-Assisted Innovation",
+                "description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools."
+            },
+            "viewMore": "Δείτε περισσότερα",
+            "3dPrinting": "3D Printing"
         },
-        {
-          "title": "Προηγμένες Τεχνολογίες Δικτύων & Προγραμματισμός",
-          "institution": "E-Learning Εθνικό & Καποδιστριακό Πανεπιστήμιο Αθηνών (ΕΚΠΑ)",
-          "badges": [
-            "Advanced Network Technologies (2024-2025)",
-            "Programming with Python (2023)",
-            "Product Design & 3D Printing Specialization (2021)"
-          ]
+        "projectCategories": {
+            "title": "Έργα & Δημιουργίες"
         },
-        {
-          "title": "Βασική Τεχνική Εκπαίδευση",
-          "institution": "Ηλεκτρολόγος Εσωτερικών Εγκαταστάσεων",
-          "location": "2ο ΤΕΛ Λαμίας",
-          "certification": "Δίπλωμα & Πιστοποίηση Χειριστή Μηχανημάτων Έργου (1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β)"
-        }
-      ],
-      "techProjects": {
-        "subtitle": "Προσωπικά Project & Έρευνα (R&D)",
-        "projects": [
-          {
-            "title": "Smart Home Ecosystem",
-            "description": "Σχεδιασμός και υλοποίηση κεντρικού συστήματος αυτοματισμού με Home Assistant και ESPHome. Ανάπτυξη custom αισθητήρων (ESP32) για την παρακολούθηση κρίσιμων παραμέτρων περιβάλλοντος."
-          },
-          {
-            "title": "Additive Manufacturing (3D Printing)",
-            "description": "Σχεδιασμός εξαρτημάτων με CAD tools και παραγωγή τους μέσω 3D εκτύπωσης. Εστίαση στη δημιουργία λειτουργικών ανταλλακτικών και εργαλείων (Functional Parts) που βελτιώνουν την καθημερινή εργασία."
-          },
-          {
-            "title": "Software Development",
-            "description": "Ανάπτυξη εφαρμογών σε Python για την αυτοματοποίηση υπολογισμών και τη διαχείριση δεδομένων, εφαρμόζοντας τις γνώσεις από τα προγράμματα του ΕΚΠΑ.",
-            "aiDev": "AI-Assisted Development: Χρήση τεχνητής νοημοσύνης για efficient code generation, debugging, και application development workflows.",
-            "homelab": "Self-hosted infrastructure: Proxmox home lab με Tailscale VPN, Debian Docker stack (N8N, Nextcloud, Portainer, WordPress, pgAdmin, Flame, PostgreSQL)."
-          }
-        ],
-        "viewProjects": "Δείτε τα Projects μου"
-      },
-      "skills": {
-        "industrial": {
-          "title": "Industrial",
-          "description": "Χειρισμός & Συντήρηση Βαρέων Μηχανημάτων, Διαχείριση Παραγωγής, Ηλεκτρολογικό Σχέδιο, Automation Systems"
+        "categories": {
+            "3dPrinting": "Δημιουργίες 3D Εκτύπωσης",
+            "design": "Σχεδιασμός",
+            "programming": "Κέντρο Ανάπτυξης Λογισμικού",
+            "cv": "Βιογραφικό"
         },
-        "digital": {
-          "title": "Digital Design",
-          "description": "CAD Design, 3D Printing (Slicing & Optimization)"
+        "categoryDescriptions": {
+            "3dPrinting": "Λειτουργικά ανταλλακτικά και εργαλεία μέσω Additive Manufacturing",
+            "design": "CAD σχεδίαση και μηχανική ανάλυση",
+            "programming": "Python automation, IoT solutions και software development",
+            "cv": "Πλήρες επαγγελματικό βιογραφικό με 25+ έτη εμπειρίας"
         },
-        "programming": {
-          "title": "Programming & IoT",
-          "description": "Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks, Data Analysis"
+        "buttons": {
+            "viewMore": "Δείτε περισσότερα",
+            "backHome": "Επιστροφή στην αρχική",
+            "downloadCV": "Κατεβάστε το CV",
+            "downloadPDF": "📥 Κατεβάστε το CV ως PDF"
         },
-        "mobile": {
-          "title": "Mobile Development",
-          "description": "Cross-platform mobile app development (Flutter/Dart, React Native, Kotlin)"
-        },
-        "devTools": {
-          "title": "Development Tools",
-          "description": "VS Code, Cursor (AI-powered IDE), Android Studio. AI-assisted development workflows"
-        },
-        "soft": {
-          "title": "Soft Skills",
-          "description": "Ηγεσία ομάδων, Στρατηγικός σχεδιασμός προμηθειών, Διαχείριση κρίσεων σε τεχνικά έργα, Predictive Maintenance"
-        }
-      },
-      "softSkills": {
-        "title": "Soft Skills & Hobbies",
-        "subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
-        "leadership": {
-          "title": "Ηγεσία Ομάδων",
-          "description": "Διαχείριση ανθρώπινου δυναμικού και συντονισμός ομάδων σε απαιτητικά τεχνικά έργα. Εμπειρία στη διαχείριση παραγωγής και επίβλεψη λειτουργιών."
-        },
-        "strategic": {
-          "title": "Στρατηγικός Σχεδιασμός",
-          "description": "Στρατηγικός σχεδιασμός προμηθειών, logistics και διαχείριση πόρων. Εφαρμογή σύγχρονων τεχνικών διαχείρισης για βελτιστοποίηση διαδικασιών."
-        },
-        "crisis": {
-          "title": "Διαχείριση Κρίσεων",
-          "description": "Διαχείριση κρίσεων σε τεχνικά έργα και λειτουργίες παραγωγής. Άμεση ανταπόκριση σε προκλήσεις και επίλυση προβλημάτων υπό πίεση."
-        },
-        "predictive": {
-          "title": "Predictive Maintenance",
-          "description": "Προληπτική συντήρηση εξοπλισμού με data analysis και παρακολούθηση παραμέτρων. Χρήση IoT και automation για βελτιστοποίηση διαδικασιών συντήρησης."
-        },
-        "programming": {
-          "title": "Programming & Development",
-          "description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE, GitHub Copilot) για efficient code generation και debugging."
-        },
-        "design": {
-          "title": "Design & 3D Printing",
-          "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization, material efficiency και functional parts."
-        },
-        "smartHome": {
-          "title": "Smart Home Automation",
-          "description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management και predictive maintenance."
-        },
-        "ai": {
-          "title": "AI-Assisted Innovation",
-          "description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
-        }
-      },
-      "hobbies": {
-        "subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
-        "programming": {
-          "title": "Programming & Development",
-          "description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE, GitHub Copilot) για efficient code generation και debugging."
-        },
-        "design": {
-          "title": "Design & 3D Printing",
-          "description": "Σχεδίαση εξαρτημάτων στο Fusion360 και παραγωγή μέσω 3D εκτύπωσης. Optimization, material efficiency και functional parts."
-        },
-        "smartHome": {
-          "title": "Smart Home Automation",
-          "description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management και predictive maintenance."
-        },
-        "ai": {
-          "title": "AI-Assisted Innovation",
-          "description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
-        }
-      },
-      "contact": {
-        "location": "Λαμία, Ελλάδα",
-        "phone": "(+30) 6974030956",
-        "email": "lathyris.kon@gmail.com",
-        "linkedin": "Konstantinos Lathyris",
-        "portfolio": "kwstas147.github.io"
-      },
-      "languages": {
-        "greek": {
-          "label": "Ελληνικά",
-          "level": "Μητρική"
-        },
-        "english": {
-          "label": "Αγγλικά",
-          "level": "Επίπεδο B2"
-        },
-        "licenses": {
-          "driving": {
-            "label": "Άδειες Οδήγησης",
-            "types": "A, B, C, D",
-            "note": "(Επαγγελματική άδεια οδήγησης)"
-          },
-          "machineOperator": {
-            "label": "Άδεια Χειριστή Μηχανημάτων Έργου",
-            "specialties": "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β"
-          }
-        }
-      }
-    },
-    "btnDownloadPDF": "Κατεβάστε το CV ως PDF",
-    "btnDownloadPDFShort": "Κατέβασμα",
-    "btnPrintPDF": "Εκτύπωση σε PDF",
-    "btnPdfmake": "Vector PDF (Νέο!)",
-    "printPdfMessage": "Επιλέξτε 'Save as PDF' στο παράθυρο εκτύπωσης για τέλεια ποιότητα",
-    "pdfmakeMessage": "Τέλεια ποιότητα, αυτόματο download",
-    "pdfOptimizedMessage": "Εναλλακτική μέθοδος",
-    "pdfGenerating": "⏳ Δημιουργία PDF...",
-    "pdfSuccess": "✅ PDF Κατέβηκε!",
-    "pdfError": "❌ Σφάλμα - Δοκιμάστε ξανά",
-    "cvName": "Κωνσταντίνος Λαθύρης",
-    "cvTitle": "Industrial Operations Manager | IoT & Digital Tech Enthusiast",
-    "cvSectionSummary": "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΣΥΝΟΨΗ",
-    "cvSummaryText": "Έμπειρο τεχνικό στέλεχος με 25ετή πορεία στη διαχείριση τεχνικών έργων και τη λειτουργία βιομηχανικών μονάδων (Ασφαλτικά Παρασκευαστήρια). Διαθέτω ένα μοναδικό προφίλ που συνδυάζει την \"hands-on\" γνώση βαρέων μηχανημάτων και ηλεκτρολογικών εγκαταστάσεων με προηγμένες ψηφιακές δεξιότητες στον Προγραμματισμό (Python), τα Δίκτυα και το Product Design (3D Printing / CAD). Εστιάζω στον εκσυγχρονισμό παραγωγικών διαδικασιών μέσω του IoT και του αυτοματισμού.",
-    "cvSummaryHomelab": "Επιπλέον, διαχειρίζομαι self-hosted infrastructure με Proxmox και Docker containers.",
-    "cvSectionContact": "ΕΠΙΚΟΙΝΩΝΙΑ",
-    "cvLocation": "Λαμία, Ελλάδα",
-    "cvPhone": "(+30) 6974030956",
-    "cvEmail": "lathyris.kon@gmail.com",
-    "cvLinkedIn": "Konstantinos Lathyris",
-    "cvPortfolio": "kwstas147.github.io",
-    "cvSectionExperience": "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ",
-    "cvJob1Title": "Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου",
-    "cvJob1Company": "ΤΕΡΝΑ Α.Ε.",
-    "cvJob1Period": "04/2022 – Σήμερα",
-    "cvJob1Desc1": "Άμεση λειτουργία, επίβλεψη και διασφάλιση εύρυθμης λειτουργίας ασφαλτικού παρασκευαστηρίου.",
-    "cvJob1Desc2": "Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού εξοπλισμού.",
-    "cvJob1Desc3": "Χειρισμός εξειδικευμένων μηχανημάτων σε απαιτητικά τεχνικά έργα.",
-    "cvJob2Title": "Χειριστής Μηχανημάτων Έργου",
-    "cvJob2Company": "Περιφέρεια Στερεάς Ελλάδας (Διεύθυνση Τεχνικών Έργων)",
-    "cvJob2Period": "12/2021 – 03/2022",
-    "cvJob2Desc1": "Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο.",
-    "cvJob3Title": "Υπεύθυνος Παραγωγής & Χειριστής Λατομικού Συγκροτήματος",
-    "cvJob3Company": "ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.",
-    "cvJob3Period": "09/2019 – 12/2022",
-    "cvJob3Desc1": "Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών.",
-    "cvJob4Title": "Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας & Διαχείρισης",
-    "cvJob4Company": "ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ",
-    "cvJob4Period": "06/2000 – 08/2019",
-    "cvJob4Desc1": "19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος.",
-    "cvJob4Desc2": "Διοικητικές Ικανότητες: Διαχείριση ανθρώπινου δυναμικού, προμηθειών, logistics και έκδοση παραστατικών.",
-    "cvJob5Title": "Τεχνικός Ψυκτικών Εφαρμογών & Κατασκευών Inox",
-    "cvJob5Company": "Ζυγούρης Κ.",
-    "cvJob5Period": "01/2000 – 05/2000",
-    "cvJob5Desc1": "Κατασκευή επαγγελματικού εξοπλισμού και εγκατάσταση ψυκτικών συστημάτων.",
-    "cvJob6Title": "Βοηθός Ηλεκτρολόγου Εσωτερικών Εγκαταστάσεων",
-    "cvJob6Company": "Τσάκας Ι.",
-    "cvJob6Period": "02/1997 – 04/1998",
-    "cvSectionEducation": "ΕΚΠΑΙΔΕΥΣΗ & ΠΙΣΤΟΠΟΙΗΣΕΙΣ",
-    "cvEdu1Title": "Τεχνικός Εσωτερικών Ηλεκτρικών Εγκαταστάσεων",
-    "cvEdu1Institution": "ΙΕΚ ΟΜΗΡΟΣ",
-    "cvEdu1Period": "2024 – 2025 (Σε αναζήτηση πρακτικής εργασίας για την ολοκλήρωση)",
-    "cvEdu2Title": "Προηγμένες Τεχνολογίες Δικτύων & Προγραμματισμός",
-    "cvEdu2Institution": "E-Learning Εθνικό & Καποδιστριακό Πανεπιστήμιο Αθηνών (ΕΚΠΑ)",
-    "cvEdu2Badge1": "Advanced Network Technologies (2024-2025)",
-    "cvEdu2Badge2": "Programming with Python (2023)",
-    "cvEdu2Badge3": "Product Design & 3D Printing Specialization (2021)",
-    "cvEdu3Title": "Βασική Τεχνική Εκπαίδευση",
-    "cvEdu3Institution": "Ηλεκτρολόγος Εσωτερικών Εγκαταστάσεων",
-    "cvEdu3Location": "2ο ΤΕΛ Λαμίας",
-    "cvEdu3Cert": "Δίπλωμα & Πιστοποίηση Χειριστή Μηχανημάτων Έργου (1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β)",
-    "cvSectionLanguages": "ΓΛΩΣΣΕΣ & ΑΔΕΙΕΣ",
-    "cvLangGreek": "Ελληνικά",
-    "cvLangGreekLevel": "Μητρική",
-    "cvLangEnglish": "Αγγλικά",
-    "cvLangEnglishLevel": "Επίπεδο B2",
-    "cvLicenses": "Άδειες Οδήγησης",
-    "cvLicensesTypes": "A, B, C, D",
-    "cvLicensesNote": "(Επαγγελματική άδεια οδήγησης)",
-    "cvMachineOperatorLicense": "Άδεια Χειριστή Μηχανημάτων Έργου",
-    "cvMachineOperatorSpecialties": "1η Ειδικότητα: Ά, 2η Ειδικότητα: Β, 4η Ειδικότητα: Β",
-    "hero": {
-      "title": "Καλώς ήρθατε στο Portfolio μου",
-      "name": "Κωνσταντίνος Λαθύρης",
-      "subtitle": "Industrial Operations Manager | IoT & Automation Enthusiast",
-      "description": "Πολυετής εμπειρία στη λειτουργία και συντήρηση ασφαλτικών συγκροτημάτων σε βιομηχανικές και λατομικές εγκαταστάσεις, καθώς και σε χειρισμό μηχανημάτων έργου. Παράλληλα, αξιοποιώ το ενδιαφέρον μου για IoT, αυτοματισμό και ψηφιακή καινοτομία στην καθημερινή μου εργασία.",
-      "openToWork": "Ανοιχτός σε Ευκαιρίες",
-      "viewCV": "Δείτε το CV",
-      "contactMe": "Επικοινωνήστε"
-    },
-    "professional": {
-      "summary": {
-        "title": "Επαγγελματική Σύνοψη",
-        "asphalt": {
-          "title": "Ασφαλτικά Παρασκευαστήρια",
-          "description": "25+ έτη εμπειρίας στη λειτουργία, επίβλεψη και συντήρηση ασφαλτικών παρασκευαστηρίων. Άμεση ευθύνη για την παραγωγή, ποιότητα και ασφάλεια λειτουργίας."
-        },
-        "machinery": {
-          "title": "Μηχανήματα Έργου",
-          "description": "Εξειδικευμένος χειριστής βαρέων μηχανημάτων έργου με πιστοποίηση σε πολλαπλές ειδικότητες. Εμπειρία σε απαιτητικά τεχνικά έργα υποδομής."
-        },
-        "maintenance": {
-          "title": "Συντήρηση & Διαχείριση",
-          "description": "Προληπτική και διορθωτική συντήρηση σύνθετου μηχανολογικού και ηλεκτρολογικού εξοπλισμού. Διαχείριση ανθρώπινου δυναμικού και logistics."
-        },
-        "optimization": {
-          "title": "Βελτιστοποίηση",
-          "description": "Data analysis και παρακολούθηση παραμέτρων παραγωγής για βελτιστοποίηση διαδικασιών. Εφαρμογή σύγχρονων τεχνικών διαχείρισης."
-        }
-      },
-      "timeline": {
-        "title": "Επαγγελματική Διαδρομή",
-        "job1": {
-          "title": "Υπεύθυνος Λειτουργίας & Χειριστής Μηχανημάτων Έργου",
-          "company": "ΤΕΡΝΑ Α.Ε.",
-          "period": "04/2022 – Σήμερα",
-          "description": "Άμεση λειτουργία και επίβλεψη ασφαλτικού παρασκευαστηρίου. Προληπτική συντήρηση εξοπλισμού. Χειρισμός εξειδικευμένων μηχανημάτων σε τεχνικά έργα."
-        },
-        "job2": {
-          "title": "Χειριστής Μηχανημάτων Έργου",
-          "company": "Περιφέρεια Στερεάς Ελλάδας",
-          "period": "12/2021 – 03/2022",
-          "description": "Εκτέλεση έργων υποδομής και διαχείριση τεχνικών προκλήσεων στο πεδίο."
-        },
-        "job3": {
-          "title": "Υπεύθυνος Παραγωγής & Χειριστής Λατομικού",
-          "company": "ΚΑΛΤΣΑΣ ΤΕΧΝΙΚΗ Α.Ε.",
-          "period": "09/2019 – 12/2022",
-          "description": "Συντονισμός παραγωγής και επίβλεψη λατομικών λειτουργιών."
-        },
-        "job4": {
-          "title": "Υπεύθυνος Παραγωγής Ασφαλτικής Μονάδας",
-          "company": "ΑΣΦΑΛΤΟΛΑΤΟΜΙΚΗ ΑΤΕΒΕ",
-          "period": "06/2000 – 08/2019",
-          "description": "19 έτη ευθύνης για τη λειτουργία και συντήρηση ασφαλτικού συγκροτήματος. Διαχείριση ανθρώπινου δυναμικού, προμηθειών και logistics."
-        }
-      }
-    },
-    "cvSection": {
-      "title": "Πλήρες Επαγγελματικό Βιογραφικό",
-      "cardTitle": "Curriculum Vitae",
-      "cardDescription": "25+ έτη επαγγελματικής εμπειρίας σε ασφαλτικά παρασκευαστήρια και μηχανήματα έργου. Πλήρες βιογραφικό με λεπτομερείς πληροφορίες.",
-      "viewFull": "Δείτε το πλήρες CV"
-    },
-    "softSkills": {
-      "title": "Soft Skills & Hobbies",
-      "subtitle": "Προσωπικά projects και ενδιαφέροντα που αναπτύσσονται με τη χρήση τεχνητής νοημοσύνης για efficient workflows και innovation.",
-      "programming": {
-        "title": "Programming & Development",
-        "description": "Ανάπτυξη εφαρμογών σε Python, Flutter, και web technologies. Χρήση AI-assisted development tools (Cursor IDE) για efficient code generation και debugging."
-      },
-      "design": {
-        "title": "Design & 3D Printing",
-        "description": "Σχεδίαση εξαρτημάτων με CAD tools και παραγωγή μέσω 3D εκτύπωσης. Χρήση AI-assisted design tools για optimization και functional parts."
-      },
-      "smartHome": {
-        "title": "Smart Home Automation",
-        "description": "Σχεδιασμός και υλοποίηση smart home ecosystem με Home Assistant, ESPHome και custom sensors. AI-assisted automation για optimal energy management."
-      },
-      "ai": {
-        "title": "AI-Assisted Innovation",
-        "description": "Χρήση τεχνητής νοημοσύνης σε όλα τα projects για code generation, design optimization, debugging και workflow automation. Cursor IDE, AI design tools."
-      },
-      "viewMore": "Δείτε περισσότερα",
-      "3dPrinting": "3D Printing"
-    },
-    "projectCategories": {
-      "title": "Έργα & Δημιουργίες"
-    },
-    "categories": {
-      "3dPrinting": "Δημιουργίες 3D Εκτύπωσης",
-      "design": "Σχεδιασμός",
-      "programming": "Κέντρο Ανάπτυξης Λογισμικού",
-      "cv": "Βιογραφικό"
-    },
-    "categoryDescriptions": {
-      "3dPrinting": "Λειτουργικά ανταλλακτικά και εργαλεία μέσω Additive Manufacturing",
-      "design": "CAD σχεδίαση και μηχανική ανάλυση",
-      "programming": "Python automation, IoT solutions και software development",
-      "cv": "Πλήρες επαγγελματικό βιογραφικό με 25+ έτη εμπειρίας"
-    },
-    "buttons": {
-      "viewMore": "Δείτε περισσότερα",
-      "backHome": "Επιστροφή στην αρχική",
-      "downloadCV": "Κατεβάστε το CV",
-      "downloadPDF": "📥 Κατεβάστε το CV ως PDF"
-    },
-    "pages": {
-      "3dPrinting": {
-        "title": "3D Printing Creations",
-        "description": "Φυσικές κατασκευές και εκτυπώσεις 3D"
-      },
-      "design": {
-        "title": "Σχεδιασμός",
-        "description": "CAD μοντέλα και σχεδίαση μηχανικών"
-      },
-      "programming": {
-        "title": "Development Hub",
-        "description": "Ενοποιημένη σελίδα για software projects",
-        "sections": {
-          "mobileApps": "Mobile Apps (Flutter)",
-          "windowsApps": "Windows Apps (C#/.NET)",
-          "pythonApps": "Desktop Applications (Python)",
-          "webApps": "Web Apps",
-          "espHome": "ESPHome/ESP32",
-          "homeAssistant": "Home Assistant Automations",
-          "smartHome": "Smart Home Setups",
-          "homeLab": "Home Lab & Infrastructure"
-        },
-        "codeExample": "Code Example",
-        "esphomeConfigExample": "ESPHome Configuration Example",
-        "projects": {
-          "flame": {
-            "title": "Flame",
-            "description": "Personal homepage και dashboard που τρέχει σε Docker container στο VM Debian μέσα στον Proxmox home lab server. Προσφέρει ένα μοντέρνο και customizable interface για διαχείριση bookmarks και links."
-          },
-          "proxmox": {
-            "title": "Proxmox Home Lab Server",
-            "description": "Proxmox VE virtualization platform για home lab environment. Προσφέρει πλήρη virtualization capabilities με support για containers και VMs, ιδανικό για testing και development."
-          },
-          "portainer": {
-            "title": "Portainer - Docker Management",
-            "description": "Portainer container management platform που τρέχει σε Docker στο VM Debian. Παρέχει web-based UI για διαχείριση Docker containers, images, volumes και networks."
-          },
-          "mailExtractor": {
-            "title": "MailExtractor",
-            "description": "Windows εφαρμογή για εξαγωγή δεδομένων από Gmail. Ο χρήστης κατεβάζει αρχείο .mbox από το Google Takeout (takeout.google.com), το αποσυμπιέζει μέσα από την εφαρμογή, το επιλέγει και η εφαρμογή εξάγει αυτόματα ονόματα, email addresses και τηλεφωνικούς αριθμούς σε Excel. Διαθέτει δωρεάν χρήση αρχικά, ενώ μετά απαιτεί machine-specific key που αντιστοιχεί στο συγκεκριμένο μηχάνημα που τρέχει η εφαρμογή."
-          },
-          "myInventory": {
-            "title": "MyInventory",
-            "description": "Μια Flutter mobile εφαρμογή για στοιχειώδη διαχείριση αποθήκης, που αναπτύχθηκε από την ανάγκη διαχείρισης αποθήκης στην εργασία. Η εφαρμογή προσφέρει πλήρη λύση διαχείρισης αποθηκών με υποστήριξη πολλαπλών αποθηκών, διαχείριση προϊόντων, μεταφορές αποθεμάτων μεταξύ αποθηκών, ειδοποιήσεις χαμηλού αποθέματος, backup & restore λειτουργικότητα, και AI Assistant με ενσωμάτωση Google Gemini API. Ιδανική για οποιονδήποτε χρειάζεται αποτελεσματική και απλή διαχείριση αποθήκης."
-          },
-          "fuelTracker": {
-            "title": "Fuel Operation Tracker",
-            "description": "Το Fuel Operation Tracker είναι μια ολοκληρωμένη λύση για την παρακολούθηση καυσίμων και τη διαχείριση στόλου μηχανημάτων/οχημάτων. Με απόλυτη προσήλωση στην ιδιωτικότητα, η εφαρμογή αποθηκεύει όλα τα δεδομένα τοπικά και κρυπτογραφημένα, προσφέροντας παράλληλα προηγμένες δυνατότητες όπως OCR για αυτόματη αναγνώριση κειμένου, βιομετρική ασφάλεια και εξαγωγή αναλυτικών αναφορών σε μορφή Excel και PDF."
-          },
-          "countdownTimer": {
-            "title": "Countdown Timer",
-            "description": "Πρώτη Python desktop εφαρμογή - ένα απλό αλλά αποτελεσματικό αντιστροφό χρονομετρητή (countdown timer) με ενσωματωμένες ειδοποιήσεις και audio playback. Όταν ο χρόνος ολοκληρώνεται, η εφαρμογή εμφανίζει ειδοποίηση και αναπαράγει αυτόματα μουσική από αρχεία στον ίδιο φάκελο. Ιδανική για time management, Pomodoro technique, και προσωπική παραγωγικότητα."
-          },
-          "pdfToMp3": {
-            "title": "PDF to MP3 Converter",
-            "description": "Python desktop εφαρμογή που μετατρέπει PDF αρχεία σε MP3 audio files, επιτρέποντας την ακουστική κατανάλωση περιεχομένου κατά τη διάρκεια άλλων δραστηριοτήτων όπως γυμναστική, τρέξιμο, ή καθημερινές εργασίες. Αναπτύχθηκε από ανάγκη και προσωπική ικανοποίηση για να βελτιώσει την αποδοτικότητα μάθησης και να αξιοποιήσει καλύτερα τον διαθέσιμο χρόνο. Ιδανική για continuous learning και multitasking."
-          },
-          "smartHomeDashboard": {
-            "title": "Κεντρικό Dashboard",
-            "description": "Ενοποιημένο dashboard Home Assistant για παρακολούθηση συσκευών, σκηνών και κατάστασης του smart home. Κεντρικό σημείο ελέγχου με οπτική επισκόπηση όλων των ενσωματώσεων, κατάστασης φωτισμού, κλιματισμού και συσκευών σε πραγματικό χρόνο."
-          },
-          "smartHomeAutomations": {
-            "title": "Αυτοματισμοί και Σκηνικά",
-            "description": "Ρουτίνες και automation flows για φωτισμό, θέρμανση και συσκευές. Ορισμός σκηνικών (scenes) και triggers με βάση ώρα, αισθητήρες ή χειροκίνητο πάτημα. Βελτιστοποίηση καθημερινής λειτουργίας μέσω YAML και visual editor του Home Assistant."
-          },
-          "smartHomeIntegrations": {
-            "title": "Ενσωματώσεις και Monitoring",
-            "description": "Ενσωματώσεις συσκευών IoT και παρακολούθηση ενεργείας ή κατάστασης. Διαχείριση integrations από διαφορετικούς vendors, energy monitoring και ιστορικό δεδομένων. Ιδανικό για επεκτασιμότητα και κεντρική διαχείριση ολόκληρου του ecosystem."
-          }
-        }
-      }
-    },
-    "design": {
-      "tag": "Σχεδιασμός",
-      "project1": {
-        "title": "Μηχανικό Εξάρτημα - Σχεδιασμός 1",
-        "description": "Σχεδιασμός μηχανικού εξαρτήματος με parametric modeling. Βελτιστοποίηση για λειτουργικότητα και αντοχή με χρήση AI-assisted tools."
-      },
-      "project2": {
-        "title": "Συνθετικό Σύστημα - Σχεδιασμός 2",
-        "description": "Σχεδιασμός συνθετικού συστήματος με πολλαπλά εξαρτήματα. Functional analysis και material optimization για καλύτερη απόδοση."
-      },
-      "project3": {
-        "title": "Εργαλείο & Ανταλλακτικό - Σχεδιασμός 3",
-        "description": "Σχεδιασμός λειτουργικού εργαλείου και ανταλλακτικού για καθημερινή χρήση. Focus στη δημιουργία functional parts με material efficiency."
-      },
-      "project4": {
-        "title": "Μηχανική Κατασκευή - Σχεδιασμός 4",
-        "description": "Προηγμένη μηχανική κατασκευή με detailed engineering analysis. Parametric design για ευελιξία και προσαρμογή στις ανάγκες."
-      },
-      "project5": {
-        "title": "Βελτιστοποιημένο Εξάρτημα - Σχεδιασμός 5",
-        "description": "Βελτιστοποιημένο εξάρτημα με AI-assisted optimization. Συνδυασμός αισθητικής και λειτουργικότητας για optimal performance."
-      },
-      "project6": {
-        "title": "Product Design & 3D Printing - ΕΚΠΑ",
-        "description": "Άσκηση από το πρόγραμμα Product Design & 3D Printing του ΕΚΠΑ. Σχεδιασμός μηχανικής τροχαλίας με τεχνικό σχέδιο, 3D μοντελοποίηση και animation. Η άσκηση καλύπτει ολόκληρο τον κύκλο σχεδιασμού από το conceptual design μέχρι την προσομοίωση και οπτικοποίηση, δείχνοντας την εφαρμογή σύγχρονων μεθόδων CAD design και engineering analysis.",
-        "videoNotSupported": "Το βίντεο δεν υποστηρίζεται στον browser σας. Παρακαλώ δοκιμάστε άλλο browser ή κατεβάστε το αρχείο."
-      },
-      "project7": {
-        "title": "Σχεδιασμός & Κατασκευή Γραναζιών Παγωτομηχανής",
-        "description": "Σχεδιασμός και μηχανική ανάλυση γραναζιών για παγωτομηχανή με Fusion 360. Parametric design για ακριβή engagement και smooth operation. Εστίαση στη functional design και optimization των gear ratios για optimal performance."
-      },
-      "project8": {
-        "title": "ESP32-C3 Smart Button",
-        "description": "Φορητό smart κουμπί βασισμένο σε ESP32-C3, τροφοδοτούμενο από μπαταρία CR2032 3V. Με κάθε πάτημα ξυπνά, συνδέεται στο WiFi, στέλνει webhook στο Home Assistant—εφαρμογή: toggle ομάδας φωτισμού—και επιστρέφει σε λειτουργία ύπνου μέχρι την επόμενη χρήση."
-      }
-    },
-    "aiCAD": {
-      "title": "Σχεδιασμός CAD",
-      "description": "Μετά το eLearning στο ΕΚΠΑ με εισαγωγή σε βασική σχεδίαση στο Autodesk Inventor, ξεκίνησα το ταξίδι μου στον σχεδιασμό. Το Product Design & 3D Printing Specialization (2021) στο ΕΚΠΑ με έφερε σε άμεση επαφή με το Fusion 360 και τον πλήρη κύκλο του design workflow. Από τα πρώτα βήματα στο Inventor, η εξέλιξη έχει οδηγήσει σε προχωρημένες τεχνικές σχεδιασμού με parametric modeling, functional analysis και material optimization. Ο σχεδιασμός μηχανικών εξαρτημάτων και συστημάτων συνδυάζεται πλέον με τον πλήρη 3D printing workflow, με focus στη δημιουργία functional parts που βελτιώνουν την καθημερινή εργασία και προσφέρουν πρακτικές λύσεις."
-    },
-    "placeholders": {
-      "projects": "Projects θα προστεθούν σύντομα...",
-      "description": "Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον."
-    },
-    "github": {
-      "activity": "GitHub Activity",
-      "activityDescription": "Οι συνεισφορές μου στο GitHub - ένα \"πράσινο\" προφίλ είναι η καλύτερη απόδειξη ότι γράφω κώδικα καθημερινά.",
-      "viewProfile": "View Profile"
-    },
-    "contact": {
-      "title": "Ας Συνεργαστούμε",
-      "description": "Ενδιαφέρεστε για συνεργασία ή ευκαιρίες; Είμαι πάντα ανοιχτός σε συζητήσεις για βιομηχανικό αυτοματισμό, IoT projects ή νέες επαγγελματικές προκλήσεις.",
-      "emailMe": "Στείλτε Email",
-      "downloadCV": "Κατεβάστε το CV",
-      "location": "Λαμία, Ελλάδα",
-      "availability": "Ανοιχτός σε μετακόμιση / remote"
-    },
-    "pageTitleCV": "Curriculum Vitae",
-    "btnBackHome": "Επιστροφή στην αρχική",
-    "footerText": "© 2026 Portfolio. Όλα τα δικαιώματα διατηρούνται.",
-    "footerFollow": "Ακολουθήστε με"
-  },
-  "en": {
-    "nav": {
-      "home": "Home",
-      "menu": "Menu",
-      "3dPrinting": "3D Printing",
-      "design": "Design",
-      "programming": "Development",
-      "cv": "CV"
-    },
-    "cv": {
-      "header": {
-        "name": "Konstantinos Lathyris",
-        "title": "Industrial Operations Manager | IoT & Digital Tech Specialist",
-        "btnDownload": "Download CV"
-      },
-      "sections": {
-        "summary": "PROFESSIONAL SUMMARY",
-        "experience": "WORK EXPERIENCE",
-        "education": "EDUCATION & CERTIFICATIONS",
-        "techProjects": "Tech Projects & Innovation",
-        "skills": "TECHNICAL & DIGITAL SKILLS",
-        "softSkills": "SOFT SKILLS",
-        "hobbies": "HOBBIES",
-        "contact": "CONTACT",
-        "languages": "LANGUAGES & LICENSES"
-      },
-      "summaryText": "Experienced technical professional with 25+ years of experience in asphalt plant operations and heavy equipment operation. Specialized in production management, equipment maintenance, and process optimization. I possess a unique profile that combines hands-on knowledge of heavy machinery and electrical installations with advanced digital skills in Programming (Python), Networks, and Product Design (3D Printing / CAD).",
-      "summaryText2": "I focus on modernizing production processes through IoT and automation. Additionally, I manage self-hosted infrastructure with Proxmox and Docker containers for data logging and predictive maintenance. My personal projects (programming, design, 3D printing, smart home) are developed using artificial intelligence for efficient workflows and innovation.",
-      "about": {
-        "title": "About Me",
-        "devSkills": "Development Technologies",
-        "devSkillsMobileTitle": "Mobile Development",
-        "devSkillsMobile": "Cross-platform development with Flutter/Dart, React Native, and native Android with Kotlin",
-        "devSkillsToolsTitle": "Development Tools",
-        "devSkillsTools": "VS Code, Cursor (AI-powered IDE), Android Studio",
-        "devSkillsAITitle": "AI-Assisted Development",
-        "devSkillsAI": "Using artificial intelligence for efficient development workflows",
-        "personalProjects": "Personal Projects",
-        "personalProjectsDesc": "I develop multiple projects in my free time, exploring new technologies and solutions. Each project is an opportunity for learning and experimentation with modern platforms and frameworks."
-      },
-      "experience": [
-        {
-          "title": "Operations Manager & Heavy Equipment Operator",
-          "company": "TERNA S.A.",
-          "period": "04/2022 – Present",
-          "description": [
-            "Direct operation, supervision and ensuring smooth operation of asphalt plant.",
-            "Preventive and corrective maintenance of complex mechanical equipment.",
-            "Operation of specialized machinery in demanding technical projects.",
-            "Data Analysis and production parameter monitoring for process optimization."
-          ]
-        },
-        {
-          "title": "Heavy Equipment Operator",
-          "company": "Region of Central Greece (Technical Works Directorate)",
-          "period": "12/2021 – 03/2022",
-          "description": [
-            "Execution of infrastructure projects and management of technical challenges in the field."
-          ]
-        },
-        {
-          "title": "Production Manager & Quarry Complex Operator",
-          "company": "KALTSAS TECHNICAL S.A.",
-          "period": "09/2019 – 12/2022",
-          "description": [
-            "Production coordination and supervision of quarry operations."
-          ]
-        },
-        {
-          "title": "Asphalt Unit Production Manager & Administration",
-          "company": "ASPHALTOLATOMIKI ATEVE",
-          "period": "06/2000 – 08/2019",
-          "description": [
-            "19 years of responsibility for operation and maintenance of asphalt complex.",
-            "Administrative Skills: Human resources management, procurement, logistics, and invoicing."
-          ]
-        },
-        {
-          "title": "Refrigeration Applications & Stainless Steel Construction Technician",
-          "company": "Zygouris K.",
-          "period": "01/2000 – 05/2000",
-          "description": [
-            "Professional equipment manufacturing and refrigeration system installation."
-          ]
-        },
-        {
-          "title": "Assistant Electrician - Internal Installations",
-          "company": "Tsakas I.",
-          "period": "02/1997 – 04/1998",
-          "description": []
-        }
-      ],
-      "education": [
-        {
-          "title": "Internal Electrical Installations Technician",
-          "institution": "IEK OMIROS",
-          "period": "2024 – 2025 (Seeking internship to complete)"
-        },
-        {
-          "title": "Advanced Network Technologies & Programming",
-          "institution": "E-Learning National and Kapodistrian University of Athens (NKUA)",
-          "badges": [
-            "Advanced Network Technologies (2024-2025)",
-            "Programming with Python (2023)",
-            "Product Design & 3D Printing Specialization (2021)"
-          ]
-        },
-        {
-          "title": "Basic Technical Education",
-          "institution": "Internal Installations Electrician",
-          "location": "2nd Technical High School of Lamia",
-          "certification": "Heavy Equipment Operator Diploma & Certification (Specialty 1: Α, Specialty 2: Β, Specialty 4: Β)"
-        }
-      ],
-      "techProjects": {
-        "subtitle": "Personal Projects & Research (R&D)",
-        "projects": [
-          {
-            "title": "Smart Home Ecosystem",
-            "description": "Design and implementation of central automation system with Home Assistant and ESPHome. Development of custom sensors (ESP32) for monitoring critical environmental parameters."
-          },
-          {
-            "title": "Additive Manufacturing (3D Printing)",
-            "description": "Component design with CAD tools and production through 3D printing. Focus on creating functional spare parts and tools that improve daily work."
-          },
-          {
-            "title": "Software Development",
-            "description": "Python application development for calculation automation and data management, applying knowledge from NKUA programs.",
-            "aiDev": "AI-Assisted Development: Leveraging artificial intelligence for efficient code generation, debugging, and application development workflows.",
-            "homelab": "Self-hosted infrastructure: Proxmox home lab with Tailscale VPN, Debian Docker stack (N8N, Nextcloud, Portainer, WordPress, pgAdmin, Flame, PostgreSQL)."
-          }
-        ],
-        "viewProjects": "View My Projects"
-      },
-      "skills": {
-        "industrial": {
-          "title": "Industrial",
-          "description": "Heavy Machinery Operation & Maintenance, Production Management, Electrical Design, Automation Systems"
-        },
-        "digital": {
-          "title": "Digital Design",
-          "description": "CAD Design, 3D Printing (Slicing & Optimization)"
-        },
-        "programming": {
-          "title": "Programming & IoT",
-          "description": "Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks, Data Analysis"
-        },
-        "mobile": {
-          "title": "Mobile Development",
-          "description": "Cross-platform mobile app development (Flutter/Dart, React Native, Kotlin)"
-        },
-        "devTools": {
-          "title": "Development Tools",
-          "description": "VS Code, Cursor (AI-powered IDE), Android Studio. AI-assisted development workflows"
-        },
-        "soft": {
-          "title": "Soft Skills",
-          "description": "Team leadership, Strategic procurement planning, Crisis management in technical projects, Predictive Maintenance"
-        }
-      },
-      "softSkills": {
-        "title": "Soft Skills & Hobbies",
-        "subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
-        "leadership": {
-          "title": "Team Leadership",
-          "description": "Management of human resources and coordination of teams in demanding technical projects. Experience in production management and operational supervision."
-        },
-        "strategic": {
-          "title": "Strategic Planning",
-          "description": "Strategic planning of supplies, logistics and resource management. Application of modern management techniques for process optimization."
-        },
-        "crisis": {
-          "title": "Crisis Management",
-          "description": "Crisis management in technical projects and production operations. Immediate response to challenges and problem solving under pressure."
-        },
-        "predictive": {
-          "title": "Predictive Maintenance",
-          "description": "Predictive equipment maintenance with data analysis and parameter monitoring. Use of IoT and automation to optimize maintenance processes."
-        },
-        "programming": {
-          "title": "Programming & Development",
-          "description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE, GitHub Copilot) for efficient code generation and debugging."
+        "pages": {
+            "3dPrinting": {
+                "title": "3D Printing Creations",
+                "description": "Φυσικές κατασκευές και εκτυπώσεις 3D"
+            },
+            "design": {
+                "title": "Σχεδιασμός",
+                "description": "CAD μοντέλα και σχεδίαση μηχανικών"
+            },
+            "programming": {
+                "title": "Development Hub",
+                "description": "Ενοποιημένη σελίδα για software projects",
+                "sections": {
+                    "mobileApps": "Mobile Apps (Flutter)",
+                    "windowsApps": "Windows Apps (C#/.NET)",
+                    "pythonApps": "Desktop Applications (Python)",
+                    "webApps": "Web Apps",
+                    "espHome": "ESPHome/ESP32",
+                    "homeAssistant": "Home Assistant Automations",
+                    "smartHome": "Smart Home Setups",
+                    "homeLab": "Home Lab & Infrastructure"
+                },
+                "codeExample": "Code Example",
+                "esphomeConfigExample": "ESPHome Configuration Example",
+                "projects": {
+                    "flame": {
+                        "title": "Flame",
+                        "description": "Personal homepage και dashboard που τρέχει σε Docker container στο VM Debian μέσα στον Proxmox home lab server. Προσφέρει ένα μοντέρνο και customizable interface για διαχείριση bookmarks και links."
+                    },
+                    "proxmox": {
+                        "title": "Proxmox Home Lab Server",
+                        "description": "Proxmox VE virtualization platform για home lab environment. Προσφέρει πλήρη virtualization capabilities με support για containers και VMs, ιδανικό για testing και development."
+                    },
+                    "portainer": {
+                        "title": "Portainer - Docker Management",
+                        "description": "Portainer container management platform που τρέχει σε Docker στο VM Debian. Παρέχει web-based UI για διαχείριση Docker containers, images, volumes και networks."
+                    },
+                    "mailExtractor": {
+                        "title": "MailExtractor",
+                        "description": "Windows εφαρμογή για εξαγωγή δεδομένων από Gmail. Ο χρήστης κατεβάζει αρχείο .mbox από το Google Takeout (takeout.google.com), το αποσυμπιέζει μέσα από την εφαρμογή, το επιλέγει και η εφαρμογή εξάγει αυτόματα ονόματα, email addresses και τηλεφωνικούς αριθμούς σε Excel. Διαθέτει δωρεάν χρήση αρχικά, ενώ μετά απαιτεί machine-specific key που αντιστοιχεί στο συγκεκριμένο μηχάνημα που τρέχει η εφαρμογή."
+                    },
+                    "myInventory": {
+                        "title": "MyInventory",
+                        "description": "Μια Flutter mobile εφαρμογή για στοιχειώδη διαχείριση αποθήκης, που αναπτύχθηκε από την ανάγκη διαχείρισης αποθήκης στην εργασία. Η εφαρμογή προσφέρει πλήρη λύση διαχείρισης αποθηκών με υποστήριξη πολλαπλών αποθηκών, διαχείριση προϊόντων, μεταφορές αποθεμάτων μεταξύ αποθηκών, ειδοποιήσεις χαμηλού αποθέματος, backup & restore λειτουργικότητα, και AI Assistant με ενσωμάτωση Google Gemini API. Ιδανική για οποιονδήποτε χρειάζεται αποτελεσματική και απλή διαχείριση αποθήκης."
+                    },
+                    "fuelTracker": {
+                        "title": "Fuel Operation Tracker",
+                        "description": "Το Fuel Operation Tracker είναι μια ολοκληρωμένη λύση για την παρακολούθηση καυσίμων και τη διαχείριση στόλου μηχανημάτων/οχημάτων. Με απόλυτη προσήλωση στην ιδιωτικότητα, η εφαρμογή αποθηκεύει όλα τα δεδομένα τοπικά και κρυπτογραφημένα, προσφέροντας παράλληλα προηγμένες δυνατότητες όπως OCR για αυτόματη αναγνώριση κειμένου, βιομετρική ασφάλεια και εξαγωγή αναλυτικών αναφορών σε μορφή Excel και PDF."
+                    },
+                    "countdownTimer": {
+                        "title": "Countdown Timer",
+                        "description": "Πρώτη Python desktop εφαρμογή - ένα απλό αλλά αποτελεσματικό αντιστροφό χρονομετρητή (countdown timer) με ενσωματωμένες ειδοποιήσεις και audio playback. Όταν ο χρόνος ολοκληρώνεται, η εφαρμογή εμφανίζει ειδοποίηση και αναπαράγει αυτόματα μουσική από αρχεία στον ίδιο φάκελο. Ιδανική για time management, Pomodoro technique, και προσωπική παραγωγικότητα."
+                    },
+                    "pdfToMp3": {
+                        "title": "PDF to MP3 Converter",
+                        "description": "Python desktop εφαρμογή που μετατρέπει PDF αρχεία σε MP3 audio files, επιτρέποντας την ακουστική κατανάλωση περιεχομένου κατά τη διάρκεια άλλων δραστηριοτήτων όπως γυμναστική, τρέξιμο, ή καθημερινές εργασίες. Αναπτύχθηκε από ανάγκη και προσωπική ικανοποίηση για να βελτιώσει την αποδοτικότητα μάθησης και να αξιοποιήσει καλύτερα τον διαθέσιμο χρόνο. Ιδανική για continuous learning και multitasking."
+                    },
+                    "smartHomeDashboard": {
+                        "title": "Κεντρικό Dashboard",
+                        "description": "Ενοποιημένο dashboard Home Assistant για παρακολούθηση συσκευών, σκηνών και κατάστασης του smart home. Κεντρικό σημείο ελέγχου με οπτική επισκόπηση όλων των ενσωματώσεων, κατάστασης φωτισμού, κλιματισμού και συσκευών σε πραγματικό χρόνο."
+                    },
+                    "smartHomeAutomations": {
+                        "title": "Αυτοματισμοί και Σκηνικά",
+                        "description": "Ρουτίνες και automation flows για φωτισμό, θέρμανση και συσκευές. Ορισμός σκηνικών (scenes) και triggers με βάση ώρα, αισθητήρες ή χειροκίνητο πάτημα. Βελτιστοποίηση καθημερινής λειτουργίας μέσω YAML και visual editor του Home Assistant."
+                    },
+                    "smartHomeIntegrations": {
+                        "title": "Ενσωματώσεις και Monitoring",
+                        "description": "Ενσωματώσεις συσκευών IoT και παρακολούθηση ενεργείας ή κατάστασης. Διαχείριση integrations από διαφορετικούς vendors, energy monitoring και ιστορικό δεδομένων. Ιδανικό για επεκτασιμότητα και κεντρική διαχείριση ολόκληρου του ecosystem."
+                    }
+                }
+            }
         },
         "design": {
-          "title": "Design & 3D Printing",
-            "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
+            "tag": "Σχεδιασμός",
+            "project1": {
+                "title": "Μηχανικό Εξάρτημα - Σχεδιασμός 1",
+                "description": "Σχεδιασμός μηχανικού εξαρτήματος με parametric modeling. Βελτιστοποίηση για λειτουργικότητα και αντοχή με χρήση AI-assisted tools."
+            },
+            "project2": {
+                "title": "Συνθετικό Σύστημα - Σχεδιασμός 2",
+                "description": "Σχεδιασμός συνθετικού συστήματος με πολλαπλά εξαρτήματα. Functional analysis και material optimization για καλύτερη απόδοση."
+            },
+            "project3": {
+                "title": "Εργαλείο & Ανταλλακτικό - Σχεδιασμός 3",
+                "description": "Σχεδιασμός λειτουργικού εργαλείου και ανταλλακτικού για καθημερινή χρήση. Focus στη δημιουργία functional parts με material efficiency."
+            },
+            "project4": {
+                "title": "Μηχανική Κατασκευή - Σχεδιασμός 4",
+                "description": "Προηγμένη μηχανική κατασκευή με detailed engineering analysis. Parametric design για ευελιξία και προσαρμογή στις ανάγκες."
+            },
+            "project5": {
+                "title": "Βελτιστοποιημένο Εξάρτημα - Σχεδιασμός 5",
+                "description": "Βελτιστοποιημένο εξάρτημα με AI-assisted optimization. Συνδυασμός αισθητικής και λειτουργικότητας για optimal performance."
+            },
+            "project6": {
+                "title": "Product Design & 3D Printing - ΕΚΠΑ",
+                "description": "Άσκηση από το πρόγραμμα Product Design & 3D Printing του ΕΚΠΑ. Σχεδιασμός μηχανικής τροχαλίας με τεχνικό σχέδιο, 3D μοντελοποίηση και animation. Η άσκηση καλύπτει ολόκληρο τον κύκλο σχεδιασμού από το conceptual design μέχρι την προσομοίωση και οπτικοποίηση, δείχνοντας την εφαρμογή σύγχρονων μεθόδων CAD design και engineering analysis.",
+                "videoNotSupported": "Το βίντεο δεν υποστηρίζεται στον browser σας. Παρακαλώ δοκιμάστε άλλο browser ή κατεβάστε το αρχείο."
+            },
+            "project7": {
+                "title": "Σχεδιασμός & Κατασκευή Γραναζιών Παγωτομηχανής",
+                "description": "Σχεδιασμός και μηχανική ανάλυση γραναζιών για παγωτομηχανή με Fusion 360. Parametric design για ακριβή engagement και smooth operation. Εστίαση στη functional design και optimization των gear ratios για optimal performance."
+            },
+            "project8": {
+                "title": "ESP32-C3 Smart Button",
+                "description": "Φορητό smart κουμπί βασισμένο σε ESP32-C3, τροφοδοτούμενο από μπαταρία CR2032 3V. Με κάθε πάτημα ξυπνά, συνδέεται στο WiFi, στέλνει webhook στο Home Assistant—εφαρμογή: toggle ομάδας φωτισμού—και επιστρέφει σε λειτουργία ύπνου μέχρι την επόμενη χρήση."
+            }
         },
-        "smartHome": {
-          "title": "Smart Home Automation",
-          "description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management and predictive maintenance."
+        "aiCAD": {
+            "title": "Σχεδιασμός CAD",
+            "description": "Μετά το eLearning στο ΕΚΠΑ με εισαγωγή σε βασική σχεδίαση στο Autodesk Inventor, ξεκίνησα το ταξίδι μου στον σχεδιασμό. Το Product Design & 3D Printing Specialization (2021) στο ΕΚΠΑ με έφερε σε άμεση επαφή με το Fusion 360 και τον πλήρη κύκλο του design workflow. Από τα πρώτα βήματα στο Inventor, η εξέλιξη έχει οδηγήσει σε προχωρημένες τεχνικές σχεδιασμού με parametric modeling, functional analysis και material optimization. Ο σχεδιασμός μηχανικών εξαρτημάτων και συστημάτων συνδυάζεται πλέον με τον πλήρη 3D printing workflow, με focus στη δημιουργία functional parts που βελτιώνουν την καθημερινή εργασία και προσφέρουν πρακτικές λύσεις."
         },
-        "ai": {
-          "title": "AI-Assisted Innovation",
-          "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
-        }
-      },
-      "hobbies": {
-        "subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
-        "programming": {
-          "title": "Programming & Development",
-          "description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE, GitHub Copilot) for efficient code generation and debugging."
+        "placeholders": {
+            "projects": "Projects θα προστεθούν σύντομα...",
+            "description": "Αυτή η ενότητα περιέχει projects που θα προστεθούν στο μέλλον."
+        },
+        "github": {
+            "activity": "GitHub Activity",
+            "activityDescription": "Οι συνεισφορές μου στο GitHub - ένα \"πράσινο\" προφίλ είναι η καλύτερη απόδειξη ότι γράφω κώδικα καθημερινά.",
+            "viewProfile": "View Profile"
+        },
+        "contact": {
+            "title": "Ας Συνεργαστούμε",
+            "description": "Ενδιαφέρεστε για συνεργασία ή ευκαιρίες; Είμαι πάντα ανοιχτός σε συζητήσεις για βιομηχανικό αυτοματισμό, IoT projects ή νέες επαγγελματικές προκλήσεις.",
+            "emailMe": "Στείλτε Email",
+            "downloadCV": "Κατεβάστε το CV",
+            "location": "Λαμία, Ελλάδα",
+            "availability": "Ανοιχτός σε μετακόμιση / remote"
+        },
+        "pageTitleCV": "Curriculum Vitae",
+        "btnBackHome": "Επιστροφή στην αρχική",
+        "footerText": "© 2026 Portfolio. Όλα τα δικαιώματα διατηρούνται.",
+        "footerFollow": "Ακολουθήστε με",
+        "pages.programming.projects.myInventory.title": "MyInventory",
+        "pages.programming.projects.myInventory.description": "Μια ολοκληρωμένη εφαρμογή διαχείρισης αποθέματος (inventory).",
+        "pages.programming.projects.fuelTracker.title": "Fuel Tracker",
+        "pages.programming.projects.fuelTracker.description": "Εφαρμογή παρακολούθησης κατανάλωσης καυσίμου και εξόδων οχήματος.",
+        "pages.programming.projects.easySlot.title": "EasySlot",
+        "pages.programming.projects.easySlot.description": "Πλατφόρμα κρατήσεων και διαχείρισης ραντεβού πολλαπλών επιχειρήσεων. Η εφαρμογή προσφέρει admin panel, σύστημα κρατήσεων με ημερολόγιο, QR code check-in, chat, marketplace, Firebase backend, και υποστήριξη πολλών γλωσσών. Ιδανική για επιχειρήσεις που θέλουν να αυτοματοποιήσουν τη διαχείριση ραντεβού τους.",
+        "pages.programming.projects.myPlan.title": "MyPlan",
+        "pages.programming.projects.myPlan.description": "Εφαρμογή σχεδιασμού υγείας και fitness με ενσωμάτωση Health Connect. Παρακολούθηση μετρήσεων σώματος, ιστορικό προόδου, προγραμματισμός γευμάτων και ασκήσεων, όλα σε premium Cupertino design. Συνδέεται με το Health Connect του Android για αυτόματη λήψη δεδομένων υγείας.",
+        "pages.programming.projects.synapses.title": "Synapses",
+        "pages.programming.projects.synapses.description": "Εφαρμογή διαχείρισης IoT συσκευών μέσω Bluetooth Low Energy (BLE). Υποστηρίζει σύζευξη συσκευών, OTA firmware updates, προφίλ συσκευών, καταγραφή ρυθμίσεων και monitoring σε πραγματικό χρόνο. Σχεδιασμένη με Clean Architecture και premium Cupertino UI.",
+        "pages.programming.projects.synthesis.title": "Synthesis",
+        "pages.programming.projects.synthesis.description": "Εφαρμογή διαχείρισης εργαστηριακών μιγμάτων και αναφορών με ενσωμάτωση τεχνητής νοημοσύνης (Google Gemini). Υποστηρίζει καταγραφή αναλογιών υλικών, batch scanning, δημιουργία PDF/Excel αναφορών, στατιστικά με γραφήματα, και home screen widgets. Ιδανική για εργαστηριακή χρήση και διαχείριση ποιότητας.",
+        "pages.programming.projects.duplicateFinder.title": "DuplicateFinder",
+        "pages.programming.projects.duplicateFinder.description": "Desktop εφαρμογή για ανίχνευση και διαχείριση διπλότυπων αρχείων. Χρησιμοποιεί SHA-256 hashing για ακριβή σύγκριση περιεχομένου αρχείων, με γραφικό περιβάλλον Qt (PySide6) και δυνατότητα εκτέλεσης ως standalone Windows εφαρμογή (.exe) μέσω PyInstaller.",
+        "btnDownloadApk": "Λήψη APK",
+        "btnDownloadInstaller": "Λήψη Installer"
+    },
+    "en": {
+        "nav": {
+            "home": "Home",
+            "menu": "Menu",
+            "3dPrinting": "3D Printing",
+            "design": "Design",
+            "programming": "Development",
+            "cv": "CV"
+        },
+        "cv": {
+            "header": {
+                "name": "Konstantinos Lathyris",
+                "title": "Industrial Operations Manager | IoT & Digital Tech Specialist",
+                "btnDownload": "Download CV"
+            },
+            "sections": {
+                "summary": "PROFESSIONAL SUMMARY",
+                "experience": "WORK EXPERIENCE",
+                "education": "EDUCATION & CERTIFICATIONS",
+                "techProjects": "Tech Projects & Innovation",
+                "skills": "TECHNICAL & DIGITAL SKILLS",
+                "softSkills": "SOFT SKILLS",
+                "hobbies": "HOBBIES",
+                "contact": "CONTACT",
+                "languages": "LANGUAGES & LICENSES"
+            },
+            "summaryText": "Experienced technical professional with 25+ years of experience in asphalt plant operations and heavy equipment operation. Specialized in production management, equipment maintenance, and process optimization. I possess a unique profile that combines hands-on knowledge of heavy machinery and electrical installations with advanced digital skills in Programming (Python), Networks, and Product Design (3D Printing / CAD).",
+            "summaryText2": "I focus on modernizing production processes through IoT and automation. Additionally, I manage self-hosted infrastructure with Proxmox and Docker containers for data logging and predictive maintenance. My personal projects (programming, design, 3D printing, smart home) are developed using artificial intelligence for efficient workflows and innovation.",
+            "about": {
+                "title": "About Me",
+                "devSkills": "Development Technologies",
+                "devSkillsMobileTitle": "Mobile Development",
+                "devSkillsMobile": "Cross-platform development with Flutter/Dart, React Native, and native Android with Kotlin",
+                "devSkillsToolsTitle": "Development Tools",
+                "devSkillsTools": "VS Code, Cursor (AI-powered IDE), Android Studio",
+                "devSkillsAITitle": "AI-Assisted Development",
+                "devSkillsAI": "Using artificial intelligence for efficient development workflows",
+                "personalProjects": "Personal Projects",
+                "personalProjectsDesc": "I develop multiple projects in my free time, exploring new technologies and solutions. Each project is an opportunity for learning and experimentation with modern platforms and frameworks."
+            },
+            "experience": [
+                {
+                    "title": "Operations Manager & Heavy Equipment Operator",
+                    "company": "TERNA S.A.",
+                    "period": "04/2022 – Present",
+                    "description": [
+                        "Direct operation, supervision and ensuring smooth operation of asphalt plant.",
+                        "Preventive and corrective maintenance of complex mechanical equipment.",
+                        "Operation of specialized machinery in demanding technical projects.",
+                        "Data Analysis and production parameter monitoring for process optimization."
+                    ]
+                },
+                {
+                    "title": "Heavy Equipment Operator",
+                    "company": "Region of Central Greece (Technical Works Directorate)",
+                    "period": "12/2021 – 03/2022",
+                    "description": [
+                        "Execution of infrastructure projects and management of technical challenges in the field."
+                    ]
+                },
+                {
+                    "title": "Production Manager & Quarry Complex Operator",
+                    "company": "KALTSAS TECHNICAL S.A.",
+                    "period": "09/2019 – 12/2022",
+                    "description": [
+                        "Production coordination and supervision of quarry operations."
+                    ]
+                },
+                {
+                    "title": "Asphalt Unit Production Manager & Administration",
+                    "company": "ASPHALTOLATOMIKI ATEVE",
+                    "period": "06/2000 – 08/2019",
+                    "description": [
+                        "19 years of responsibility for operation and maintenance of asphalt complex.",
+                        "Administrative Skills: Human resources management, procurement, logistics, and invoicing."
+                    ]
+                },
+                {
+                    "title": "Refrigeration Applications & Stainless Steel Construction Technician",
+                    "company": "Zygouris K.",
+                    "period": "01/2000 – 05/2000",
+                    "description": [
+                        "Professional equipment manufacturing and refrigeration system installation."
+                    ]
+                },
+                {
+                    "title": "Assistant Electrician - Internal Installations",
+                    "company": "Tsakas I.",
+                    "period": "02/1997 – 04/1998",
+                    "description": []
+                }
+            ],
+            "education": [
+                {
+                    "title": "Internal Electrical Installations Technician",
+                    "institution": "IEK OMIROS",
+                    "period": "2024 – 2025 (Seeking internship to complete)"
+                },
+                {
+                    "title": "Advanced Network Technologies & Programming",
+                    "institution": "E-Learning National and Kapodistrian University of Athens (NKUA)",
+                    "badges": [
+                        "Advanced Network Technologies (2024-2025)",
+                        "Programming with Python (2023)",
+                        "Product Design & 3D Printing Specialization (2021)"
+                    ]
+                },
+                {
+                    "title": "Basic Technical Education",
+                    "institution": "Internal Installations Electrician",
+                    "location": "2nd Technical High School of Lamia",
+                    "certification": "Heavy Equipment Operator Diploma & Certification (Specialty 1: Α, Specialty 2: Β, Specialty 4: Β)"
+                }
+            ],
+            "techProjects": {
+                "subtitle": "Personal Projects & Research (R&D)",
+                "projects": [
+                    {
+                        "title": "Smart Home Ecosystem",
+                        "description": "Design and implementation of central automation system with Home Assistant and ESPHome. Development of custom sensors (ESP32) for monitoring critical environmental parameters."
+                    },
+                    {
+                        "title": "Additive Manufacturing (3D Printing)",
+                        "description": "Component design with CAD tools and production through 3D printing. Focus on creating functional spare parts and tools that improve daily work."
+                    },
+                    {
+                        "title": "Software Development",
+                        "description": "Python application development for calculation automation and data management, applying knowledge from NKUA programs.",
+                        "aiDev": "AI-Assisted Development: Leveraging artificial intelligence for efficient code generation, debugging, and application development workflows.",
+                        "homelab": "Self-hosted infrastructure: Proxmox home lab with Tailscale VPN, Debian Docker stack (N8N, Nextcloud, Portainer, WordPress, pgAdmin, Flame, PostgreSQL)."
+                    }
+                ],
+                "viewProjects": "View My Projects"
+            },
+            "skills": {
+                "industrial": {
+                    "title": "Industrial",
+                    "description": "Heavy Machinery Operation & Maintenance, Production Management, Electrical Design, Automation Systems"
+                },
+                "digital": {
+                    "title": "Digital Design",
+                    "description": "CAD Design, 3D Printing (Slicing & Optimization)"
+                },
+                "programming": {
+                    "title": "Programming & IoT",
+                    "description": "Python (Scripting), ESPHome, Home Assistant Automation, MQTT Networks, Data Analysis"
+                },
+                "mobile": {
+                    "title": "Mobile Development",
+                    "description": "Cross-platform mobile app development (Flutter/Dart, React Native, Kotlin)"
+                },
+                "devTools": {
+                    "title": "Development Tools",
+                    "description": "VS Code, Cursor (AI-powered IDE), Android Studio. AI-assisted development workflows"
+                },
+                "soft": {
+                    "title": "Soft Skills",
+                    "description": "Team leadership, Strategic procurement planning, Crisis management in technical projects, Predictive Maintenance"
+                }
+            },
+            "softSkills": {
+                "title": "Soft Skills & Hobbies",
+                "subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
+                "leadership": {
+                    "title": "Team Leadership",
+                    "description": "Management of human resources and coordination of teams in demanding technical projects. Experience in production management and operational supervision."
+                },
+                "strategic": {
+                    "title": "Strategic Planning",
+                    "description": "Strategic planning of supplies, logistics and resource management. Application of modern management techniques for process optimization."
+                },
+                "crisis": {
+                    "title": "Crisis Management",
+                    "description": "Crisis management in technical projects and production operations. Immediate response to challenges and problem solving under pressure."
+                },
+                "predictive": {
+                    "title": "Predictive Maintenance",
+                    "description": "Predictive equipment maintenance with data analysis and parameter monitoring. Use of IoT and automation to optimize maintenance processes."
+                },
+                "programming": {
+                    "title": "Programming & Development",
+                    "description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE, GitHub Copilot) for efficient code generation and debugging."
+                },
+                "design": {
+                    "title": "Design & 3D Printing",
+                    "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
+                },
+                "smartHome": {
+                    "title": "Smart Home Automation",
+                    "description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management and predictive maintenance."
+                },
+                "ai": {
+                    "title": "AI-Assisted Innovation",
+                    "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
+                }
+            },
+            "hobbies": {
+                "subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
+                "programming": {
+                    "title": "Programming & Development",
+                    "description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE, GitHub Copilot) for efficient code generation and debugging."
+                },
+                "design": {
+                    "title": "Design & 3D Printing",
+                    "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
+                },
+                "smartHome": {
+                    "title": "Smart Home Automation",
+                    "description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management and predictive maintenance."
+                },
+                "ai": {
+                    "title": "AI-Assisted Innovation",
+                    "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
+                }
+            },
+            "contact": {
+                "location": "Lamia, Greece",
+                "phone": "(+30) 6974030956",
+                "email": "lathyris.kon@gmail.com",
+                "linkedin": "Konstantinos Lathyris",
+                "portfolio": "kwstas147.github.io"
+            },
+            "languages": {
+                "greek": {
+                    "label": "Greek",
+                    "level": "Native"
+                },
+                "english": {
+                    "label": "English",
+                    "level": "Level B2"
+                },
+                "licenses": {
+                    "driving": {
+                        "label": "Driving Licenses",
+                        "types": "A, B, C, D",
+                        "note": "(Professional driving license)"
+                    },
+                    "machineOperator": {
+                        "label": "Heavy Equipment Operator License",
+                        "specialties": "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β"
+                    }
+                }
+            }
+        },
+        "btnDownloadPDF": "Download CV as PDF",
+        "btnDownloadPDFShort": "Download",
+        "btnPrintPDF": "Print to PDF",
+        "btnPdfmake": "Vector PDF (New!)",
+        "printPdfMessage": "Select 'Save as PDF' in the print dialog for perfect quality",
+        "pdfmakeMessage": "Perfect quality, auto download",
+        "pdfOptimizedMessage": "Alternative method",
+        "pdfGenerating": "⏳ Generating PDF...",
+        "pdfSuccess": "✅ PDF Downloaded!",
+        "pdfError": "❌ Error - Try Again",
+        "cvName": "Konstantinos Lathyris",
+        "cvTitle": "Industrial Operations Manager | IoT & Digital Tech Enthusiast",
+        "cvSectionSummary": "PROFESSIONAL SUMMARY",
+        "cvSummaryText": "Experienced technical professional with 25 years of experience in technical project management and industrial plant operations (Asphalt Plants). I possess a unique profile that combines hands-on knowledge of heavy machinery and electrical installations with advanced digital skills in Programming (Python), Networks, and Product Design (3D Printing / CAD). I focus on modernizing production processes through IoT and automation.",
+        "cvSummaryHomelab": "Additionally, I manage self-hosted infrastructure with Proxmox and Docker containers.",
+        "cvSectionContact": "CONTACT",
+        "cvLocation": "Lamia, Greece",
+        "cvPhone": "(+30) 6974030956",
+        "cvEmail": "lathyris.kon@gmail.com",
+        "cvLinkedIn": "Konstantinos Lathyris",
+        "cvPortfolio": "kwstas147.github.io",
+        "cvSectionExperience": "PROFESSIONAL EXPERIENCE",
+        "cvJob1Title": "Operations Manager & Heavy Equipment Operator",
+        "cvJob1Company": "TERNA S.A.",
+        "cvJob1Period": "04/2022 – Present",
+        "cvJob1Desc1": "Direct operation, supervision and ensuring smooth operation of asphalt plant.",
+        "cvJob1Desc2": "Preventive and corrective maintenance of complex mechanical equipment.",
+        "cvJob1Desc3": "Operation of specialized machinery in demanding technical projects.",
+        "cvJob2Title": "Heavy Equipment Operator",
+        "cvJob2Company": "Region of Central Greece (Technical Works Directorate)",
+        "cvJob2Period": "12/2021 – 03/2022",
+        "cvJob2Desc1": "Execution of infrastructure projects and management of technical challenges in the field.",
+        "cvJob3Title": "Production Manager & Quarry Complex Operator",
+        "cvJob3Company": "KALTSAS TECHNICAL S.A.",
+        "cvJob3Period": "09/2019 – 12/2022",
+        "cvJob3Desc1": "Production coordination and supervision of quarry operations.",
+        "cvJob4Title": "Asphalt Unit Production Manager & Administration",
+        "cvJob4Company": "ASPHALTOLATOMIKI ATEVE",
+        "cvJob4Period": "06/2000 – 08/2019",
+        "cvJob4Desc1": "19 years of responsibility for operation and maintenance of asphalt complex.",
+        "cvJob4Desc2": "Administrative Skills: Human resources management, procurement, logistics, and invoicing.",
+        "cvJob5Title": "Refrigeration Applications & Stainless Steel Construction Technician",
+        "cvJob5Company": "Zygouris K.",
+        "cvJob5Period": "01/2000 – 05/2000",
+        "cvJob5Desc1": "Professional equipment manufacturing and refrigeration system installation.",
+        "cvJob6Title": "Assistant Electrician - Internal Installations",
+        "cvJob6Company": "Tsakas I.",
+        "cvJob6Period": "02/1997 – 04/1998",
+        "cvSectionEducation": "EDUCATION & CERTIFICATIONS",
+        "cvEdu1Title": "Internal Electrical Installations Technician",
+        "cvEdu1Institution": "IEK OMIROS",
+        "cvEdu1Period": "2024 – 2025 (Seeking internship to complete)",
+        "cvEdu2Title": "Advanced Network Technologies & Programming",
+        "cvEdu2Institution": "E-Learning National and Kapodistrian University of Athens (NKUA)",
+        "cvEdu2Badge1": "Advanced Network Technologies (2024-2025)",
+        "cvEdu2Badge2": "Programming with Python (2023)",
+        "cvEdu2Badge3": "Product Design & 3D Printing Specialization (2021)",
+        "cvEdu3Title": "Basic Technical Education",
+        "cvEdu3Institution": "Internal Installations Electrician",
+        "cvEdu3Location": "2nd Technical High School of Lamia",
+        "cvEdu3Cert": "Heavy Equipment Operator Diploma & Certification (Specialty 1: Α, Specialty 2: Β, Specialty 4: Β)",
+        "cvSectionLanguages": "LANGUAGES & LICENSES",
+        "cvLangGreek": "Greek",
+        "cvLangGreekLevel": "Native",
+        "cvLangEnglish": "English",
+        "cvLangEnglishLevel": "Level B2",
+        "cvLicenses": "Driving Licenses",
+        "cvLicensesTypes": "A, B, C, D",
+        "cvLicensesNote": "(Professional driving license)",
+        "cvMachineOperatorLicense": "Heavy Equipment Operator License",
+        "cvMachineOperatorSpecialties": "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β",
+        "hero": {
+            "title": "Welcome to My Portfolio",
+            "name": "Konstantinos Lathyris",
+            "subtitle": "Industrial Operations Manager | IoT & Automation Enthusiast",
+            "description": "Extensive experience in the operation and maintenance of asphalt plants at industrial and quarry installations, as well as in heavy equipment operation. In parallel, I apply my interest in IoT, automation, and digital innovation to my daily work.",
+            "openToWork": "Open to Opportunities",
+            "viewCV": "View CV",
+            "contactMe": "Contact Me"
+        },
+        "professional": {
+            "summary": {
+                "title": "Professional Summary",
+                "asphalt": {
+                    "title": "Asphalt Plants",
+                    "description": "25+ years of experience in operation, supervision and maintenance of asphalt plants. Direct responsibility for production, quality and operational safety."
+                },
+                "machinery": {
+                    "title": "Heavy Equipment",
+                    "description": "Specialized heavy equipment operator with multiple specialty certifications. Experience in demanding infrastructure technical projects."
+                },
+                "maintenance": {
+                    "title": "Maintenance & Management",
+                    "description": "Preventive and corrective maintenance of complex mechanical and electrical equipment. Human resources and logistics management."
+                },
+                "optimization": {
+                    "title": "Optimization",
+                    "description": "Data analysis and production parameter monitoring for process optimization. Application of modern management techniques."
+                }
+            },
+            "timeline": {
+                "title": "Professional Journey",
+                "job1": {
+                    "title": "Operations Manager & Heavy Equipment Operator",
+                    "company": "TERNA S.A.",
+                    "period": "04/2022 – Present",
+                    "description": "Direct operation and supervision of asphalt plant. Preventive equipment maintenance. Operation of specialized machinery in technical projects."
+                },
+                "job2": {
+                    "title": "Heavy Equipment Operator",
+                    "company": "Region of Central Greece",
+                    "period": "12/2021 – 03/2022",
+                    "description": "Execution of infrastructure projects and management of technical challenges in the field."
+                },
+                "job3": {
+                    "title": "Production Manager & Quarry Operator",
+                    "company": "KALTSAS TECHNICAL S.A.",
+                    "period": "09/2019 – 12/2022",
+                    "description": "Production coordination and supervision of quarry operations."
+                },
+                "job4": {
+                    "title": "Asphalt Unit Production Manager",
+                    "company": "ASPHALTOLATOMIKI ATEVE",
+                    "period": "06/2000 – 08/2019",
+                    "description": "19 years of responsibility for operation and maintenance of asphalt complex. Human resources, procurement and logistics management."
+                }
+            }
+        },
+        "cvSection": {
+            "title": "Complete Professional CV",
+            "cardTitle": "Curriculum Vitae",
+            "cardDescription": "25+ years of professional experience in asphalt plants and heavy equipment. Complete CV with detailed information.",
+            "viewFull": "View Full CV"
+        },
+        "softSkills": {
+            "title": "Soft Skills & Hobbies",
+            "subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
+            "programming": {
+                "title": "Programming & Development",
+                "description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE) for efficient code generation and debugging."
+            },
+            "design": {
+                "title": "Design & 3D Printing",
+                "description": "Component design with CAD tools and production through 3D printing. Use of AI-assisted design tools for optimization and functional parts."
+            },
+            "smartHome": {
+                "title": "Smart Home Automation",
+                "description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management."
+            },
+            "ai": {
+                "title": "AI-Assisted Innovation",
+                "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools."
+            },
+            "viewMore": "View More",
+            "3dPrinting": "3D Printing"
+        },
+        "projectCategories": {
+            "title": "Projects & Creations"
+        },
+        "categories": {
+            "3dPrinting": "3D Printing Creations",
+            "design": "Design",
+            "programming": "Development Hub",
+            "cv": "Curriculum Vitae"
+        },
+        "categoryDescriptions": {
+            "3dPrinting": "Functional spare parts and tools through Additive Manufacturing",
+            "design": "CAD design and engineering analysis",
+            "programming": "Python automation, IoT solutions and software development",
+            "cv": "Complete professional CV with 25+ years of experience"
         },
         "design": {
-          "title": "Design & 3D Printing",
-            "description": "Component design in Fusion360 and production through 3D printing. Use of AI-assisted design tools for optimization, material efficiency and functional parts."
+            "tag": "Design",
+            "project1": {
+                "title": "Mechanical Component - Design 1",
+                "description": "Mechanical component design with parametric modeling. Optimization for functionality and durability using AI-assisted tools."
+            },
+            "project2": {
+                "title": "Complex System - Design 2",
+                "description": "Complex system design with multiple components. Functional analysis and material optimization for better performance."
+            },
+            "project3": {
+                "title": "Tool & Spare Part - Design 3",
+                "description": "Functional tool and spare part design for everyday use. Focus on creating functional parts with material efficiency."
+            },
+            "project4": {
+                "title": "Mechanical Assembly - Design 4",
+                "description": "Advanced mechanical assembly with detailed engineering analysis. Parametric design for flexibility and adaptation to needs."
+            },
+            "project5": {
+                "title": "Optimized Component - Design 5",
+                "description": "Optimized component with AI-assisted optimization. Combination of aesthetics and functionality for optimal performance."
+            },
+            "project6": {
+                "title": "Product Design & 3D Printing - NKUA",
+                "description": "Exercise from the NKUA Product Design & 3D Printing program. Mechanical pulley design with technical drawing, 3D modeling and animation. The exercise covers the complete design cycle from conceptual design to simulation and visualization, demonstrating the application of modern CAD design methods and engineering analysis.",
+                "videoNotSupported": "Video is not supported in your browser. Please try another browser or download the file."
+            },
+            "project7": {
+                "title": "Ice Cream Machine Gear Design & Construction",
+                "description": "Design and engineering analysis of gears for ice cream machine using Fusion 360. Parametric design for precise engagement and smooth operation. Focus on functional design and optimization of gear ratios for optimal performance."
+            },
+            "project8": {
+                "title": "ESP32-C3 Smart Button",
+                "description": "Portable smart button based on ESP32-C3, powered by a CR2032 3V coin cell. On each press it wakes up, connects to WiFi, sends a webhook to Home Assistant (use case: toggle a lighting group), then returns to sleep until the next use."
+            }
         },
-        "smartHome": {
-          "title": "Smart Home Automation",
-          "description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management and predictive maintenance."
+        "aiCAD": {
+            "title": "CAD Design",
+            "description": "After eLearning at NKUA with an introduction to basic design in Autodesk Inventor, I began my journey in design. The Product Design & 3D Printing Specialization (2021) at NKUA brought me into direct contact with Fusion 360 and the complete design workflow. From my first steps in Inventor, this evolution has led to advanced design techniques with parametric modeling, functional analysis and material optimization. Designing mechanical components and systems is now combined with the complete 3D printing workflow, with focus on creating functional parts that improve daily work and provide practical solutions."
         },
-        "ai": {
-          "title": "AI-Assisted Innovation",
-          "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools, ChatGPT integration."
-        }
-      },
-      "contact": {
-        "location": "Lamia, Greece",
-        "phone": "(+30) 6974030956",
-        "email": "lathyris.kon@gmail.com",
-        "linkedin": "Konstantinos Lathyris",
-        "portfolio": "kwstas147.github.io"
-      },
-      "languages": {
-        "greek": {
-          "label": "Greek",
-          "level": "Native"
+        "buttons": {
+            "viewMore": "View More",
+            "backHome": "Back to Home",
+            "downloadCV": "Download CV",
+            "downloadPDF": "📥 Download CV as PDF"
         },
-        "english": {
-          "label": "English",
-          "level": "Level B2"
+        "pages": {
+            "3dPrinting": {
+                "title": "3D Printing Creations",
+                "description": "Physical constructions and 3D prints"
+            },
+            "design": {
+                "title": "Design",
+                "description": "CAD models and mechanical design"
+            },
+            "programming": {
+                "title": "Development Hub",
+                "description": "Integrated page for software projects",
+                "sections": {
+                    "mobileApps": "Mobile Apps (Flutter)",
+                    "windowsApps": "Windows Apps (C#/.NET)",
+                    "pythonApps": "Desktop Applications (Python)",
+                    "webApps": "Web Apps",
+                    "espHome": "ESPHome/ESP32",
+                    "homeAssistant": "Home Assistant Automations",
+                    "smartHome": "Smart Home Setups",
+                    "homeLab": "Home Lab & Infrastructure"
+                },
+                "codeExample": "Code Example",
+                "esphomeConfigExample": "ESPHome Configuration Example",
+                "projects": {
+                    "flame": {
+                        "title": "Flame",
+                        "description": "Personal homepage and dashboard running in Docker container on Debian VM within Proxmox home lab server. Provides a modern and customizable interface for managing bookmarks and links."
+                    },
+                    "proxmox": {
+                        "title": "Proxmox Home Lab Server",
+                        "description": "Proxmox VE virtualization platform for home lab environment. Provides full virtualization capabilities with support for containers and VMs, ideal for testing and development."
+                    },
+                    "portainer": {
+                        "title": "Portainer - Docker Management",
+                        "description": "Portainer container management platform running in Docker on Debian VM. Provides web-based UI for managing Docker containers, images, volumes and networks."
+                    },
+                    "mailExtractor": {
+                        "title": "MailExtractor",
+                        "description": "Windows application for extracting data from Gmail. Users download an .mbox file from Google Takeout (takeout.google.com), decompress it within the application, select it, and the application automatically extracts names, email addresses, and phone numbers to Excel. Features free use initially, then requires a machine-specific key that corresponds to the specific machine running the application."
+                    },
+                    "myInventory": {
+                        "title": "MyInventory",
+                        "description": "A Flutter mobile application for basic warehouse management, developed from the need for warehouse management at work. The application provides a complete warehouse management solution with multi-warehouse support, product management, stock transfers between warehouses, low stock alerts, backup & restore functionality, and AI Assistant with Google Gemini API integration. Ideal for anyone who needs effective and simple warehouse management."
+                    },
+                    "fuelTracker": {
+                        "title": "Fuel Operation Tracker",
+                        "description": "Fuel Operation Tracker is a comprehensive solution for fuel monitoring and machinery/vehicle fleet management. With a strict focus on privacy, the app stores all data locally and encrypted, while offering advanced features such as OCR for automatic text recognition, biometric security, and detailed report exports in Excel and PDF formats."
+                    },
+                    "countdownTimer": {
+                        "title": "Countdown Timer",
+                        "description": "My first Python desktop application - a simple yet effective countdown timer with built-in notifications and audio playback. When the timer completes, the application displays a notification and automatically plays music files from the same directory. Ideal for time management, Pomodoro technique, and personal productivity."
+                    },
+                    "pdfToMp3": {
+                        "title": "PDF to MP3 Converter",
+                        "description": "Python desktop application that converts PDF files to MP3 audio files, enabling audio consumption of content during other activities such as exercise, running, or daily tasks. Developed out of necessity and personal satisfaction to improve learning efficiency and better utilize available time. Ideal for continuous learning and multitasking."
+                    },
+                    "smartHomeDashboard": {
+                        "title": "Central Dashboard",
+                        "description": "Unified Home Assistant dashboard for monitoring devices, scenes, and smart home status. Central control point with visual overview of all integrations, lighting, climate, and device states in real time."
+                    },
+                    "smartHomeAutomations": {
+                        "title": "Automations and Scenes",
+                        "description": "Routines and automation flows for lighting, heating, and devices. Definition of scenes and triggers based on time, sensors, or manual input. Optimization of daily operation via Home Assistant YAML and visual editor."
+                    },
+                    "smartHomeIntegrations": {
+                        "title": "Integrations and Monitoring",
+                        "description": "IoT device integrations and energy or status monitoring. Management of integrations from multiple vendors, energy monitoring, and historical data. Ideal for extensibility and central management of the entire ecosystem."
+                    }
+                }
+            }
         },
-        "licenses": {
-          "driving": {
-            "label": "Driving Licenses",
-            "types": "A, B, C, D",
-            "note": "(Professional driving license)"
-          },
-          "machineOperator": {
-            "label": "Heavy Equipment Operator License",
-            "specialties": "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β"
-          }
-        }
-      }
-    },
-    "btnDownloadPDF": "Download CV as PDF",
-    "btnDownloadPDFShort": "Download",
-    "btnPrintPDF": "Print to PDF",
-    "btnPdfmake": "Vector PDF (New!)",
-    "printPdfMessage": "Select 'Save as PDF' in the print dialog for perfect quality",
-    "pdfmakeMessage": "Perfect quality, auto download",
-    "pdfOptimizedMessage": "Alternative method",
-    "pdfGenerating": "⏳ Generating PDF...",
-    "pdfSuccess": "✅ PDF Downloaded!",
-    "pdfError": "❌ Error - Try Again",
-    "cvName": "Konstantinos Lathyris",
-    "cvTitle": "Industrial Operations Manager | IoT & Digital Tech Enthusiast",
-    "cvSectionSummary": "PROFESSIONAL SUMMARY",
-    "cvSummaryText": "Experienced technical professional with 25 years of experience in technical project management and industrial plant operations (Asphalt Plants). I possess a unique profile that combines hands-on knowledge of heavy machinery and electrical installations with advanced digital skills in Programming (Python), Networks, and Product Design (3D Printing / CAD). I focus on modernizing production processes through IoT and automation.",
-    "cvSummaryHomelab": "Additionally, I manage self-hosted infrastructure with Proxmox and Docker containers.",
-    "cvSectionContact": "CONTACT",
-    "cvLocation": "Lamia, Greece",
-    "cvPhone": "(+30) 6974030956",
-    "cvEmail": "lathyris.kon@gmail.com",
-    "cvLinkedIn": "Konstantinos Lathyris",
-    "cvPortfolio": "kwstas147.github.io",
-    "cvSectionExperience": "PROFESSIONAL EXPERIENCE",
-    "cvJob1Title": "Operations Manager & Heavy Equipment Operator",
-    "cvJob1Company": "TERNA S.A.",
-    "cvJob1Period": "04/2022 – Present",
-    "cvJob1Desc1": "Direct operation, supervision and ensuring smooth operation of asphalt plant.",
-    "cvJob1Desc2": "Preventive and corrective maintenance of complex mechanical equipment.",
-    "cvJob1Desc3": "Operation of specialized machinery in demanding technical projects.",
-    "cvJob2Title": "Heavy Equipment Operator",
-    "cvJob2Company": "Region of Central Greece (Technical Works Directorate)",
-    "cvJob2Period": "12/2021 – 03/2022",
-    "cvJob2Desc1": "Execution of infrastructure projects and management of technical challenges in the field.",
-    "cvJob3Title": "Production Manager & Quarry Complex Operator",
-    "cvJob3Company": "KALTSAS TECHNICAL S.A.",
-    "cvJob3Period": "09/2019 – 12/2022",
-    "cvJob3Desc1": "Production coordination and supervision of quarry operations.",
-    "cvJob4Title": "Asphalt Unit Production Manager & Administration",
-    "cvJob4Company": "ASPHALTOLATOMIKI ATEVE",
-    "cvJob4Period": "06/2000 – 08/2019",
-    "cvJob4Desc1": "19 years of responsibility for operation and maintenance of asphalt complex.",
-    "cvJob4Desc2": "Administrative Skills: Human resources management, procurement, logistics, and invoicing.",
-    "cvJob5Title": "Refrigeration Applications & Stainless Steel Construction Technician",
-    "cvJob5Company": "Zygouris K.",
-    "cvJob5Period": "01/2000 – 05/2000",
-    "cvJob5Desc1": "Professional equipment manufacturing and refrigeration system installation.",
-    "cvJob6Title": "Assistant Electrician - Internal Installations",
-    "cvJob6Company": "Tsakas I.",
-    "cvJob6Period": "02/1997 – 04/1998",
-    "cvSectionEducation": "EDUCATION & CERTIFICATIONS",
-    "cvEdu1Title": "Internal Electrical Installations Technician",
-    "cvEdu1Institution": "IEK OMIROS",
-    "cvEdu1Period": "2024 – 2025 (Seeking internship to complete)",
-    "cvEdu2Title": "Advanced Network Technologies & Programming",
-    "cvEdu2Institution": "E-Learning National and Kapodistrian University of Athens (NKUA)",
-    "cvEdu2Badge1": "Advanced Network Technologies (2024-2025)",
-    "cvEdu2Badge2": "Programming with Python (2023)",
-    "cvEdu2Badge3": "Product Design & 3D Printing Specialization (2021)",
-    "cvEdu3Title": "Basic Technical Education",
-    "cvEdu3Institution": "Internal Installations Electrician",
-    "cvEdu3Location": "2nd Technical High School of Lamia",
-    "cvEdu3Cert": "Heavy Equipment Operator Diploma & Certification (Specialty 1: Α, Specialty 2: Β, Specialty 4: Β)",
-    "cvSectionLanguages": "LANGUAGES & LICENSES",
-    "cvLangGreek": "Greek",
-    "cvLangGreekLevel": "Native",
-    "cvLangEnglish": "English",
-    "cvLangEnglishLevel": "Level B2",
-    "cvLicenses": "Driving Licenses",
-    "cvLicensesTypes": "A, B, C, D",
-    "cvLicensesNote": "(Professional driving license)",
-    "cvMachineOperatorLicense": "Heavy Equipment Operator License",
-    "cvMachineOperatorSpecialties": "Specialty 1: Α, Specialty 2: Β, Specialty 4: Β",
-    "hero": {
-      "title": "Welcome to My Portfolio",
-      "name": "Konstantinos Lathyris",
-      "subtitle": "Industrial Operations Manager | IoT & Automation Enthusiast",
-      "description": "Extensive experience in the operation and maintenance of asphalt plants at industrial and quarry installations, as well as in heavy equipment operation. In parallel, I apply my interest in IoT, automation, and digital innovation to my daily work.",
-      "openToWork": "Open to Opportunities",
-      "viewCV": "View CV",
-      "contactMe": "Contact Me"
-    },
-    "professional": {
-      "summary": {
-        "title": "Professional Summary",
-        "asphalt": {
-          "title": "Asphalt Plants",
-          "description": "25+ years of experience in operation, supervision and maintenance of asphalt plants. Direct responsibility for production, quality and operational safety."
+        "placeholders": {
+            "projects": "Projects will be added soon...",
+            "description": "This section contains projects that will be added in the future."
         },
-        "machinery": {
-          "title": "Heavy Equipment",
-          "description": "Specialized heavy equipment operator with multiple specialty certifications. Experience in demanding infrastructure technical projects."
+        "github": {
+            "activity": "GitHub Activity",
+            "activityDescription": "My GitHub contributions - a 'green' profile is the best proof that I write code daily.",
+            "viewProfile": "View Profile"
         },
-        "maintenance": {
-          "title": "Maintenance & Management",
-          "description": "Preventive and corrective maintenance of complex mechanical and electrical equipment. Human resources and logistics management."
+        "contact": {
+            "title": "Let's Work Together",
+            "description": "Interested in collaboration or opportunities? I'm always open to discussing industrial automation, IoT projects, or new career challenges.",
+            "emailMe": "Email Me",
+            "downloadCV": "Download CV",
+            "location": "Lamia, Greece",
+            "availability": "Open to relocation / remote"
         },
-        "optimization": {
-          "title": "Optimization",
-          "description": "Data analysis and production parameter monitoring for process optimization. Application of modern management techniques."
-        }
-      },
-      "timeline": {
-        "title": "Professional Journey",
-        "job1": {
-          "title": "Operations Manager & Heavy Equipment Operator",
-          "company": "TERNA S.A.",
-          "period": "04/2022 – Present",
-          "description": "Direct operation and supervision of asphalt plant. Preventive equipment maintenance. Operation of specialized machinery in technical projects."
-        },
-        "job2": {
-          "title": "Heavy Equipment Operator",
-          "company": "Region of Central Greece",
-          "period": "12/2021 – 03/2022",
-          "description": "Execution of infrastructure projects and management of technical challenges in the field."
-        },
-        "job3": {
-          "title": "Production Manager & Quarry Operator",
-          "company": "KALTSAS TECHNICAL S.A.",
-          "period": "09/2019 – 12/2022",
-          "description": "Production coordination and supervision of quarry operations."
-        },
-        "job4": {
-          "title": "Asphalt Unit Production Manager",
-          "company": "ASPHALTOLATOMIKI ATEVE",
-          "period": "06/2000 – 08/2019",
-          "description": "19 years of responsibility for operation and maintenance of asphalt complex. Human resources, procurement and logistics management."
-        }
-      }
-    },
-    "cvSection": {
-      "title": "Complete Professional CV",
-      "cardTitle": "Curriculum Vitae",
-      "cardDescription": "25+ years of professional experience in asphalt plants and heavy equipment. Complete CV with detailed information.",
-      "viewFull": "View Full CV"
-    },
-    "softSkills": {
-      "title": "Soft Skills & Hobbies",
-      "subtitle": "Personal projects and interests developed using artificial intelligence for efficient workflows and innovation.",
-      "programming": {
-        "title": "Programming & Development",
-        "description": "Application development in Python, Flutter, and web technologies. Use of AI-assisted development tools (Cursor IDE) for efficient code generation and debugging."
-      },
-      "design": {
-        "title": "Design & 3D Printing",
-        "description": "Component design with CAD tools and production through 3D printing. Use of AI-assisted design tools for optimization and functional parts."
-      },
-      "smartHome": {
-        "title": "Smart Home Automation",
-        "description": "Design and implementation of smart home ecosystem with Home Assistant, ESPHome and custom sensors. AI-assisted automation for optimal energy management."
-      },
-      "ai": {
-        "title": "AI-Assisted Innovation",
-        "description": "Use of artificial intelligence in all projects for code generation, design optimization, debugging and workflow automation. Cursor IDE, AI design tools."
-      },
-      "viewMore": "View More",
-      "3dPrinting": "3D Printing"
-    },
-    "projectCategories": {
-      "title": "Projects & Creations"
-    },
-    "categories": {
-      "3dPrinting": "3D Printing Creations",
-      "design": "Design",
-      "programming": "Development Hub",
-      "cv": "Curriculum Vitae"
-    },
-    "categoryDescriptions": {
-      "3dPrinting": "Functional spare parts and tools through Additive Manufacturing",
-      "design": "CAD design and engineering analysis",
-      "programming": "Python automation, IoT solutions and software development",
-      "cv": "Complete professional CV with 25+ years of experience"
-    },
-    "design": {
-      "tag": "Design",
-      "project1": {
-        "title": "Mechanical Component - Design 1",
-        "description": "Mechanical component design with parametric modeling. Optimization for functionality and durability using AI-assisted tools."
-      },
-      "project2": {
-        "title": "Complex System - Design 2",
-        "description": "Complex system design with multiple components. Functional analysis and material optimization for better performance."
-      },
-      "project3": {
-        "title": "Tool & Spare Part - Design 3",
-        "description": "Functional tool and spare part design for everyday use. Focus on creating functional parts with material efficiency."
-      },
-      "project4": {
-        "title": "Mechanical Assembly - Design 4",
-        "description": "Advanced mechanical assembly with detailed engineering analysis. Parametric design for flexibility and adaptation to needs."
-      },
-      "project5": {
-        "title": "Optimized Component - Design 5",
-        "description": "Optimized component with AI-assisted optimization. Combination of aesthetics and functionality for optimal performance."
-      },
-      "project6": {
-        "title": "Product Design & 3D Printing - NKUA",
-        "description": "Exercise from the NKUA Product Design & 3D Printing program. Mechanical pulley design with technical drawing, 3D modeling and animation. The exercise covers the complete design cycle from conceptual design to simulation and visualization, demonstrating the application of modern CAD design methods and engineering analysis.",
-        "videoNotSupported": "Video is not supported in your browser. Please try another browser or download the file."
-      },
-      "project7": {
-        "title": "Ice Cream Machine Gear Design & Construction",
-        "description": "Design and engineering analysis of gears for ice cream machine using Fusion 360. Parametric design for precise engagement and smooth operation. Focus on functional design and optimization of gear ratios for optimal performance."
-      },
-      "project8": {
-        "title": "ESP32-C3 Smart Button",
-        "description": "Portable smart button based on ESP32-C3, powered by a CR2032 3V coin cell. On each press it wakes up, connects to WiFi, sends a webhook to Home Assistant (use case: toggle a lighting group), then returns to sleep until the next use."
-      }
-    },
-    "aiCAD": {
-      "title": "CAD Design",
-      "description": "After eLearning at NKUA with an introduction to basic design in Autodesk Inventor, I began my journey in design. The Product Design & 3D Printing Specialization (2021) at NKUA brought me into direct contact with Fusion 360 and the complete design workflow. From my first steps in Inventor, this evolution has led to advanced design techniques with parametric modeling, functional analysis and material optimization. Designing mechanical components and systems is now combined with the complete 3D printing workflow, with focus on creating functional parts that improve daily work and provide practical solutions."
-    },
-    "buttons": {
-      "viewMore": "View More",
-      "backHome": "Back to Home",
-      "downloadCV": "Download CV",
-      "downloadPDF": "📥 Download CV as PDF"
-    },
-    "pages": {
-      "3dPrinting": {
-        "title": "3D Printing Creations",
-        "description": "Physical constructions and 3D prints"
-      },
-      "design": {
-        "title": "Design",
-        "description": "CAD models and mechanical design"
-      },
-      "programming": {
-        "title": "Development Hub",
-        "description": "Integrated page for software projects",
-        "sections": {
-          "mobileApps": "Mobile Apps (Flutter)",
-          "windowsApps": "Windows Apps (C#/.NET)",
-          "pythonApps": "Desktop Applications (Python)",
-          "webApps": "Web Apps",
-          "espHome": "ESPHome/ESP32",
-          "homeAssistant": "Home Assistant Automations",
-          "smartHome": "Smart Home Setups",
-          "homeLab": "Home Lab & Infrastructure"
-        },
-        "codeExample": "Code Example",
-        "esphomeConfigExample": "ESPHome Configuration Example",
-        "projects": {
-          "flame": {
-            "title": "Flame",
-            "description": "Personal homepage and dashboard running in Docker container on Debian VM within Proxmox home lab server. Provides a modern and customizable interface for managing bookmarks and links."
-          },
-          "proxmox": {
-            "title": "Proxmox Home Lab Server",
-            "description": "Proxmox VE virtualization platform for home lab environment. Provides full virtualization capabilities with support for containers and VMs, ideal for testing and development."
-          },
-          "portainer": {
-            "title": "Portainer - Docker Management",
-            "description": "Portainer container management platform running in Docker on Debian VM. Provides web-based UI for managing Docker containers, images, volumes and networks."
-          },
-          "mailExtractor": {
-            "title": "MailExtractor",
-            "description": "Windows application for extracting data from Gmail. Users download an .mbox file from Google Takeout (takeout.google.com), decompress it within the application, select it, and the application automatically extracts names, email addresses, and phone numbers to Excel. Features free use initially, then requires a machine-specific key that corresponds to the specific machine running the application."
-          },
-          "myInventory": {
-            "title": "MyInventory",
-            "description": "A Flutter mobile application for basic warehouse management, developed from the need for warehouse management at work. The application provides a complete warehouse management solution with multi-warehouse support, product management, stock transfers between warehouses, low stock alerts, backup & restore functionality, and AI Assistant with Google Gemini API integration. Ideal for anyone who needs effective and simple warehouse management."
-          },
-          "fuelTracker": {
-            "title": "Fuel Operation Tracker",
-            "description": "Fuel Operation Tracker is a comprehensive solution for fuel monitoring and machinery/vehicle fleet management. With a strict focus on privacy, the app stores all data locally and encrypted, while offering advanced features such as OCR for automatic text recognition, biometric security, and detailed report exports in Excel and PDF formats."
-          },
-          "countdownTimer": {
-            "title": "Countdown Timer",
-            "description": "My first Python desktop application - a simple yet effective countdown timer with built-in notifications and audio playback. When the timer completes, the application displays a notification and automatically plays music files from the same directory. Ideal for time management, Pomodoro technique, and personal productivity."
-          },
-          "pdfToMp3": {
-            "title": "PDF to MP3 Converter",
-            "description": "Python desktop application that converts PDF files to MP3 audio files, enabling audio consumption of content during other activities such as exercise, running, or daily tasks. Developed out of necessity and personal satisfaction to improve learning efficiency and better utilize available time. Ideal for continuous learning and multitasking."
-          },
-          "smartHomeDashboard": {
-            "title": "Central Dashboard",
-            "description": "Unified Home Assistant dashboard for monitoring devices, scenes, and smart home status. Central control point with visual overview of all integrations, lighting, climate, and device states in real time."
-          },
-          "smartHomeAutomations": {
-            "title": "Automations and Scenes",
-            "description": "Routines and automation flows for lighting, heating, and devices. Definition of scenes and triggers based on time, sensors, or manual input. Optimization of daily operation via Home Assistant YAML and visual editor."
-          },
-          "smartHomeIntegrations": {
-            "title": "Integrations and Monitoring",
-            "description": "IoT device integrations and energy or status monitoring. Management of integrations from multiple vendors, energy monitoring, and historical data. Ideal for extensibility and central management of the entire ecosystem."
-          }
-        }
-      }
-    },
-    "placeholders": {
-      "projects": "Projects will be added soon...",
-      "description": "This section contains projects that will be added in the future."
-    },
-    "github": {
-      "activity": "GitHub Activity",
-      "activityDescription": "My GitHub contributions - a 'green' profile is the best proof that I write code daily.",
-      "viewProfile": "View Profile"
-    },
-    "contact": {
-      "title": "Let's Work Together",
-      "description": "Interested in collaboration or opportunities? I'm always open to discussing industrial automation, IoT projects, or new career challenges.",
-      "emailMe": "Email Me",
-      "downloadCV": "Download CV",
-      "location": "Lamia, Greece",
-      "availability": "Open to relocation / remote"
-    },
-    "pageTitleCV": "Curriculum Vitae",
-    "btnBackHome": "Back to Home",
-    "footerText": "© 2026 Portfolio. All rights reserved.",
-    "footerFollow": "Follow me"
-  }
+        "pageTitleCV": "Curriculum Vitae",
+        "btnBackHome": "Back to Home",
+        "footerText": "© 2026 Portfolio. All rights reserved.",
+        "footerFollow": "Follow me",
+        "pages.programming.projects.myInventory.title": "MyInventory",
+        "pages.programming.projects.myInventory.description": "A comprehensive inventory management application.",
+        "pages.programming.projects.fuelTracker.title": "Fuel Tracker",
+        "pages.programming.projects.fuelTracker.description": "Vehicle fuel consumption and expenses tracking application.",
+        "pages.programming.projects.easySlot.title": "EasySlot",
+        "pages.programming.projects.easySlot.description": "Multi-business appointment booking and management platform. The app features an admin panel, calendar-based booking system, QR code check-in, chat, marketplace, Firebase backend, and multi-language support. Ideal for businesses looking to automate their appointment management.",
+        "pages.programming.projects.myPlan.title": "MyPlan",
+        "pages.programming.projects.myPlan.description": "Health and fitness planning application with Health Connect integration. Track body measurements, view progress history, plan meals and exercises, all in a premium Cupertino design. Connects with Android's Health Connect for automatic health data retrieval.",
+        "pages.programming.projects.synapses.title": "Synapses",
+        "pages.programming.projects.synapses.description": "IoT device management application via Bluetooth Low Energy (BLE). Supports device pairing, OTA firmware updates, device profiles, configuration logging and real-time monitoring. Built with Clean Architecture and premium Cupertino UI.",
+        "pages.programming.projects.synthesis.title": "Synthesis",
+        "pages.programming.projects.synthesis.description": "Laboratory mixture management and reporting application with AI integration (Google Gemini). Supports material proportion recording, batch scanning, PDF/Excel report generation, statistics with charts, and home screen widgets. Ideal for laboratory use and quality management.",
+        "pages.programming.projects.duplicateFinder.title": "DuplicateFinder",
+        "pages.programming.projects.duplicateFinder.description": "Desktop application for detecting and managing duplicate files. Uses SHA-256 hashing for accurate file content comparison, with a Qt GUI (PySide6) and the ability to run as a standalone Windows application (.exe) via PyInstaller.",
+        "btnDownloadApk": "Download APK",
+        "btnDownloadInstaller": "Download Installer"
+    }
 }

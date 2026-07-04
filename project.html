@@ -325,6 +325,7 @@
             }
 
             // Force translation update for newly added elements
+            if (window.languageManager) { window.languageManager.updateContent(); }
             if (typeof updateTranslations === 'function') {
                 updateTranslations(currentLang);
             }

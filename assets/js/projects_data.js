@@ -104,7 +104,7 @@ const projectsData = {
         "id": "duplicatefinder",
         "titleKey": "pages.programming.projects.duplicateFinder.title",
         "descKey": "pages.programming.projects.duplicateFinder.description",
-        "icon": "assets/images/development/DuplicateFinder/icon.ico",
+        "icon": "assets/images/development/duplicatefinder/icon.ico",
         "tags": [
             "Python",
             "PySide6",
