@@ -220,6 +220,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="assets/js/language.js?v=2"></script>
     <script src="assets/js/translations.js"></script>
     <script src="assets/js/projects_data.js"></script>
     
@@ -252,7 +253,7 @@
             
             // Fallback for missing icon
             const iconImg = document.getElementById('project-icon');
-            iconImg.src = project.icon + '?v=' + new Date().getTime();
+            iconImg.src = project.icon;
             iconImg.onerror = function() {
                 this.style.display='none'; 
                 this.nextElementSibling.style.display='block';
