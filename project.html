@@ -66,7 +66,7 @@
     <nav class="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 hover:from-blue-300 hover:to-emerald-300 transition-all duration-300">
-                Kwstas<span class="text-white">147</span>
+                <i data-lucide="code-2" class="w-8 h-8 text-blue-400"></i>
             </a>
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium" data-i18n="nav.home">
@@ -250,8 +250,13 @@
             container.classList.remove('hidden');
             const project = projectsData[projectId];
             
-            // Populate Basic Info
-            document.getElementById('project-icon').src = project.icon;
+            // Fallback for missing icon
+            const iconImg = document.getElementById('project-icon');
+            iconImg.src = project.icon + '?v=' + new Date().getTime();
+            iconImg.onerror = function() {
+                this.style.display='none'; 
+                this.nextElementSibling.style.display='block';
+            };
             
             // Handle i18n
             const titleEl = document.getElementById('project-title');

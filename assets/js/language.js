@@ -13,7 +13,8 @@ class LanguageManager {
         }
 
         try {
-            const response = await fetch('./assets/lang/translations.json');
+            const cacheBuster = '?v=' + new Date().getTime();
+            const response = await fetch('./assets/lang/translations.json' + cacheBuster);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
