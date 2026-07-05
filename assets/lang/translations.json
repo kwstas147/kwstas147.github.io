@@ -573,7 +573,8 @@
         "btnUnavailable": "Προσωρινά μη διαθέσιμο",
         "nav.aboutProject": "Σχετικά με την εφαρμογή",
         "nav.backToProgramming": "Επιστροφή",
-        "nav.screenshots": "Στιγμιότυπα (Screenshots)"
+        "nav.screenshots": "Στιγμιότυπα (Screenshots)",
+        "btnExternalLink": "Πήγαινε στη σελίδα της εφαρμογής"
     },
     "en": {
         "nav": {
@@ -1149,6 +1150,7 @@
         "btnUnavailable": "Temporarily unavailable",
         "nav.aboutProject": "About the application",
         "nav.backToProgramming": "Go Back",
-        "nav.screenshots": "Screenshots"
+        "nav.screenshots": "Screenshots",
+        "btnExternalLink": "Go to application page"
     }
 }

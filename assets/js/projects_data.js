@@ -161,14 +161,15 @@ const projectsData = {
         "downloadAvailable": false,
         "downloadLink": "",
         "downloadFilename": "",
+        "externalLink": "https://kwstas147.github.io/Fuel-Operation-Tracker/",
         "screenshots": [
-            "assets/images/development/Fuel Operation Tracker/converted/1",
-            "assets/images/development/Fuel Operation Tracker/converted/2",
-            "assets/images/development/Fuel Operation Tracker/converted/3",
-            "assets/images/development/Fuel Operation Tracker/converted/4",
-            "assets/images/development/Fuel Operation Tracker/converted/5",
-            "assets/images/development/Fuel Operation Tracker/converted/6",
-            "assets/images/development/Fuel Operation Tracker/converted/7"
+            "assets/images/development/Fuel Operation Tracker/optimized_assets/1",
+            "assets/images/development/Fuel Operation Tracker/optimized_assets/2",
+            "assets/images/development/Fuel Operation Tracker/optimized_assets/3",
+            "assets/images/development/Fuel Operation Tracker/optimized_assets/4",
+            "assets/images/development/Fuel Operation Tracker/optimized_assets/5",
+            "assets/images/development/Fuel Operation Tracker/optimized_assets/6",
+            "assets/images/development/Fuel Operation Tracker/optimized_assets/7"
         ]
     }
 };
