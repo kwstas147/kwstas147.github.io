@@ -1,18 +1,67 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details - Konstantinos</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom config -->
-    <script src="assets/js/tailwind-config.js"></script>
-    <link href="assets/css/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <meta name="description" content="Development projects by Konstantinos Lathyris. Flutter apps, Python automation, Home Assistant, ESPHome, Docker infrastructure.">
+    <meta name="keywords" content="Programming, Python, Flutter, Home Assistant, ESPHome, Docker, Proxmox, IoT">
+    <meta name="author" content="Konstantinos Lathyris">
     
+    <!-- Open Graph -->
+    <meta property="og:title" content="Development Hub - Konstantinos Lathyris">
+    <meta property="og:description" content="Software projects: Flutter, Python, Home Assistant, IoT solutions">
+    <meta property="og:image" content="https://kwstas147.github.io/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://kwstas147.github.io/programming.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kwstas147.github.io/programming.html">
+    
+    <!-- Google tag (gtag.js) — Consent Mode v2 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3D154BR9R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      // GDPR: Απόρριψη analytics cookies μέχρι τη συναίνεση χρήστη
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-Z3D154BR9R');
+    </script>
+    <title>Project Details - Konstantinos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        // Critical: Apply theme and language before rendering to prevent flash
+        (function() {
+            try {
+                // Apply theme
+                const savedTheme = localStorage.getItem('portfolio_theme') || 'midnight';
+                if (savedTheme === 'clean-office' || savedTheme === 'midnight') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+                
+                // Apply language - Default to English for international audience
+                const savedLang = localStorage.getItem('portfolio_language') || 'en';
+                if (savedLang === 'el' || savedLang === 'en') {
+                    document.documentElement.setAttribute('lang', savedLang);
+                }
+            } catch(e) {
+                // Fallback to defaults if localStorage fails
+                document.documentElement.setAttribute('data-theme', 'midnight');
+                document.documentElement.setAttribute('lang', 'en');
+            }
+        })();
+    </script>
+
+    <!-- Project specific styles -->
     <style>
         .lightbox {
             display: none;
@@ -60,59 +109,67 @@
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased min-h-screen flex flex-col pt-20">
+<body class="min-h-screen">
+    <!-- Ambient Background -->
+    <div class="ambient-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 hover:from-blue-300 hover:to-emerald-300 transition-all duration-300">
-                <i data-lucide="code-2" class="w-8 h-8 text-blue-400"></i>
-            </a>
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium">
-                    <i data-lucide="home" class="w-4 h-4"></i><span data-i18n="nav.home"></span>
-                </a>
-                <a href="3d-printing.html" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2 font-medium">
-                    <i data-lucide="printer" class="w-4 h-4"></i><span data-i18n="nav.printing"></span>
-                </a>
-                <a href="programming.html" class="text-blue-400 transition-colors flex items-center gap-2 font-medium">
-                    <i data-lucide="code-2" class="w-4 h-4"></i><span data-i18n="nav.programming"></span>
-                </a>
-            </div>
-            
-            <div class="flex items-center gap-4">
-                <!-- Language Toggle -->
-                <button id="langToggle" class="px-3 py-1 rounded-full bg-gray-800 text-gray-300 hover:text-white hover:bg-gray-700 transition-all text-sm font-semibold flex items-center gap-2 border border-gray-700">
-                    <i data-lucide="globe" class="w-4 h-4"></i>
-                    <span id="currentLang">EN</span>
-                </button>
-                
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-gray-300 hover:text-white focus:outline-none" id="mobile-menu-btn">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-gray-800/95 backdrop-blur-xl border-t border-gray-700 absolute w-full" id="mobile-menu">
-            <div class="px-4 py-4 space-y-4">
-                <a href="index.html" class="block text-gray-300 hover:text-white transition-colors font-medium flex items-center gap-3">
-                    <i data-lucide="home" class="w-5 h-5 text-gray-400"></i><span data-i18n="nav.home"></span>
-                </a>
-                <a href="3d-printing.html" class="block text-gray-300 hover:text-white transition-colors font-medium flex items-center gap-3">
-                    <i data-lucide="printer" class="w-5 h-5 text-gray-400"></i><span data-i18n="nav.printing"></span>
-                </a>
-                <a href="programming.html" class="block text-blue-400 transition-colors font-medium flex items-center gap-3">
-                    <i data-lucide="code-2" class="w-5 h-5 text-blue-400"></i><span data-i18n="nav.programming"></span>
-                </a>
+    <nav class="bg-nav border-b border-theme sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="index" data-i18n="nav.home"></a>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="3d-printing.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="3d-printing" data-i18n="nav.3dPrinting">3D Printing</a>
+                        <a href="design.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="design" data-i18n="nav.design"></a>
+                        <a href="programming.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="programming" data-i18n="nav.programming">Development</a>
+                        <a href="cv.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="cv" data-i18n="nav.cv"></a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <!-- Hamburger Menu Button (mobile only) -->
+                    <button id="mobile-menu-toggle" class="md:hidden" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                    <div class="theme-switcher">
+                        <button data-theme="midnight" class="active" title="Midnight">🌙</button>
+                        <button data-theme="clean-office" title="Clean Office">☀️</button>
+                    </div>
+                    <div class="lang-switcher">
+                        <button data-lang="el" class="active">EL</button>
+                        <button data-lang="en">EN</button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+        <div id="mobile-menu-panel" class="mobile-menu-panel">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-title" data-i18n="nav.menu">Menu</span>
+                <button id="mobile-menu-close" aria-label="Close mobile menu">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="index.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="index" data-i18n="nav.home"></a>
+                <a href="3d-printing.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="3d-printing" data-i18n="nav.3dPrinting">3D Printing</a>
+                <a href="design.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="design" data-i18n="nav.design"></a>
+                <a href="programming.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="programming" data-i18n="nav.programming">Development</a>
+                <a href="cv.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="cv" data-i18n="nav.cv"></a>
+            </nav>
+        </div>
+    </div>
+
     <main class="flex-grow container mx-auto px-4 py-8 max-w-5xl">
         <!-- Back button -->
-        <a href="programming.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 group">
+        <a href="programming.html" class="inline-flex items-center gap-2  hover:text-white transition-colors mb-8 group">
             <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i>
             <span data-i18n="nav.backToProgramming">Επιστροφή</span>
         </a>
@@ -122,14 +179,14 @@
             <!-- Header Section -->
             <div class="flex flex-col md:flex-row gap-8 items-start mb-12">
                 <!-- Icon -->
-                <div class="w-32 h-32 md:w-48 md:h-48 bg-card rounded-3xl p-4 flex-shrink-0 shadow-2xl shadow-blue-500/10 border border-gray-800 flex items-center justify-center overflow-hidden">
+                <div class="w-32 h-32 md:w-48 md:h-48 bg-card glass-panel border border-theme rounded-3xl p-4 flex-shrink-0 shadow-2xl shadow-blue-500/10 border border-theme flex items-center justify-center overflow-hidden">
                     <img id="project-icon" src="" alt="Project Icon" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                     <i data-lucide="app-window" class="w-16 h-16 text-slate-500 opacity-40 hidden" id="fallback-icon"></i>
                 </div>
 
                 <!-- Info & Download -->
                 <div class="flex-1 w-full">
-                    <h1 id="project-title" class="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                    <h1 id="project-title" class="text-4xl md:text-5xl font-extrabold mb-4 text-gradient">
                         <!-- Dynamic Title -->
                     </h1>
                     
@@ -138,7 +195,7 @@
                     </div>
 
                     <!-- Download Section -->
-                    <div class="bg-card/50 border border-gray-800 rounded-2xl p-6 backdrop-blur-sm max-w-xl">
+                    <div class="bg-card glass-panel border border-theme/50 border border-theme rounded-2xl p-6 backdrop-blur-sm max-w-xl">
                         <div id="download-available" class="hidden">
                             <a id="download-link" href="#" download class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/25">
                                 <i data-lucide="download" class="w-6 h-6"></i>
@@ -147,7 +204,7 @@
                         </div>
                         
                         <div id="download-unavailable" class="hidden">
-                            <button disabled class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-gray-400 bg-gray-800 border border-gray-700 cursor-not-allowed opacity-75">
+                            <button disabled class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold  bg-tertiary border border-theme cursor-not-allowed opacity-75">
                                 <i data-lucide="clock" class="w-6 h-6"></i>
                                 <span data-i18n="btnUnavailable">Προσωρινά Μη Διαθέσιμο</span>
                             </button>
@@ -160,7 +217,7 @@
                             </a>
                         </div>
                         
-                        <p class="text-[11px] text-gray-400 mt-4 flex items-center gap-2">
+                        <p class="text-[11px]  mt-4 flex items-center gap-2">
                             <i data-lucide="shield-alert" class="w-4 h-4 text-red-400 flex-shrink-0"></i>
                             <span data-i18n="apkRedistributionWarning">Απαγορεύεται ρητά η αναδιανομή από τρίτους.</span>
                         </p>
@@ -169,24 +226,24 @@
             </div>
 
             <!-- Description -->
-            <div class="prose prose-invert prose-blue max-w-none mb-16 bg-card border border-gray-800 rounded-3xl p-8 shadow-xl">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-gray-100">
-                    <i data-lucide="info" class="w-6 h-6 text-blue-400"></i>
+            <div class="prose prose-invert prose-blue max-w-none mb-16 bg-card glass-panel border border-theme border border-theme rounded-3xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 ">
+                    <i data-lucide="info" class="w-6 h-6 text-theme"></i>
                     <span data-i18n="nav.aboutProject">Σχετικά με την εφαρμογή</span>
                 </h2>
-                <p id="project-description" class="text-gray-300 leading-relaxed text-lg whitespace-pre-line">
+                <p id="project-description" class=" leading-relaxed text-lg whitespace-pre-line">
                     <!-- Dynamic Description -->
                 </p>
             </div>
 
             <!-- Screenshots -->
             <div id="screenshots-section" class="hidden mb-16">
-                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-100">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 ">
                     <i data-lucide="image" class="w-6 h-6 text-purple-400"></i>
                     <span data-i18n="nav.screenshots">Στιγμιότυπα (Screenshots)</span>
                 </h2>
                 
-                <div class="bg-card border border-gray-800 rounded-3xl p-4 md:p-8 shadow-xl overflow-hidden">
+                <div class="bg-card glass-panel border border-theme border border-theme rounded-3xl p-4 md:p-8 shadow-xl overflow-hidden">
                     <div id="screenshots-container" class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full gap-4 pb-4">
                         <!-- Dynamic Screenshots -->
                     </div>
@@ -198,33 +255,10 @@
         <div id="error-state" class="hidden flex-col items-center justify-center py-20 text-center">
             <i data-lucide="alert-circle" class="w-16 h-16 text-red-400 mb-4"></i>
             <h2 class="text-2xl font-bold mb-2">Project not found</h2>
-            <p class="text-gray-400 mb-6">The requested project could not be found or does not exist.</p>
+            <p class=" mb-6">The requested project could not be found or does not exist.</p>
             <a href="programming.html" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-full font-bold transition-colors">Go Back</a>
         </div>
     </main>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <i data-lucide="x" class="lightbox-close w-10 h-10"></i>
-        <img id="lightbox-img" src="" alt="Full size image">
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 mt-auto">
-        <div class="container mx-auto px-4 py-8">
-            <div class="flex flex-col items-center justify-center gap-4">
-                <div class="flex gap-6">
-                    <a href="https://github.com/Kwstas147" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                        <i data-lucide="github" class="w-6 h-6"></i>
-                    </a>
-                </div>
-                <p class="text-gray-500 text-sm text-center font-medium">
-                    © 2026 Konstantinos. <span data-i18n="footer.rights">All rights reserved.</span><br>
-                    <span class="text-xs mt-1 block opacity-75">Built with modern web technologies</span>
-                </p>
-            </div>
-        </div>
-    </footer>
 
     <!-- Scripts -->
     <script src="assets/js/language.js?v=2"></script>
@@ -388,5 +422,6 @@
             });
         }
     </script>
+<script src="assets/js/theme.js"></script>
 </body>
 </html>
