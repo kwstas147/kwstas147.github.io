@@ -343,6 +343,12 @@
             
             // Fallback for missing icon
             const iconImg = document.getElementById('project-icon');
+            const fallbackIcon = document.getElementById('fallback-icon');
+            
+            // Reset display just in case the empty initial src="" triggered onerror prematurely
+            iconImg.style.display = 'block';
+            if (fallbackIcon) fallbackIcon.style.display = 'none';
+            
             iconImg.src = project.icon;
             iconImg.onerror = function() {
                 this.style.display='none'; 
