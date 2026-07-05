@@ -260,6 +260,12 @@
         </div>
     </main>
 
+    <!-- Lightbox Container -->
+    <div id="lightbox" class="lightbox">
+        <i data-lucide="x" class="w-8 h-8 lightbox-close"></i>
+        <img id="lightbox-img" src="" alt="Full size screenshot">
+    </div>
+
     <!-- Scripts -->
     <script src="assets/js/language.js?v=2"></script>
     <script src="assets/js/translations.js"></script>
@@ -269,11 +275,23 @@
         lucide.createIcons();
 
         // Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        const menuBtn = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-overlay');
+        const menuCloseBtn = document.getElementById('mobile-menu-close');
+        
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+        
+        if (menuCloseBtn && mobileMenu) {
+            menuCloseBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
 
         // Initialize Project Page
         document.addEventListener('DOMContentLoaded', () => {
@@ -309,9 +327,10 @@
             
             // Populate Tags
             const tagsContainer = document.getElementById('project-tags');
+            tagsContainer.innerHTML = ''; // Clear previous tags if any
             project.tags.forEach(tag => {
                 const span = document.createElement('span');
-                span.className = 'px-3 py-1 bg-gray-800 border border-gray-700 text-sm text-gray-300 rounded-full font-medium';
+                span.className = 'px-3 py-1 bg-tertiary border border-theme text-sm text-theme rounded-full font-medium';
                 span.textContent = tag;
                 tagsContainer.appendChild(span);
             });
