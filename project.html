@@ -107,6 +107,31 @@
         .lightbox-close:hover {
             background: rgba(255, 255, 255, 0.2);
         }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            cursor: pointer;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+        }
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .lightbox-prev {
+            left: 1.5rem;
+        }
+        .lightbox-next {
+            right: 1.5rem;
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -263,6 +288,12 @@
     <!-- Lightbox Container -->
     <div id="lightbox" class="lightbox">
         <i data-lucide="x" class="w-8 h-8 lightbox-close"></i>
+        <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Previous image">
+            <i data-lucide="chevron-left" class="w-8 h-8"></i>
+        </button>
+        <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Next image">
+            <i data-lucide="chevron-right" class="w-8 h-8"></i>
+        </button>
         <img id="lightbox-img" src="" alt="Full size screenshot">
     </div>
 
@@ -408,15 +439,50 @@
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
             const closeBtn = document.querySelector('.lightbox-close');
+            const prevBtn = document.getElementById('lightbox-prev');
+            const nextBtn = document.getElementById('lightbox-next');
+            
+            const images = Array.from(document.querySelectorAll('.lightbox-image'));
+            let currentIndex = 0;
+            
+            if (images.length <= 1) {
+                if (prevBtn) prevBtn.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+            }
 
-            document.querySelectorAll('.lightbox-image').forEach(img => {
+            const updateImage = (index) => {
+                if (images.length === 0) return;
+                // Handle wrap-around
+                if (index < 0) index = images.length - 1;
+                if (index >= images.length) index = 0;
+                
+                currentIndex = index;
+                const img = images[currentIndex];
+                const fullsizeUrl = img.getAttribute('data-fullsize') || img.src;
+                lightboxImg.src = fullsizeUrl;
+            };
+
+            images.forEach((img, index) => {
                 img.addEventListener('click', (e) => {
-                    const fullsizeUrl = img.getAttribute('data-fullsize') || img.src;
-                    lightboxImg.src = fullsizeUrl;
+                    updateImage(index);
                     lightbox.classList.add('active');
                     document.body.style.overflow = 'hidden'; // Prevent scrolling
                 });
             });
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // prevent closing lightbox
+                    updateImage(currentIndex - 1);
+                });
+            }
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // prevent closing lightbox
+                    updateImage(currentIndex + 1);
+                });
+            }
 
             const closeLightbox = () => {
                 lightbox.classList.remove('active');
@@ -435,10 +501,21 @@
             });
 
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-                    closeLightbox();
+                if (lightbox.classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        updateImage(currentIndex - 1);
+                    } else if (e.key === 'ArrowRight') {
+                        updateImage(currentIndex + 1);
+                    }
                 }
             });
+            
+            // Note: need to re-initialize lucide icons for the new chevron icons if they were added dynamically,
+            // but since they are in the HTML payload, the initial lucide.createIcons() should catch them unless
+            // it was already executed. Let's force it just in case.
+            lucide.createIcons();
         }
     </script>
 <script src="assets/js/theme.js"></script>
