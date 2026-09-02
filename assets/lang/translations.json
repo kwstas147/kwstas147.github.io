@@ -574,7 +574,7 @@
         "nav.aboutProject": "Σχετικά με την εφαρμογή",
         "nav.backToProgramming": "Επιστροφή",
         "nav.screenshots": "Στιγμιότυπα (Screenshots)",
-        "btnExternalLink": "Πήγαινε στη σελίδα της εφαρμογής"
+        "btnExternalLink": "Επίσημη Ιστοσελίδα"
     },
     "en": {
         "nav": {
@@ -1151,6 +1151,6 @@
         "nav.aboutProject": "About the application",
         "nav.backToProgramming": "Go Back",
         "nav.screenshots": "Screenshots",
-        "btnExternalLink": "Go to application page"
+        "btnExternalLink": "Official Website"
     }
 }

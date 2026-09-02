@@ -87,6 +87,7 @@ const projectsData = {
         "downloadAvailable": false,
         "downloadLink": "",
         "downloadFilename": "",
+        "externalLink": "https://kwstas147.github.io/Synthesis-Distribution/",
         "screenshots": [
             "assets/images/development/synthesis/optimized_assets/synt",
             "assets/images/development/synthesis/optimized_assets/synt1",

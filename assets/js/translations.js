@@ -345,6 +345,7 @@ const translations = {
         "btnDownloadApk": "Λήψη APK",
         "btnDownloadInstaller": "Λήψη Installer",
         "btnUnavailable": "Προσωρινά Μη Διαθέσιμο",
+        "btnExternalLink": "Επίσημη Ιστοσελίδα",
         "apkRedistributionWarning": "Απαγορεύεται ρητά η αναδιανομή των αρχείων εγκατάστασης από τρίτους.",
         
         // 3D Printing Page
@@ -776,6 +777,7 @@ const translations = {
         "btnDownloadApk": "Download APK",
         "btnDownloadInstaller": "Download Installer",
         "btnUnavailable": "Temporarily Unavailable",
+        "btnExternalLink": "Official Website",
         "apkRedistributionWarning": "Redistribution of the installation files by third parties is strictly prohibited.",
         
         // 3D Printing Page
