@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "description": "Build script for generating gallery image lists",
   "scripts": {
-    "build-gallery": "node build-gallery.js"
+    "build-gallery": "node build-gallery.js",
+    "build:css": "tailwindcss -c tailwind.config.js -i assets/css/tailwind.src.css -o assets/css/tailwind.css --minify"
   },
-  "keywords": ["gallery", "images", "build"],
+  "keywords": [
+    "gallery",
+    "images",
+    "build"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
 }

@@ -1,7 +1,7 @@
 Ανοίγεις Terminal/PowerShell από οποιοδήποτε μέρος και τρέχεις:
 
-cd c:\Users\kwsta\AndroidStudioProjects\kwstas147.github.io
-python assets\images\development\optimize_images.py "C:\Users\kwsta\Documents\development" "assets\images\development"
+cd c:\Users\<your-user>\AndroidStudioProjects\kwstas147.github.io
+python assets\images\development\optimize_images.py "C:\Users\<your-user>\Documents\development" "assets\images\development"
 
 
 
@@ -13,7 +13,7 @@ python [path-to-script] [path-with-your-images] [output-folder]
 Παράδειγμα:
 
 
-python assets\images\development\optimize_images.py "C:\Users\kwsta\Documents\development" "assets\images\development"
+python assets\images\development\optimize_images.py "C:\Users\<your-user>\Documents\development" "assets\images\development"
 #                      ↑ script location              ↑ input (όπου έχεις τις εικόνες)  ↑ output (όπου θα πάνε)
 
 

@@ -64,6 +64,8 @@
         if (overlay) {
             overlay.classList.add('active');
             body.classList.add('mobile-menu-open');
+            const toggle = document.getElementById('mobile-menu-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'true');
             // Prevent body scroll when menu is open
             document.body.style.overflow = 'hidden';
         }
@@ -76,6 +78,8 @@
         if (overlay) {
             overlay.classList.remove('active');
             body.classList.remove('mobile-menu-open');
+            const toggle = document.getElementById('mobile-menu-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
             // Restore body scroll
             document.body.style.overflow = '';
         }

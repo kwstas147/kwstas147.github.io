@@ -217,7 +217,7 @@
             "contact": {
                 "location": "Λαμία, Ελλάδα",
                 "phone": "(+30) 6974030956",
-                "email": "lathyris.kon@gmail.com",
+                "email": "kwstas147@gmail.com",
                 "linkedin": "Konstantinos Lathyris",
                 "portfolio": "kwstas147.github.io"
             },
@@ -261,7 +261,7 @@
         "cvSectionContact": "ΕΠΙΚΟΙΝΩΝΙΑ",
         "cvLocation": "Λαμία, Ελλάδα",
         "cvPhone": "(+30) 6974030956",
-        "cvEmail": "lathyris.kon@gmail.com",
+        "cvEmail": "kwstas147@gmail.com",
         "cvLinkedIn": "Konstantinos Lathyris",
         "cvPortfolio": "kwstas147.github.io",
         "cvSectionExperience": "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ",
@@ -423,7 +423,15 @@
         "pages": {
             "3dPrinting": {
                 "title": "3D Printing Creations",
-                "description": "Φυσικές κατασκευές και εκτυπώσεις 3D"
+                "description": "Φυσικές κατασκευές και εκτυπώσεις 3D",
+                "collection1": {
+                    "description": "Συλλογή λειτουργικών ανταλλακτικών και εργαλείων που έχουν σχεδιαστεί και εκτυπωθεί με additive manufacturing. Κάθε κομμάτι είναι βελτιστοποιημένο για λειτουργικότητα, αντοχή και αποδοτικότητα υλικού.",
+                    "title": "Συλλογή Ανταλλακτικών 3D Printing"
+                },
+                "replica": {
+                    "description": "Αυτό το project δημιουργήθηκε από το αίτημα των παιδιών μου για μια ρεπλίκα αντικειμένου από τα online games που παίζουν. Η ρεπλίκα του βομβιδοβόλου είναι σχεδιασμένη με προσοχή στις λεπτομέρειες και εκτυπωμένη με ακρίβεια για να είναι όσο το δυνατόν πιο πιστή στο πρωτότυπο. Αυτό το project συνδυάζει την αγάπη για τα βιντεοπαιχνίδια με τις τεχνικές δεξιότητες του 3D printing και CAD design.",
+                    "title": "Replica Project - Online Games Collection"
+                }
             },
             "design": {
                 "title": "Σχεδιασμός",
@@ -488,6 +496,10 @@
                     "smartHomeIntegrations": {
                         "title": "Ενσωματώσεις και Monitoring",
                         "description": "Ενσωματώσεις συσκευών IoT και παρακολούθηση ενεργείας ή κατάστασης. Διαχείριση integrations από διαφορετικούς vendors, energy monitoring και ιστορικό δεδομένων. Ιδανικό για επεκτασιμότητα και κεντρική διαχείριση ολόκληρου του ecosystem."
+                    },
+                    "solarWaterHeater": {
+                        "description": "Σύστημα παρακολούθησης θερμοκρασίας για ηλιακό θερμοσίφωνα με χρήση ESP32 και ESPHome, βελτιστοποιημένο για αυτόνομη λειτουργία με εξαιρετικά χαμηλή κατανάλωση ενέργειας. Το σύστημα τροφοδοτείται από μπαταρία που φορτίζεται αυτόματα από μικρό φωτοβολταϊκό πάνελ, επιτρέποντας εγκατάσταση σε απομακρυσμένες ή δυσπρόσιτες τοποθεσίες χωρίς πρόσβαση σε ηλεκτρικό δίκτυο. Για τη μεγιστοποίηση της διάρκειας ζωής της μπαταρίας, ο μικροελεγκτής λειτουργεί σε λειτουργία deep sleep, ξυπνώντας περιοδικά για να συλλέξει δεδομένα από τους αισθητήρες θερμοκρασίας DS18B20, να αποστείλει τα δεδομένα μέσω WiFi στο Home Assistant, και να επιστρέψει άμεσα σε κατάσταση ύπνου. Η υλοποίηση επιτρέπει την πραγματική παρακολούθηση της θερμοκρασίας του νερού από απόσταση, με δυνατότητα ειδοποιήσεων και αυτοματισμών. Ιδανικό για smart home automation, παρακολούθηση ενεργειακής απόδοσης του ηλιακού συστήματος, και IoT applications που απαιτούν μακροχρόνια αυτόνομη λειτουργία.",
+                        "title": "Παρακολούθηση Θερμοκρασίας Ηλιακού Θερμοσίφωνα"
                     }
                 }
             }
@@ -574,7 +586,40 @@
         "nav.aboutProject": "Σχετικά με την εφαρμογή",
         "nav.backToProgramming": "Επιστροφή",
         "nav.screenshots": "Στιγμιότυπα (Screenshots)",
-        "btnExternalLink": "Επίσημη Ιστοσελίδα"
+        "btnExternalLink": "Επίσημη Ιστοσελίδα",
+        "achievements": {
+            "innovation": "Πάθος για Καινοτομία",
+            "projects": "Ολοκληρωμένα Έργα",
+            "tech": "Τεχνικές Δεξιότητες",
+            "years": "Χρόνια Εμπειρίας"
+        },
+        "aiDesign": {
+            "description": "Τα CAD designs μου και οι 3D εκτυπώσεις χρησιμοποιούν AI-assisted tools για optimization, material efficiency και functional design. Η τεχνητή νοημοσύνη βοηθάει στον σχεδιασμό λειτουργικών ανταλλακτικών και εργαλείων που βελτιώνουν την καθημερινή εργασία.",
+            "title": "AI-Assisted Design & Optimization"
+        },
+        "aiDev": {
+            "benefits": {
+                "learning": "Continuous learning & improvement",
+                "quality": "Improved code quality",
+                "speed": "Faster code generation",
+                "title": "Benefits"
+            },
+            "description": "Χρησιμοποιώ τεχνητή νοημοσύνη σε όλα τα development projects μου για efficient workflows, code generation, debugging και optimization. Η χρήση AI tools όπως το Cursor IDE επιταχύνει σημαντικά την ανάπτυξη και βελτιώνει την ποιότητα του κώδικα.",
+            "note": "Όλα τα projects σε αυτή τη σελίδα έχουν αναπτυχθεί με τη βοήθεια τεχνητής νοημοσύνης, αποδεικνύοντας πώς η AI μπορεί να ενισχύσει την παραγωγικότητα και την καινοτομία στον προγραμματισμό.",
+            "title": "AI-Assisted Development",
+            "tools": {
+                "chatgpt": "ChatGPT for code review & debugging",
+                "copilot": "GitHub Copilot integration",
+                "cursor": "Cursor IDE (AI-powered code editor)",
+                "title": "AI Tools & IDE"
+            }
+        },
+        "cta": {
+            "button": "Επικοινωνήστε μαζί μου",
+            "description": "Είτε έχετε ένα project στο μυαλό σας είτε απλά θέλετε να πείτε ένα γεια, είμαι πάντα ανοιχτός σε νέες ιδέες και καινοτομίες.",
+            "title": "Ενδιαφέρεστε για συνεργασία;"
+        },
+        "heroTitle": "Κωνσταντίνος Λαθύρης | Βιομηχανικές Λειτουργίες & IoT"
     },
     "en": {
         "nav": {
@@ -794,7 +839,7 @@
             "contact": {
                 "location": "Lamia, Greece",
                 "phone": "(+30) 6974030956",
-                "email": "lathyris.kon@gmail.com",
+                "email": "kwstas147@gmail.com",
                 "linkedin": "Konstantinos Lathyris",
                 "portfolio": "kwstas147.github.io"
             },
@@ -838,7 +883,7 @@
         "cvSectionContact": "CONTACT",
         "cvLocation": "Lamia, Greece",
         "cvPhone": "(+30) 6974030956",
-        "cvEmail": "lathyris.kon@gmail.com",
+        "cvEmail": "kwstas147@gmail.com",
         "cvLinkedIn": "Konstantinos Lathyris",
         "cvPortfolio": "kwstas147.github.io",
         "cvSectionExperience": "PROFESSIONAL EXPERIENCE",
@@ -1040,7 +1085,15 @@
         "pages": {
             "3dPrinting": {
                 "title": "3D Printing Creations",
-                "description": "Physical constructions and 3D prints"
+                "description": "Physical constructions and 3D prints",
+                "collection1": {
+                    "description": "Collection of functional spare parts and tools designed and printed using additive manufacturing. Each piece is optimized for functionality, durability, and material efficiency.",
+                    "title": "3D-Printed Parts Collection"
+                },
+                "replica": {
+                    "description": "This project was created from my children's request for a replica of an object from the online games they play. The bomb thrower replica is carefully designed with attention to detail and printed with precision to be as faithful to the original as possible. This project combines the love for video games with the technical skills of 3D printing and CAD design.",
+                    "title": "Replica Project - Online Games Collection"
+                }
             },
             "design": {
                 "title": "Design",
@@ -1105,6 +1158,10 @@
                     "smartHomeIntegrations": {
                         "title": "Integrations and Monitoring",
                         "description": "IoT device integrations and energy or status monitoring. Management of integrations from multiple vendors, energy monitoring, and historical data. Ideal for extensibility and central management of the entire ecosystem."
+                    },
+                    "solarWaterHeater": {
+                        "description": "Temperature monitoring system for solar water heater using ESP32 and ESPHome, optimized for autonomous operation with extremely low power consumption. The system is powered by a battery that automatically charges from a small photovoltaic panel, enabling installation in remote or inaccessible locations without access to electrical grid. To maximize battery life, the microcontroller operates in deep sleep mode, periodically waking up to collect data from DS18B20 temperature sensors, transmit the data via WiFi to Home Assistant, and immediately return to sleep state. The implementation enables real-time remote monitoring of water temperature, with notification and automation capabilities. Ideal for smart home automation, monitoring the energy performance of the solar system, and IoT applications requiring long-term autonomous operation.",
+                        "title": "Solar Water Heater Temperature Monitoring"
                     }
                 }
             }
@@ -1151,6 +1208,39 @@
         "nav.aboutProject": "About the application",
         "nav.backToProgramming": "Go Back",
         "nav.screenshots": "Screenshots",
-        "btnExternalLink": "Official Website"
+        "btnExternalLink": "Official Website",
+        "achievements": {
+            "innovation": "Innovation Focused",
+            "projects": "Projects Delivered",
+            "tech": "Tech Stack Skills",
+            "years": "Years Experience"
+        },
+        "aiDesign": {
+            "description": "My CAD designs and 3D prints use AI-assisted tools for optimization, material efficiency and functional design. Artificial intelligence helps in designing functional spare parts and tools that improve daily work.",
+            "title": "AI-Assisted Design & Optimization"
+        },
+        "aiDev": {
+            "benefits": {
+                "learning": "Continuous learning & improvement",
+                "quality": "Improved code quality",
+                "speed": "Faster code generation",
+                "title": "Benefits"
+            },
+            "description": "I use artificial intelligence in all my development projects for efficient workflows, code generation, debugging and optimization. The use of AI tools such as Cursor IDE significantly speeds up development and improves code quality.",
+            "note": "All projects on this page have been developed with the help of artificial intelligence, demonstrating how AI can enhance productivity and innovation in programming.",
+            "title": "AI-Assisted Development",
+            "tools": {
+                "chatgpt": "ChatGPT for code review & debugging",
+                "copilot": "GitHub Copilot integration",
+                "cursor": "Cursor IDE (AI-powered code editor)",
+                "title": "AI Tools & IDE"
+            }
+        },
+        "cta": {
+            "button": "Get In Touch",
+            "description": "Whether you have a project in mind or just want to say hi, I'm always open to discussing new opportunities and innovations.",
+            "title": "Interested in working together?"
+        },
+        "heroTitle": "Konstantinos Lathyris | Industrial Operations & IoT"
     }
 }
