@@ -2886,3 +2886,24 @@ html.theme-transition::view-transition-new(root) {
         bottom: 11rem;
     }
 }
+
+/* Navigation hides while scrolling down and returns when scrolling up */
+nav.sticky,
+.section-nav {
+    transition: transform 0.3s ease;
+}
+
+html.header-hidden nav.sticky {
+    transform: translateY(-100%);
+}
+
+html.header-hidden .section-nav {
+    transform: translateY(calc(-100% - var(--nav-h, 4.5rem)));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    nav.sticky,
+    .section-nav {
+        transition: none;
+    }
+}
