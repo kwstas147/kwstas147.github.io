@@ -143,6 +143,7 @@
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
                 banner.classList.add('cookie-consent-visible');
+                document.documentElement.classList.add('cookie-banner-open');
             });
         });
 
@@ -174,6 +175,7 @@
         if (banner) {
             banner.classList.remove('cookie-consent-visible');
             banner.classList.add('cookie-consent-hidden');
+            document.documentElement.classList.remove('cookie-banner-open');
             // Αφαίρεση από DOM μετά το animation
             setTimeout(() => {
                 if (banner.parentNode) {
