@@ -1,7 +1,7 @@
 // Language switching functionality with JSON-based translations
 class LanguageManager {
     constructor() {
-        this.currentLang = this.getStoredLanguage() || 'el';
+        this.currentLang = this.getStoredLanguage();
         this.translations = null;
         this.translationsLoaded = false;
         this.init();
@@ -13,8 +13,8 @@ class LanguageManager {
         }
 
         try {
-            const cacheBuster = '?v=' + new Date().getTime();
-            const response = await fetch('./assets/lang/translations.json' + cacheBuster);
+            // Fixed version string (not a timestamp), so the browser can cache the file
+            const response = await fetch('./assets/lang/translations.json?v=2');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -51,6 +51,8 @@ class LanguageManager {
             await this.loadTranslations();
         } catch (error) {
             console.error('Failed to load translations:', error);
+            // Show the static text rather than leaving the page hidden
+            document.querySelectorAll('[data-i18n]').forEach(el => el.classList.add('i18n-ready'));
             return;
         }
 
@@ -72,11 +74,14 @@ class LanguageManager {
     }
 
     getStoredLanguage() {
+        // A saved choice wins; otherwise follow the browser language (Greek -> el, anything else -> en)
         try {
-            return localStorage.getItem('portfolio_language') || 'en';
+            const stored = localStorage.getItem('portfolio_language');
+            if (stored === 'el' || stored === 'en') return stored;
         } catch (e) {
-            return 'el';
+            // Storage can be blocked (private mode); fall through to the browser language
         }
+        return (navigator.language || '').toLowerCase().indexOf('el') === 0 ? 'el' : 'en';
     }
 
     storeLanguage(lang) {
@@ -88,7 +93,6 @@ class LanguageManager {
     }
 
     async setLanguage(lang) {
-        console.log('setLanguage called with:', lang);
         
         // Ensure translations are loaded
         if (!this.translationsLoaded) {
@@ -105,9 +109,11 @@ class LanguageManager {
             return;
         }
 
-        console.log('Changing language from', this.currentLang, 'to', lang);
         this.currentLang = lang;
-        this.storeLanguage(lang);
+        // Remember explicit choices only, not the browser-based default
+        if (!this.isInitialLoad) {
+            this.storeLanguage(lang);
+        }
         
         // Update HTML lang attribute for SEO
         document.documentElement.setAttribute('lang', lang);
@@ -118,7 +124,6 @@ class LanguageManager {
         // Dispatch event for Lucide icons re-initialization
         document.dispatchEvent(new CustomEvent('languageChanged'));
         
-        console.log('Language changed successfully to:', this.currentLang);
     }
 
     toggleLanguage() {
@@ -414,9 +419,7 @@ class LanguageManager {
             e.stopPropagation();
             
             const lang = button.getAttribute('data-lang');
-            console.log('Language button clicked:', lang);
             if (lang && (lang === 'el' || lang === 'en')) {
-                console.log('Setting language to:', lang);
                 self.setLanguage(lang);
             } else {
                 console.warn('Invalid language:', lang);

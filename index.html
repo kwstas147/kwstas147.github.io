@@ -23,9 +23,9 @@
     <meta name="twitter:image" content="https://kwstas147.github.io/assets/images/og-image.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" onerror="this.onerror=null; this.href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>';">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" onerror="this.onerror=null; this.href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>';">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" onerror="this.onerror=null; this.href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>';">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://kwstas147.github.io/">
@@ -42,37 +42,26 @@
       gtag('js', new Date());
       gtag('config', 'G-Z3D154BR9R');
     </script>
-    <title data-i18n="heroTitle"></title>
+    <title data-i18n="heroTitle">Konstantinos Lathyris | Industrial Operations &amp; IoT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-                        outfit: ['Outfit', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <script src="https://unpkg.com/lucide@1.56.0/dist/umd/lucide.min.js" integrity="sha384-kxA7XQbo2ctlLRLh12oGZC6Eao0ELKI4y0lTRMBSLC37U2AuNf0F7s8r0bChYAAF" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css?v=3">
     <script>
         // Critical: Apply theme and language before rendering to prevent flash
         (function() {
             try {
                 // Apply theme
+                document.documentElement.classList.add('js');
                 const savedTheme = localStorage.getItem('portfolio_theme') || 'midnight';
                 if (savedTheme === 'clean-office' || savedTheme === 'midnight') {
                     document.documentElement.setAttribute('data-theme', savedTheme);
                 }
                 
                 // Apply language - Default to English for international audience
-                const savedLang = localStorage.getItem('portfolio_language') || 'en';
+                const savedLang = localStorage.getItem('portfolio_language') || ((navigator.language || '').toLowerCase().indexOf('el') === 0 ? 'el' : 'en');
                 if (savedLang === 'el' || savedLang === 'en') {
                     document.documentElement.setAttribute('lang', savedLang);
                 }
@@ -82,6 +71,35 @@
                 document.documentElement.setAttribute('lang', 'en');
             }
         })();
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Konstantinos Lathyris",
+      "url": "https://kwstas147.github.io/",
+      "image": "https://kwstas147.github.io/assets/images/og-image.jpg",
+      "jobTitle": "Industrial Operations Manager",
+      "description": "Industrial Operations Manager with 25+ years of experience. IoT specialist, 3D printing and Python developer.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lamia",
+        "addressCountry": "GR"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/konstantinos-lathyris-5b98931b0",
+        "https://github.com/kwstas147",
+        "https://instagram.com/kwstas147"
+      ],
+      "knowsAbout": [
+        "Industrial automation",
+        "IoT",
+        "Home Assistant",
+        "ESPHome",
+        "3D printing",
+        "Python"
+      ]
+    }
     </script>
 </head>
 <body class="min-h-screen">
@@ -115,8 +133,8 @@
                         <button data-theme="clean-office" title="Clean Office">☀️</button>
                     </div>
                     <div class="lang-switcher">
-                        <button data-lang="el" class="active">EL</button>
-                        <button data-lang="en">EN</button>
+                        <button data-lang="el">EL</button>
+                        <button data-lang="en" class="active">EN</button>
                     </div>
                 </div>
             </div>
@@ -155,9 +173,9 @@
                 </span>
             </div>
             
-            <h1 class="text-4xl md:text-6xl font-bold mb-3 reveal-on-scroll hero-text" data-i18n="hero.name"></h1>
-            <p class="text-xl md:text-2xl text-blue-400 mb-4 reveal-on-scroll hero-text" data-i18n="hero.subtitle" style="transition-delay: 100ms;"></p>
-            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto reveal-on-scroll hero-text mb-8" data-i18n="hero.description" style="transition-delay: 200ms;"></p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-3 reveal-on-scroll hero-text" data-i18n="hero.name">Konstantinos Lathyris</h1>
+            <p class="text-xl md:text-2xl text-blue-400 mb-4 reveal-on-scroll hero-text" data-i18n="hero.subtitle" style="transition-delay: 100ms;">Industrial Operations Manager | IoT &amp; Automation Enthusiast</p>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto reveal-on-scroll hero-text mb-8" data-i18n="hero.description" style="transition-delay: 200ms;">Extensive experience in the operation and maintenance of asphalt plants at industrial and quarry installations, as well as in heavy equipment operation. In parallel, I apply my interest in IoT, automation, and digital innovation to my daily work.</p>
             
             <!-- CTA Buttons -->
             <div class="flex flex-wrap justify-center gap-4 mb-8 fade-in">
@@ -233,8 +251,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
     <!-- Professional Timeline Section -->
     <section class="container mx-auto px-4 py-12 reveal-on-scroll">
@@ -375,7 +391,7 @@
                     </div>
                     <div class="flex gap-4">
                         <a href="design.html" class="text-blue-400 hover:text-blue-300 text-sm flex items-center gap-1">
-                            <span data-i18n="softSkills.design"></span>
+                            <span data-i18n="nav.design">Design</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                         <a href="3d-printing.html" class="text-blue-400 hover:text-blue-300 text-sm flex items-center gap-1">
@@ -526,7 +542,7 @@
                 </p>
                 
                 <div class="flex flex-wrap justify-center gap-4 mb-8">
-                    <a href="mailto:lathyris.kon@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+                    <a href="mailto:kwstas147@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                         <i data-lucide="mail" class="w-5 h-5"></i>
                         <span data-i18n="contact.emailMe">Email Me</span>
                     </a>
@@ -598,9 +614,9 @@
                     </a>
                     <!-- Email -->
                     <a 
-                        href="mailto:lathyris.kon@gmail.com" 
+                        href="mailto:kwstas147@gmail.com" 
                         class="text-gray-500 hover:text-blue-400 transition-colors"
-                        title="Email: lathyris.kon@gmail.com"
+                        title="Email: kwstas147@gmail.com"
                         aria-label="Email"
                     >
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -645,14 +661,14 @@
     <!-- Floating Action Button (FAB) -->
     <div class="fab-container">
         <div class="fab-options">
-            <a href="https://wa.me/306945892547" target="_blank" class="fab-item fab-whatsapp" title="WhatsApp">
+            <a href="https://wa.me/306974030956" target="_blank" class="fab-item fab-whatsapp" title="WhatsApp" rel="noopener noreferrer">
                 <i data-lucide="phone"></i>
             </a>
-            <a href="viber://chat?number=%2B306945892547" class="fab-item fab-viber" title="Viber">
+            <a href="viber://chat?number=%2B306974030956" class="fab-item fab-viber" title="Viber">
                 <i data-lucide="message-circle"></i>
             </a>
         </div>
-        <button class="fab-main">
+        <button class="fab-main" type="button" aria-label="Quick contact">
             <i data-lucide="message-square"></i>
         </button>
     </div>
@@ -663,7 +679,6 @@
     </button>
 
     <!-- Scripts -->
-    <script src="assets/js/translations.js?v=2"></script>
     <script src="assets/js/language.js?v=2"></script>
     <script src="assets/js/theme.js?v=1"></script>
     <script src="assets/js/navigation.js?v=1"></script>

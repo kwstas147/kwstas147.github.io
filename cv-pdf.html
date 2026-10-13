@@ -421,13 +421,14 @@
         (function() {
             try {
                 // Apply theme
+                document.documentElement.classList.add('js');
                 const savedTheme = localStorage.getItem('portfolio_theme') || 'midnight';
                 if (savedTheme === 'clean-office' || savedTheme === 'midnight') {
                     document.documentElement.setAttribute('data-theme', savedTheme);
                 }
                 
                 // Apply language - Default to English for international audience
-                const savedLang = localStorage.getItem('portfolio_language') || 'en';
+                const savedLang = localStorage.getItem('portfolio_language') || ((navigator.language || '').toLowerCase().indexOf('el') === 0 ? 'el' : 'en');
                 if (savedLang === 'el' || savedLang === 'en') {
                     document.documentElement.setAttribute('lang', savedLang);
                 }
@@ -463,7 +464,7 @@
                 <div style="font-size: 14px; line-height: 1.8;">
                     <div style="margin-bottom: 8px;">📍 <span data-i18n="cvLocation">Λαμία, Ελλάδα</span></div>
                     <div style="margin-bottom: 8px;">📞 <span data-i18n="cvPhone">(+30) 6974030956</span></div>
-                    <div style="margin-bottom: 8px;">✉️ <span data-i18n="cvEmail">lathyris.kon@gmail.com</span></div>
+                    <div style="margin-bottom: 8px;">✉️ <span data-i18n="cvEmail">kwstas147@gmail.com</span></div>
                     <div style="margin-bottom: 8px;">💼 LinkedIn: <span data-i18n="cvLinkedIn">Konstantinos Lathyris</span></div>
                     <div style="margin-bottom: 8px;">🌐 <span data-i18n="cvPortfolio">kwstas147.github.io</span></div>
                 </div>
@@ -702,7 +703,6 @@
         </p>
     </div>
 
-    <script src="assets/js/translations.js?v=2"></script>
     <script src="assets/js/language.js?v=2"></script>
     <script>
         // Simple Language Manager Setup

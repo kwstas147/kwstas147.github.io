@@ -34,8 +34,8 @@
       gtag('config', 'G-Z3D154BR9R');
     </script>
     <title>Project Details - Konstantinos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <script src="https://unpkg.com/lucide@1.56.0/dist/umd/lucide.min.js" integrity="sha384-kxA7XQbo2ctlLRLh12oGZC6Eao0ELKI4y0lTRMBSLC37U2AuNf0F7s8r0bChYAAF" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
@@ -43,13 +43,14 @@
         (function() {
             try {
                 // Apply theme
+                document.documentElement.classList.add('js');
                 const savedTheme = localStorage.getItem('portfolio_theme') || 'midnight';
                 if (savedTheme === 'clean-office' || savedTheme === 'midnight') {
                     document.documentElement.setAttribute('data-theme', savedTheme);
                 }
                 
                 // Apply language - Default to English for international audience
-                const savedLang = localStorage.getItem('portfolio_language') || 'en';
+                const savedLang = localStorage.getItem('portfolio_language') || ((navigator.language || '').toLowerCase().indexOf('el') === 0 ? 'el' : 'en');
                 if (savedLang === 'el' || savedLang === 'en') {
                     document.documentElement.setAttribute('lang', savedLang);
                 }
@@ -236,7 +237,7 @@
                         </div>
                         
                         <div id="external-link-container" class="hidden">
-                            <a id="external-link" href="#" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-emerald-500/25">
+                            <a id="external-link" href="#" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-emerald-500/25" rel="noopener noreferrer">
                                 <i data-lucide="external-link" class="w-6 h-6"></i>
                                 <span data-i18n="btnExternalLink">Επίσημη Ιστοσελίδα</span>
                             </a>
@@ -299,7 +300,6 @@
 
     <!-- Scripts -->
     <script src="assets/js/language.js?v=2"></script>
-    <script src="assets/js/translations.js"></script>
     <script src="assets/js/projects_data.js"></script>
     
     <script>

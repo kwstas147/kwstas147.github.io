@@ -70,9 +70,9 @@
                 <div class="relative overflow-hidden">
                     <img 
                         src="${imagePath}-800w.jpg" 
-                        srcset="${imagePath}-400w.jpg 400w,
-                                ${imagePath}-800w.jpg 800w,
-                                ${imagePath}-1200w.jpg 1200w"
+                        srcset="${encodeURI(imagePath)}-400w.jpg 400w,
+                                ${encodeURI(imagePath)}-800w.jpg 800w,
+                                ${encodeURI(imagePath)}-1200w.jpg 1200w"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt="${imageAlt}" 
                         class="w-full h-full object-cover lazy-image lightbox-image cursor-pointer hover:opacity-90 transition-opacity"
@@ -96,9 +96,9 @@
                 hiddenImagesHTML += `
                     <img 
                         src="${imagePath}-400w.jpg" 
-                        srcset="${imagePath}-400w.jpg 400w,
-                                ${imagePath}-800w.jpg 800w,
-                                ${imagePath}-1200w.jpg 1200w"
+                        srcset="${encodeURI(imagePath)}-400w.jpg 400w,
+                                ${encodeURI(imagePath)}-800w.jpg 800w,
+                                ${encodeURI(imagePath)}-1200w.jpg 1200w"
                         alt="${imageAlt}" 
                         class="lightbox-image"
                         loading="lazy"
