@@ -2704,3 +2704,185 @@ html[data-theme="clean-office"] .qr-container span {
     color: #64748b;
     text-shadow: none;
 }
+
+
+/* ===== Navigation ergonomics, transitions and home effects ===== */
+
+/* Header switchers move into the mobile menu on small screens */
+.mobile-controls {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .header-controls {
+        display: none !important;
+    }
+
+    .mobile-controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.5rem 1rem 0;
+    }
+}
+
+/* Section bar under the main navigation (home page) */
+.section-nav {
+    position: sticky;
+    top: var(--nav-h, 4.5rem);
+    z-index: 40;
+    background: rgba(15, 23, 42, 0.86);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+html[data-theme="clean-office"] .section-nav {
+    background: rgba(241, 245, 249, 0.92);
+    border-bottom-color: rgba(51, 65, 85, 0.15);
+}
+
+.section-nav-inner {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.section-nav-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.section-nav-link {
+    white-space: nowrap;
+    padding: 0.4rem 0.9rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.section-nav-link:hover {
+    color: #60a5fa;
+}
+
+.section-nav-link[aria-current="true"] {
+    background: rgba(59, 130, 246, 0.18);
+    color: #60a5fa;
+}
+
+section[id] {
+    scroll-margin-top: calc(var(--nav-h, 4.5rem) + 3.5rem);
+}
+
+/* The contact button opens on tap as well as on hover */
+.fab-container.is-open .fab-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Compact cookie banner on phones */
+@media (max-width: 640px) {
+    .cookie-consent-inner {
+        padding: 0.75rem 0.9rem;
+        gap: 0.6rem;
+    }
+
+    .cookie-consent-title {
+        font-size: 0.95rem;
+    }
+
+    .cookie-consent-message {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .cookie-consent-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Timeline progress line */
+.timeline-fill {
+    top: 0;
+    height: 0;
+    transition: height 0.15s linear;
+}
+
+/* Circular theme change, and smooth navigation between pages */
+@view-transition {
+    navigation: auto;
+}
+
+html.theme-transition::view-transition-old(root),
+html.theme-transition::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .timeline-fill {
+        transition: none;
+    }
+}
+
+/* Keep the contact button above the cookie banner on phones */
+@media (max-width: 640px) {
+    html.cookie-banner-open .fab-container {
+        bottom: 10.5rem;
+    }
+}
+
+/* Cookie banner on phones: text and buttons side by side, so it takes less of the screen */
+@media (max-width: 640px) {
+    .cookie-consent-inner {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 0.85rem;
+    }
+
+    .cookie-consent-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .cookie-consent-title {
+        font-size: 0.9rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .cookie-consent-message {
+        font-size: 0.75rem;
+        line-height: 1.35;
+    }
+
+    .cookie-consent-privacy-link {
+        font-size: 0.72rem;
+    }
+
+    .cookie-consent-actions {
+        width: auto;
+        flex-direction: column;
+        flex-shrink: 0;
+        gap: 0.4rem;
+    }
+
+    .cookie-consent-btn {
+        min-width: 6.25rem;
+        padding: 0.45rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    html.cookie-banner-open .fab-container {
+        bottom: 11rem;
+    }
+}

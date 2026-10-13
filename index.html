@@ -128,16 +128,26 @@
                     <button id="mobile-menu-toggle" class="md:hidden" aria-label="Toggle mobile menu" aria-expanded="false">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
-                    <div class="theme-switcher">
+                    <div class="theme-switcher header-controls">
                         <button data-theme="midnight" class="active" title="Midnight">🌙</button>
                         <button data-theme="clean-office" title="Clean Office">☀️</button>
                     </div>
-                    <div class="lang-switcher">
+                    <div class="lang-switcher header-controls">
                         <button data-lang="el">EL</button>
                         <button data-lang="en" class="active">EN</button>
                     </div>
                 </div>
             </div>
+        </div>
+    </nav>
+
+    <!-- Section navigation -->
+    <nav id="section-nav" class="section-nav" aria-label="Sections">
+        <div class="section-nav-inner">
+            <a href="#experience" class="section-nav-link" data-i18n="sectionNav.experience">Experience</a>
+            <a href="#projects" class="section-nav-link" data-i18n="sectionNav.projects">Projects</a>
+            <a href="#cv" class="section-nav-link" data-i18n="sectionNav.cv">CV</a>
+            <a href="#contact" class="section-nav-link" data-i18n="sectionNav.contact">Contact</a>
         </div>
     </nav>
 
@@ -149,6 +159,16 @@
                 <button id="mobile-menu-close" aria-label="Close mobile menu">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
+            </div>
+            <div class="mobile-controls">
+                <div class="theme-switcher">
+                    <button type="button" data-theme="midnight" title="Midnight">🌙</button>
+                    <button type="button" data-theme="clean-office" title="Clean Office">☀️</button>
+                </div>
+                <div class="lang-switcher">
+                    <button type="button" data-lang="el">EL</button>
+                    <button type="button" data-lang="en">EN</button>
+                </div>
             </div>
             <nav class="mobile-nav-links">
                 <a href="index.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="index" data-i18n="nav.home"></a>
@@ -186,10 +206,6 @@
                 <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                     <i data-lucide="mail" class="w-5 h-5"></i>
                     <span data-i18n="hero.contactMe">Contact Me</span>
-                </a>
-                <a href="https://linkedin.com/in/konstantinos-lathyris-5b98931b0" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-500 text-gray-300 hover:border-blue-400 hover:text-blue-400 font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    <span>LinkedIn</span>
                 </a>
             </div>
             
@@ -234,31 +250,32 @@
             <div class="max-w-5xl mx-auto mt-20 reveal-on-scroll">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-gradient mb-2">25+</div>
-                        <div class="text-xs uppercase tracking-widest text-gray-500" data-i18n="achievements.years">Years Experience</div>
+                        <div class="text-4xl font-bold text-gradient mb-2" data-count="25" data-suffix="+">25+</div>
+                        <div class="text-sm uppercase tracking-widest text-gray-500" data-i18n="achievements.years">Years Experience</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-gradient mb-2">100+</div>
-                        <div class="text-xs uppercase tracking-widest text-gray-500" data-i18n="achievements.projects">Projects Delivered</div>
+                        <div class="text-4xl font-bold text-gradient mb-2" data-count="100" data-suffix="+">100+</div>
+                        <div class="text-sm uppercase tracking-widest text-gray-500" data-i18n="achievements.projects">Projects Delivered</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-gradient mb-2">15+</div>
-                        <div class="text-xs uppercase tracking-widest text-gray-500" data-i18n="achievements.tech">Tech Stack Skills</div>
+                        <div class="text-4xl font-bold text-gradient mb-2" data-count="15" data-suffix="+">15+</div>
+                        <div class="text-sm uppercase tracking-widest text-gray-500" data-i18n="achievements.tech">Tech Stack Skills</div>
                     </div>
                     <div class="text-center">
                         <div class="text-4xl font-bold text-gradient mb-2">∞</div>
-                        <div class="text-xs uppercase tracking-widest text-gray-500" data-i18n="achievements.innovation">Passion for Innovation</div>
+                        <div class="text-sm uppercase tracking-widest text-gray-500" data-i18n="achievements.innovation">Passion for Innovation</div>
                     </div>
                 </div>
             </div>
 
     <!-- Professional Timeline Section -->
-    <section class="container mx-auto px-4 py-12 reveal-on-scroll">
+    <section id="experience" class="container mx-auto px-4 py-12 reveal-on-scroll">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gradient" data-i18n="professional.timeline.title"></h2>
-            <div class="relative">
+            <div class="relative timeline-track">
                 <!-- Timeline Line -->
                 <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-400 opacity-30 hidden md:block"></div>
+                <div class="timeline-fill absolute left-8 top-0 w-0.5 bg-blue-400 hidden md:block" aria-hidden="true"></div>
                 
                 <!-- Timeline Items -->
                 <div class="space-y-12">
@@ -327,7 +344,7 @@
     </section>
 
     <!-- CV Section - First Priority -->
-    <section class="container mx-auto px-4 py-16 reveal-on-scroll">
+    <section id="cv" class="container mx-auto px-4 py-16 reveal-on-scroll">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-gradient" data-i18n="cvSection.title"></h2>
             <a href="cv.html" class="category-card bg-card glass-panel rounded-lg p-8 text-center hover:scale-105 transition-all duration-300 block">
@@ -441,7 +458,7 @@
     </section>
 
     <!-- Project Categories Section -->
-    <section class="container mx-auto px-4 py-16 reveal-on-scroll">
+    <section id="projects" class="container mx-auto px-4 py-16 reveal-on-scroll">
         <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-gradient" data-i18n="projectCategories.title">Projects & Creations</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <!-- 3D Printing -->
@@ -668,7 +685,7 @@
                 <i data-lucide="message-circle"></i>
             </a>
         </div>
-        <button class="fab-main" type="button" aria-label="Quick contact">
+        <button class="fab-main" type="button" aria-label="Quick contact" aria-expanded="false">
             <i data-lucide="message-square"></i>
         </button>
     </div>
@@ -729,6 +746,7 @@
     </script>
     <!-- Cookie Consent — GDPR -->
     <script src="assets/js/cookie-consent.js?v=1"></script>
+    <script src="assets/js/home-effects.js?v=1"></script>
 </body>
 </html>
 

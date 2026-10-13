@@ -88,11 +88,11 @@
                     <button id="mobile-menu-toggle" class="md:hidden" aria-label="Toggle mobile menu" aria-expanded="false">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
-                    <div class="theme-switcher">
+                    <div class="theme-switcher header-controls">
                         <button data-theme="midnight" class="active" title="Midnight">🌙</button>
                         <button data-theme="clean-office" title="Clean Office">☀️</button>
                     </div>
-                    <div class="lang-switcher">
+                    <div class="lang-switcher header-controls">
                         <button data-lang="el" class="active">EL</button>
                         <button data-lang="en">EN</button>
                     </div>
@@ -109,6 +109,16 @@
                 <button id="mobile-menu-close" aria-label="Close mobile menu">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
+            </div>
+            <div class="mobile-controls">
+                <div class="theme-switcher">
+                    <button type="button" data-theme="midnight" title="Midnight">🌙</button>
+                    <button type="button" data-theme="clean-office" title="Clean Office">☀️</button>
+                </div>
+                <div class="lang-switcher">
+                    <button type="button" data-lang="el">EL</button>
+                    <button type="button" data-lang="en">EN</button>
+                </div>
             </div>
             <nav class="mobile-nav-links">
                 <a href="index.html" class="nav-link hover:text-blue-400 transition-colors" data-nav-page="index" data-i18n="nav.home"></a>

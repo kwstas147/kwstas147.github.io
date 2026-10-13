@@ -69,6 +69,28 @@ class ThemeManager {
         html.setAttribute('data-theme', theme);
     }
 
+    setThemeAnimated(theme, event) {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!document.startViewTransition || reduceMotion || theme === this.currentTheme) {
+            this.setTheme(theme);
+            return;
+        }
+        // The new theme grows as a circle from the clicked button
+        const x = event && event.clientX ? event.clientX : window.innerWidth / 2;
+        const y = event && event.clientY ? event.clientY : window.innerHeight / 2;
+        const radius = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+        const html = document.documentElement;
+        html.classList.add('theme-transition');
+        const transition = document.startViewTransition(() => this.setTheme(theme));
+        transition.ready.then(() => {
+            html.animate(
+                { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
+                { duration: 550, easing: 'ease-in-out', pseudoElement: '::view-transition-new(root)' }
+            );
+        }).catch(() => {});
+        transition.finished.finally(() => html.classList.remove('theme-transition'));
+    }
+
     toggleTheme() {
         const newTheme = this.currentTheme === 'midnight' ? 'clean-office' : 'midnight';
         this.setTheme(newTheme);
@@ -99,7 +121,7 @@ class ThemeManager {
                 e.preventDefault();
                 const theme = btn.getAttribute('data-theme');
                 if (theme && (theme === 'midnight' || theme === 'clean-office')) {
-                    this.setTheme(theme);
+                    this.setThemeAnimated(theme, e);
                 } else {
                     this.toggleTheme();
                 }

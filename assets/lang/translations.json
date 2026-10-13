@@ -619,7 +619,13 @@
             "description": "Είτε έχετε ένα project στο μυαλό σας είτε απλά θέλετε να πείτε ένα γεια, είμαι πάντα ανοιχτός σε νέες ιδέες και καινοτομίες.",
             "title": "Ενδιαφέρεστε για συνεργασία;"
         },
-        "heroTitle": "Κωνσταντίνος Λαθύρης | Βιομηχανικές Λειτουργίες & IoT"
+        "heroTitle": "Κωνσταντίνος Λαθύρης | Βιομηχανικές Λειτουργίες & IoT",
+        "sectionNav": {
+            "experience": "Εμπειρία",
+            "projects": "Projects",
+            "cv": "CV",
+            "contact": "Επικοινωνία"
+        }
     },
     "en": {
         "nav": {
@@ -1241,6 +1247,12 @@
             "description": "Whether you have a project in mind or just want to say hi, I'm always open to discussing new opportunities and innovations.",
             "title": "Interested in working together?"
         },
-        "heroTitle": "Konstantinos Lathyris | Industrial Operations & IoT"
+        "heroTitle": "Konstantinos Lathyris | Industrial Operations & IoT",
+        "sectionNav": {
+            "experience": "Experience",
+            "projects": "Projects",
+            "cv": "CV",
+            "contact": "Contact"
+        }
     }
 }
